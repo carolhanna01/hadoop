@@ -1,0 +1,2204 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Tamas Domok
+        '@username': tdomok
+      attachments: null
+      comments:
+        comment:
+        - '#text': "<p>tomicooler opened a new pull request, #6433:<br/>\nURL: <a\
+            \ href=\"https://github.com/apache/hadoop/pull/6433\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/hadoop/pull/6433</a></p>\n\
+            \n<p>   Change-Id: Id00a5382d982dcf33ec8a3769fc33419b660968b</p>\n\n<p>\
+            \   &lt;!--<br/>\n     Thanks for sending a pull request!<br/>\n     \
+            \  1. If this is your first time, please read our contributor guidelines:\
+            \ <a href=\"https://cwiki.apache.org/confluence/display/HADOOP/How+To+Contribute\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://cwiki.apache.org/confluence/display/HADOOP/How+To+Contribute</a><br/>\n\
+            \       2. Make sure your PR title starts with JIRA issue id, e.g., '<a\
+            \ href=\"https://issues.apache.org/jira/browse/HADOOP-17799\" title=\"\
+            Improve the GitHub pull request template\" class=\"issue-link\" data-issue-key=\"\
+            HADOOP-17799\"><del>HADOOP-17799</del></a>. Your PR title ...'.<br/>\n\
+            \   --&gt;</p>\n\n<ol>\n\t<li>\n\t<ol>\n\t\t<li>\n\t\t<ol>\n\t\t\t<li>Description\
+            \ of PR</li>\n\t\t</ol>\n\t\t</li>\n\t</ol>\n\t</li>\n</ol>\n\n\n<p> \
+            \  There is no reason to ignore the configured capacity if the memory\
+            \ is 0 in the configuration.</p>\n\n<p>   It makes it impossible to configure\
+            \ a zero absolute resource capacity.</p>\n\n<p>   Example:<br/>\n   ```<br/>\n\
+            \   root.default.capacity=<span class=\"error\">&#91;memory=0, vcores=0&#93;</span><br/>\n\
+            \   root.default.maximum-capacity=<span class=\"error\">&#91;memory=2048,\
+            \ vcores=2&#93;</span><br/>\n   ```</p>\n\n<ol>\n\t<li>\n\t<ol>\n\t\t\
+            <li>\n\t\t<ol>\n\t\t\t<li>How was this patch tested?</li>\n\t\t</ol>\n\
+            \t\t</li>\n\t</ol>\n\t</li>\n</ol>\n\n\n<p>   Ran the unit tests.</p>\n\
+            \n<ol>\n\t<li>\n\t<ol>\n\t\t<li>\n\t\t<ol>\n\t\t\t<li>For code changes:</li>\n\
+            \t\t</ol>\n\t\t</li>\n\t</ol>\n\t</li>\n</ol>\n\n\n<ul class=\"alternate\"\
+            \ type=\"square\">\n\t<li><span class=\"error\">&#91;x&#93;</span> Does\
+            \ the title or this PR starts with the corresponding JIRA issue id (e.g.\
+            \ '<a href=\"https://issues.apache.org/jira/browse/YARN-11646\" title=\"\
+            QueueCapacityConfigParser shouldn&#39;t ignore capacity config with 0\
+            \ memory\" class=\"issue-link\" data-issue-key=\"YARN-11646\"><del>YARN-11646</del></a>.\
+            \ Your PR title ...')?</li>\n\t<li>[ ] Object storage: have the integration\
+            \ tests been executed and the endpoint declared according to the connector-specific\
+            \ documentation?</li>\n\t<li>[ ] If adding new dependencies to the code,\
+            \ are these dependencies licensed in a way that is compatible for inclusion\
+            \ under <span class=\"error\">&#91;ASF 2.0&#93;</span>(<a href=\"http://www.apache.org/legal/resolved.html#category-a)?\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://www.apache.org/legal/resolved.html#category-a)?</a></li>\n\t<li>[\
+            \ ] If applicable, have you updated the `LICENSE`, `LICENSE-binary`, `NOTICE-binary`\
+            \ files?</li>\n</ul>"
+          '@author': githubbot
+          '@created': Wed, 10 Jan 2024 14:53:53 +0000
+          '@id': '17805176'
+        - '#text': '<p>hadoop-yetus commented on PR #6433:<br/>
+
+            URL: <a href="https://github.com/apache/hadoop/pull/6433#issuecomment-1885328661"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433#issuecomment-1885328661</a></p>
+
+
+            <p>   :confetti_ball: *<b>+1 overall</b>*</p>
+
+
+
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Vote </td>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Runtime </td>
+
+            <td class=''confluenceTd''>  Logfile </td>
+
+            <td class=''confluenceTd''> Comment </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>:----:</td>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>--------:</td>
+
+            <td class=''confluenceTd''>:--------:</td>
+
+            <td class=''confluenceTd''>:-------:</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  reexec  </td>
+
+            <td class=''confluenceTd''>   0m 21s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  Docker mode activated.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Prechecks _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  dupname  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  No case conflicting files found.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  codespell  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  codespell was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  detsecrets  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  detect-secrets was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  @author  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not contain any @author tags.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  test4tests  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch appears to include 1 new or modified
+            test files.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ trunk Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>  32m 45s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 31s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 27s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 29s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 30s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 33s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 27s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m  4s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  20m 44s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  branch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Patch Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 27s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 27s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  blanks  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch has no blanks issues.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> -0 :warning: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 20s </td>
+
+            <td class=''confluenceTd''> <span class="error">&#91;/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt&#93;</span>(<a
+            href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/artifact/out/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/artifact/out/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt</a>)
+            </td>
+
+            <td class=''confluenceTd''>  hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager:
+            The patch generated 1 new + 0 unchanged - 0 fixed = 1 total (was 0)  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m  9s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  19m 36s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  patch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Other Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  unit  </td>
+
+            <td class=''confluenceTd''>  84m 56s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  hadoop-yarn-server-resourcemanager in the
+            patch passed.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  asflicense  </td>
+
+            <td class=''confluenceTd''>   0m 21s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not generate ASF License warnings.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''> 168m 38s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Report/Notes </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>:-------------</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> ClientAPI=1.43 ServerAPI=1.43 base: <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/artifact/out/Dockerfile"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/artifact/out/Dockerfile</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> GITHUB PR </td>
+
+            <td class=''confluenceTd''> <a href="https://github.com/apache/hadoop/pull/6433"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''> dupname asflicense compile javac javadoc mvninstall
+            mvnsite unit shadedclient spotbugs checkstyle codespell detsecrets </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 0d3fc268fb08 5.15.0-88-generic #98-Ubuntu
+            SMP Mon Oct 2 15:18:56 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> dev-support/bin/hadoop.sh </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 29d5dd4b7c5efa93901e2f398af0a36d233e476b
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Multi-JDK versions </td>
+
+            <td class=''confluenceTd''> /usr/lib/jvm/java-11-openjdk-amd64:Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04
+            /usr/lib/jvm/java-8-openjdk-amd64:Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 953 (vs. ulimit of 5500) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/1/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> versions </td>
+
+            <td class=''confluenceTd''> git=2.25.1 maven=3.6.3 spotbugs=4.2.2 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.14.0 <a href="https://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">https://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>   This message was automatically generated.</p>'
+          '@author': githubbot
+          '@created': Wed, 10 Jan 2024 17:43:24 +0000
+          '@id': '17805238'
+        - '#text': '<p>hadoop-yetus commented on PR #6433:<br/>
+
+            URL: <a href="https://github.com/apache/hadoop/pull/6433#issuecomment-1885332277"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433#issuecomment-1885332277</a></p>
+
+
+            <p>   :confetti_ball: *<b>+1 overall</b>*</p>
+
+
+
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Vote </td>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Runtime </td>
+
+            <td class=''confluenceTd''>  Logfile </td>
+
+            <td class=''confluenceTd''> Comment </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>:----:</td>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>--------:</td>
+
+            <td class=''confluenceTd''>:--------:</td>
+
+            <td class=''confluenceTd''>:-------:</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  reexec  </td>
+
+            <td class=''confluenceTd''>   0m 21s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  Docker mode activated.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Prechecks _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  dupname  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  No case conflicting files found.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  codespell  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  codespell was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  detsecrets  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  detect-secrets was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  @author  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not contain any @author tags.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  test4tests  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch appears to include 1 new or modified
+            test files.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ trunk Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>  31m 43s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 33s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 28s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 29s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 31s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 33s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 28s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m  8s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  19m 40s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  branch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Patch Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 23s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 23s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  blanks  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch has no blanks issues.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> -0 :warning: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 20s </td>
+
+            <td class=''confluenceTd''> <span class="error">&#91;/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt&#93;</span>(<a
+            href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/artifact/out/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/artifact/out/results-checkstyle-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt</a>)
+            </td>
+
+            <td class=''confluenceTd''>  hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager:
+            The patch generated 1 new + 0 unchanged - 0 fixed = 1 total (was 0)  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 25s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m  5s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  19m 37s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  patch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Other Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  unit  </td>
+
+            <td class=''confluenceTd''>  86m  5s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  hadoop-yarn-server-resourcemanager in the
+            patch passed.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  asflicense  </td>
+
+            <td class=''confluenceTd''>   0m 23s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not generate ASF License warnings.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''> 167m 31s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Report/Notes </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>:-------------</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> ClientAPI=1.43 ServerAPI=1.43 base: <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/artifact/out/Dockerfile"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/artifact/out/Dockerfile</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> GITHUB PR </td>
+
+            <td class=''confluenceTd''> <a href="https://github.com/apache/hadoop/pull/6433"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''> dupname asflicense compile javac javadoc mvninstall
+            mvnsite unit shadedclient spotbugs checkstyle codespell detsecrets </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux da84b7c3b3c3 5.15.0-88-generic #98-Ubuntu
+            SMP Mon Oct 2 15:18:56 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> dev-support/bin/hadoop.sh </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 29d5dd4b7c5efa93901e2f398af0a36d233e476b
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Multi-JDK versions </td>
+
+            <td class=''confluenceTd''> /usr/lib/jvm/java-11-openjdk-amd64:Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04
+            /usr/lib/jvm/java-8-openjdk-amd64:Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 941 (vs. ulimit of 5500) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/2/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> versions </td>
+
+            <td class=''confluenceTd''> git=2.25.1 maven=3.6.3 spotbugs=4.2.2 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.14.0 <a href="https://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">https://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>   This message was automatically generated.</p>'
+          '@author': githubbot
+          '@created': Wed, 10 Jan 2024 17:45:57 +0000
+          '@id': '17805240'
+        - '#text': '<p>hadoop-yetus commented on PR #6433:<br/>
+
+            URL: <a href="https://github.com/apache/hadoop/pull/6433#issuecomment-1886820435"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433#issuecomment-1886820435</a></p>
+
+
+            <p>   :confetti_ball: *<b>+1 overall</b>*</p>
+
+
+
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Vote </td>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Runtime </td>
+
+            <td class=''confluenceTd''>  Logfile </td>
+
+            <td class=''confluenceTd''> Comment </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>:----:</td>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>--------:</td>
+
+            <td class=''confluenceTd''>:--------:</td>
+
+            <td class=''confluenceTd''>:-------:</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  reexec  </td>
+
+            <td class=''confluenceTd''>   0m 20s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  Docker mode activated.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Prechecks _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  dupname  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  No case conflicting files found.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  codespell  </td>
+
+            <td class=''confluenceTd''>   0m  1s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  codespell was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +0 :ok: </td>
+
+            <td class=''confluenceTd''>  detsecrets  </td>
+
+            <td class=''confluenceTd''>   0m  1s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  detect-secrets was not available.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  @author  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not contain any @author tags.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  test4tests  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch appears to include 1 new or modified
+            test files.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ trunk Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>  31m 30s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 33s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 30s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 30s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 32s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 35s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m 10s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  trunk passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  19m 52s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  branch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Patch Compile Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvninstall  </td>
+
+            <td class=''confluenceTd''>   0m 25s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 26s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  compile  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javac  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  blanks  </td>
+
+            <td class=''confluenceTd''>   0m  0s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch has no blanks issues.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  checkstyle  </td>
+
+            <td class=''confluenceTd''>   0m 21s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  mvnsite  </td>
+
+            <td class=''confluenceTd''>   0m 27s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  javadoc  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed with JDK Private Build-1.8.0_392-8u392-ga-1~20.04-b08  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  spotbugs  </td>
+
+            <td class=''confluenceTd''>   1m  8s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  the patch passed  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  shadedclient  </td>
+
+            <td class=''confluenceTd''>  19m 49s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  patch has no errors when building and testing
+            our client artifacts.  </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''> _ Other Tests _ </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  unit  </td>
+
+            <td class=''confluenceTd''>  86m  3s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  hadoop-yarn-server-resourcemanager in the
+            patch passed.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> +1 :green_heart: </td>
+
+            <td class=''confluenceTd''>  asflicense  </td>
+
+            <td class=''confluenceTd''>   0m 24s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>  The patch does not generate ASF License warnings.  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''> 167m 50s </td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            <td class=''confluenceTd''>&nbsp;</td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> Subsystem </td>
+
+            <td class=''confluenceTd''> Report/Notes </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>----------:</td>
+
+            <td class=''confluenceTd''>:-------------</td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> ClientAPI=1.43 ServerAPI=1.43 base: <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/artifact/out/Dockerfile"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/artifact/out/Dockerfile</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> GITHUB PR </td>
+
+            <td class=''confluenceTd''> <a href="https://github.com/apache/hadoop/pull/6433"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''> dupname asflicense compile javac javadoc mvninstall
+            mvnsite unit shadedclient spotbugs checkstyle codespell detsecrets </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux cc5e70693e1e 5.15.0-88-generic #98-Ubuntu
+            SMP Mon Oct 2 15:18:56 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> dev-support/bin/hadoop.sh </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 60444baa9559c354a9ba67696488b33ea9915143
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Multi-JDK versions </td>
+
+            <td class=''confluenceTd''> /usr/lib/jvm/java-11-openjdk-amd64:Ubuntu-11.0.21+9-post-Ubuntu-0ubuntu120.04
+            /usr/lib/jvm/java-8-openjdk-amd64:Private Build-1.8.0_392-8u392-ga-1~20.04-b08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 952 (vs. ulimit of 5500) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://ci-hadoop.apache.org/job/hadoop-multibranch/job/PR-6433/3/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> versions </td>
+
+            <td class=''confluenceTd''> git=2.25.1 maven=3.6.3 spotbugs=4.2.2 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.14.0 <a href="https://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">https://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>   This message was automatically generated.</p>'
+          '@author': githubbot
+          '@created': Thu, 11 Jan 2024 10:34:58 +0000
+          '@id': '17805494'
+        - '#text': '<p>K0K0V0K commented on PR #6433:<br/>
+
+            URL: <a href="https://github.com/apache/hadoop/pull/6433#issuecomment-1886953063"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433#issuecomment-1886953063</a></p>
+
+
+            <p>   Thanks @tomicooler for this change! LGTM!</p>'
+          '@author': githubbot
+          '@created': Thu, 11 Jan 2024 11:36:55 +0000
+          '@id': '17805531'
+        - '#text': '<p>brumi1024 merged PR #6433:<br/>
+
+            URL: <a href="https://github.com/apache/hadoop/pull/6433" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/hadoop/pull/6433</a></p>'
+          '@author': githubbot
+          '@created': Thu, 11 Jan 2024 12:47:03 +0000
+          '@id': '17805562'
+      component: capacityscheduler
+      created: Wed, 10 Jan 2024 14:50:47 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 1 year, 17 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1mo20:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>There is no reason to ignore the configured capacity if the
+        memory is 0 in the configuration.</p>
+
+
+        <p>It makes it impossible to configure a zero absolute resource capacity.</p>
+
+
+        <p>Example:</p>
+
+        <div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent
+        panelContent">
+
+        <pre>root.default.capacity=[memory=0, vcores=0]
+
+        root.default.maximum-capacity=[memory=2048, vcores=2]
+
+        </pre>
+
+        </div></div>'
+      due: null
+      environment: null
+      fixVersion: 3.4.0
+      key:
+        '#text': YARN-11646
+        '@id': '13564210'
+      labels:
+        label: pull-request-available
+      link: https://issues.apache.org/jira/browse/YARN-11646
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Tamas Domok
+        '@username': tdomok
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 11 Jan 2024 12:49:15 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: QueueCapacityConfigParser shouldn't ignore capacity config with 0 memory
+      title: '[YARN-11646] QueueCapacityConfigParser shouldn''t ignore capacity config
+        with 0 memory'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 11 Jan 2024 12:49:15 +0000
+      version: 3.4.0
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
