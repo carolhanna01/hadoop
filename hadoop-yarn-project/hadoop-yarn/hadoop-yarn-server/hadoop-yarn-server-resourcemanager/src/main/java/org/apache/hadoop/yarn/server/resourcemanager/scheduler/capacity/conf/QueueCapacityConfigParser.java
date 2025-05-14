@@ -148,6 +148,11 @@ public class QueueCapacityConfigParser {
       }
     }
 
+    // Memory always have to be defined
+    if (capacityVector.getMemory() == 0L) {
+      return new QueueCapacityVector();
+    }
+
     return capacityVector;
   }
 
