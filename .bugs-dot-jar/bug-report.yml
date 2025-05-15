@@ -1,0 +1,793 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Bibin Chundatt
+        '@username': bibinchundatt
+      attachments:
+        attachment:
+          '@author': bibinchundatt
+          '@created': Tue, 31 Jul 2018 13:54:40 +0000
+          '@id': '12933769'
+          '@name': YARN-8606.001.patch
+          '@size': '8943'
+      comments:
+        comment:
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/error.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="red">-1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Prechecks </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> trunk Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 26m 11s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 43s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 46s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 12m 10s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> branch has no errors
+            when building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 11s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 28s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Patch Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 44s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 39s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 39s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  9s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 41s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 12m 17s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> patch has no errors when
+            building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 17s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 27s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Other Tests </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="red">-1</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> 69m 35s</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> hadoop-yarn-server-resourcemanager
+            in the patch failed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 24s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black">128m 26s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Reason </th>
+
+            <th class=''confluenceTh''> Tests </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Failed junit tests </td>
+
+            <td class=''confluenceTd''> hadoop.yarn.server.resourcemanager.scheduler.fair.policies.TestDominantResourceFairnessPolicy
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> Client=17.05.0-ce Server=17.05.0-ce Image:yetus/hadoop:ba1ab08
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-8606"
+            title="Opportunistic scheduling does not work post RM failover" class="issue-link"
+            data-issue-key="YARN-8606"><del>YARN-8606</del></a> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12933769/YARN-8606.001.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12933769/YARN-8606.001.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  shadedclient  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux dc6f86b2fb80 3.13.0-153-generic #203-Ubuntu
+            SMP Thu Jun 14 08:52:28 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 7631e0a </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> maven </td>
+
+            <td class=''confluenceTd''> version: Apache Maven 3.3.9 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_171 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.1.0-RC1 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> unit </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/21448/artifact/out/patch-unit-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/21448/artifact/out/patch-unit-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/21448/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/21448/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 928 (vs. ulimit of 10000) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/21448/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/21448/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.8.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': genericqa
+          '@created': Tue, 31 Jul 2018 16:08:58 +0000
+          '@id': '16563892'
+        - '#text': '<p>cc: <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=leftnoteasy"
+            class="user-hover" rel="leftnoteasy">leftnoteasy</a> . Could you please
+            review</p>'
+          '@author': bibinchundatt
+          '@created': Tue, 31 Jul 2018 16:23:08 +0000
+          '@id': '16563919'
+        - '#text': <p>Thanks for the patch <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=bibinchundatt"
+            class="user-hover" rel="bibinchundatt">bibinchundatt</a>. createApplicationMasterService
+            is already registering an EventDispatcher for OpportunisticContainerAllocatorAMService
+            when opportunistic scheduling is enabled in RMActiveServices composite
+            service. Can you pls explain what is the issue and what this patch intends
+            to fix? </p>
+          '@author': suma.shivaprasad
+          '@created': Tue, 31 Jul 2018 17:40:58 +0000
+          '@id': '16564054'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=bibinchundatt"
+            class="user-hover" rel="bibinchundatt">bibinchundatt</a>, is this a regression
+            recently? If yes, which JIRA breaks the use case?</p>
+          '@author': leftnoteasy
+          '@created': Tue, 31 Jul 2018 18:12:33 +0000
+          '@id': '16564089'
+        - '#text': '<p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=suma.shivaprasad"
+            class="user-hover" rel="suma.shivaprasad">suma.shivaprasad</a></p>
+
+
+            <blockquote>
+
+            <p> EventDispatcher for OpportunisticContainerAllocatorAMService when
+            opportunistic scheduling is enabled in RMActiveServices composite service</p></blockquote>
+
+            <p>Coud you recheck, Its getting added to ResourceManager composite Service.
+            <tt>createApplicationMasterService()</tt> of ResourceManager class not
+            the inner RMActiveServices so service gets added to Resourcemanager CompositeService.</p>
+
+
+            <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=leftnoteasy"
+            class="user-hover" rel="leftnoteasy">leftnoteasy</a></p>
+
+
+            <p>Not regression but blocking issue as per functionality</p>'
+          '@author': bibinchundatt
+          '@created': Wed, 1 Aug 2018 04:57:33 +0000
+          '@id': '16564737'
+        - '#text': "<p><a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=bibinchundatt\"\
+            \ class=\"user-hover\" rel=\"bibinchundatt\">bibinchundatt</a>,\_</p>\n\
+            \n<p>Gotcha, fix make sense to me. +1 to the patch. I think the failed\
+            \ UT is not related.\_</p>"
+          '@author': leftnoteasy
+          '@created': Wed, 1 Aug 2018 05:52:06 +0000
+          '@id': '16564775'
+        - '#text': <p>Looks good to me as well. Committing shortly.</p>
+          '@author': sunilg
+          '@created': Wed, 1 Aug 2018 05:57:00 +0000
+          '@id': '16564778'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=bibinchundatt"
+            class="user-hover" rel="bibinchundatt">bibinchundatt</a> for the patch.
+            Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=leftnoteasy"
+            class="user-hover" rel="leftnoteasy">leftnoteasy</a> and <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=suma.shivaprasad"
+            class="user-hover" rel="suma.shivaprasad">suma.shivaprasad</a> for additional
+            reviews. Committed to trunk/branch-3.1</p>
+          '@author': sunilg
+          '@created': Wed, 1 Aug 2018 07:09:51 +0000
+          '@id': '16564859'
+        - '#text': "<p>SUCCESS: Integrated in Jenkins build Hadoop-trunk-Commit #14685\
+            \ (See <a href=\"https://builds.apache.org/job/Hadoop-trunk-Commit/14685/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-trunk-Commit/14685/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-8606\" title=\"Opportunistic\
+            \ scheduling does not work post RM failover\" class=\"issue-link\" data-issue-key=\"\
+            YARN-8606\"><del>YARN-8606</del></a>. Opportunistic scheduling does not\
+            \ work post RM failover. (sunilg: rev a48a0cc7fd8e7ac1c07b260e6078077824f27c35)</p>\n\
+            <ul>\n\t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/OpportunisticContainerAllocatorAMService.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 1 Aug 2018 07:09:57 +0000
+          '@id': '16564860'
+      created: Tue, 31 Jul 2018 13:53:15 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 6 years, 42 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3witr:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 3.1.1
+              '@id': '12342982'
+      description: '<p>EventDispatcher for oppurtunistic scheduling is added to RM
+        composite service and not RMActiveService composite service  causing dispatcher
+        to be started once on RM restart.</p>
+
+
+        <p>Issue credits: Rakesh</p>'
+      due: null
+      environment: null
+      fixVersion:
+      - 3.2.0
+      - 3.1.1
+      key:
+        '#text': YARN-8606
+        '@id': '13175841'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-8606
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Bibin Chundatt
+        '@username': bibinchundatt
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 1 Aug 2018 07:09:51 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Opportunistic scheduling does not work post RM failover
+      title: '[YARN-8606] Opportunistic scheduling does not work post RM failover'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Wed, 1 Aug 2018 07:09:57 +0000
+      version: 3.1.0
+      votes: '0'
+      watches: '5'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
