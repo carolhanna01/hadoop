@@ -1,0 +1,78 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< org.apache.hadoop:hadoop-yarn-server-resourcemanager >--------
+[INFO] Building Apache Hadoop YARN ResourceManager 3.2.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager (includes = [dependency-reduced-pom.xml], excludes = [])
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/test-dir
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.2.0-SNAPSHOT:protoc (compile-protoc) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Wrote protoc checksums to file /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/hadoop-maven-plugins-protoc-checksums.json
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ hadoop-yarn-server-resourcemanager ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Compiling 574 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/distributed/NodeQueueLoadMonitor.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/distributed/NodeQueueLoadMonitor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.2.0-SNAPSHOT:test-protoc (compile-test-protoc) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Wrote protoc checksums to file /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/hadoop-maven-plugins-protoc-checksums.json
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 16 resources
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Compiling 289 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FairSchedulerTestBase.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FairSchedulerTestBase.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMRestart.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMRestart.java: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java:[697,25] getLeastLoadedNodes() has private access in org.apache.hadoop.yarn.server.resourcemanager.OpportunisticContainerAllocatorAMService
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java:[701,37] getLeastLoadedNodes() has private access in org.apache.hadoop.yarn.server.resourcemanager.OpportunisticContainerAllocatorAMService
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.703 s
+[INFO] Finished at: 2025-05-15T19:38:35+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project hadoop-yarn-server-resourcemanager: Compilation failure: Compilation failure: 
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java:[697,25] getLeastLoadedNodes() has private access in org.apache.hadoop.yarn.server.resourcemanager.OpportunisticContainerAllocatorAMService
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java:[701,37] getLeastLoadedNodes() has private access in org.apache.hadoop.yarn.server.resourcemanager.OpportunisticContainerAllocatorAMService
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
