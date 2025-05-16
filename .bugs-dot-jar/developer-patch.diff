@@ -1,0 +1,94 @@
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/webapp/RouterWebServiceUtil.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/webapp/RouterWebServiceUtil.java
+index 5528e784a0..76435f0551 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/webapp/RouterWebServiceUtil.java
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/webapp/RouterWebServiceUtil.java
+@@ -406,22 +406,26 @@ public static void mergeMetrics(ClusterMetricsInfo metrics,
+     metrics.setContainersPending(metrics.getPendingContainers()
+         + metricsResponse.getPendingContainers());
+ 
+-    metrics.setTotalMB(metrics.getTotalMB() + metricsResponse.getTotalMB());
+-    metrics.setTotalVirtualCores(
+-        metrics.getTotalVirtualCores() + metrics.getTotalVirtualCores());
+-    metrics.setTotalNodes(metrics.getTotalNodes() + metrics.getTotalNodes());
+-    metrics.setLostNodes(metrics.getLostNodes() + metrics.getLostNodes());
+-    metrics.setUnhealthyNodes(
+-        metrics.getUnhealthyNodes() + metrics.getUnhealthyNodes());
+-    metrics.setDecommissioningNodes(
+-        metrics.getDecommissioningNodes() + metrics.getDecommissioningNodes());
+-    metrics.setDecommissionedNodes(
+-        metrics.getDecommissionedNodes() + metrics.getDecommissionedNodes());
+-    metrics.setRebootedNodes(
+-        metrics.getRebootedNodes() + metrics.getRebootedNodes());
+-    metrics.setActiveNodes(metrics.getActiveNodes() + metrics.getActiveNodes());
+-    metrics.setShutdownNodes(
+-        metrics.getShutdownNodes() + metrics.getShutdownNodes());
++    metrics.setTotalMB(metrics.getTotalMB()
++        + metricsResponse.getTotalMB());
++    metrics.setTotalVirtualCores(metrics.getTotalVirtualCores()
++        + metricsResponse.getTotalVirtualCores());
++    metrics.setTotalNodes(metrics.getTotalNodes()
++        + metricsResponse.getTotalNodes());
++    metrics.setLostNodes(metrics.getLostNodes()
++        + metricsResponse.getLostNodes());
++    metrics.setUnhealthyNodes(metrics.getUnhealthyNodes()
++        + metricsResponse.getUnhealthyNodes());
++    metrics.setDecommissioningNodes(metrics.getDecommissioningNodes()
++        + metricsResponse.getDecommissioningNodes());
++    metrics.setDecommissionedNodes(metrics.getDecommissionedNodes()
++        + metricsResponse.getDecommissionedNodes());
++    metrics.setRebootedNodes(metrics.getRebootedNodes()
++        + metricsResponse.getRebootedNodes());
++    metrics.setActiveNodes(metrics.getActiveNodes()
++        + metricsResponse.getActiveNodes());
++    metrics.setShutdownNodes(metrics.getShutdownNodes()
++        + metricsResponse.getShutdownNodes());
+   }
+ 
+ }
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/test/java/org/apache/hadoop/yarn/server/router/webapp/TestRouterWebServiceUtil.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/test/java/org/apache/hadoop/yarn/server/router/webapp/TestRouterWebServiceUtil.java
+index 7073b3b3f2..edf3804d82 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/test/java/org/apache/hadoop/yarn/server/router/webapp/TestRouterWebServiceUtil.java
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/test/java/org/apache/hadoop/yarn/server/router/webapp/TestRouterWebServiceUtil.java
+@@ -33,11 +33,15 @@
+ import org.apache.hadoop.yarn.server.uam.UnmanagedApplicationManager;
+ import org.junit.Assert;
+ import org.junit.Test;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
+ 
+ /**
+  * Test class to validate RouterWebServiceUtil methods.
+  */
+ public class TestRouterWebServiceUtil {
++  private static final Logger LOG =
++      LoggerFactory.getLogger(TestRouterWebServiceUtil.class);
+ 
+   private static final ApplicationId APPID1 = ApplicationId.newInstance(1, 1);
+   private static final ApplicationId APPID2 = ApplicationId.newInstance(2, 1);
+@@ -407,8 +411,12 @@ public void testMergeMetrics() {
+     ClusterMetricsInfo metrics = new ClusterMetricsInfo();
+     ClusterMetricsInfo metricsResponse = new ClusterMetricsInfo();
+ 
+-    setUpClusterMetrics(metrics);
+-    setUpClusterMetrics(metricsResponse);
++    long seed = System.currentTimeMillis();
++    setUpClusterMetrics(metrics, seed);
++    // ensure that we don't reuse the same seed when setting up metricsResponse
++    // or it might mask bugs
++    seed += 1000000000;
++    setUpClusterMetrics(metricsResponse, seed);
+     ClusterMetricsInfo metricsClone = createClusterMetricsClone(metrics);
+     RouterWebServiceUtil.mergeMetrics(metrics, metricsResponse);
+ 
+@@ -538,8 +546,9 @@ private ClusterMetricsInfo createClusterMetricsClone(
+ 
+   }
+ 
+-  private void setUpClusterMetrics(ClusterMetricsInfo metrics) {
+-    Random rand = new Random(System.currentTimeMillis());
++  private void setUpClusterMetrics(ClusterMetricsInfo metrics, long seed) {
++    LOG.info("Using seed: " + seed);
++    Random rand = new Random(seed);
+     metrics.setAppsSubmitted(rand.nextInt(1000));
+     metrics.setAppsCompleted(rand.nextInt(1000));
+     metrics.setAppsPending(rand.nextInt(1000));

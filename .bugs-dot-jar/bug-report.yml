@@ -1,0 +1,817 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Robert Kanter
+        '@username': rkanter
+      attachments:
+        attachment:
+          '@author': rkanter
+          '@created': Mon, 16 Oct 2017 23:46:14 +0000
+          '@id': '12892492'
+          '@name': YARN-7341.001.patch
+          '@size': '5405'
+      comments:
+        comment:
+        - '#text': '<p>It turns out that this is a real bug introduced by <a href="https://issues.apache.org/jira/browse/YARN-7095"
+            title="Federation: routing getNode/getNodes/getMetrics REST invocations
+            transparently to multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>.  <tt>RouterWebServiceUtil#mergeMetrics</tt>
+            takes into two sets of metrics and merges them into the first one.  However,
+            for a number of the metrics, it actually simply doubles the first metric.  For
+            example</p>
+
+            <div class="code panel" style="border-width: 1px;"><div class="codeContent
+            panelContent">
+
+            <pre class="code-java">
+
+            metrics.setTotalNodes(metrics.getTotalNodes() + metrics.getTotalNodes());
+
+            </pre>
+
+            </div></div>
+
+            <p>should be</p>
+
+            <div class="code panel" style="border-width: 1px;"><div class="codeContent
+            panelContent">
+
+            <pre class="code-java">
+
+            metrics.setTotalNodes(metrics.getTotalNodes() + metricsResponse.getTotalNodes());
+
+            </pre>
+
+            </div></div>
+
+
+            <p>This should have failed every time, but the test also had a "flaw",
+            which only made it flakey.  The test initializes two sets of metrics to
+            random values using different <tt>Random</tt> objects using <tt>System.getCurrentTimeMillis()</tt>
+            for the seed.  However, the code is fast enough that it often takes less
+            than 1ms, causing the two objects to use the same seed.  When this happens,
+            the two sets of metrics have the same values, and will mask the bug I
+            described earlier.  If the code is slower (e.g. GC pause, swapping, adding
+            a log statement for the seed, etc), then you''ll get different seed values
+            and the test will (correctly) fail.</p>
+
+
+            <p>The 001 patch fixes the bug by using the correct metric in <tt>RouterWebServiceUtil#mergeMetrics</tt>.  And
+            it fixes the test by ensuring that the two seeds will be different.  It
+            also cleans up some formatting and logs the seed for better debugability.</p>'
+          '@author': rkanter
+          '@created': Mon, 16 Oct 2017 23:46:16 +0000
+          '@id': '16206790'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/check.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="green">+1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 20s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Prechecks </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> trunk Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 12m 37s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 19s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 20s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green">  9m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> branch has no errors
+            when building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 26s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 12s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Patch Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 17s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 15s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 15s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 10s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 18s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 10m  8s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> patch has no errors when
+            building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 34s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Other Tests </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m  3s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-yarn-server-router
+            in the patch passed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 18s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> 37m 52s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''>  Image:yetus/hadoop:0de40f0 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-7341"
+            title="TestRouterWebServiceUtil#testMergeMetrics is flakey" class="issue-link"
+            data-issue-key="YARN-7341"><del>YARN-7341</del></a> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12892492/YARN-7341.001.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12892492/YARN-7341.001.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  shadedclient  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 5c44187fc487 4.4.0-43-generic #63-Ubuntu
+            SMP Wed Oct 12 13:48:03 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/hadoop/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / e906108 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_144 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.1.0-RC1 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/17976/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/17976/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/17976/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/17976/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.6.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': hadoopqa
+          '@created': Tue, 17 Oct 2017 00:38:42 +0000
+          '@id': '16206836'
+        - '#text': <p>+1. Will commit it shortly</p>
+          '@author': haibochen
+          '@created': Tue, 17 Oct 2017 16:33:58 +0000
+          '@id': '16207879'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rkanter"
+            class="user-hover" rel="rkanter">rkanter</a> for the patch. I have committed
+            it to trunk and branch-3.0.</p>
+          '@author': haibochen
+          '@created': Tue, 17 Oct 2017 17:28:49 +0000
+          '@id': '16207990'
+        - '#text': "<p>SUCCESS: Integrated in Jenkins build Hadoop-trunk-Commit #13098\
+            \ (See <a href=\"https://builds.apache.org/job/Hadoop-trunk-Commit/13098/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-trunk-Commit/13098/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-7341\" title=\"TestRouterWebServiceUtil#testMergeMetrics\
+            \ is flakey\" class=\"issue-link\" data-issue-key=\"YARN-7341\"><del>YARN-7341</del></a>.\
+            \ TestRouterWebServiceUtil#testMergeMetrics is flakey. (Robert (haibochen:\
+            \ rev acabc657ff5433f36ce1b238cecd3a3b5bbe87ae)</p>\n<ul>\n\t<li>(edit)\
+            \ hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/webapp/RouterWebServiceUtil.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/test/java/org/apache/hadoop/yarn/server/router/webapp/TestRouterWebServiceUtil.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Tue, 17 Oct 2017 17:42:07 +0000
+          '@id': '16208008'
+        - '#text': '<p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=haibochen"
+            class="user-hover" rel="haibochen">haibochen</a> does this need to go
+            into branch-2 as well?  <a href="https://issues.apache.org/jira/browse/YARN-7095"
+            title="Federation: routing getNode/getNodes/getMetrics REST invocations
+            transparently to multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>
+            was also committed to branch-2, and IIUC that means branch-2 has the same
+            problem as reported here.</p>'
+          '@author': jlowe
+          '@created': Tue, 17 Oct 2017 18:04:57 +0000
+          '@id': '16208048'
+        - '#text': '<p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=jlowe"
+            class="user-hover" rel="jlowe">jlowe</a>, neither the <tt>mergeMetrics</tt>
+            method nor the test exist in branch-2, so I figured that <a href="https://issues.apache.org/jira/browse/YARN-7095"
+            title="Federation: routing getNode/getNodes/getMetrics REST invocations
+            transparently to multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>
+            had a different patch for branch-2.  But looking at the git history now,
+            it looks like it''s not actually in branch-2 at all:</p>
+
+            <div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent
+            panelContent">
+
+            <pre>&gt;&gt; [155] 11:09 : hadoop-common (trunk) :: git log branch-2
+            --oneline | grep YARN-7095
+
+            &gt;&gt; [156] 11:21 : hadoop-common (trunk) :: git log trunk --oneline
+            | grep YARN-7095
+
+            bac4e8cca8b YARN-7095. Federation: routing getNode/getNodes/getMetrics
+            REST invocations transparently to multiple RMs. (Giovanni Matteo Fumarola
+            via Subru).
+
+            &gt;&gt; [157] 11:21 : hadoop-common (trunk) :: git log branch-3.0 --oneline
+            | grep YARN-7095
+
+            bac4e8cca8b YARN-7095. Federation: routing getNode/getNodes/getMetrics
+            REST invocations transparently to multiple RMs. (Giovanni Matteo Fumarola
+            via Subru).
+
+            </pre>
+
+            </div></div>
+
+            <p>Either <a href="https://issues.apache.org/jira/browse/YARN-7095" title="Federation:
+            routing getNode/getNodes/getMetrics REST invocations transparently to
+            multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>
+            has the wrong fix version or someone forgot to backport it.  <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=subru"
+            class="user-hover" rel="subru">subru</a>?</p>'
+          '@author': rkanter
+          '@created': Tue, 17 Oct 2017 18:23:59 +0000
+          '@id': '16208087'
+        - '#text': '<p>Ah, sorry, I was simply going off of the JIRA versions and
+            should have looked at the code.  Thanks for the clarification.  Guess
+            we''ll wait to hear from Subru on what branch-2 is supposed to look like
+            wrt. <a href="https://issues.apache.org/jira/browse/YARN-7095" title="Federation:
+            routing getNode/getNodes/getMetrics REST invocations transparently to
+            multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>.</p>'
+          '@author': jlowe
+          '@created': Tue, 17 Oct 2017 18:26:53 +0000
+          '@id': '16208092'
+        - '#text': '<p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rkanter"
+            class="user-hover" rel="rkanter">rkanter</a>/<a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=jlowe"
+            class="user-hover" rel="jlowe">jlowe</a> for bringing this to my attention.
+            I cherry-picked this along with <a href="https://issues.apache.org/jira/browse/YARN-7095"
+            title="Federation: routing getNode/getNodes/getMetrics REST invocations
+            transparently to multiple RMs" class="issue-link" data-issue-key="YARN-7095"><del>YARN-7095</del></a>
+            to branch-2.</p>'
+          '@author': subru
+          '@created': Tue, 17 Oct 2017 19:45:25 +0000
+          '@id': '16208221'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=subru"
+            class="user-hover" rel="subru">subru</a>.</p>
+          '@author': rkanter
+          '@created': Tue, 17 Oct 2017 20:23:17 +0000
+          '@id': '16208270'
+      component: federation
+      created: Mon, 16 Oct 2017 23:40:49 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 7 years, 31 weeks, 2 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3lbzb:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p><tt>TestRouterWebServiceUtil#testMergeMetrics</tt> is flakey.\
+        \  It sometimes fails with something like:</p>\n<div class=\"preformatted\
+        \ panel\" style=\"border-width: 1px;\"><div class=\"preformattedContent panelContent\"\
+        >\n<pre>Running org.apache.hadoop.yarn.server.router.webapp.TestRouterWebServiceUtil\n\
+        Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec\
+        \ &lt;&lt;&lt; FAILURE! - in org.apache.hadoop.yarn.server.router.webapp.TestRouterWebServiceUtil\n\
+        testMergeMetrics(org.apache.hadoop.yarn.server.router.webapp.TestRouterWebServiceUtil)\
+        \  Time elapsed: 0.005 sec  &lt;&lt;&lt; FAILURE!\njava.lang.AssertionError:\
+        \ expected:&lt;1092&gt; but was:&lt;584&gt;\n\tat org.junit.Assert.fail(Assert.java:88)\n\
+        \tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\
+        \tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\
+        \tat org.apache.hadoop.yarn.server.router.webapp.TestRouterWebServiceUtil.testMergeMetrics(TestRouterWebServiceUtil.java:473)\n\
+        </pre>\n</div></div>"
+      due: null
+      environment: null
+      fixVersion:
+      - 2.9.0
+      - 3.0.0
+      - 3.1.0
+      issuelinks:
+        issuelinktype:
+          '@id': '12310050'
+          inwardlinks:
+            '@description': is broken by
+            issuelink:
+              issuekey:
+                '#text': YARN-7095
+                '@id': '13097460'
+          name: Regression
+      key:
+        '#text': YARN-7341
+        '@id': '13109834'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-7341
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Robert Kanter
+        '@username': rkanter
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Tue, 17 Oct 2017 17:28:49 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: TestRouterWebServiceUtil#testMergeMetrics is flakey
+      title: '[YARN-7341] TestRouterWebServiceUtil#testMergeMetrics is flakey'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 17 Oct 2017 20:23:17 +0000
+      version: 3.0.0-beta1
+      votes: '0'
+      watches: '5'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
