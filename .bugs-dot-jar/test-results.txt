@@ -1,0 +1,135 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.hadoop:hadoop-common >-------------------
+[INFO] Building Apache Hadoop Common 3.0.0-alpha1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ hadoop-common ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/site/markdown (includes = [UnixShellAPI.md], excludes = [])
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/site/resources (includes = [configuration.xsl, core-default.xml], excludes = [])
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-dir
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-alpha1-SNAPSHOT:protoc (compile-protoc) @ hadoop-common ---
+[INFO] Wrote protoc checksums to file /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/hadoop-maven-plugins-protoc-checksums.json
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-alpha1-SNAPSHOT:version-info (version-info) @ hadoop-common ---
+[WARNING] [svn, info] failed: java.io.IOException: Cannot run program "svn": error=2, No such file or directory
+[INFO] SCM: GIT
+[INFO] Computed MD5: 5987b5eb6518d9b59537b5b24474f773
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ hadoop-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (copy-files) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-common ---
+[INFO] Compiling 882 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[46,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[56,19] sun.net.dns.ResolverConfiguration is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[57,20] sun.net.util.IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[21,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[22,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[25,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[329,39] sun.nio.ch.DirectBuffer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[330,17] sun.misc.Cleaner is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[331,25] sun.nio.ch.DirectBuffer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[684,17] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[686,7] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/nativeio/NativeIO.java:[686,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/LdapGroupsMapping.java:[507,28] com.sun.jndi.ldap.LdapCtxFactory is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[583,9] sun.net.dns.ResolverConfiguration is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[601,11] sun.net.util.IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[603,21] sun.net.util.IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[605,18] sun.net.util.IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[607,21] sun.net.util.IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[44,43] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[46,19] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[50,39] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[50,21] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/SignalLogger.java:[59,24] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[136,20] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[142,22] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[147,29] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/crypto/CryptoStreamUtils.java:[39,37] sun.nio.ch.DirectBuffer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/crypto/CryptoStreamUtils.java:[40,21] sun.misc.Cleaner is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/crypto/CryptoStreamUtils.java:[41,23] sun.nio.ch.DirectBuffer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/FilterFileSystem.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/FilterFileSystem.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/FileSystem.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/fs/FileSystem.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-alpha1-SNAPSHOT:protoc (compile-test-protoc) @ hadoop-common ---
+[INFO] Wrote protoc checksums to file /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/hadoop-maven-plugins-protoc-checksums.json
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.4:schema (generate-avro-test-sources) @ hadoop-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-log-dir) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/log
+     [copy] Copying 8 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-classes
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-common ---
+[INFO] Compiling 538 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/TestFindClass.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/TestFindClass.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/security/TestCredentials.java: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/security/TestCredentials.java uses unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/security/TestCredentials.java: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/http/HttpServerFunctionalTest.java:[185,9] cannot find symbol
+  symbol:   method configureXFrame(boolean)
+  location: class org.apache.hadoop.http.HttpServer2.Builder
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.525 s
+[INFO] Finished at: 2025-05-17T00:29:53+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project hadoop-common: Compilation failure
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/http/HttpServerFunctionalTest.java:[185,9] cannot find symbol
+[ERROR]   symbol:   method configureXFrame(boolean)
+[ERROR]   location: class org.apache.hadoop.http.HttpServer2.Builder
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
