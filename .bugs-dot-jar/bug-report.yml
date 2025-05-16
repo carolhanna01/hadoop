@@ -1,0 +1,1989 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Tao Yang
+        '@username': Tao Yang
+      attachments:
+        attachment:
+        - '@author': Tao Yang
+          '@created': Thu, 29 Mar 2018 04:52:43 +0000
+          '@id': '12916740'
+          '@name': YARN-8085.001.patch
+          '@size': '3519'
+        - '@author': Tao Yang
+          '@created': Thu, 29 Mar 2018 05:37:35 +0000
+          '@id': '12916743'
+          '@name': YARN-8085.002.patch
+          '@size': '5840'
+        - '@author': Tao Yang
+          '@created': Thu, 29 Mar 2018 07:12:38 +0000
+          '@id': '12916758'
+          '@name': YARN-8085.003.patch
+          '@size': '7421'
+        - '@author': Tao Yang
+          '@created': Thu, 29 Mar 2018 07:55:38 +0000
+          '@id': '12916765'
+          '@name': YARN-8085.004.patch
+          '@size': '8114'
+      comments:
+        comment:
+        - '#text': "<p>Thanks <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=Tao+Yang\"\
+            \ class=\"user-hover\" rel=\"Tao Yang\">Tao Yang</a>, nice catch. ResourceProfilesManager\
+            \ was added in\_<a href=\"https://issues.apache.org/jira/browse/YARN-5707\"\
+            \ title=\"Add manager class for resource profiles\" class=\"issue-link\"\
+            \ data-issue-key=\"YARN-5707\"><del>YARN-5707</del></a>, so only affected\
+            \ version is 3.1.0. Since this one would cause NPE in fail-over, not sure\
+            \ if we can get this into 3.1.0 as it already enters RC0. + <a href=\"\
+            https://issues.apache.org/jira/secure/ViewProfile.jspa?name=wangda\" class=\"\
+            user-hover\" rel=\"wangda\">wangda</a> to the loop.</p>\n\n<p>Regarding\
+            \ to the fix, can we move <tt>ResourceProfilesManager</tt> into the\_\
+            <tt>RMServiceContext</tt> ? As ResourceManager#resetRMContext is supposedly\
+            \ to get the reset done by</p>\n<div class=\"code panel\" style=\"border-width:\
+            \ 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"code-java\"\
+            >\nrmContextImpl.setServiceContext(rmContext.getServiceContext());\n\n\
+            </pre>\n</div></div>\n<p>\_don't think we need an extra set here.\_Does\
+            \ that make sense?</p>\n\n<p>Thanks</p>"
+          '@author': cheersyang
+          '@created': Thu, 29 Mar 2018 05:18:26 +0000
+          '@id': '16418450'
+        - '#text': '<p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cheersyang"
+            class="user-hover" rel="cheersyang">cheersyang</a> for your suggestion.</p>
+
+
+            <p>Yes, RMServiceContext contains services which will be running always
+            irrespective of the HA state of the RM. It''s better to move ResourceProfilesManager
+            into RMServiceContext.</p>
+
+
+            <p>Attached v2 patch for review.</p>'
+          '@author': tao yang
+          '@created': Thu, 29 Mar 2018 05:37:15 +0000
+          '@id': '16418461'
+        - '#text': '<p>thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=Tao+Yang"
+            class="user-hover" rel="Tao Yang">Tao Yang</a> for the patch! It is a
+            blocker for 3.1.0.</p>
+
+
+            <p>Regarding the patch, we have clear separation of alwaysOnService vs
+            activeServiceContext. ResourceProfilesManager should be part of active
+            service context because activeServiceContext context is refreshed  for
+            every transition. I see that profiles are loaded during service initialization.
+            If it get added into serviceContext, then profiles are NOT refreshed which
+            get stale profile information. cc :/ <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=sunilg"
+            class="user-hover" rel="sunilg">sunilg</a></p>'
+          '@author': rohithsharma
+          '@created': Thu, 29 Mar 2018 06:27:48 +0000
+          '@id': '16418494'
+        - '#text': "<p>This should be part of\_activeServiceContext. Same reason given\
+            \ by <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rohithsharma\"\
+            \ class=\"user-hover\" rel=\"rohithsharma\">rohithsharma</a>, there is\
+            \ more chance to have stale data if its alwaysOn</p>"
+          '@author': sunilg
+          '@created': Thu, 29 Mar 2018 06:31:19 +0000
+          '@id': '16418496'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=Tao+Yang"
+            class="user-hover" rel="Tao Yang">Tao Yang</a> for reporting this issue,
+            I'm glad to see this you found this issue before 3.1.0 release. <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=Tao+Yang"
+            class="user-hover" rel="Tao Yang">Tao Yang</a>, could you report this
+            to 3.1.0 voting thread and I will get a RC1 out tomorrow.</p>
+          '@author': leftnoteasy
+          '@created': Thu, 29 Mar 2018 06:54:10 +0000
+          '@id': '16418514'
+        - '#text': "<p>Thanks <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rohithsharma\"\
+            \ class=\"user-hover\" rel=\"rohithsharma\">rohithsharma</a>, <a href=\"\
+            https://issues.apache.org/jira/secure/ViewProfile.jspa?name=sunilg\" class=\"\
+            user-hover\" rel=\"sunilg\">sunilg</a> for your mentions.\_</p>\n\n<p>I\_\
+            will correct it with\_moving\_ResourceProfilesManager to ActiveServiceContext\
+            \ in v3 patch.</p>"
+          '@author': tao yang
+          '@created': Thu, 29 Mar 2018 06:58:14 +0000
+          '@id': '16418519'
+        - '#text': "<p>For 003.patch, profile adding at ResourceManager@serviceInit\
+            \ need to be removed.\_ Otherwise ResourceProfilesManager created and\
+            \ added into composite service 2 times unnecessarily i.e one at RM level\
+            \ and active service init.</p>"
+          '@author': rohithsharma
+          '@created': Thu, 29 Mar 2018 07:19:05 +0000
+          '@id': '16418536'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/check.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="green">+1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 19s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Prechecks </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> trunk Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 25m 22s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 42s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 36s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 46s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 11m 30s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> branch has no errors
+            when building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 15s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 27s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Patch Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 44s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 39s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 39s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 31s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 42s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 11m 30s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> patch has no errors when
+            building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 20s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 26s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Other Tests </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 66m 34s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-yarn-server-resourcemanager
+            in the patch passed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 22s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black">123m 27s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> Client=17.05.0-ce Server=17.05.0-ce Image:yetus/hadoop:8620d2b
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-8085"
+            title="ResourceProfilesManager should be set in RMActiveServiceContext"
+            class="issue-link" data-issue-key="YARN-8085"><del>YARN-8085</del></a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12916743/YARN-8085.002.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12916743/YARN-8085.002.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  shadedclient  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 10b4b0d6e9d8 3.13.0-139-generic #188-Ubuntu
+            SMP Tue Jan 9 14:43:09 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 3d185d6 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> maven </td>
+
+            <td class=''confluenceTd''> version: Apache Maven 3.3.9 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_151 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.1.0-RC1 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20136/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20136/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 801 (vs. ulimit of 10000) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20136/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20136/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.8.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': genericqa
+          '@created': Thu, 29 Mar 2018 07:44:06 +0000
+          '@id': '16418552'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rohithsharma"
+            class="user-hover" rel="rohithsharma">rohithsharma</a> for your mention.
+            Attached v4 patch for review.</p>
+          '@author': tao yang
+          '@created': Thu, 29 Mar 2018 07:55:59 +0000
+          '@id': '16418568'
+        - '#text': "<p>Thanks <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=leftnoteasy\"\
+            \ class=\"user-hover\" rel=\"leftnoteasy\">leftnoteasy</a>.</p>\n\n<p>Please\
+            \ wait for a moment,\_<a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cheersyang\"\
+            \ class=\"user-hover\" rel=\"cheersyang\">cheersyang</a>\_will\_give a\
+            \ summary\_report about\_our\_test\_works\_for 3.1.0-RC0 (including this\
+            \ one) later.</p>"
+          '@author': tao yang
+          '@created': Thu, 29 Mar 2018 08:06:11 +0000
+          '@id': '16418575'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/check.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="green">+1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 22s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Prechecks </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> trunk Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 23m 46s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 39s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 25s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 38s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green">  9m 22s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> branch has no errors
+            when building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 59s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Patch Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 38s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 34s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 34s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 26s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 36s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green">  9m 26s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> patch has no errors when
+            building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 12s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Other Tests </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 65m 59s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-yarn-server-resourcemanager
+            in the patch passed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black">115m 50s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> Client=17.05.0-ce Server=17.05.0-ce Image:yetus/hadoop:8620d2b
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-8085"
+            title="ResourceProfilesManager should be set in RMActiveServiceContext"
+            class="issue-link" data-issue-key="YARN-8085"><del>YARN-8085</del></a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12916758/YARN-8085.003.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12916758/YARN-8085.003.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  shadedclient  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux d12013a70050 4.4.0-64-generic #85-Ubuntu
+            SMP Mon Feb 20 11:50:30 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 3d185d6 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> maven </td>
+
+            <td class=''confluenceTd''> version: Apache Maven 3.3.9 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_151 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.1.0-RC1 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20140/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20140/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 845 (vs. ulimit of 10000) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20140/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20140/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.8.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': genericqa
+          '@created': Thu, 29 Mar 2018 09:16:29 +0000
+          '@id': '16418644'
+        - '#text': <p>v4 patch looks good.</p>
+          '@author': sunilg
+          '@created': Thu, 29 Mar 2018 09:26:47 +0000
+          '@id': '16418656'
+        - '#text': <p>+1 lgtm</p>
+          '@author': rohithsharma
+          '@created': Thu, 29 Mar 2018 09:41:58 +0000
+          '@id': '16418667'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/error.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="red">-1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 20s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Prechecks </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> trunk Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 25m 45s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 43s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 36s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 47s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 11m 38s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> branch has no errors
+            when building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 15s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 27s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Patch Compile Tests </font>
+            </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 43s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 37s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 37s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 31s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 40s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> shadedclient </font>
+            </td>
+
+            <td class=''confluenceTd''> <font color="green"> 11m 20s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> patch has no errors when
+            building and testing our client artifacts. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 13s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 25s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''>&nbsp;</th>
+
+            <th class=''confluenceTh''> <font color="brown"> Other Tests </font> </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="red">-1</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> 67m 16s</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> hadoop-yarn-server-resourcemanager
+            in the patch failed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 21s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black">124m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Reason </th>
+
+            <th class=''confluenceTh''> Tests </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Failed junit tests </td>
+
+            <td class=''confluenceTd''> hadoop.yarn.webapp.TestRMWithCSRFFilter </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''> Client=17.05.0-ce Server=17.05.0-ce Image:yetus/hadoop:8620d2b
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-8085"
+            title="ResourceProfilesManager should be set in RMActiveServiceContext"
+            class="issue-link" data-issue-key="YARN-8085"><del>YARN-8085</del></a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12916765/YARN-8085.004.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12916765/YARN-8085.004.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  shadedclient  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 0024835a0457 3.13.0-139-generic #188-Ubuntu
+            SMP Tue Jan 9 14:43:09 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 3d185d6 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> maven </td>
+
+            <td class=''confluenceTd''> version: Apache Maven 3.3.9 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_151 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.1.0-RC1 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> unit </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20141/artifact/out/patch-unit-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20141/artifact/out/patch-unit-hadoop-yarn-project_hadoop-yarn_hadoop-yarn-server_hadoop-yarn-server-resourcemanager.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20141/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20141/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max. process+thread count </td>
+
+            <td class=''confluenceTd''> 839 (vs. ulimit of 10000) </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            U: hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/20141/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/20141/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.8.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': genericqa
+          '@created': Thu, 29 Mar 2018 10:04:55 +0000
+          '@id': '16418689'
+        - '#text': '<p>Test case is passing locally.</p>
+
+
+            <p>Committing shortly.</p>'
+          '@author': sunilg
+          '@created': Thu, 29 Mar 2018 14:08:29 +0000
+          '@id': '16419056'
+        - '#text': "<p>Thanks <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=Tao+Yang\"\
+            \ class=\"user-hover\" rel=\"Tao Yang\">Tao Yang</a>\_and <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cheersyang\"\
+            \ class=\"user-hover\" rel=\"cheersyang\">cheersyang</a>. And thanks <a\
+            \ href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rohithsharma\"\
+            \ class=\"user-hover\" rel=\"rohithsharma\">rohithsharma</a> for additional\
+            \ reviews.</p>"
+          '@author': sunilg
+          '@created': Thu, 29 Mar 2018 16:12:49 +0000
+          '@id': '16419271'
+        - '#text': "<p>SUCCESS: Integrated in Jenkins build Hadoop-trunk-Commit #13900\
+            \ (See <a href=\"https://builds.apache.org/job/Hadoop-trunk-Commit/13900/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-trunk-Commit/13900/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-8085\" title=\"ResourceProfilesManager\
+            \ should be set in RMActiveServiceContext\" class=\"issue-link\" data-issue-key=\"\
+            YARN-8085\"><del>YARN-8085</del></a>. ResourceProfilesManager should be\
+            \ set in (sunilg: rev 7a59d60e0c50e8264e07f6b1dadaeedba676c8c2)</p>\n\
+            <ul>\n\t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMContextImpl.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java</li>\n\
+            \t<li>(edit) hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMActiveServiceContext.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 29 Mar 2018 16:31:06 +0000
+          '@id': '16419306'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=sunilg"
+            class="user-hover" rel="sunilg">sunilg</a>, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rohithsharma"
+            class="user-hover" rel="rohithsharma">rohithsharma</a>, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cheersyang"
+            class="user-hover" rel="cheersyang">cheersyang</a> and <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=leftnoteasy"
+            class="user-hover" rel="leftnoteasy">leftnoteasy</a> !</p>
+          '@author': tao yang
+          '@created': Fri, 30 Mar 2018 02:47:35 +0000
+          '@id': '16420094'
+      component: capacityscheduler
+      created: Thu, 29 Mar 2018 04:49:39 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '4.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 7 years, 8 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3rxf3:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 3.1.0
+              '@id': '12341436'
+      description: "<p>We submited a distributed shell application\_after\_RM failover\
+        \ and back to active, then got NPE error in RM log:</p>\n<div class=\"preformatted\
+        \ panel\" style=\"border-width: 1px;\"><div class=\"preformattedContent panelContent\"\
+        >\n<pre>java.lang.NullPointerException\n        at org.apache.hadoop.yarn.server.resourcemanager.ClientRMService.getResourceProfiles(ClientRMService.java:1814)\n\
+        \        at org.apache.hadoop.yarn.api.impl.pb.service.ApplicationClientProtocolPBServiceImpl.getResourceProfiles(ApplicationClientProtocolPBServiceImpl.java:657)\n\
+        \        at org.apache.hadoop.yarn.proto.ApplicationClientProtocol$ApplicationClientProtocolService$2.callBlockingMethod(ApplicationClientProtocol.java:617)\n\
+        \        at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)\n\
+        \        at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)\n        at\
+        \ org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)\n        at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)\n\
+        \        at java.security.AccessController.doPrivileged(Native Method)\n \
+        \       at javax.security.auth.Subject.doAs(Subject.java:422)\n        at\
+        \ org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1682)\n\
+        \        at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)\n</pre>\n\
+        </div></div>\n\n<p>The cause is that currently resourceProfilesManager is\
+        \ not transferred to new RMContext instance in RMContext#resetRMContext. We\
+        \ should do this transfer to fix this error.</p>\n<div class=\"code panel\"\
+        \ style=\"border-width: 1px;\"><div class=\"codeContent panelContent\">\n\
+        <pre class=\"code-java\">\n@@ -1488,6 +1488,10 @@ <span class=\"code-keyword\"\
+        >private</span> void resetRMContext() {\n     <span class=\"code-comment\"\
+        >// transfer service context to <span class=\"code-keyword\">new</span> RM\
+        \ service Context\n</span>     rmContextImpl.setServiceContext(rmContext.getServiceContext());\n\
+        \n+    <span class=\"code-comment\">// transfer resource profiles manager\n\
+        </span>+    rmContextImpl\n+        .setResourceProfilesManager(rmContext.getResourceProfilesManager());\n\
+        +\n     <span class=\"code-comment\">// reset dispatcher\n</span>     Dispatcher\
+        \ dispatcher = setupDispatcher();\n     ((Service) dispatcher).init(<span\
+        \ class=\"code-keyword\">this</span>.conf);\n</pre>\n</div></div>"
+      due: null
+      environment: null
+      fixVersion: 3.1.0
+      key:
+        '#text': YARN-8085
+        '@id': '13148787'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-8085
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Tao Yang
+        '@username': Tao Yang
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 29 Mar 2018 16:12:36 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: ResourceProfilesManager should be set in RMActiveServiceContext
+      title: '[YARN-8085] ResourceProfilesManager should be set in RMActiveServiceContext'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 30 Mar 2018 02:47:35 +0000
+      votes: '0'
+      watches: '8'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
