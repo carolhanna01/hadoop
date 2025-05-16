@@ -1,0 +1,90 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.apache.hadoop:hadoop-resourceestimator >-------------
+[INFO] Building Apache Hadoop Resource Estimator Service 3.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-resourceestimator ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ hadoop-resourceestimator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-resourceestimator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-resourceestimator ---
+[INFO] Compiling 18 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-resourceestimator/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-resourceestimator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 17 resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-resourceestimator ---
+[INFO] Compiling 2 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-resourceestimator/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hadoop-resourceestimator ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-resourceestimator/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.resourceestimator.skylinestore.impl.TestInMemoryStore
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.651 sec - in org.apache.hadoop.resourceestimator.skylinestore.impl.TestInMemoryStore
+Running org.apache.hadoop.resourceestimator.translator.api.TestJobMetaData
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.626 sec - in org.apache.hadoop.resourceestimator.translator.api.TestJobMetaData
+Running org.apache.hadoop.resourceestimator.translator.impl.TestRmParser
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.719 sec - in org.apache.hadoop.resourceestimator.translator.impl.TestRmParser
+Running org.apache.hadoop.resourceestimator.translator.impl.TestNativeParser
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.555 sec - in org.apache.hadoop.resourceestimator.translator.impl.TestNativeParser
+Running org.apache.hadoop.resourceestimator.service.TestResourceEstimatorService
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.851 sec <<< FAILURE! - in org.apache.hadoop.resourceestimator.service.TestResourceEstimatorService
+testGetPrediction(org.apache.hadoop.resourceestimator.service.TestResourceEstimatorService)  Time elapsed: 1.694 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at org.apache.hadoop.resourceestimator.service.TestResourceEstimatorService.checkResult(TestResourceEstimatorService.java:169)
+	at org.apache.hadoop.resourceestimator.service.TestResourceEstimatorService.testGetPrediction(TestResourceEstimatorService.java:208)
+
+Running org.apache.hadoop.resourceestimator.solver.impl.TestLpSolver
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.547 sec - in org.apache.hadoop.resourceestimator.solver.impl.TestLpSolver
+Running org.apache.hadoop.resourceestimator.common.api.TestResourceSkyline
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.697 sec - in org.apache.hadoop.resourceestimator.common.api.TestResourceSkyline
+Running org.apache.hadoop.resourceestimator.common.serialization.TestHistorySkylineSerDe
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.622 sec - in org.apache.hadoop.resourceestimator.common.serialization.TestHistorySkylineSerDe
+Running org.apache.hadoop.resourceestimator.common.serialization.TestResourceSerDe
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec - in org.apache.hadoop.resourceestimator.common.serialization.TestResourceSerDe
+Running org.apache.hadoop.resourceestimator.common.serialization.TestResourceSkylineSerDe
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.491 sec - in org.apache.hadoop.resourceestimator.common.serialization.TestResourceSkylineSerDe
+
+Results :
+
+Tests in error: 
+  TestResourceEstimatorService.testGetPrediction:208->checkResult:169 NullPointer
+
+Tests run: 47, Failures: 0, Errors: 1, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.291 s
+[INFO] Finished at: 2025-05-16T21:06:44+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project hadoop-resourceestimator: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-resourceestimator/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
