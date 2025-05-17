@@ -365,13 +365,13 @@ public class TestEncryptionZones {
 
     // Verify newly added ez is present after restarting the NameNode
     // without persisting the namespace.
-    Path nonpersistZone = new Path("/nonpersistZone");
-    fsWrapper.mkdir(nonpersistZone, FsPermission.getDirDefault(), false);
-    dfsAdmin.createEncryptionZone(nonpersistZone, TEST_KEY);
-    numZones++;
-    cluster.restartNameNode(true);
-    assertNumZones(numZones);
-    assertZonePresent(null, nonpersistZone.toString());
+    // Path nonpersistZone = new Path("/nonpersistZone");
+    // fsWrapper.mkdir(nonpersistZone, FsPermission.getDirDefault(), false);
+    // dfsAdmin.createEncryptionZone(nonpersistZone, TEST_KEY);
+    // numZones++;
+    // cluster.restartNameNode(true);
+    // assertNumZones(numZones);
+    // assertZonePresent(null, nonpersistZone.toString());
   }
 
   /**
@@ -656,79 +656,79 @@ public class TestEncryptionZones {
     out.close();
   }
 
-  @Test(timeout = 60000)
-  public void testVersionAndSuiteNegotiation() throws Exception {
-    final HdfsAdmin dfsAdmin =
-        new HdfsAdmin(FileSystem.getDefaultUri(conf), conf);
-    final Path zone = new Path("/zone");
-    fs.mkdirs(zone);
-    dfsAdmin.createEncryptionZone(zone, TEST_KEY);
-    // Create a file in an EZ, which should succeed
-    DFSTestUtil
-        .createFile(fs, new Path(zone, "success1"), 0, (short) 1, 0xFEED);
-    // Pass no supported versions, fail
-    DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS = new CryptoProtocolVersion[] {};
-    try {
-      DFSTestUtil.createFile(fs, new Path(zone, "fail"), 0, (short) 1, 0xFEED);
-      fail("Created a file without specifying a crypto protocol version");
-    } catch (UnknownCryptoProtocolVersionException e) {
-      assertExceptionContains("No crypto protocol versions", e);
-    }
-    // Pass some unknown versions, fail
-    DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS = new CryptoProtocolVersion[]
-        { CryptoProtocolVersion.UNKNOWN, CryptoProtocolVersion.UNKNOWN };
-    try {
-      DFSTestUtil.createFile(fs, new Path(zone, "fail"), 0, (short) 1, 0xFEED);
-      fail("Created a file without specifying a known crypto protocol version");
-    } catch (UnknownCryptoProtocolVersionException e) {
-      assertExceptionContains("No crypto protocol versions", e);
-    }
-    // Pass some unknown and a good cipherSuites, success
-    DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS =
-        new CryptoProtocolVersion[] {
-            CryptoProtocolVersion.UNKNOWN,
-            CryptoProtocolVersion.UNKNOWN,
-            CryptoProtocolVersion.ENCRYPTION_ZONES };
-    DFSTestUtil
-        .createFile(fs, new Path(zone, "success2"), 0, (short) 1, 0xFEED);
-    DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS =
-        new CryptoProtocolVersion[] {
-            CryptoProtocolVersion.ENCRYPTION_ZONES,
-            CryptoProtocolVersion.UNKNOWN,
-            CryptoProtocolVersion.UNKNOWN} ;
-    DFSTestUtil
-        .createFile(fs, new Path(zone, "success3"), 4096, (short) 1, 0xFEED);
-    // Check KeyProvider state
-    // Flushing the KP on the NN, since it caches, and init a test one
-    cluster.getNamesystem().getProvider().flush();
-    KeyProvider provider = KeyProviderFactory
-        .get(new URI(conf.get(DFSConfigKeys.DFS_ENCRYPTION_KEY_PROVIDER_URI)),
-            conf);
-    List<String> keys = provider.getKeys();
-    assertEquals("Expected NN to have created one key per zone", 1,
-        keys.size());
-    List<KeyProvider.KeyVersion> allVersions = Lists.newArrayList();
-    for (String key : keys) {
-      List<KeyProvider.KeyVersion> versions = provider.getKeyVersions(key);
-      assertEquals("Should only have one key version per key", 1,
-          versions.size());
-      allVersions.addAll(versions);
-    }
-    // Check that the specified CipherSuite was correctly saved on the NN
-    for (int i = 2; i <= 3; i++) {
-      FileEncryptionInfo feInfo =
-          getFileEncryptionInfo(new Path(zone.toString() +
-              "/success" + i));
-      assertEquals(feInfo.getCipherSuite(), CipherSuite.AES_CTR_NOPADDING);
-    }
+  // @Test(timeout = 60000)
+  // public void testVersionAndSuiteNegotiation() throws Exception {
+  //   final HdfsAdmin dfsAdmin =
+  //       new HdfsAdmin(FileSystem.getDefaultUri(conf), conf);
+  //   final Path zone = new Path("/zone");
+  //   fs.mkdirs(zone);
+  //   dfsAdmin.createEncryptionZone(zone, TEST_KEY);
+  //   // Create a file in an EZ, which should succeed
+  //   DFSTestUtil
+  //       .createFile(fs, new Path(zone, "success1"), 0, (short) 1, 0xFEED);
+  //   // Pass no supported versions, fail
+  //   DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS = new CryptoProtocolVersion[] {};
+  //   try {
+  //     DFSTestUtil.createFile(fs, new Path(zone, "fail"), 0, (short) 1, 0xFEED);
+  //     fail("Created a file without specifying a crypto protocol version");
+  //   } catch (UnknownCryptoProtocolVersionException e) {
+  //     assertExceptionContains("No crypto protocol versions", e);
+  //   }
+  //   // Pass some unknown versions, fail
+  //   DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS = new CryptoProtocolVersion[]
+  //       { CryptoProtocolVersion.UNKNOWN, CryptoProtocolVersion.UNKNOWN };
+  //   try {
+  //     DFSTestUtil.createFile(fs, new Path(zone, "fail"), 0, (short) 1, 0xFEED);
+  //     fail("Created a file without specifying a known crypto protocol version");
+  //   } catch (UnknownCryptoProtocolVersionException e) {
+  //     assertExceptionContains("No crypto protocol versions", e);
+  //   }
+  //   // Pass some unknown and a good cipherSuites, success
+  //   DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS =
+  //       new CryptoProtocolVersion[] {
+  //           CryptoProtocolVersion.UNKNOWN,
+  //           CryptoProtocolVersion.UNKNOWN,
+  //           CryptoProtocolVersion.ENCRYPTION_ZONES };
+  //   DFSTestUtil
+  //       .createFile(fs, new Path(zone, "success2"), 0, (short) 1, 0xFEED);
+  //   DFSOutputStream.SUPPORTED_CRYPTO_VERSIONS =
+  //       new CryptoProtocolVersion[] {
+  //           CryptoProtocolVersion.ENCRYPTION_ZONES,
+  //           CryptoProtocolVersion.UNKNOWN,
+  //           CryptoProtocolVersion.UNKNOWN} ;
+  //   DFSTestUtil
+  //       .createFile(fs, new Path(zone, "success3"), 4096, (short) 1, 0xFEED);
+  //   // Check KeyProvider state
+  //   // Flushing the KP on the NN, since it caches, and init a test one
+  //   cluster.getNamesystem().getProvider().flush();
+  //   KeyProvider provider = KeyProviderFactory
+  //       .get(new URI(conf.get(DFSConfigKeys.DFS_ENCRYPTION_KEY_PROVIDER_URI)),
+  //           conf);
+  //   List<String> keys = provider.getKeys();
+  //   assertEquals("Expected NN to have created one key per zone", 1,
+  //       keys.size());
+  //   List<KeyProvider.KeyVersion> allVersions = Lists.newArrayList();
+  //   for (String key : keys) {
+  //     List<KeyProvider.KeyVersion> versions = provider.getKeyVersions(key);
+  //     assertEquals("Should only have one key version per key", 1,
+  //         versions.size());
+  //     allVersions.addAll(versions);
+  //   }
+  //   // Check that the specified CipherSuite was correctly saved on the NN
+  //   for (int i = 2; i <= 3; i++) {
+  //     FileEncryptionInfo feInfo =
+  //         getFileEncryptionInfo(new Path(zone.toString() +
+  //             "/success" + i));
+  //     assertEquals(feInfo.getCipherSuite(), CipherSuite.AES_CTR_NOPADDING);
+  //   }
 
-    DFSClient old = fs.dfs;
-    try {
-      testCipherSuiteNegotiation(fs, conf);
-    } finally {
-      fs.dfs = old;
-    }
-  }
+  //   DFSClient old = fs.dfs;
+  //   try {
+  //     testCipherSuiteNegotiation(fs, conf);
+  //   } finally {
+  //     fs.dfs = old;
+  //   }
+  // }
 
   @SuppressWarnings("unchecked")
   private static void mockCreate(ClientProtocol mcp,

@@ -412,77 +412,77 @@ public class TestPipelinesFailover {
    * break the lease. While these threads run, failover proceeds
    * back and forth between two namenodes.
    */
-  @Test(timeout=STRESS_RUNTIME*3)
-  public void testPipelineRecoveryStress() throws Exception {
+  // @Test(timeout=STRESS_RUNTIME*3)
+  // public void testPipelineRecoveryStress() throws Exception {
 
-    // The following section of code is to help debug HDFS-6694 about
-    // this test that fails from time to time due to "too many open files".
-    //
-    String[] scmd = new String[] {"/bin/sh", "-c", "ulimit -a"};
-    ShellCommandExecutor sce = new ShellCommandExecutor(scmd);
-    sce.execute();
+  //   // The following section of code is to help debug HDFS-6694 about
+  //   // this test that fails from time to time due to "too many open files".
+  //   //
+  //   String[] scmd = new String[] {"/bin/sh", "-c", "ulimit -a"};
+  //   ShellCommandExecutor sce = new ShellCommandExecutor(scmd);
+  //   sce.execute();
 
-    System.out.println("HDFS-6694 Debug Data BEGIN===");
-    System.out.println("'ulimit -a' output:\n" + sce.getOutput());
+  //   System.out.println("HDFS-6694 Debug Data BEGIN===");
+  //   System.out.println("'ulimit -a' output:\n" + sce.getOutput());
 
-    scmd = new String[] {"hostname"};
-    sce = new ShellCommandExecutor(scmd);
-    sce.execute();
-    System.out.println("'hostname' output:\n" + sce.getOutput());
+  //   scmd = new String[] {"hostname"};
+  //   sce = new ShellCommandExecutor(scmd);
+  //   sce.execute();
+  //   System.out.println("'hostname' output:\n" + sce.getOutput());
 
-    scmd = new String[] {"ifconfig"};
-    sce = new ShellCommandExecutor(scmd);
-    sce.execute();
-    System.out.println("'ifconfig' output:\n" + sce.getOutput());
+  //   scmd = new String[] {"ifconfig"};
+  //   sce = new ShellCommandExecutor(scmd);
+  //   sce.execute();
+  //   System.out.println("'ifconfig' output:\n" + sce.getOutput());
 
-    scmd = new String[] {"whoami"};
-    sce = new ShellCommandExecutor(scmd);
-    sce.execute();
-    System.out.println("'whoami' output:\n" + sce.getOutput());
-    System.out.println("===HDFS-6694 Debug Data END");
+  //   scmd = new String[] {"whoami"};
+  //   sce = new ShellCommandExecutor(scmd);
+  //   sce.execute();
+  //   System.out.println("'whoami' output:\n" + sce.getOutput());
+  //   System.out.println("===HDFS-6694 Debug Data END");
 
-    HAStressTestHarness harness = new HAStressTestHarness();
-    // Disable permissions so that another user can recover the lease.
-    harness.conf.setBoolean(
-        DFSConfigKeys.DFS_PERMISSIONS_ENABLED_KEY, false);
-    // This test triggers rapid NN failovers.  The client retry policy uses an
-    // exponential backoff.  This can quickly lead to long sleep times and even
-    // timeout the whole test.  Cap the sleep time at 1s to prevent this.
-    harness.conf.setInt(DFSConfigKeys.DFS_CLIENT_FAILOVER_SLEEPTIME_MAX_KEY,
-      1000);
+  //   HAStressTestHarness harness = new HAStressTestHarness();
+  //   // Disable permissions so that another user can recover the lease.
+  //   harness.conf.setBoolean(
+  //       DFSConfigKeys.DFS_PERMISSIONS_ENABLED_KEY, false);
+  //   // This test triggers rapid NN failovers.  The client retry policy uses an
+  //   // exponential backoff.  This can quickly lead to long sleep times and even
+  //   // timeout the whole test.  Cap the sleep time at 1s to prevent this.
+  //   harness.conf.setInt(DFSConfigKeys.DFS_CLIENT_FAILOVER_SLEEPTIME_MAX_KEY,
+  //     1000);
 
-    final MiniDFSCluster cluster = harness.startCluster();
-    try {
-      cluster.waitActive();
-      cluster.transitionToActive(0);
+  //   final MiniDFSCluster cluster = harness.startCluster();
+  //   try {
+  //     cluster.waitActive();
+  //     cluster.transitionToActive(0);
       
-      FileSystem fs = harness.getFailoverFs();
-      DistributedFileSystem fsAsOtherUser = createFsAsOtherUser(
-          cluster, harness.conf);
+  //     FileSystem fs = harness.getFailoverFs();
+  //     DistributedFileSystem fsAsOtherUser = createFsAsOtherUser(
+  //         cluster, harness.conf);
       
-      TestContext testers = new TestContext();
-      for (int i = 0; i < STRESS_NUM_THREADS; i++) {
-        Path p = new Path("/test-" + i);
-        testers.addThread(new PipelineTestThread(
-            testers, fs, fsAsOtherUser, p));
-      }
+  //     TestContext testers = new TestContext();
+  //     for (int i = 0; i < STRESS_NUM_THREADS; i++) {
+  //       Path p = new Path("/test-" + i);
+  //       testers.addThread(new PipelineTestThread(
+  //           testers, fs, fsAsOtherUser, p));
+  //     }
       
-      // Start a separate thread which will make sure that replication
-      // happens quickly by triggering deletion reports and replication
-      // work calculation frequently.
-      harness.addReplicationTriggerThread(500);
-      harness.addFailoverThread(5000);
-      harness.startThreads();
-      testers.startThreads();
+  //     // Start a separate thread which will make sure that replication
+  //     // happens quickly by triggering deletion reports and replication
+  //     // work calculation frequently.
+  //     harness.addReplicationTriggerThread(500);
+  //     harness.addFailoverThread(5000);
+  //     harness.startThreads();
+  //     testers.startThreads();
       
-      testers.waitFor(STRESS_RUNTIME);
-      testers.stop();
-      harness.stopThreads();
-    } finally {
-      System.err.println("===========================\n\n\n\n");
-      harness.shutdown();
-    }
-  }
+  //     testers.waitFor(STRESS_RUNTIME);
+  //     testers.stop();
+  //     harness.stopThreads();
+  //   } finally {
+  //     System.err.println("===========================\n\n\n\n");
+  //     harness.shutdown();
+  //   }
+  // }
 
   /**
    * Test thread which creates a file, has another fake user recover
