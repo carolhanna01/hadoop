@@ -1,0 +1,869 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Anu Engineer
+        '@username': aengineer
+      attachments:
+        attachment:
+        - '@author': aengineer
+          '@created': Fri, 8 Jul 2016 04:27:43 +0000
+          '@id': '12816765'
+          '@name': HADOOP-13352.001.patch
+          '@size': '10572'
+        - '@author': aengineer
+          '@created': Fri, 8 Jul 2016 20:26:03 +0000
+          '@id': '12816901'
+          '@name': HADOOP-13352.002.patch
+          '@size': '10597'
+      comments:
+        comment:
+        - '#text': <p>Adds config capability for X-FRAME-OPTIONS support in HttpServer2.</p>
+          '@author': anu
+          '@created': Fri, 8 Jul 2016 04:27:43 +0000
+          '@id': '15367209'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/check.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="green">+1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 2 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  6m 44s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  6m 31s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 24s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 57s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 14s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 31s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 45s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 41s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  6m 50s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  6m 50s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="orange">-0</font> </td>
+
+            <td class=''confluenceTd''> <font color="orange"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="orange">  0m 24s</font> </td>
+
+            <td class=''confluenceTd''> <font color="orange"> hadoop-common-project/hadoop-common:
+            The patch generated 1 new + 115 unchanged - 0 fixed = 116 total (was 115)
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 55s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 13s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  1m 28s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 46s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  7m 10s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-common in the
+            patch passed. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green">  0m 25s</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> 37m 35s</font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''>  Image:yetus/hadoop:9560f25 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12816765/HADOOP-13352.001.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12816765/HADOOP-13352.001.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/HADOOP-13352"
+            title="Make X-FRAME-OPTIONS configurable in HttpServer2" class="issue-link"
+            data-issue-key="HADOOP-13352"><del>HADOOP-13352</del></a> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 7d93adb48424 3.13.0-36-lowlatency #63-Ubuntu
+            SMP PREEMPT Wed Sep 3 21:56:12 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/hadoop/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 30ee57c </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.8.0_91 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.0.0 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> checkstyle </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/artifact/patchprocess/diff-checkstyle-hadoop-common-project_hadoop-common.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/artifact/patchprocess/diff-checkstyle-hadoop-common-project_hadoop-common.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''>  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-common-project/hadoop-common U:
+            hadoop-common-project/hadoop-common </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-HADOOP-Build/9944/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.4.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': hadoopqa
+          '@created': Fri, 8 Jul 2016 17:22:41 +0000
+          '@id': '15368016'
+        - '#text': '<p>Hi <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=anu"
+            class="user-hover" rel="anu">anu</a> - this looks great.<br/>
+
+            Can you resolve the new checkstyle issue that it adds?</p>
+
+
+            <p>After that is taken care of and we have a clean jenkins build I will
+            be +1.</p>'
+          '@author': lmccay
+          '@created': Fri, 8 Jul 2016 19:14:11 +0000
+          '@id': '15368225'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=lmccay"
+            class="user-hover" rel="lmccay">lmccay</a> Thanks for your comment. Current
+            code follows the surrounding code in <tt>HttpServer2.java</tt> file, and
+            it looks consistent in the context. We have generally been ignoring this
+            checkstyle warning, especially when we are working in older files. if
+            you insist I will go ahead and fix it. Please let know your preference
+            and I will address it accordingly.</p>
+          '@author': anu
+          '@created': Fri, 8 Jul 2016 19:22:12 +0000
+          '@id': '15368252'
+        - '#text': '<p>If that is an accepted warning due to the context then I am
+            +1 on the patch.<br/>
+
+            <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cnauroth"
+            class="user-hover" rel="cnauroth">cnauroth</a> - do you have any problem
+            with that?</p>'
+          '@author': lmccay
+          '@created': Fri, 8 Jul 2016 19:28:11 +0000
+          '@id': '15368265'
+        - '#text': '<p>No objection from me.  Thanks!</p>
+
+
+            <p>--Chris Nauroth</p>'
+          '@author': cnauroth
+          '@created': Fri, 8 Jul 2016 19:39:40 +0000
+          '@id': '15368282'
+        - '#text': <p>The patch LGTM, +1 non-binding.</p>
+          '@author': haibochen
+          '@created': Fri, 8 Jul 2016 20:09:21 +0000
+          '@id': '15368340'
+        - '#text': <p>Here is my +1.</p>
+          '@author': lmccay
+          '@created': Fri, 8 Jul 2016 20:14:17 +0000
+          '@id': '15368351'
+        - '#text': <p>Not a big deal, but should we make <tt>getEnum</tt> <tt>private</tt>
+            or at least <tt>protected</tt>?</p>
+          '@author': rkanter
+          '@created': Fri, 8 Jul 2016 20:17:07 +0000
+          '@id': '15368355'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rkanter"
+            class="user-hover" rel="rkanter">rkanter</a> Good catch !  Thanks for
+            your review comment, This patch changes the public access of getEnum to
+            private. There is no other change, so I am hoping other +1s will hold.</p>
+          '@author': anu
+          '@created': Fri, 8 Jul 2016 20:26:03 +0000
+          '@id': '15368378'
+        - '#text': <p>+1, I am going to commit shortly.</p>
+          '@author': jnp
+          '@created': Fri, 8 Jul 2016 21:11:50 +0000
+          '@id': '15368484'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/error.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="red">-1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue">  0m  0s</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="red">-1</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> patch </font> </td>
+
+            <td class=''confluenceTd''> <font color="red">  0m  5s</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> <a href="https://issues.apache.org/jira/browse/HADOOP-13352"
+            title="Make X-FRAME-OPTIONS configurable in HttpServer2" class="issue-link"
+            data-issue-key="HADOOP-13352"><del>HADOOP-13352</del></a> does not apply
+            to trunk. Rebase required? Wrong Branch? See <a href="https://wiki.apache.org/hadoop/HowToContribute"
+            class="external-link" target="_blank" rel="nofollow noopener">https://wiki.apache.org/hadoop/HowToContribute</a>
+            for help. </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12816901/HADOOP-13352.002.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12816901/HADOOP-13352.002.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/HADOOP-13352"
+            title="Make X-FRAME-OPTIONS configurable in HttpServer2" class="issue-link"
+            data-issue-key="HADOOP-13352"><del>HADOOP-13352</del></a> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-HADOOP-Build/9947/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-HADOOP-Build/9947/console</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.4.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': hadoopqa
+          '@created': Fri, 8 Jul 2016 21:20:41 +0000
+          '@id': '15368505'
+        - '#text': <p>Seems jenkins picked it up, after my commit. I compiled and
+            ran the new test. I have committed it to trunk and branch-2. Thanks Anu.
+            </p>
+          '@author': jnp
+          '@created': Fri, 8 Jul 2016 21:32:07 +0000
+          '@id': '15368526'
+        - '#text': <p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=jnp"
+            class="user-hover" rel="jnp">jnp</a> Thank you for reviewing and committing
+            this. <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=rkanter"
+            class="user-hover" rel="rkanter">rkanter</a>, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=haibochen"
+            class="user-hover" rel="haibochen">haibochen</a>, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=lmccay"
+            class="user-hover" rel="lmccay">lmccay</a> and <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=cnauroth"
+            class="user-hover" rel="cnauroth">cnauroth</a> Thanks for the reviews
+            and comments.</p>
+          '@author': anu
+          '@created': Fri, 8 Jul 2016 21:38:17 +0000
+          '@id': '15368533'
+        - '#text': "<p>SUCCESS: Integrated in Hadoop-trunk-Commit #10070 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-trunk-Commit/10070/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-trunk-Commit/10070/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HADOOP-13352\" title=\"\
+            Make X-FRAME-OPTIONS configurable in HttpServer2\" class=\"issue-link\"\
+            \ data-issue-key=\"HADOOP-13352\"><del>HADOOP-13352</del></a>. Make X-FRAME-OPTIONS\
+            \ configurable in HttpServer2. (jitendra: rev ef30bf3c3f2688f803b3e9d16cc7e9f61a1ab0de)</p>\n\
+            <ul>\n\t<li>hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/http/HttpServerFunctionalTest.java</li>\n\
+            \t<li>hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/http/TestHttpServer.java</li>\n\
+            \t<li>hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/http/HttpServer2.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Fri, 8 Jul 2016 21:44:48 +0000
+          '@id': '15368541'
+        - '#text': <p>Great - thanks for adding this, <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=anu"
+            class="user-hover" rel="anu">anu</a>!</p>
+          '@author': lmccay
+          '@created': Fri, 8 Jul 2016 22:15:06 +0000
+          '@id': '15368587'
+        - '#text': <p>Committed this to branch-2.8 as well.</p>
+          '@author': jnp
+          '@created': Tue, 12 Jul 2016 21:45:59 +0000
+          '@id': '15373758'
+      component:
+      - net
+      - security
+      created: Fri, 8 Jul 2016 00:54:31 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '2.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 45 weeks, 3 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i30ojb:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>In <a href="https://issues.apache.org/jira/browse/HADOOP-12964"
+        title="Http server vulnerable to clickjacking " class="issue-link" data-issue-key="HADOOP-12964"><del>HADOOP-12964</del></a>
+        we introduced support for X-FRAME-OPTIONS in HttpServer2. This JIRA makes
+        it configurable.</p>
+      due: null
+      environment: null
+      fixVersion:
+      - 2.8.0
+      - 3.0.0-alpha1
+      issuelinks:
+        issuelinktype:
+          '@id': '12310360'
+          inwardlinks:
+            '@description': Dependent
+            issuelink:
+              issuekey:
+                '#text': HDFS-10579
+                '@id': '12982814'
+          name: Dependent
+      key:
+        '#text': HADOOP-13352
+        '@id': '12987651'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HADOOP-13352
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop Common
+        '@id': '12310240'
+        '@key': HADOOP
+      reporter:
+        '#text': Anu Engineer
+        '@username': aengineer
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Fri, 8 Jul 2016 21:38:17 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Make X-FRAME-OPTIONS configurable in HttpServer2
+      title: '[HADOOP-13352] Make X-FRAME-OPTIONS configurable in HttpServer2'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 30 Aug 2016 01:13:01 +0000
+      votes: '0'
+      watches: '7'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
