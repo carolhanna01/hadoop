@@ -1,0 +1,1383 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Ming Ma
+        '@username': mingma
+      attachments:
+        attachment:
+        - '@author': mingma
+          '@created': Wed, 20 Jan 2016 17:44:54 +0000
+          '@id': '12783379'
+          '@name': YARN-4611-2.patch
+          '@size': '3132'
+        - '@author': mingma
+          '@created': Wed, 20 Jan 2016 01:32:53 +0000
+          '@id': '12783239'
+          '@name': YARN-4611.patch
+          '@size': '2302'
+      comments:
+        comment:
+        - '#text': <p>Here is the draft patch. Also tested it with actual rumen trace.</p>
+          '@author': mingma
+          '@created': Wed, 20 Jan 2016 01:32:53 +0000
+          '@id': '15107795'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/error.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="red">-1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 1 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 7m 52s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 14s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 15s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 9s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 23s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 13s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 32s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 12s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 15s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 16s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 13s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 13s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 8s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 18s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> Patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 41s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 10s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 13s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="red">-1</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> 0m 48s </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> hadoop-sls in the patch
+            failed with JDK v1.8.0_66. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="red">-1</font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> 0m 51s </font> </td>
+
+            <td class=''confluenceTd''> <font color="red"> hadoop-sls in the patch
+            failed with JDK v1.7.0_91. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 18s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> Patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> 25m 41s </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Reason </th>
+
+            <th class=''confluenceTh''> Tests </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JDK v1.8.0_66 Failed junit tests </td>
+
+            <td class=''confluenceTd''> hadoop.yarn.sls.nodemanager.TestNMSimulator
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JDK v1.7.0_91 Failed junit tests </td>
+
+            <td class=''confluenceTd''> hadoop.yarn.sls.nodemanager.TestNMSimulator
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''>  Image:yetus/hadoop:0ca8df7 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12783239/YARN-4611.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12783239/YARN-4611.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-4611"
+            title="Fix scheduler load simulator to support multi-layer network location"
+            class="issue-link" data-issue-key="YARN-4611"><del>YARN-4611</del></a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux 5fc93dc65ffa 3.13.0-36-lowlatency #63-Ubuntu
+            SMP PREEMPT Wed Sep 3 21:56:12 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/hadoop/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 1acc509 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.7.0_91 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Multi-JDK versions </td>
+
+            <td class=''confluenceTd''>  /usr/lib/jvm/java-8-oracle:1.8.0_66 /usr/lib/jvm/java-7-openjdk-amd64:1.7.0_91
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.0.0 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> unit </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.8.0_66.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.8.0_66.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> unit </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.7.0_91.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.7.0_91.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> unit test logs </td>
+
+            <td class=''confluenceTd''>  <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.8.0_66.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.8.0_66.txt</a>
+            <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.7.0_91.txt"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/artifact/patchprocess/patch-unit-hadoop-tools_hadoop-sls-jdk1.7.0_91.txt</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JDK v1.7.0_91  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-tools/hadoop-sls U: hadoop-tools/hadoop-sls
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max memory used </td>
+
+            <td class=''confluenceTd''> 77MB </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.2.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10333/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10333/console</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': hadoopqa
+          '@created': Wed, 20 Jan 2016 02:23:33 +0000
+          '@id': '15107840'
+        - '#text': <p>New patch to fix TestNMSimulator.</p>
+          '@author': mingma
+          '@created': Wed, 20 Jan 2016 17:44:54 +0000
+          '@id': '15109020'
+        - '#text': '<div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <td class=''confluenceTd''> <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/check.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/> <b><font
+            color="green">+1 overall</font></b> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Vote </th>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Runtime </th>
+
+            <th class=''confluenceTh''> Comment </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="blue">0</font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> reexec </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="blue"> Docker mode activated.
+            </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> @author </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch does not contain
+            any @author tags. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> test4tests </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> The patch appears to
+            include 2 new or modified test files. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 7m 39s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 14s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 17s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 9s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 22s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 14s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 33s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 12s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 16s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> trunk passed with JDK
+            v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvninstall </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 18s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> compile </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 14s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javac </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 14s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> checkstyle </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 9s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvnsite </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 18s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> mvneclipse </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 11s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> whitespace </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 0s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> Patch has no whitespace
+            issues. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> findbugs </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 42s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed </font>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 10s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.8.0_66 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> javadoc </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 13s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> the patch passed with
+            JDK v1.7.0_91 </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 49s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-sls in the patch
+            passed with JDK v1.8.0_66. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> unit </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 51s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> hadoop-sls in the patch
+            passed with JDK v1.7.0_91. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="green">+1</font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> asflicense </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> 0m 18s </font> </td>
+
+            <td class=''confluenceTd''> <font color="green"> Patch does not generate
+            ASF License warnings. </font> </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> <font color="black"></font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> 15m 23s </font> </td>
+
+            <td class=''confluenceTd''> <font color="black"> </font> </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+            <p><br class="atl-forced-newline" />
+
+            <br class="atl-forced-newline" /></p>
+
+            <div class=''table-wrap''>
+
+            <table class=''confluenceTable''><tbody>
+
+            <tr>
+
+            <th class=''confluenceTh''> Subsystem </th>
+
+            <th class=''confluenceTh''> Report/Notes </th>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Docker </td>
+
+            <td class=''confluenceTd''>  Image:yetus/hadoop:0ca8df7 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Patch URL </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/secure/attachment/12783379/YARN-4611-2.patch"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/secure/attachment/12783379/YARN-4611-2.patch</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JIRA Issue </td>
+
+            <td class=''confluenceTd''> <a href="https://issues.apache.org/jira/browse/YARN-4611"
+            title="Fix scheduler load simulator to support multi-layer network location"
+            class="issue-link" data-issue-key="YARN-4611"><del>YARN-4611</del></a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Optional Tests </td>
+
+            <td class=''confluenceTd''>  asflicense  compile  javac  javadoc  mvninstall  mvnsite  unit  findbugs  checkstyle  </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> uname </td>
+
+            <td class=''confluenceTd''> Linux b2c6153b19fb 3.13.0-36-lowlatency #63-Ubuntu
+            SMP PREEMPT Wed Sep 3 21:56:12 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Build tool </td>
+
+            <td class=''confluenceTd''> maven </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Personality </td>
+
+            <td class=''confluenceTd''> /testptch/hadoop/patchprocess/precommit/personality/provided.sh
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> git revision </td>
+
+            <td class=''confluenceTd''> trunk / 1425578 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Default Java </td>
+
+            <td class=''confluenceTd''> 1.7.0_91 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Multi-JDK versions </td>
+
+            <td class=''confluenceTd''>  /usr/lib/jvm/java-8-oracle:1.8.0_66 /usr/lib/jvm/java-7-openjdk-amd64:1.7.0_91
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> findbugs </td>
+
+            <td class=''confluenceTd''> v3.0.0 </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> JDK v1.7.0_91  Test Results </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10340/testReport/"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10340/testReport/</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> modules </td>
+
+            <td class=''confluenceTd''> C: hadoop-tools/hadoop-sls U: hadoop-tools/hadoop-sls
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Max memory used </td>
+
+            <td class=''confluenceTd''> 77MB </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Powered by </td>
+
+            <td class=''confluenceTd''> Apache Yetus 0.2.0-SNAPSHOT   <a href="http://yetus.apache.org"
+            class="external-link" target="_blank" rel="nofollow noopener">http://yetus.apache.org</a>
+            </td>
+
+            </tr>
+
+            <tr>
+
+            <td class=''confluenceTd''> Console output </td>
+
+            <td class=''confluenceTd''> <a href="https://builds.apache.org/job/PreCommit-YARN-Build/10340/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-YARN-Build/10340/console</a>
+            </td>
+
+            </tr>
+
+            </tbody></table>
+
+            </div>
+
+
+
+
+            <p>This message was automatically generated.</p>'
+          '@author': hadoopqa
+          '@created': Wed, 20 Jan 2016 18:03:58 +0000
+          '@id': '15109042'
+        - '#text': <p>+1 LGTM. Checking this in.</p>
+          '@author': xgong
+          '@created': Wed, 20 Jan 2016 23:39:24 +0000
+          '@id': '15109741'
+        - '#text': <p>Committed into trunk/branch-2. Thanks, Ming</p>
+          '@author': xgong
+          '@created': Wed, 20 Jan 2016 23:43:32 +0000
+          '@id': '15109747'
+        - '#text': <p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=xgong"
+            class="user-hover" rel="xgong">xgong</a>!</p>
+          '@author': mingma
+          '@created': Wed, 20 Jan 2016 23:47:38 +0000
+          '@id': '15109754'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-trunk-Commit #9144 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-trunk-Commit/9144/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-trunk-Commit/9144/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-4611\" title=\"Fix\
+            \ scheduler load simulator to support multi-layer network location\" class=\"\
+            issue-link\" data-issue-key=\"YARN-4611\"><del>YARN-4611</del></a>. Fix\
+            \ scheduler load simulator to support multi-layer network (xgong: rev\
+            \ 1708a4cd2377c56e2cb5738720b7eaf10baf13c8)</p>\n<ul>\n\t<li>hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>hadoop-tools/hadoop-sls/src/test/java/org/apache/hadoop/yarn/sls/nodemanager/TestNMSimulator.java</li>\n\
+            \t<li>hadoop-tools/hadoop-sls/src/test/java/org/apache/hadoop/yarn/sls/utils/TestSLSUtils.java</li>\n\
+            \t<li>hadoop-tools/hadoop-sls/src/main/java/org/apache/hadoop/yarn/sls/utils/SLSUtils.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 21 Jan 2016 00:21:51 +0000
+          '@id': '15109804'
+      created: Wed, 20 Jan 2016 01:29:43 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '2.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 9 years, 18 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i2rprz:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>SLS assumes the host name's network path has one level, e.g.,
+        /default-rack/hostFoo. It won't work if the rumen trace comes from clusters
+        with more than one network layer.</p>
+      due: null
+      environment: null
+      fixVersion:
+      - 2.9.0
+      - 3.0.0-alpha1
+      issuelinks:
+        issuelinktype:
+          '@id': '12310000'
+          inwardlinks:
+            '@description': is duplicated by
+            issuelink:
+              issuekey:
+                '#text': HADOOP-14232
+                '@id': '13058948'
+          name: Duplicate
+      key:
+        '#text': YARN-4611
+        '@id': '12932589'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-4611
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Ming Ma
+        '@username': mingma
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 20 Jan 2016 23:43:42 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Fix scheduler load simulator to support multi-layer network location
+      title: '[YARN-4611] Fix scheduler load simulator to support multi-layer network
+        location'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 24 Mar 2017 17:02:35 +0000
+      votes: '0'
+      watches: '6'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

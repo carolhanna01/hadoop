@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.hadoop:hadoop-sls >--------------------
+[INFO] Building Apache Hadoop Scheduler Load Simulator 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-sls ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-sls ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-sls/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-sls ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-sls/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-sls ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 7 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-sls ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-sls/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hadoop-sls ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-sls/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.scheduler.TestTaskRunner
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.582 sec - in org.apache.hadoop.yarn.sls.scheduler.TestTaskRunner
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.utils.TestSLSUtils
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec <<< FAILURE! - in org.apache.hadoop.yarn.sls.utils.TestSLSUtils
+testGetRackHostname(org.apache.hadoop.yarn.sls.utils.TestSLSUtils)  Time elapsed: 0.013 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<rackA[]> but was:<rackA[/rackB]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.apache.hadoop.yarn.sls.utils.TestSLSUtils.testGetRackHostname(TestSLSUtils.java:35)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.nodemanager.TestNMSimulator
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.043 sec - in org.apache.hadoop.yarn.sls.nodemanager.TestNMSimulator
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.appmaster.TestAMSimulator
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.216 sec - in org.apache.hadoop.yarn.sls.appmaster.TestAMSimulator
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.web.TestSLSWebApp
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec - in org.apache.hadoop.yarn.sls.web.TestSLSWebApp
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.yarn.sls.TestSLSRunner
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.977 sec - in org.apache.hadoop.yarn.sls.TestSLSRunner
+
+Results :
+
+Failed tests: 
+  TestSLSUtils.testGetRackHostname:35 expected:<rackA[]> but was:<rackA[/rackB]>
+
+Tests run: 12, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  45.422 s
+[INFO] Finished at: 2025-05-17T00:59:47+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project hadoop-sls: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-sls/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
