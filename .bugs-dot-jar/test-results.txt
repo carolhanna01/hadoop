@@ -1,0 +1,517 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.apache.hadoop:hadoop-hdfs-httpfs >----------------
+[INFO] Building Apache Hadoop HttpFS 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-hdfs-httpfs ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-hdfs-httpfs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-hdfs-httpfs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 48 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/src/main/java/org/apache/hadoop/lib/service/instrumentation/InstrumentationService.java: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/src/main/java/org/apache/hadoop/lib/service/instrumentation/InstrumentationService.java uses unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/src/main/java/org/apache/hadoop/lib/service/instrumentation/InstrumentationService.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-web-xmls) @ hadoop-hdfs-httpfs ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-hdfs-httpfs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-hdfs-httpfs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 45 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hadoop-hdfs-httpfs ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.server.TestBaseService
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.52 sec - in org.apache.hadoop.lib.server.TestBaseService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.server.TestServerConstructor
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.377 sec - in org.apache.hadoop.lib.server.TestServerConstructor
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.server.TestServer
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.684 sec - in org.apache.hadoop.lib.server.TestServer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.wsrs.TestJSONMapProvider
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.hadoop.lib.wsrs.TestJSONMapProvider
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.wsrs.TestInputStreamEntity
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.134 sec - in org.apache.hadoop.lib.wsrs.TestInputStreamEntity
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.wsrs.TestJSONProvider
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec - in org.apache.hadoop.lib.wsrs.TestJSONProvider
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.wsrs.TestParam
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 sec - in org.apache.hadoop.lib.wsrs.TestParam
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.servlet.TestServerWebApp
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.384 sec - in org.apache.hadoop.lib.servlet.TestServerWebApp
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.servlet.TestHostnameFilter
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.438 sec - in org.apache.hadoop.lib.servlet.TestHostnameFilter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.servlet.TestMDCFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.407 sec - in org.apache.hadoop.lib.servlet.TestMDCFilter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.util.TestCheck
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.127 sec - in org.apache.hadoop.lib.util.TestCheck
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.util.TestConfigurationUtils
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.43 sec - in org.apache.hadoop.lib.util.TestConfigurationUtils
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.service.scheduler.TestSchedulerService
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.349 sec - in org.apache.hadoop.lib.service.scheduler.TestSchedulerService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.service.instrumentation.TestInstrumentationService
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.843 sec - in org.apache.hadoop.lib.service.instrumentation.TestInstrumentationService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.service.security.TestGroupsService
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.671 sec - in org.apache.hadoop.lib.service.security.TestGroupsService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.service.hadoop.TestFileSystemAccessService
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.16 sec - in org.apache.hadoop.lib.service.hadoop.TestFileSystemAccessService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.lang.TestRunnableCallable
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec - in org.apache.hadoop.lib.lang.TestRunnableCallable
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.lib.lang.TestXException
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.134 sec - in org.apache.hadoop.lib.lang.TestXException
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.test.TestDirHelper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec - in org.apache.hadoop.test.TestDirHelper
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.test.TestHFSTestCase
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.897 sec - in org.apache.hadoop.test.TestHFSTestCase
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.test.TestHTestCase
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.331 sec - in org.apache.hadoop.test.TestHTestCase
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.test.TestExceptionHelper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 sec - in org.apache.hadoop.test.TestExceptionHelper
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.test.TestHdfsHelper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec - in org.apache.hadoop.test.TestHdfsHelper
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.server.TestHttpFSServerNoXAttrs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.656 sec - in org.apache.hadoop.fs.http.server.TestHttpFSServerNoXAttrs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.server.TestHttpFSServerNoACLs
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.106 sec <<< FAILURE! - in org.apache.hadoop.fs.http.server.TestHttpFSServerNoACLs
+testWithNoAcls(org.apache.hadoop.fs.http.server.TestHttpFSServerNoACLs)  Time elapsed: 5.978 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<500> but was:<400>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at org.apache.hadoop.fs.http.server.TestHttpFSServerNoACLs.putCmd(TestHttpFSServerNoACLs.java:222)
+	at org.apache.hadoop.fs.http.server.TestHttpFSServerNoACLs.testWithNoAcls(TestHttpFSServerNoACLs.java:275)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.server.TestCheckUploadContentTypeFilter
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.491 sec - in org.apache.hadoop.fs.http.server.TestCheckUploadContentTypeFilter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.server.TestHttpFSServer
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.059 sec <<< FAILURE! - in org.apache.hadoop.fs.http.server.TestHttpFSServer
+testFileAcls(org.apache.hadoop.fs.http.server.TestHttpFSServer)  Time elapsed: 0.809 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<200> but was:<400>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at org.apache.hadoop.fs.http.server.TestHttpFSServer.putCmd(TestHttpFSServer.java:331)
+	at org.apache.hadoop.fs.http.server.TestHttpFSServer.testFileAcls(TestHttpFSServer.java:559)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.client.TestHttpFSFileSystemLocalFileSystem
+Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.706 sec - in org.apache.hadoop.fs.http.client.TestHttpFSFileSystemLocalFileSystem
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.client.TestHttpFSWithHttpFSFileSystem
+Tests run: 46, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 27.696 sec <<< FAILURE! - in org.apache.hadoop.fs.http.client.TestHttpFSWithHttpFSFileSystem
+testOperation[17](org.apache.hadoop.fs.http.client.TestHttpFSWithHttpFSFileSystem)  Time elapsed: 0.546 sec  <<< ERROR!
+org.apache.hadoop.HadoopIllegalArgumentException: Invalid <aclSpec> : user:foo:
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.util.HttpExceptionUtils.validateResponse(HttpExceptionUtils.java:157)
+	at org.apache.hadoop.fs.http.client.HttpFSFileSystem.removeAclEntries(HttpFSFileSystem.java:891)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperation(BaseTestHttpFSWith.java:918)
+	at sun.reflect.GeneratedMethodAccessor371.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+testOperationDoAs[17](org.apache.hadoop.fs.http.client.TestHttpFSWithHttpFSFileSystem)  Time elapsed: 0.42 sec  <<< ERROR!
+org.apache.hadoop.HadoopIllegalArgumentException: Invalid <aclSpec> : user:foo:
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.util.HttpExceptionUtils.validateResponse(HttpExceptionUtils.java:157)
+	at org.apache.hadoop.fs.http.client.HttpFSFileSystem.removeAclEntries(HttpFSFileSystem.java:891)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.access$100(BaseTestHttpFSWith.java:70)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:932)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:929)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperationDoAs(BaseTestHttpFSWith.java:929)
+	at sun.reflect.GeneratedMethodAccessor372.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.client.TestHttpFSFWithWebhdfsFileSystem
+Tests run: 46, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 27.501 sec <<< FAILURE! - in org.apache.hadoop.fs.http.client.TestHttpFSFWithWebhdfsFileSystem
+testOperation[17](org.apache.hadoop.fs.http.client.TestHttpFSFWithWebhdfsFileSystem)  Time elapsed: 0.498 sec  <<< ERROR!
+org.apache.hadoop.ipc.RemoteException: Invalid <aclSpec> : user:foo:
+	at org.apache.hadoop.hdfs.web.JsonUtilClient.toRemoteException(JsonUtilClient.java:67)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.validateResponse(WebHdfsFileSystem.java:389)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.access$200(WebHdfsFileSystem.java:91)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.runWithRetry(WebHdfsFileSystem.java:641)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.access$100(WebHdfsFileSystem.java:490)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner$1.run(WebHdfsFileSystem.java:520)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.run(WebHdfsFileSystem.java:516)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.removeAclEntries(WebHdfsFileSystem.java:1068)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperation(BaseTestHttpFSWith.java:918)
+	at sun.reflect.GeneratedMethodAccessor370.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+testOperationDoAs[17](org.apache.hadoop.fs.http.client.TestHttpFSFWithWebhdfsFileSystem)  Time elapsed: 0.543 sec  <<< ERROR!
+org.apache.hadoop.ipc.RemoteException: Invalid <aclSpec> : user:foo:
+	at org.apache.hadoop.hdfs.web.JsonUtilClient.toRemoteException(JsonUtilClient.java:67)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.validateResponse(WebHdfsFileSystem.java:389)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.access$200(WebHdfsFileSystem.java:91)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.runWithRetry(WebHdfsFileSystem.java:641)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.access$100(WebHdfsFileSystem.java:490)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner$1.run(WebHdfsFileSystem.java:520)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.run(WebHdfsFileSystem.java:516)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.removeAclEntries(WebHdfsFileSystem.java:1068)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.access$100(BaseTestHttpFSWith.java:70)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:932)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:929)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperationDoAs(BaseTestHttpFSWith.java:929)
+	at sun.reflect.GeneratedMethodAccessor371.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.http.client.TestHttpFSFWithSWebhdfsFileSystem
+Tests run: 46, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 33.914 sec <<< FAILURE! - in org.apache.hadoop.fs.http.client.TestHttpFSFWithSWebhdfsFileSystem
+testOperation[17](org.apache.hadoop.fs.http.client.TestHttpFSFWithSWebhdfsFileSystem)  Time elapsed: 0.623 sec  <<< ERROR!
+org.apache.hadoop.ipc.RemoteException: Invalid <aclSpec> : user:foo:
+	at org.apache.hadoop.hdfs.web.JsonUtilClient.toRemoteException(JsonUtilClient.java:67)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.validateResponse(WebHdfsFileSystem.java:389)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.access$200(WebHdfsFileSystem.java:91)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.runWithRetry(WebHdfsFileSystem.java:641)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.access$100(WebHdfsFileSystem.java:490)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner$1.run(WebHdfsFileSystem.java:520)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.run(WebHdfsFileSystem.java:516)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.removeAclEntries(WebHdfsFileSystem.java:1068)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperation(BaseTestHttpFSWith.java:918)
+	at sun.reflect.GeneratedMethodAccessor369.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+testOperationDoAs[17](org.apache.hadoop.fs.http.client.TestHttpFSFWithSWebhdfsFileSystem)  Time elapsed: 0.45 sec  <<< ERROR!
+org.apache.hadoop.ipc.RemoteException: Invalid <aclSpec> : user:foo:
+	at org.apache.hadoop.hdfs.web.JsonUtilClient.toRemoteException(JsonUtilClient.java:67)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.validateResponse(WebHdfsFileSystem.java:389)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.access$200(WebHdfsFileSystem.java:91)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.runWithRetry(WebHdfsFileSystem.java:641)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.access$100(WebHdfsFileSystem.java:490)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner$1.run(WebHdfsFileSystem.java:520)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem$AbstractRunner.run(WebHdfsFileSystem.java:516)
+	at org.apache.hadoop.hdfs.web.WebHdfsFileSystem.removeAclEntries(WebHdfsFileSystem.java:1068)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testFileAcls(BaseTestHttpFSWith.java:769)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.operation(BaseTestHttpFSWith.java:875)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.access$100(BaseTestHttpFSWith.java:70)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:932)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith$1.run(BaseTestHttpFSWith.java:929)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1669)
+	at org.apache.hadoop.fs.http.client.BaseTestHttpFSWith.testOperationDoAs(BaseTestHttpFSWith.java:929)
+	at sun.reflect.GeneratedMethodAccessor370.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.apache.hadoop.test.TestHdfsHelper$HdfsStatement.evaluate(TestHdfsHelper.java:75)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestDirHelper$1.evaluate(TestDirHelper.java:106)
+	at org.apache.hadoop.test.TestJettyHelper$1.evaluate(TestJettyHelper.java:69)
+	at org.apache.hadoop.test.TestExceptionHelper$1.evaluate(TestExceptionHelper.java:42)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+
+Results :
+
+Failed tests: 
+  TestHttpFSServerNoACLs.testWithNoAcls:275->putCmd:222 expected:<500> but was:<400>
+  TestHttpFSServer.testFileAcls:559->putCmd:331 expected:<200> but was:<400>
+
+Tests in error: 
+  TestHttpFSWithHttpFSFileSystem>BaseTestHttpFSWith.testOperation:918->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » HadoopIllegalArgument
+  TestHttpFSWithHttpFSFileSystem>BaseTestHttpFSWith.testOperationDoAs:929->BaseTestHttpFSWith.access$100:70->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » HadoopIllegalArgument
+  TestHttpFSFWithWebhdfsFileSystem>BaseTestHttpFSWith.testOperation:918->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » Remote
+  TestHttpFSFWithWebhdfsFileSystem>BaseTestHttpFSWith.testOperationDoAs:929->BaseTestHttpFSWith.access$100:70->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » Remote
+  TestHttpFSFWithSWebhdfsFileSystem>BaseTestHttpFSWith.testOperation:918->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » Remote
+  TestHttpFSFWithSWebhdfsFileSystem>BaseTestHttpFSWith.testOperationDoAs:929->BaseTestHttpFSWith.access$100:70->BaseTestHttpFSWith.operation:875->BaseTestHttpFSWith.testFileAcls:769 » Remote
+
+Tests run: 352, Failures: 2, Errors: 6, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:13 min
+[INFO] Finished at: 2025-05-17T01:20:42+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project hadoop-hdfs-httpfs: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
