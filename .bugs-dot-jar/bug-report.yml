@@ -1,0 +1,238 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Robert Kanter
+        '@username': rkanter
+      attachments:
+        attachment:
+          '@author': rkanter
+          '@created': Sat, 21 Jun 2014 01:02:40 +0000
+          '@id': '12651785'
+          '@name': YARN-2187.patch
+          '@size': '9938'
+      comments:
+        comment:
+        - '#text': "<p><font color=\"green\">+1 overall</font>.  Here are the results\
+            \ of testing the latest attachment <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12651785/YARN-2187.patch\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12651785/YARN-2187.patch</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    <font color=\"green\">+1 @author</font>.\
+            \  The patch does not contain any @author tags.</p>\n\n<p>    <font color=\"\
+            green\">+1 tests included</font>.  The patch appears to include 1 new\
+            \ or modified test files.</p>\n\n<p>    <font color=\"green\">+1 javac</font>.\
+            \  The applied patch does not increase the total number of javac compiler\
+            \ warnings.</p>\n\n<p>    <font color=\"green\">+1 javadoc</font>.  There\
+            \ were no new javadoc warning messages.</p>\n\n<p>    <font color=\"green\"\
+            >+1 eclipse:eclipse</font>.  The patch built with eclipse:eclipse.</p>\n\
+            \n<p>    <font color=\"green\">+1 findbugs</font>.  The patch does not\
+            \ introduce any new Findbugs (version 1.3.9) warnings.</p>\n\n<p>    <font\
+            \ color=\"green\">+1 release audit</font>.  The applied patch does not\
+            \ increase the total number of release audit warnings.</p>\n\n<p>    <font\
+            \ color=\"green\">+1 core tests</font>.  The patch passed unit tests in\
+            \ hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager.</p>\n\
+            \n<p>    <font color=\"green\">+1 contrib tests</font>.  The patch passed\
+            \ contrib unit tests.</p>\n\n<p>Test results: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/4037//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/4037//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/4037//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/4037//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Sat, 21 Jun 2014 02:00:25 +0000
+          '@id': '14039644'
+        - '#text': <p>+1. Committing this. </p>
+          '@author': kkambatl
+          '@created': Sat, 21 Jun 2014 07:27:03 +0000
+          '@id': '14039726'
+        - '#text': <p>Thanks for working on this, Robert. Committed to trunk and branch-2.
+            </p>
+          '@author': kkambatl
+          '@created': Sat, 21 Jun 2014 07:33:38 +0000
+          '@id': '14039727'
+        - '#text': "<p>SUCCESS: Integrated in Hadoop-trunk-Commit #5749 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-trunk-Commit/5749/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-trunk-Commit/5749/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2187\" title=\"FairScheduler:\
+            \ Disable max-AM-share check by default\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2187\"><del>YARN-2187</del></a>. FairScheduler: Disable max-AM-share\
+            \ check by default. (Robert Kanter via kasha) (kasha: <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321</a>)</p>\n\
+            <ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationConfiguration.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationFileLoaderService.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FSLeafQueue.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-site/src/site/apt/FairScheduler.apt.vm</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 21 Jun 2014 07:40:42 +0000
+          '@id': '14039729'
+        - '#text': "<p>SUCCESS: Integrated in Hadoop-Yarn-trunk #590 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Yarn-trunk/590/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Yarn-trunk/590/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2187\" title=\"FairScheduler:\
+            \ Disable max-AM-share check by default\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2187\"><del>YARN-2187</del></a>. FairScheduler: Disable max-AM-share\
+            \ check by default. (Robert Kanter via kasha) (kasha: <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321</a>)</p>\n\
+            <ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationConfiguration.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationFileLoaderService.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FSLeafQueue.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-site/src/site/apt/FairScheduler.apt.vm</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 21 Jun 2014 11:28:49 +0000
+          '@id': '14039783'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Hdfs-trunk #1781 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk/1781/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk/1781/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2187\" title=\"FairScheduler:\
+            \ Disable max-AM-share check by default\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2187\"><del>YARN-2187</del></a>. FairScheduler: Disable max-AM-share\
+            \ check by default. (Robert Kanter via kasha) (kasha: <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321</a>)</p>\n\
+            <ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationConfiguration.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationFileLoaderService.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FSLeafQueue.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-site/src/site/apt/FairScheduler.apt.vm</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 21 Jun 2014 14:04:58 +0000
+          '@id': '14039843'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Mapreduce-trunk #1808 (See <a\
+            \ href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1808/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1808/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2187\" title=\"FairScheduler:\
+            \ Disable max-AM-share check by default\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2187\"><del>YARN-2187</del></a>. FairScheduler: Disable max-AM-share\
+            \ check by default. (Robert Kanter via kasha) (kasha: <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1604321</a>)</p>\n\
+            <ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationConfiguration.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/AllocationFileLoaderService.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/FSLeafQueue.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-site/src/site/apt/FairScheduler.apt.vm</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 21 Jun 2014 15:19:04 +0000
+          '@id': '14039867'
+      component: fairscheduler
+      created: Fri, 20 Jun 2014 22:33:58 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '401081'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 10 years, 49 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i1x1fj:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '401163'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 2.5.0
+              '@id': '12326262'
+      description: <p>Say you have a small cluster with 8gb memory and 5 queues.  This
+        means that equal queue can have 8gb / 5 = 1.6gb but an AM requires 2gb to
+        start so no AMs can be started.  By default, max-am-share check should be
+        disabled so users don't see a regression. On medium-sized clusters, it still
+        makes sense to set the max-am-share to a value between 0 and 1. </p>
+      due: null
+      environment: null
+      fixVersion: 2.5.0
+      key:
+        '#text': YARN-2187
+        '@id': '12722894'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-2187
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Robert Kanter
+        '@username': rkanter
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Sat, 21 Jun 2014 07:33:38 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: 'FairScheduler: Disable max-AM-share check by default'
+      title: '[YARN-2187] FairScheduler: Disable max-AM-share check by default'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 15 Aug 2014 05:44:48 +0000
+      version: 2.5.0
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

@@ -1,0 +1,230 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< org.apache.hadoop:hadoop-yarn-server-resourcemanager >--------
+[INFO] Building hadoop-yarn-server-resourcemanager 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Compiling 3 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Compiling 1 source file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/test-classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.1:test-jar (default) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Building jar: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/hadoop-yarn-server-resourcemanager-3.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ hadoop-yarn-server-resourcemanager ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMHA
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.193 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMHA
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestNodesPage
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.279 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestNodesPage
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesCapacitySched
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.18 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesCapacitySched
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesNodes
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.201 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesNodes
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesFairScheduler
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.899 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesFairScheduler
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServices
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.302 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServices
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesApps
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 158.293 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesApps
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebApp
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.294 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebApp
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesAppsModification
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 68.704 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebServicesAppsModification
+Running org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebAppFairScheduler
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.408 sec - in org.apache.hadoop.yarn.server.resourcemanager.webapp.TestRMWebAppFairScheduler
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestSchedulerUtils
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.049 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestSchedulerUtils
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestQueueMetrics
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.103 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestQueueMetrics
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestCapacitySchedulerQueueACLs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.802 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestCapacitySchedulerQueueACLs
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestCapacityScheduler
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.567 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestCapacityScheduler
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestQueueParsing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.484 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestQueueParsing
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestParentQueue
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.456 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestParentQueue
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestApplicationLimits
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.902 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestApplicationLimits
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestContainerAllocation
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.992 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestContainerAllocation
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestChildQueueOrder
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.895 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestChildQueueOrder
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestLeafQueue
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.733 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.TestLeafQueue
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestSchedulerApplicationAttempt
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.TestSchedulerApplicationAttempt
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestAllocationFileLoaderService
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.382 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestAllocationFileLoaderService
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestComputeFairShares
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.208 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestComputeFairShares
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFSSchedulerApp
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.299 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFSSchedulerApp
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFSLeafQueue
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.679 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFSLeafQueue
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairScheduler
+Tests run: 63, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.635 sec <<< FAILURE! - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairScheduler
+testQueueMaxAMShareDefault(org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairScheduler)  Time elapsed: 0.026 sec  <<< FAILURE!
+java.lang.AssertionError: Application1's AM should be running expected:<1> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairScheduler.testQueueMaxAMShareDefault(TestFairScheduler.java:2552)
+
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerConfiguration
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.196 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerConfiguration
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerEventLog
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.656 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerEventLog
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerPreemption
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.951 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerPreemption
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerQueueACLs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.769 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestFairSchedulerQueueACLs
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestQueueManager
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.448 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestQueueManager
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestMaxRunningAppsEnforcer
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.54 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestMaxRunningAppsEnforcer
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.policies.TestDominantResourceFairnessPolicy
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.policies.TestDominantResourceFairnessPolicy
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.policies.TestEmptyQueues
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.policies.TestEmptyQueues
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestSchedulingPolicy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.181 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestSchedulingPolicy
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestQueuePlacementPolicy
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.296 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.TestQueuePlacementPolicy
+Running org.apache.hadoop.yarn.server.resourcemanager.scheduler.fifo.TestFifoScheduler
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.082 sec - in org.apache.hadoop.yarn.server.resourcemanager.scheduler.fifo.TestFifoScheduler
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMAdminService
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.352 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMAdminService
+Running org.apache.hadoop.yarn.server.resourcemanager.monitor.TestSchedulingMonitor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.623 sec - in org.apache.hadoop.yarn.server.resourcemanager.monitor.TestSchedulingMonitor
+Running org.apache.hadoop.yarn.server.resourcemanager.monitor.capacity.TestProportionalCapacityPreemptionPolicy
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.747 sec - in org.apache.hadoop.yarn.server.resourcemanager.monitor.capacity.TestProportionalCapacityPreemptionPolicy
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMNodeTransitions
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.667 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMNodeTransitions
+Running org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestNMReconnect
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.531 sec - in org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestNMReconnect
+Running org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestNMExpiry
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.632 sec - in org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestNMExpiry
+Running org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestRMNMRPCResponseId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.503 sec - in org.apache.hadoop.yarn.server.resourcemanager.resourcetracker.TestRMNMRPCResponseId
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRM
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.268 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRM
+Running org.apache.hadoop.yarn.server.resourcemanager.TestResourceTrackerService
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.149 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestResourceTrackerService
+Running org.apache.hadoop.yarn.server.resourcemanager.TestApplicationCleanup
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.248 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestApplicationCleanup
+Running org.apache.hadoop.yarn.server.resourcemanager.TestClientRMTokens
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.176 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestClientRMTokens
+Running org.apache.hadoop.yarn.server.resourcemanager.TestApplicationACLs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.61 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestApplicationACLs
+Running org.apache.hadoop.yarn.server.resourcemanager.TestMoveApplication
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.253 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestMoveApplication
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMAuditLogger
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.55 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMAuditLogger
+Running org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRMRPCResponseId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.794 sec - in org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRMRPCResponseId
+Running org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRMRPCNodeUpdates
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.82 sec - in org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRMRPCNodeUpdates
+Running org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRestart
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.511 sec - in org.apache.hadoop.yarn.server.resourcemanager.applicationsmanager.TestAMRestart
+Running org.apache.hadoop.yarn.server.resourcemanager.TestAMAuthorization
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.241 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestAMAuthorization
+Running org.apache.hadoop.yarn.server.resourcemanager.TestKillApplicationWithRMHA
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.885 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestKillApplicationWithRMHA
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMRestart
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 178.71 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMRestart
+Running org.apache.hadoop.yarn.server.resourcemanager.security.TestDelegationTokenRenewer
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.549 sec - in org.apache.hadoop.yarn.server.resourcemanager.security.TestDelegationTokenRenewer
+Running org.apache.hadoop.yarn.server.resourcemanager.security.TestRMDelegationTokens
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.745 sec - in org.apache.hadoop.yarn.server.resourcemanager.security.TestRMDelegationTokens
+Running org.apache.hadoop.yarn.server.resourcemanager.security.TestAMRMTokens
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.14 sec - in org.apache.hadoop.yarn.server.resourcemanager.security.TestAMRMTokens
+Running org.apache.hadoop.yarn.server.resourcemanager.security.TestDelegationTokenRenewerLifecycle
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.311 sec - in org.apache.hadoop.yarn.server.resourcemanager.security.TestDelegationTokenRenewerLifecycle
+Running org.apache.hadoop.yarn.server.resourcemanager.security.TestClientToAMTokens
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.079 sec - in org.apache.hadoop.yarn.server.resourcemanager.security.TestClientToAMTokens
+Running org.apache.hadoop.yarn.server.resourcemanager.TestClientRMService
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.584 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestClientRMService
+Running org.apache.hadoop.yarn.server.resourcemanager.TestSubmitApplicationWithRMHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.898 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestSubmitApplicationWithRMHA
+Running org.apache.hadoop.yarn.server.resourcemanager.TestWorkPreservingRMRestart
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.082 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestWorkPreservingRMRestart
+Running org.apache.hadoop.yarn.server.resourcemanager.rmcontainer.TestRMContainerImpl
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.441 sec - in org.apache.hadoop.yarn.server.resourcemanager.rmcontainer.TestRMContainerImpl
+Running org.apache.hadoop.yarn.server.resourcemanager.TestRMEmbeddedElector
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.905 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestRMEmbeddedElector
+Running org.apache.hadoop.yarn.server.resourcemanager.TestApplicationMasterService
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.411 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestApplicationMasterService
+Running org.apache.hadoop.yarn.server.resourcemanager.TestAppManager
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.857 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestAppManager
+Running org.apache.hadoop.yarn.server.resourcemanager.TestFifoScheduler
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.222 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestFifoScheduler
+Running org.apache.hadoop.yarn.server.resourcemanager.rmapp.TestRMAppTransitions
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.248 sec - in org.apache.hadoop.yarn.server.resourcemanager.rmapp.TestRMAppTransitions
+Running org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.TestRMAppAttemptTransitions
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 2.04 sec - in org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.TestRMAppAttemptTransitions
+Running org.apache.hadoop.yarn.server.resourcemanager.recovery.TestZKRMStateStore
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.173 sec - in org.apache.hadoop.yarn.server.resourcemanager.recovery.TestZKRMStateStore
+Running org.apache.hadoop.yarn.server.resourcemanager.recovery.TestFSRMStateStore
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.371 sec - in org.apache.hadoop.yarn.server.resourcemanager.recovery.TestFSRMStateStore
+Running org.apache.hadoop.yarn.server.resourcemanager.recovery.TestZKRMStateStoreZKClientConnections
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.643 sec - in org.apache.hadoop.yarn.server.resourcemanager.recovery.TestZKRMStateStoreZKClientConnections
+Running org.apache.hadoop.yarn.server.resourcemanager.resource.TestResourceWeights
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in org.apache.hadoop.yarn.server.resourcemanager.resource.TestResourceWeights
+Running org.apache.hadoop.yarn.server.resourcemanager.resource.TestResources
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.192 sec - in org.apache.hadoop.yarn.server.resourcemanager.resource.TestResources
+Running org.apache.hadoop.yarn.server.resourcemanager.ahs.TestRMApplicationHistoryWriter
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.511 sec - in org.apache.hadoop.yarn.server.resourcemanager.ahs.TestRMApplicationHistoryWriter
+Running org.apache.hadoop.yarn.server.resourcemanager.TestApplicationMasterLauncher
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.883 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestApplicationMasterLauncher
+Running org.apache.hadoop.yarn.server.resourcemanager.TestResourceManager
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.019 sec - in org.apache.hadoop.yarn.server.resourcemanager.TestResourceManager
+
+Results :
+
+Failed tests: 
+  TestFairScheduler.testQueueMaxAMShareDefault:2552 Application1's AM should be running expected:<1> but was:<0>
+
+Tests run: 633, Failures: 1, Errors: 0, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18:54 min
+[INFO] Finished at: 2025-05-18T22:05:34+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project hadoop-yarn-server-resourcemanager: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
