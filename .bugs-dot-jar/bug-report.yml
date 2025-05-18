@@ -1,0 +1,368 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Jian He
+        '@username': jianhe
+      attachments:
+        attachment:
+          '@author': jianhe
+          '@created': Sun, 9 Nov 2014 21:11:57 +0000
+          '@id': '12680505'
+          '@name': YARN-2834.1.patch
+          '@size': '12733'
+      comments:
+        comment:
+        - '#text': <p>The reason RM fails with NPE is that now if app fails to renew
+            the token, it'll move to FAILED state and save the app final state. But
+            we didn't fail the RMAppAttempt and save the attempt final state. So,
+            on recovery, app won't be added to scheduler because app is already in
+            final state, but it'll still try to add the attempt to scheduler which
+            causes the NPE.</p>
+          '@author': jianhe
+          '@created': Sun, 9 Nov 2014 20:30:49 +0000
+          '@id': '14204101'
+        - '#text': <p>Talked with Zhijie, it should be fine to just ignore the token-renew
+            exception on recovery and let app continue. App itself could decide whether
+            it choose to fail or not when the token eventually expires.  Even in the
+            regular case, RM doesn't fail the app if token renew fails, why do we
+            need to fail the app if token-renew fails on recovery. </p>
+          '@author': jianhe
+          '@created': Sun, 9 Nov 2014 20:42:00 +0000
+          '@id': '14204104'
+        - '#text': '<blockquote><p>The reason RM fails with NPE is that now if app
+            fails to renew the token, it''ll move to FAILED state and save the app
+            final state. But we didn''t fail the RMAppAttempt and save the attempt
+            final state.</p></blockquote>
+
+            <p>Shouldn''t we move app-attempts to FAILED state whose parent app itself
+            has failed? That is consistent with what happens in the regular control
+            path.</p>
+
+
+            <blockquote><p>Even in the regular case, RM doesn''t fail the app if token
+            renew fails, why do we need to fail the app if token-renew fails on recovery.
+            </p></blockquote>
+
+            <p>Agreed this is an existing problem, but we should fix that too separately.
+            <a href="https://issues.apache.org/jira/browse/YARN-342" title="RM doesn&#39;t
+            retry token renewals" class="issue-link" data-issue-key="YARN-342"><del>YARN-342</del></a>
+            is related.</p>'
+          '@author': vinodkv
+          '@created': Sun, 9 Nov 2014 21:21:20 +0000
+          '@id': '14204119'
+        - '#text': '<blockquote><p>Even in the regular case, RM doesn''t fail the
+            app if token renew fails, why do we need to fail the app if token-renew
+            fails on recovery. </p></blockquote>
+
+            <p>After more discussions with <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=jianhe"
+            class="user-hover" rel="jianhe">jianhe</a> offline, for things like Timeline
+            tokens which are automatically obtained whether the app needs it or not
+            (we should fix this to be user driven), we can ignore failures. But for
+            HDFS Tokens etc, ignoring failures is bad because it (1) wastes resources
+            as AMs will continue and eventually fail (2) app doesn''t know what happened
+            it fails eventually.</p>
+
+
+            <p>Anyways, treating renewal failures is broken today. I am okay ignoring
+            renewal failures during recovery in this ticket. But let''s file a blocker
+            for handling them correctly in 2.7.</p>'
+          '@author': vinodkv
+          '@created': Sun, 9 Nov 2014 21:35:34 +0000
+          '@id': '14204128'
+        - '#text': '<blockquote><p>Anyways, treating renewal failures is broken today.
+            I am okay ignoring renewal failures during recovery in this ticket. But
+            let''s file a blocker for handling them correctly in 2.7.</p></blockquote>
+
+
+            <p>Thanks for your comments. +1 for this proposal.</p>'
+          '@author': zjshen
+          '@created': Sun, 9 Nov 2014 21:44:32 +0000
+          '@id': '14204132'
+        - '#text': "<p><font color=\"green\">+1 overall</font>.  Here are the results\
+            \ of testing the latest attachment <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12680505/YARN-2834.1.patch\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12680505/YARN-2834.1.patch</a><br/>\n\
+            \  against trunk revision 9ba8d8c.</p>\n\n<p>    <font color=\"green\"\
+            >+1 @author</font>.  The patch does not contain any @author tags.</p>\n\
+            \n<p>    <font color=\"green\">+1 tests included</font>.  The patch appears\
+            \ to include 2 new or modified test files.</p>\n\n<p>    <font color=\"\
+            green\">+1 javac</font>.  The applied patch does not increase the total\
+            \ number of javac compiler warnings.</p>\n\n<p>    <font color=\"green\"\
+            >+1 javadoc</font>.  There were no new javadoc warning messages.</p>\n\
+            \n<p>    <font color=\"green\">+1 eclipse:eclipse</font>.  The patch built\
+            \ with eclipse:eclipse.</p>\n\n<p>    <font color=\"green\">+1 findbugs</font>.\
+            \  The patch does not introduce any new Findbugs (version 2.0.3) warnings.</p>\n\
+            \n<p>    <font color=\"green\">+1 release audit</font>.  The applied patch\
+            \ does not increase the total number of release audit warnings.</p>\n\n\
+            <p>    <font color=\"green\">+1 core tests</font>.  The patch passed unit\
+            \ tests in hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager.</p>\n\
+            \n<p>    <font color=\"green\">+1 contrib tests</font>.  The patch passed\
+            \ contrib unit tests.</p>\n\n<p>Test results: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/5807//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/5807//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/5807//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/5807//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Sun, 9 Nov 2014 22:36:31 +0000
+          '@id': '14204154'
+        - '#text': <p>This looks good, +1. Checking this in.</p>
+          '@author': vinodkv
+          '@created': Mon, 10 Nov 2014 02:56:29 +0000
+          '@id': '14204266'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-trunk-Commit #6501 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-trunk-Commit/6501/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-trunk-Commit/6501/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2834\" title=\"Resource\
+            \ manager crashed with Null Pointer Exception\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2834\"><del>YARN-2834</del></a>. Fixed ResourceManager to ignore\
+            \ token-renewal failures on recovery consistent with the (somewhat incorrect)\
+            \ behaviour in the non-recovery case. Contributed by Jian He. (vinodkv:\
+            \ rev e76faebc9589654e83c8244ef9aff88391e56b80)</p>\n<ul>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttemptImpl.java</li>\n\
+            \t<li>hadoop-yarn-project/CHANGES.txt</li>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestWorkPreservingRMRestart.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/TestRMAppTransitions.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMAppImpl.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 10 Nov 2014 03:02:16 +0000
+          '@id': '14204269'
+        - '#text': <p>Committed this to trunk, branch-2 and branch-2.6. Thanks Jian!</p>
+          '@author': vinodkv
+          '@created': Mon, 10 Nov 2014 03:11:18 +0000
+          '@id': '14204275'
+        - '#text': <p>Filed <a href="https://issues.apache.org/jira/browse/YARN-2836"
+            title="RM behaviour on token renewal failures is broken" class="issue-link"
+            data-issue-key="YARN-2836">YARN-2836</a> as a 2.7 blocker.</p>
+          '@author': vinodkv
+          '@created': Mon, 10 Nov 2014 03:14:31 +0000
+          '@id': '14204290'
+        - '#text': "<p>SUCCESS: Integrated in Hadoop-Yarn-trunk #739 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Yarn-trunk/739/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Yarn-trunk/739/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2834\" title=\"Resource\
+            \ manager crashed with Null Pointer Exception\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2834\"><del>YARN-2834</del></a>. Fixed ResourceManager to ignore\
+            \ token-renewal failures on recovery consistent with the (somewhat incorrect)\
+            \ behaviour in the non-recovery case. Contributed by Jian He. (vinodkv:\
+            \ rev e76faebc9589654e83c8244ef9aff88391e56b80)</p>\n<ul>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/TestRMAppTransitions.java</li>\n\
+            \t<li>hadoop-yarn-project/CHANGES.txt</li>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttemptImpl.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestWorkPreservingRMRestart.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMAppImpl.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 10 Nov 2014 11:51:37 +0000
+          '@id': '14204683'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Hdfs-trunk #1929 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk/1929/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk/1929/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2834\" title=\"Resource\
+            \ manager crashed with Null Pointer Exception\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2834\"><del>YARN-2834</del></a>. Fixed ResourceManager to ignore\
+            \ token-renewal failures on recovery consistent with the (somewhat incorrect)\
+            \ behaviour in the non-recovery case. Contributed by Jian He. (vinodkv:\
+            \ rev e76faebc9589654e83c8244ef9aff88391e56b80)</p>\n<ul>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/TestRMAppTransitions.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMAppImpl.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestWorkPreservingRMRestart.java</li>\n\
+            \t<li>hadoop-yarn-project/CHANGES.txt</li>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttemptImpl.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 10 Nov 2014 14:15:46 +0000
+          '@id': '14204811'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Mapreduce-trunk #1953 (See <a\
+            \ href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1953/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1953/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/YARN-2834\" title=\"Resource\
+            \ manager crashed with Null Pointer Exception\" class=\"issue-link\" data-issue-key=\"\
+            YARN-2834\"><del>YARN-2834</del></a>. Fixed ResourceManager to ignore\
+            \ token-renewal failures on recovery consistent with the (somewhat incorrect)\
+            \ behaviour in the non-recovery case. Contributed by Jian He. (vinodkv:\
+            \ rev e76faebc9589654e83c8244ef9aff88391e56b80)</p>\n<ul>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/RMAppImpl.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/attempt/RMAppAttemptImpl.java</li>\n\
+            \t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/rmapp/TestRMAppTransitions.java</li>\n\
+            \t<li>hadoop-yarn-project/CHANGES.txt</li>\n\t<li>hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestWorkPreservingRMRestart.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 10 Nov 2014 15:16:58 +0000
+          '@id': '14204869'
+        - '#text': <p>Sorry for missing this earlier, doesn't this undo <a href="https://issues.apache.org/jira/browse/YARN-2010"
+            title="Handle app-recovery failures gracefully" class="issue-link" data-issue-key="YARN-2010"><del>YARN-2010</del></a>?  If
+            I am not mistaken, the RM will crash if it fails to recover apps now.
+            <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=jianhe"
+            class="user-hover" rel="jianhe">jianhe</a> - thoughts? </p>
+          '@author': kasha
+          '@created': Mon, 12 Jan 2015 01:03:00 +0000
+          '@id': '14273129'
+        - '#text': '<blockquote><p>If I am not mistaken, the RM will crash if it fails
+            to recover apps now.</p></blockquote>
+
+            <p>No, the patch won''t cause RM to crash.   why ?</p>'
+          '@author': jianhe
+          '@created': Mon, 12 Jan 2015 04:06:10 +0000
+          '@id': '14273198'
+      created: Sun, 9 Nov 2014 06:07:01 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 10 years, 19 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i225jr:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 2.6.0
+              '@id': '12327197'
+      description: "<p>Resource manager failed after restart. </p>\n\n<div class=\"\
+        preformatted panel\" style=\"border-width: 1px;\"><div class=\"preformattedContent\
+        \ panelContent\">\n<pre>2014-11-09 04:12:53,013 INFO  capacity.CapacityScheduler\
+        \ (CapacityScheduler.java:initializeQueues(467)) - Initialized root queue\
+        \ root: numChildQueue= 2, capacity=1.0, absoluteCapacity=1.0, usedResources=&lt;memory:0,\
+        \ vCores:0&gt;usedCapacity=0.0, numApps=0, numContainers=0\n2014-11-09 04:12:53,013\
+        \ INFO  capacity.CapacityScheduler (CapacityScheduler.java:initializeQueueMappings(436))\
+        \ - Initialized queue mappings, override: false\n2014-11-09 04:12:53,013 INFO\
+        \  capacity.CapacityScheduler (CapacityScheduler.java:initScheduler(305))\
+        \ - Initialized CapacityScheduler with calculator=class org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator,\
+        \ minimumAllocation=&lt;&lt;memory:256, vCores:1&gt;&gt;, maximumAllocation=&lt;&lt;memory:2048,\
+        \ vCores:32&gt;&gt;, asynchronousScheduling=false, asyncScheduleInterval=5ms\n\
+        2014-11-09 04:12:53,015 INFO  service.AbstractService (AbstractService.java:noteFailure(272))\
+        \ - Service ResourceManager failed in state STARTED; cause: java.lang.NullPointerException\n\
+        java.lang.NullPointerException\n        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.addApplicationAttempt(CapacityScheduler.java:734)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.handle(CapacityScheduler.java:1089)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.handle(CapacityScheduler.java:114)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptImpl$AttemptRecoveredTransition.transition(RMAppAttemptImpl.java:1041)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptImpl$AttemptRecoveredTransition.transition(RMAppAttemptImpl.java:1005)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory$MultipleInternalArc.doTransition(StateMachineFactory.java:385)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory.doTransition(StateMachineFactory.java:302)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory.access$300(StateMachineFactory.java:46)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory$InternalStateMachine.doTransition(StateMachineFactory.java:448)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptImpl.handle(RMAppAttemptImpl.java:757)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptImpl.handle(RMAppAttemptImpl.java:106)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl.recoverAppAttempts(RMAppImpl.java:821)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl.access$1900(RMAppImpl.java:101)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl$RMAppRecoveredTransition.transition(RMAppImpl.java:843)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl$RMAppRecoveredTransition.transition(RMAppImpl.java:826)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory$MultipleInternalArc.doTransition(StateMachineFactory.java:385)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory.doTransition(StateMachineFactory.java:302)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory.access$300(StateMachineFactory.java:46)\n\
+        \        at org.apache.hadoop.yarn.state.StateMachineFactory$InternalStateMachine.doTransition(StateMachineFactory.java:448)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppImpl.handle(RMAppImpl.java:701)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.RMAppManager.recoverApplication(RMAppManager.java:312)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.RMAppManager.recover(RMAppManager.java:413)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.recover(ResourceManager.java:1207)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMActiveServices.serviceStart(ResourceManager.java:590)\n\
+        \        at org.apache.hadoop.service.AbstractService.start(AbstractService.java:193)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.startActiveServices(ResourceManager.java:1014)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1051)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1047)\n\
+        \        at java.security.AccessController.doPrivileged(Native Method)\n \
+        \       at javax.security.auth.Subject.doAs(Subject.java:415)\n        at\
+        \ org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.transitionToActive(ResourceManager.java:1047)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.serviceStart(ResourceManager.java:1091)\n\
+        \        at org.apache.hadoop.service.AbstractService.start(AbstractService.java:193)\n\
+        \        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.main(ResourceManager.java:1226)\n\
+        </pre>\n</div></div>"
+      due: null
+      environment: null
+      fixVersion: 2.6.0
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+            - issuekey:
+                '#text': YARN-2836
+                '@id': '12754043'
+            - issuekey:
+                '#text': YARN-4032
+                '@id': '12853035'
+      key:
+        '#text': YARN-2834
+        '@id': '12753978'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-2834
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Yesha Vora
+        '@username': yeshavora
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Mon, 10 Nov 2014 03:11:18 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Resource manager crashed with Null Pointer Exception
+      title: '[YARN-2834] Resource manager crashed with Null Pointer Exception'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 13 Oct 2015 17:01:29 +0000
+      votes: '0'
+      watches: '10'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
