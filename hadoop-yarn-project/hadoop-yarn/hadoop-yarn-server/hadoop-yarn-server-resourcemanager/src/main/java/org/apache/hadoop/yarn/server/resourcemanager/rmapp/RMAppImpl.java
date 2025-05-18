@@ -714,7 +714,7 @@ public class RMAppImpl implements RMApp, Recoverable {
   }
 
   @Override
-  public void recover(RMState state) {
+  public void recover(RMState state) throws Exception{
     ApplicationState appState = state.getApplicationState().get(getApplicationId());
     this.recoveredFinalState = appState.getState();
     LOG.info("Recovering app: " + getApplicationId() + " with " + 
@@ -830,7 +830,14 @@ public class RMAppImpl implements RMApp, Recoverable {
     public RMAppState transition(RMAppImpl app, RMAppEvent event) {
 
       RMAppRecoverEvent recoverEvent = (RMAppRecoverEvent) event;
-      app.recover(recoverEvent.getRMState());
+      try {
+        app.recover(recoverEvent.getRMState());
+      } catch (Exception e) {
+        String msg = app.applicationId + " failed to recover. " + e.getMessage();
+        failToRecoverApp(app, event, msg, e);
+        return RMAppState.FINAL_SAVING;
+      }
+
       // The app has completed.
       if (app.recoveredFinalState != null) {
         app.recoverAppAttempts();
@@ -845,10 +852,10 @@ public class RMAppImpl implements RMApp, Recoverable {
             app.getApplicationId(), app.parseCredentials(),
             app.submissionContext.getCancelTokensWhenComplete(), app.getUser());
         } catch (Exception e) {
-          String msg = "Failed to renew token for " + app.applicationId
-                  + " on recovery : " + e.getMessage();
-          app.diagnostics.append(msg);
-          LOG.error(msg, e);
+          String msg = "Failed to renew delegation token on recovery for "
+              + app.applicationId + e.getMessage();
+          failToRecoverApp(app, event, msg, e);
+          return RMAppState.FINAL_SAVING;
         }
       }
 
@@ -884,6 +891,14 @@ public class RMAppImpl implements RMApp, Recoverable {
       // accepted. So after YARN-1507, an app is saved meaning it is accepted.
       // Thus we return ACCECPTED state on recovery.
       return RMAppState.ACCEPTED;
+    }
+
+    private void failToRecoverApp(RMAppImpl app, RMAppEvent event, String msg,
+        Exception e) {
+      app.diagnostics.append(msg);
+      LOG.error(msg, e);
+      app.rememberTargetTransitionsAndStoreState(event, new FinalTransition(
+        RMAppState.FAILED), RMAppState.FAILED, RMAppState.FAILED);
     }
   }
 
