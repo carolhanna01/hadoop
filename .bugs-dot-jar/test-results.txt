@@ -1,0 +1,1667 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.hadoop:hadoop-hdfs >--------------------
+[INFO] Building Apache Hadoop HDFS 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ hadoop-hdfs ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-dir
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-SNAPSHOT:protoc (compile-protoc) @ hadoop-hdfs ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hadoop-hdfs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hadoop-hdfs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 625 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[39,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[53,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[55,18] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[57,17] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[59,15] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/CachePoolIterator.java: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/CachePoolIterator.java uses unchecked or unsafe operations.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/CachePoolIterator.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-web-xmls) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/hdfs/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/secondary/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/datanode/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/journal/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/nfs3/WEB-INF
+     [copy] Copying 22 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hadoop-hdfs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 41 resources
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-log-dir) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/log
+     [copy] Copying 27 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hadoop-hdfs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 554 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[67,31] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[230,11] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[236,12] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[236,40] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[238,7] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[241,25] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[261,5] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[279,5] sun.net.spi.nameservice.NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/NNThroughputBenchmark.java: Some input files use or override a deprecated API.
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/NNThroughputBenchmark.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hadoop-hdfs ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.TestRefreshCallQueue
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.393 sec - in org.apache.hadoop.TestRefreshCallQueue
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.TestGenericRefresh
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.443 sec - in org.apache.hadoop.TestGenericRefresh
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRead
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 3.448 sec - in org.apache.hadoop.hdfs.TestRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileAppend
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.941 sec - in org.apache.hadoop.hdfs.TestFileAppend
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDefaultNameNodePort
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.36 sec - in org.apache.hadoop.hdfs.TestDefaultNameNodePort
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFSOutputSummer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.129 sec - in org.apache.hadoop.hdfs.TestFSOutputSummer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitReadUnCached
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.118 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitReadUnCached
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestInjectionForSimulatedStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.204 sec - in org.apache.hadoop.hdfs.TestInjectionForSimulatedStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestMissingBlocksAlert
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.481 sec - in org.apache.hadoop.hdfs.TestMissingBlocksAlert
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.211 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancer
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 240.294 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithSaslDataTransfer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.753 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithSaslDataTransfer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.212 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithEncryptedTransfer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.311 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithEncryptedTransfer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.446 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.mover.TestStorageMover
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 182.486 sec - in org.apache.hadoop.hdfs.server.mover.TestStorageMover
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.mover.TestMover
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 129.384 sec - in org.apache.hadoop.hdfs.server.mover.TestMover
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestListCorruptFileBlocks
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.453 sec - in org.apache.hadoop.hdfs.server.namenode.TestListCorruptFileBlocks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestStoragePolicySummary
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 sec - in org.apache.hadoop.hdfs.server.namenode.TestStoragePolicySummary
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogRace
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.026 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogRace
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAclTransformation
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.367 sec - in org.apache.hadoop.hdfs.server.namenode.TestAclTransformation
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestParallelImageWrite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.522 sec - in org.apache.hadoop.hdfs.server.namenode.TestParallelImageWrite
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestNNHealthCheck
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.376 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestNNHealthCheck
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestRetryCacheWithHA
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.409 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestRetryCacheWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAFsck
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.778 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAFsck
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.531 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyCheckpoints
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 100.731 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyCheckpoints
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailureToReadEdits
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 83.619 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailureToReadEdits
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestGetGroupsWithHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.038 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestGetGroupsWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencing
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.344 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAConfiguration
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.122 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAConfiguration
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogsDuringFailover
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.157 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogsDuringFailover
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandbyWithQJM
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.678 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandbyWithQJM
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestLossyRetryInvocationHandler
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.429 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestLossyRetryInvocationHandler
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAMetrics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.338 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestPendingCorruptDnMessages
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.903 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestPendingCorruptDnMessages
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHarFileSystemWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.286 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHarFileSystemWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.851 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandby
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.037 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandby
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.083 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestXAttrsWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.619 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestXAttrsWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.811 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDelegationTokensWithHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.654 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDelegationTokensWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestQuotasWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.988 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestQuotasWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencingWithReplication
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.758 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencingWithReplication
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAAppend
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.687 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAAppend
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStateTransitionFailure
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.536 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStateTransitionFailure
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.701 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDFSZKFailoverController
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.676 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDFSZKFailoverController
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.377 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestInitializeSharedEdits
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.094 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestInitializeSharedEdits
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailoverWithBlockTokensEnabled
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.626 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailoverWithBlockTokensEnabled
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogTailer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.024 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogTailer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 74.79 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFavoredNodesEndToEnd
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.603 sec - in org.apache.hadoop.hdfs.server.namenode.TestFavoredNodesEndToEnd
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRecovery
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.619 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRecovery
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSecurityTokenEditLog
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.843 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecurityTokenEditLog
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestGenericJournalConf
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.215 sec - in org.apache.hadoop.hdfs.server.namenode.TestGenericJournalConf
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSPermissionChecker
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.692 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSPermissionChecker
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNNMetricFilesInGetListingOps
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.002 sec - in org.apache.hadoop.hdfs.server.namenode.metrics.TestNNMetricFilesInGetListingOps
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNameNodeMetrics
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 112.637 sec - in org.apache.hadoop.hdfs.server.namenode.metrics.TestNameNodeMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditsDoubleBuffer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditsDoubleBuffer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestPathComponents
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.253 sec - in org.apache.hadoop.hdfs.server.namenode.TestPathComponents
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestStorageRestore
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.395 sec - in org.apache.hadoop.hdfs.server.namenode.TestStorageRestore
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeXAttr
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.169 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeXAttr
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestLeaseManager
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.438 sec - in org.apache.hadoop.hdfs.server.namenode.TestLeaseManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76.455 sec - in org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestStartupProgressServlet
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.501 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartupProgressServlet
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestMetaSave
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.213 sec - in org.apache.hadoop.hdfs.server.namenode.TestMetaSave
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSDirectory
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.077 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSDirectory
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestCreateEditsLog
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.937 sec - in org.apache.hadoop.hdfs.server.namenode.TestCreateEditsLog
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestProcessCorruptBlocks
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.505 sec - in org.apache.hadoop.hdfs.server.namenode.TestProcessCorruptBlocks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogAutoroll
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.509 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogAutoroll
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogJournalFailures
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.788 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogJournalFailures
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSnapshotPathINodes
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.859 sec - in org.apache.hadoop.hdfs.server.namenode.TestSnapshotPathINodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAuditLogger
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.207 sec - in org.apache.hadoop.hdfs.server.namenode.TestAuditLogger
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestBlockUnderConstruction
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.038 sec - in org.apache.hadoop.hdfs.server.namenode.TestBlockUnderConstruction
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFsckWithMultipleNameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.317 sec - in org.apache.hadoop.hdfs.server.namenode.TestFsckWithMultipleNameNodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgressMetrics
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.404 sec - in org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgressMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgress
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.355 sec - in org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgress
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.644 sec - in org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDeadDatanode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.32 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeadDatanode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.top.window.TestRollingWindow
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 sec - in org.apache.hadoop.hdfs.server.namenode.top.window.TestRollingWindow
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.top.window.TestRollingWindowManager
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.434 sec - in org.apache.hadoop.hdfs.server.namenode.top.window.TestRollingWindowManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFsLimits
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.97 sec - in org.apache.hadoop.hdfs.server.namenode.TestFsLimits
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImage
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.319 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestHostsFiles
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.082 sec - in org.apache.hadoop.hdfs.server.namenode.TestHostsFiles
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestMetadataVersionOutput
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.226 sec - in org.apache.hadoop.hdfs.server.namenode.TestMetadataVersionOutput
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogFileOutputStream
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.661 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogFileOutputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithSnapshot
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.08 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestStartup
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.887 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartup
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFileContextXAttr
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.494 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileContextXAttr
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNamenodeCapacityReport
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.807 sec - in org.apache.hadoop.hdfs.server.namenode.TestNamenodeCapacityReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestTruncateQuotaUpdate
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.984 sec - in org.apache.hadoop.hdfs.server.namenode.TestTruncateQuotaUpdate
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestINodeAttributeProvider
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.112 sec - in org.apache.hadoop.hdfs.server.namenode.TestINodeAttributeProvider
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDefaultBlockPlacementPolicy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.979 sec - in org.apache.hadoop.hdfs.server.namenode.TestDefaultBlockPlacementPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDeduplicationMap
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeduplicationMap
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestStartupOptionUpgrade
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.766 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartupOptionUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRetryCacheMetrics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.231 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRetryCacheMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSecureNameNode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.095 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecureNameNode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckPointForSecurityTokens
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.108 sec - in org.apache.hadoop.hdfs.server.namenode.TestCheckPointForSecurityTokens
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestClusterId
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.297 sec - in org.apache.hadoop.hdfs.server.namenode.TestClusterId
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSEditLogLoader
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.076 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSEditLogLoader
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSNamesystemMBean
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.293 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSNamesystemMBean
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSNamesystem
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.469 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSNamesystem
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourcePolicy
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.3 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourcePolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAclConfigFlag
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.771 sec - in org.apache.hadoop.hdfs.server.namenode.TestAclConfigFlag
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSecureNameNodeWithExternalKdc
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.108 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecureNameNodeWithExternalKdc
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDeleteRace
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 58.334 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeleteRace
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestHDFSConcat
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.094 sec - in org.apache.hadoop.hdfs.server.namenode.TestHDFSConcat
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotStatsMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.314 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotStatsMXBean
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestINodeFileUnderConstructionWithSnapshot
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.161 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestINodeFileUnderConstructionWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotFileLength
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.116 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotFileLength
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.679 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSetQuotaWithSnapshot
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.975 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSetQuotaWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.254 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotRename
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.956 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotRename
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.495 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestXAttrWithSnapshot
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.452 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestXAttrWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestDisallowModifyROSnapshot
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.562 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestDisallowModifyROSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestRenameWithSnapshots
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 102.476 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestRenameWithSnapshots
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestCheckpointsWithSnapshots
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.966 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestCheckpointsWithSnapshots
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestUpdatePipelineWithSnapshots
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.873 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestUpdatePipelineWithSnapshots
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotManager
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.577 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotReplication
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.495 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotReplication
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotMetrics
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.246 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotListing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.802 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotListing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshot
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.253 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestAclWithSnapshot
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.017 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestAclWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshottableDirListing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.586 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshottableDirListing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotNameWithInvalidCharacters
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.805 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotNameWithInvalidCharacters
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDiffReport
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.627 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDiffReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestOpenFilesWithSnapshot
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.71 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestOpenFilesWithSnapshot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestCommitBlockSynchronization
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.108 sec - in org.apache.hadoop.hdfs.server.namenode.TestCommitBlockSynchronization
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.236 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFileTruncate
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 77.445 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileTruncate
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFsck
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.938 sec - in org.apache.hadoop.hdfs.server.namenode.TestFsck
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestQuotaByStorageType
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.259 sec - in org.apache.hadoop.hdfs.server.namenode.TestQuotaByStorageType
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNamenodeRetryCache
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.916 sec - in org.apache.hadoop.hdfs.server.namenode.TestNamenodeRetryCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionManager
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.961 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestMalformedURLs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.259 sec - in org.apache.hadoop.hdfs.server.namenode.TestMalformedURLs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageStorageInspector
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.382 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageStorageInspector
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFileJournalManager
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.217 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileJournalManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFileLimit
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.233 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileLimit
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAuditLogs
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.779 sec - in org.apache.hadoop.hdfs.server.namenode.TestAuditLogs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeHttpServer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.099 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeHttpServer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFileContextAcl
+Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.476 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileContextAcl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameEditsConfigs
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.784 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameEditsConfigs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeOptionParsing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.6 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeOptionParsing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestSecondaryNameNodeUpgrade
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.49 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecondaryNameNodeUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionFunctional
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.123 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionFunctional
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckpoint
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.295 sec - in org.apache.hadoop.hdfs.server.namenode.TestCheckpoint
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLog
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.892 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLog
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRespectsBindHostKeys
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.276 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRespectsBindHostKeys
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeMXBean
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.555 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeMXBean
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogFileInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.96 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogFileInputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDiskspaceQuotaUpdate
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.415 sec - in org.apache.hadoop.hdfs.server.namenode.TestDiskspaceQuotaUpdate
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithXAttr
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.173 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithXAttr
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestValidateConfigurationSettings
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.766 sec - in org.apache.hadoop.hdfs.server.namenode.TestValidateConfigurationSettings
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.013 sec - in org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNNThroughputBenchmark
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.875 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNThroughputBenchmark
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestTransferFsImage
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.235 sec - in org.apache.hadoop.hdfs.server.namenode.TestTransferFsImage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl
+Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.789 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestBackupNode
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.783 sec - in org.apache.hadoop.hdfs.server.namenode.TestBackupNode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.web.resources.TestWebHdfsDataLocality
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.442 sec - in org.apache.hadoop.hdfs.server.namenode.web.resources.TestWebHdfsDataLocality
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithAcl
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.606 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithAcl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAddBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.597 sec - in org.apache.hadoop.hdfs.server.namenode.TestAddBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestXAttrConfigFlag
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.411 sec - in org.apache.hadoop.hdfs.server.namenode.TestXAttrConfigFlag
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestLargeDirectoryDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.949 sec - in org.apache.hadoop.hdfs.server.namenode.TestLargeDirectoryDelete
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRpcServer
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.839 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRpcServer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAllowFormat
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.497 sec - in org.apache.hadoop.hdfs.server.namenode.TestAllowFormat
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestAddBlockRetry
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.771 sec - in org.apache.hadoop.hdfs.server.namenode.TestAddBlockRetry
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestINodeFile
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.002 sec - in org.apache.hadoop.hdfs.server.namenode.TestINodeFile
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourceChecker
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.684 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourceChecker
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.namenode.TestGetImageServlet
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.869 sec - in org.apache.hadoop.hdfs.server.namenode.TestGetImageServlet
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.common.TestGetUriFromString
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 sec - in org.apache.hadoop.hdfs.server.common.TestGetUriFromString
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.common.TestJspHelper
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.251 sec - in org.apache.hadoop.hdfs.server.common.TestJspHelper
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestCachedBlocksList
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.235 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestCachedBlocksList
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestOverReplicatedBlocks
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.474 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestOverReplicatedBlocks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlockQueues
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.304 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlockQueues
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicy
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.186 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHostFileManager
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.956 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHostFileManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestComputeInvalidateWork
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.93 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestComputeInvalidateWork
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingInvalidateBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.578 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingInvalidateBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyConsiderLoad
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.257 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyConsiderLoad
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestCorruptReplicaInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.422 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestCorruptReplicaInfo
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestNodeCount
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.774 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestNodeCount
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyWithNodeGroup
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.074 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyWithNodeGroup
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeManager
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.075 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlocksWithNotEnoughRacks
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.425 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlocksWithNotEnoughRacks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestNameNodePrunesMissingStorages
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.849 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestNameNodePrunesMissingStorages
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestSequentialBlockId
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.338 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestSequentialBlockId
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeDescriptor
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.25 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeDescriptor
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfo
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.263 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfo
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestRBWBlockInvalidation
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.422 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestRBWBlockInvalidation
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingDataNodeMessages
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingDataNodeMessages
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingReplication
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.083 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingReplication
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.784 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlocks
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.663 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlocks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.145 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHost2NodesMap
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.277 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHost2NodesMap
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHeartbeatHandling
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.259 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHeartbeatHandling
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoUnderConstruction
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.365 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoUnderConstruction
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockRecovery
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.188 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockRecovery
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.408 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockPoolManager
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.033 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockPoolManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataStorage
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.544 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.883 sec - in org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestTransferRbw
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.592 sec - in org.apache.hadoop.hdfs.server.datanode.TestTransferRbw
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestReadOnlySharedStorage
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.623 sec - in org.apache.hadoop.hdfs.server.datanode.TestReadOnlySharedStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.406 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestTriggerBlockReport
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.079 sec - in org.apache.hadoop.hdfs.server.datanode.TestTriggerBlockReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeECN
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.216 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeECN
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeInitStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.11 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeInitStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCacheRevocation
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.293 sec - in org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCacheRevocation
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestHSync
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.468 sec - in org.apache.hadoop.hdfs.server.datanode.TestHSync
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataDirs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.852 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataDirs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDiskError
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.724 sec - in org.apache.hadoop.hdfs.server.datanode.TestDiskError
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeHotSwapVolumes
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 47.165 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeHotSwapVolumes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.758 sec - in org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockHasMultipleReplicasOnSameDN
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.811 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockHasMultipleReplicasOnSameDN
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCache
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 95.746 sec - in org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestIncrementalBlockReports
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.319 sec - in org.apache.hadoop.hdfs.server.datanode.TestIncrementalBlockReports
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestNNHandlesCombinedBlockReport
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.119 sec - in org.apache.hadoop.hdfs.server.datanode.TestNNHandlesCombinedBlockReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeRollingUpgrade
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 118.57 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeRollingUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestIncrementalBrVariations
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.684 sec - in org.apache.hadoop.hdfs.server.datanode.TestIncrementalBrVariations
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockPoolSliceStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.248 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockPoolSliceStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockScanner
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.879 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockScanner
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestSimulatedFSDataset
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.982 sec - in org.apache.hadoop.hdfs.server.datanode.TestSimulatedFSDataset
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDnRespectsBlockReportSplitThreshold
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.835 sec - in org.apache.hadoop.hdfs.server.datanode.TestDnRespectsBlockReportSplitThreshold
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestCachingStrategy
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.329 sec - in org.apache.hadoop.hdfs.server.datanode.TestCachingStrategy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeStartupOptions
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec - in org.apache.hadoop.hdfs.server.datanode.TestDatanodeStartupOptions
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeProtocolRetryPolicy
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.978 sec - in org.apache.hadoop.hdfs.server.datanode.TestDatanodeProtocolRetryPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestNNHandlesBlockReportPerStorage
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.154 sec - in org.apache.hadoop.hdfs.server.datanode.TestNNHandlesBlockReportPerStorage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestStorageReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.639 sec - in org.apache.hadoop.hdfs.server.datanode.TestStorageReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.TestAvailableSpaceVolumeChoosingPolicy
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.639 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.TestAvailableSpaceVolumeChoosingPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.TestRoundRobinVolumeChoosingPolicy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.32 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.TestRoundRobinVolumeChoosingPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestDatanodeRestart
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.592 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestDatanodeRestart
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestInterDatanodeProtocol
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.265 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestInterDatanodeProtocol
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsVolumeList
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.804 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsVolumeList
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestRbwSpaceReservation
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 68.867 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestRbwSpaceReservation
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsDatasetImpl
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.08 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestFsDatasetImpl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestScrLazyPersistFiles
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 8, Time elapsed: 0.436 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestScrLazyPersistFiles
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestWriteToReplica
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.259 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestWriteToReplica
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestReplicaMap
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestReplicaMap
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 230.393 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.extdataset.TestExternalDataset
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec - in org.apache.hadoop.hdfs.server.datanode.extdataset.TestExternalDataset
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.429 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.808 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.57 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.887 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.344 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeRegister
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.826 sec - in org.apache.hadoop.hdfs.server.datanode.TestDatanodeRegister
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.web.webhdfs.TestParameterParser
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.543 sec - in org.apache.hadoop.hdfs.server.datanode.web.webhdfs.TestParameterParser
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestBPOfferService
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.109 sec - in org.apache.hadoop.hdfs.server.datanode.TestBPOfferService
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.734 sec - in org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestStartSecureDataNode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.088 sec - in org.apache.hadoop.hdfs.server.datanode.TestStartSecureDataNode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestHdfsServerConstants
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec - in org.apache.hadoop.hdfs.server.datanode.TestHdfsServerConstants
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.185 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestClientReportBadBlock
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.844 sec - in org.apache.hadoop.hdfs.TestClientReportBadBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestPread
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 98.23 sec - in org.apache.hadoop.hdfs.TestPread
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFsShellPermission
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.493 sec - in org.apache.hadoop.hdfs.TestFsShellPermission
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.345 sec - in org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSFinalize
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.19 sec - in org.apache.hadoop.hdfs.TestDFSFinalize
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileCorruption
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.884 sec - in org.apache.hadoop.hdfs.TestFileCorruption
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestWriteBlockGetsBlockLengthHint
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.899 sec - in org.apache.hadoop.hdfs.TestWriteBlockGetsBlockLengthHint
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestAppendDifferentChecksum
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.545 sec - in org.apache.hadoop.hdfs.TestAppendDifferentChecksum
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestByteArrayManager
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.199 sec - in org.apache.hadoop.hdfs.util.TestByteArrayManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestBestEffortLongFile
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 sec - in org.apache.hadoop.hdfs.util.TestBestEffortLongFile
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestMD5FileUtils
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.329 sec - in org.apache.hadoop.hdfs.util.TestMD5FileUtils
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestLightWeightLinkedSet
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.2 sec - in org.apache.hadoop.hdfs.util.TestLightWeightLinkedSet
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestXMLUtils
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec - in org.apache.hadoop.hdfs.util.TestXMLUtils
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestAtomicFileOutputStream
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.308 sec - in org.apache.hadoop.hdfs.util.TestAtomicFileOutputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestExactSizeInputStream
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 sec - in org.apache.hadoop.hdfs.util.TestExactSizeInputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestLightWeightHashSet
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.197 sec - in org.apache.hadoop.hdfs.util.TestLightWeightHashSet
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestCyclicIteration
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec - in org.apache.hadoop.hdfs.util.TestCyclicIteration
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.util.TestDiff
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.63 sec - in org.apache.hadoop.hdfs.util.TestDiff
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSClientExcludedNodes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.181 sec - in org.apache.hadoop.hdfs.TestDFSClientExcludedNodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileCreationEmpty
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.685 sec - in org.apache.hadoop.hdfs.TestFileCreationEmpty
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitReadNoChecksum
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.202 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitReadNoChecksum
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestIsMethodSupported
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.666 sec - in org.apache.hadoop.hdfs.TestIsMethodSupported
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlockMissingException
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.196 sec - in org.apache.hadoop.hdfs.TestBlockMissingException
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSetrepIncreasing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.842 sec - in org.apache.hadoop.hdfs.TestSetrepIncreasing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.crypto.TestHdfsCryptoStreams
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.731 sec - in org.apache.hadoop.hdfs.crypto.TestHdfsCryptoStreams
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLeaseRecovery2
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 180.116 sec - in org.apache.hadoop.hdfs.TestLeaseRecovery2
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRollingUpgradeDowngrade
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.07 sec - in org.apache.hadoop.hdfs.TestRollingUpgradeDowngrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileCreationDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.662 sec - in org.apache.hadoop.hdfs.TestFileCreationDelete
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileAppendRestart
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.855 sec - in org.apache.hadoop.hdfs.TestFileAppendRestart
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestPersistBlocks
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.868 sec - in org.apache.hadoop.hdfs.TestPersistBlocks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSRemove
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.978 sec - in org.apache.hadoop.hdfs.TestDFSRemove
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitLegacyRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.812 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitLegacyRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeRegistration
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.975 sec - in org.apache.hadoop.hdfs.TestDatanodeRegistration
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestEncryptionZones
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.336 sec - in org.apache.hadoop.hdfs.TestEncryptionZones
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.458 sec - in org.apache.hadoop.hdfs.TestParallelRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestClose
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.833 sec - in org.apache.hadoop.hdfs.TestClose
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileAppend2
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.513 sec - in org.apache.hadoop.hdfs.TestFileAppend2
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDataTransferProtocol
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.462 sec - in org.apache.hadoop.hdfs.TestDataTransferProtocol
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHttpPolicy
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.508 sec - in org.apache.hadoop.hdfs.TestHttpPolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSAddressConfig
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.976 sec - in org.apache.hadoop.hdfs.TestDFSAddressConfig
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileConcurrentReader
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.042 sec - in org.apache.hadoop.hdfs.TestFileConcurrentReader
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestListFilesInFileContext
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.145 sec - in org.apache.hadoop.hdfs.TestListFilesInFileContext
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSetrepDecreasing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.075 sec - in org.apache.hadoop.hdfs.TestSetrepDecreasing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestReplication
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.397 sec - in org.apache.hadoop.hdfs.TestReplication
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSClientFailover
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.816 sec - in org.apache.hadoop.hdfs.TestDFSClientFailover
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDataTransferKeepalive
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.621 sec - in org.apache.hadoop.hdfs.TestDataTransferKeepalive
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRenameWhileOpen
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 47.351 sec - in org.apache.hadoop.hdfs.TestRenameWhileOpen
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.971 sec - in org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLeaseRenewer
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.247 sec - in org.apache.hadoop.hdfs.TestLeaseRenewer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestListFilesInDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.087 sec - in org.apache.hadoop.hdfs.TestListFilesInDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFetchImage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.671 sec - in org.apache.hadoop.hdfs.TestFetchImage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeDeath
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 156.21 sec - in org.apache.hadoop.hdfs.TestDatanodeDeath
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitCache
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 1.183 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 11, Time elapsed: 0.298 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitShm
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.185 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitShm
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.204 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileStatus
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.625 sec - in org.apache.hadoop.hdfs.TestFileStatus
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLargeBlock
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.195 sec - in org.apache.hadoop.hdfs.TestLargeBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSRename
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.452 sec - in org.apache.hadoop.hdfs.TestDFSRename
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSOutputStream
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.618 sec - in org.apache.hadoop.hdfs.TestDFSOutputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDisableConnCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.13 sec - in org.apache.hadoop.hdfs.TestDisableConnCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSPermission
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.328 sec - in org.apache.hadoop.hdfs.TestDFSPermission
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.security.token.block.TestBlockToken
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.904 sec - in org.apache.hadoop.hdfs.security.token.block.TestBlockToken
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.security.TestClientProtocolWithDelegationToken
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.392 sec - in org.apache.hadoop.hdfs.security.TestClientProtocolWithDelegationToken
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.782 sec - in org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.security.TestDelegationToken
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.937 sec - in org.apache.hadoop.hdfs.security.TestDelegationToken
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileCreationClient
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.907 sec - in org.apache.hadoop.hdfs.TestFileCreationClient
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.TestAnnotations
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec - in org.apache.hadoop.hdfs.protocol.TestAnnotations
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.datatransfer.TestPacketReceiver
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.361 sec - in org.apache.hadoop.hdfs.protocol.datatransfer.TestPacketReceiver
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.833 sec - in org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.TestExtendedBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 sec - in org.apache.hadoop.hdfs.protocol.TestExtendedBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.TestLayoutVersion
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec - in org.apache.hadoop.hdfs.protocol.TestLayoutVersion
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocol.TestBlockListAsLongs
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.052 sec - in org.apache.hadoop.hdfs.protocol.TestBlockListAsLongs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlockReaderLocalLegacy
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 4.731 sec - in org.apache.hadoop.hdfs.TestBlockReaderLocalLegacy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestWriteRead
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.501 sec - in org.apache.hadoop.hdfs.TestWriteRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestClientProtocolForPipelineRecovery
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.914 sec - in org.apache.hadoop.hdfs.TestClientProtocolForPipelineRecovery
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlockStoragePolicy
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.462 sec - in org.apache.hadoop.hdfs.TestBlockStoragePolicy
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestMiniDFSCluster
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.157 sec - in org.apache.hadoop.hdfs.TestMiniDFSCluster
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestCrcCorruption
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.703 sec - in org.apache.hadoop.hdfs.TestCrcCorruption
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestEncryptionZonesWithKMS
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.567 sec - in org.apache.hadoop.hdfs.TestEncryptionZonesWithKMS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSmallBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.4 sec - in org.apache.hadoop.hdfs.TestSmallBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRestartDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.62 sec - in org.apache.hadoop.hdfs.TestRestartDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDeprecatedKeys
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.442 sec - in org.apache.hadoop.hdfs.TestDeprecatedKeys
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSClientRetries
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 146.455 sec - in org.apache.hadoop.hdfs.TestDFSClientRetries
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHFlush
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.323 sec - in org.apache.hadoop.hdfs.TestHFlush
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSnapshotCommands
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.869 sec - in org.apache.hadoop.hdfs.TestSnapshotCommands
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestModTime
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.978 sec - in org.apache.hadoop.hdfs.TestModTime
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.734 sec - in org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.18 sec - in org.apache.hadoop.hdfs.TestDatanodeReport
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRollingUpgrade
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 89.908 sec - in org.apache.hadoop.hdfs.TestRollingUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeLayoutUpgrade
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.01 sec - in org.apache.hadoop.hdfs.TestDatanodeLayoutUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestConnCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.836 sec - in org.apache.hadoop.hdfs.TestConnCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestEncryptionZonesWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.666 sec - in org.apache.hadoop.hdfs.TestEncryptionZonesWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSInotifyEventInputStream
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.627 sec - in org.apache.hadoop.hdfs.TestDFSInotifyEventInputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestKeyProviderCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.442 sec - in org.apache.hadoop.hdfs.TestKeyProviderCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestWriteConfigurationToDFS
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.785 sec - in org.apache.hadoop.hdfs.TestWriteConfigurationToDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestClientBlockVerification
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.568 sec - in org.apache.hadoop.hdfs.TestClientBlockVerification
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSeekBug
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.771 sec - in org.apache.hadoop.hdfs.TestSeekBug
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLease
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.186 sec - in org.apache.hadoop.hdfs.TestLease
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSMkdirs
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.47 sec - in org.apache.hadoop.hdfs.TestDFSMkdirs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSUpgradeFromImage
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.567 sec - in org.apache.hadoop.hdfs.TestDFSUpgradeFromImage
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSetTimes
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.365 sec - in org.apache.hadoop.hdfs.TestSetTimes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestEncryptedTransfer
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.301 sec - in org.apache.hadoop.hdfs.TestEncryptedTransfer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSShellGenericOptions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.522 sec - in org.apache.hadoop.hdfs.TestDFSShellGenericOptions
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestAppendSnapshotTruncate
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.167 sec - in org.apache.hadoop.hdfs.TestAppendSnapshotTruncate
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHDFSTrash
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.861 sec - in org.apache.hadoop.hdfs.TestHDFSTrash
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHDFSFileSystemContract
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.028 sec - in org.apache.hadoop.hdfs.TestHDFSFileSystemContract
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDFSAdmin
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.629 sec - in org.apache.hadoop.hdfs.tools.TestDFSAdmin
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestGetConf
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.024 sec - in org.apache.hadoop.hdfs.tools.TestGetConf
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDFSHAAdmin
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.463 sec - in org.apache.hadoop.hdfs.tools.TestDFSHAAdmin
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.027 sec - in org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestStoragePolicyCommands
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.163 sec - in org.apache.hadoop.hdfs.tools.TestStoragePolicyCommands
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.offlineEditsViewer.TestOfflineEditsViewer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.1 sec - in org.apache.hadoop.hdfs.tools.offlineEditsViewer.TestOfflineEditsViewer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDebugAdmin
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.822 sec - in org.apache.hadoop.hdfs.tools.TestDebugAdmin
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDelegationTokenFetcher
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.972 sec - in org.apache.hadoop.hdfs.tools.TestDelegationTokenFetcher
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestDFSHAAdminMiniCluster
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.999 sec - in org.apache.hadoop.hdfs.tools.TestDFSHAAdminMiniCluster
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewerForAcl
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.551 sec - in org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewerForAcl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewer
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.779 sec - in org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.tools.TestGetGroups
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.627 sec - in org.apache.hadoop.hdfs.tools.TestGetGroups
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.protocolPB.TestPBHelper
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.797 sec - in org.apache.hadoop.hdfs.protocolPB.TestPBHelper
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFSInputChecker
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.099 sec - in org.apache.hadoop.hdfs.TestFSInputChecker
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSPacket
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec - in org.apache.hadoop.hdfs.TestDFSPacket
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSStartupVersions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.278 sec - in org.apache.hadoop.hdfs.TestDFSStartupVersions
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHDFSServerPorts
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.937 sec - in org.apache.hadoop.hdfs.TestHDFSServerPorts
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDecommission
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 136.899 sec - in org.apache.hadoop.hdfs.TestDecommission
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestSafeMode
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.518 sec - in org.apache.hadoop.hdfs.TestSafeMode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLocalDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.484 sec - in org.apache.hadoop.hdfs.TestLocalDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlockReaderLocal
+Tests run: 37, Failures: 0, Errors: 0, Skipped: 37, Time elapsed: 0.337 sec - in org.apache.hadoop.hdfs.TestBlockReaderLocal
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDatanodeConfig
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 3.718 sec - in org.apache.hadoop.hdfs.TestDatanodeConfig
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestQuota
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.513 sec - in org.apache.hadoop.hdfs.TestQuota
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBalancerBandwidth
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.399 sec - in org.apache.hadoop.hdfs.TestBalancerBandwidth
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDistributedFileSystem
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 47.246 sec - in org.apache.hadoop.hdfs.TestDistributedFileSystem
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileAppend4
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.467 sec - in org.apache.hadoop.hdfs.TestFileAppend4
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestHdfsAdmin
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.521 sec - in org.apache.hadoop.hdfs.TestHdfsAdmin
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestAbandonBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.843 sec - in org.apache.hadoop.hdfs.TestAbandonBlock
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileAppend3
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.764 sec - in org.apache.hadoop.hdfs.TestFileAppend3
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestPipelines
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.283 sec - in org.apache.hadoop.hdfs.TestPipelines
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestGetFileChecksum
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.486 sec - in org.apache.hadoop.hdfs.TestGetFileChecksum
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.resources.TestParam
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.72 sec - in org.apache.hadoop.hdfs.web.resources.TestParam
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsContentLength
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.865 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsContentLength
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestFSMainOperationsWebHdfs
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.325 sec - in org.apache.hadoop.hdfs.web.TestFSMainOperationsWebHdfs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsUrl
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.289 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsUrl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHDFSAcl
+Tests run: 64, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 26.259 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSAcl
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestTokenAspect
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.206 sec - in org.apache.hadoop.hdfs.web.TestTokenAspect
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestJsonUtil
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.57 sec - in org.apache.hadoop.hdfs.web.TestJsonUtil
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsTokens
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.204 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsTokens
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestOffsetUrlInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 sec - in org.apache.hadoop.hdfs.web.TestOffsetUrlInputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHDFSForHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.26 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSForHA
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsWithAuthenticationFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.699 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsWithAuthenticationFilter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsFileSystemContract
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.774 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsFileSystemContract
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsWithMultipleNameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.302 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsWithMultipleNameNodes
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestURLConnectionFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 sec - in org.apache.hadoop.hdfs.web.TestURLConnectionFactory
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestByteRangeInputStream
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.366 sec - in org.apache.hadoop.hdfs.web.TestByteRangeInputStream
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHDFSXAttr
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.536 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSXAttr
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHDFS
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 99.43 sec - in org.apache.hadoop.hdfs.web.TestWebHDFS
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.339 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.web.TestAuthFilter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.652 sec - in org.apache.hadoop.hdfs.web.TestAuthFilter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelUnixDomainRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.222 sec - in org.apache.hadoop.hdfs.TestParallelUnixDomainRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestReservedRawPaths
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.522 sec - in org.apache.hadoop.hdfs.TestReservedRawPaths
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSUpgrade
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestPeerCache
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.962 sec - in org.apache.hadoop.hdfs.TestPeerCache
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestMultiThreadedHflush
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.168 sec <<< FAILURE! - in org.apache.hadoop.hdfs.TestMultiThreadedHflush
+testHflushWhileClosing(org.apache.hadoop.hdfs.TestMultiThreadedHflush)  Time elapsed: 2.788 sec  <<< ERROR!
+java.io.IOException: Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked
+	at org.apache.hadoop.hdfs.server.common.Storage$StorageDirectory.lock(Storage.java:683)
+	at org.apache.hadoop.hdfs.server.common.Storage$StorageDirectory.analyzeStorage(Storage.java:499)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverStorageDirs(FSImage.java:321)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverTransitionRead(FSImage.java:215)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFSImage(FSNamesystem.java:985)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFromDisk(FSNamesystem.java:692)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.loadNamesystem(NameNode.java:585)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.initialize(NameNode.java:644)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.<init>(NameNode.java:811)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.<init>(NameNode.java:795)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.createNameNode(NameNode.java:1492)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNode(MiniDFSCluster.java:1111)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNodesAndSetConf(MiniDFSCluster.java:982)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.initMiniDFSCluster(MiniDFSCluster.java:811)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.<init>(MiniDFSCluster.java:471)
+	at org.apache.hadoop.hdfs.MiniDFSCluster$Builder.build(MiniDFSCluster.java:430)
+	at org.apache.hadoop.hdfs.TestMultiThreadedHflush.testHflushWhileClosing(TestMultiThreadedHflush.java:154)
+
+testMultipleHflushersRepl3(org.apache.hadoop.hdfs.TestMultiThreadedHflush)  Time elapsed: 0.169 sec  <<< ERROR!
+java.io.FileNotFoundException: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1/current/seen_txid.tmp (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.hadoop.hdfs.util.AtomicFileOutputStream.<init>(AtomicFileOutputStream.java:58)
+	at org.apache.hadoop.hdfs.util.PersistentLongFile.writeFile(PersistentLongFile.java:78)
+	at org.apache.hadoop.hdfs.server.namenode.NNStorage.writeTransactionIdFile(NNStorage.java:438)
+	at org.apache.hadoop.hdfs.server.namenode.NNStorage.format(NNStorage.java:550)
+	at org.apache.hadoop.hdfs.server.namenode.NNStorage.format(NNStorage.java:569)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.format(FSImage.java:161)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.format(NameNode.java:991)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.format(NameNode.java:343)
+	at org.apache.hadoop.hdfs.DFSTestUtil.formatNameNode(DFSTestUtil.java:172)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNodesAndSetConf(MiniDFSCluster.java:973)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.initMiniDFSCluster(MiniDFSCluster.java:811)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.<init>(MiniDFSCluster.java:471)
+	at org.apache.hadoop.hdfs.MiniDFSCluster$Builder.build(MiniDFSCluster.java:430)
+	at org.apache.hadoop.hdfs.TestMultiThreadedHflush.doTestMultipleHflushers(TestMultiThreadedHflush.java:129)
+	at org.apache.hadoop.hdfs.TestMultiThreadedHflush.testMultipleHflushersRepl3(TestMultiThreadedHflush.java:122)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestGetBlocks
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 40.558 sec <<< FAILURE! - in org.apache.hadoop.hdfs.TestGetBlocks
+testReadSelectNonStaleDatanode(org.apache.hadoop.hdfs.TestGetBlocks)  Time elapsed: 3.485 sec  <<< ERROR!
+org.apache.hadoop.hdfs.server.common.InconsistentFSStateException: Directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name2 is in an inconsistent state: namespaceID is incompatible with others.
+	at org.apache.hadoop.hdfs.server.common.StorageInfo.setNamespaceID(StorageInfo.java:214)
+	at org.apache.hadoop.hdfs.server.common.StorageInfo.setFieldsFromProperties(StorageInfo.java:157)
+	at org.apache.hadoop.hdfs.server.namenode.NNStorage.setFieldsFromProperties(NNStorage.java:610)
+	at org.apache.hadoop.hdfs.server.namenode.NNStorage.readProperties(NNStorage.java:639)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverStorageDirs(FSImage.java:338)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverTransitionRead(FSImage.java:215)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFSImage(FSNamesystem.java:985)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFromDisk(FSNamesystem.java:692)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.loadNamesystem(NameNode.java:585)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.initialize(NameNode.java:644)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.<init>(NameNode.java:811)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.<init>(NameNode.java:795)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.createNameNode(NameNode.java:1492)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNode(MiniDFSCluster.java:1111)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNodesAndSetConf(MiniDFSCluster.java:982)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.initMiniDFSCluster(MiniDFSCluster.java:811)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.<init>(MiniDFSCluster.java:471)
+	at org.apache.hadoop.hdfs.MiniDFSCluster$Builder.build(MiniDFSCluster.java:430)
+	at org.apache.hadoop.hdfs.TestGetBlocks.testReadSelectNonStaleDatanode(TestGetBlocks.java:96)
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSStorageStateRecovery
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 134.075 sec - in org.apache.hadoop.hdfs.TestDFSStorageStateRecovery
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSUtil
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.376 sec - in org.apache.hadoop.hdfs.TestDFSUtil
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSShell
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.914 sec - in org.apache.hadoop.hdfs.TestDFSShell
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestReadWhileWriting
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.357 sec - in org.apache.hadoop.hdfs.TestReadWhileWriting
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlockReaderFactory
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 0.217 sec - in org.apache.hadoop.hdfs.TestBlockReaderFactory
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestLeaseRecovery
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.66 sec - in org.apache.hadoop.hdfs.TestLeaseRecovery
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestParallelReadUtil
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.027 sec - in org.apache.hadoop.hdfs.TestParallelReadUtil
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestFileCreation
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 383.088 sec - in org.apache.hadoop.hdfs.TestFileCreation
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.399 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeMXBean
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournalNode
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.234 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournalNode
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournal
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.491 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournal
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.TestNNWithQJM
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.187 sec - in org.apache.hadoop.hdfs.qjournal.TestNNWithQJM
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManager
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.469 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManager
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumCall
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumCall
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestQJMWithFaults
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 141.847 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQJMWithFaults
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManagerUnit
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.249 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManagerUnit
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestSegmentRecoveryComparator
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.267 sec - in org.apache.hadoop.hdfs.qjournal.client.TestSegmentRecoveryComparator
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestIPCLoggerChannel
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.949 sec - in org.apache.hadoop.hdfs.qjournal.client.TestIPCLoggerChannel
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.client.TestEpochsAreUnique
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.725 sec - in org.apache.hadoop.hdfs.qjournal.client.TestEpochsAreUnique
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.TestMiniJournalCluster
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.714 sec - in org.apache.hadoop.hdfs.qjournal.TestMiniJournalCluster
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.339 sec - in org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestRollingUpgradeRollback
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.804 sec - in org.apache.hadoop.hdfs.TestRollingUpgradeRollback
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestDFSRollback
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.805 sec - in org.apache.hadoop.hdfs.TestDFSRollback
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.hdfs.TestBlocksScheduledCounter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.951 sec - in org.apache.hadoop.hdfs.TestBlocksScheduledCounter
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.cli.TestHDFSCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.517 sec - in org.apache.hadoop.cli.TestHDFSCLI
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.cli.TestAclCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.032 sec - in org.apache.hadoop.cli.TestAclCLI
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.cli.TestCacheAdminCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.28 sec - in org.apache.hadoop.cli.TestCacheAdminCLI
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.cli.TestXAttrCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.483 sec - in org.apache.hadoop.cli.TestXAttrCLI
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.security.TestPermission
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.714 sec - in org.apache.hadoop.security.TestPermission
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.security.TestRefreshUserMappings
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.623 sec - in org.apache.hadoop.security.TestRefreshUserMappings
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.security.TestPermissionSymlinks
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.987 sec - in org.apache.hadoop.security.TestPermissionSymlinks
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.tools.TestTools
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.088 sec - in org.apache.hadoop.tools.TestTools
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.tools.TestJMXGet
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.204 sec - in org.apache.hadoop.tools.TestJMXGet
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.tracing.TestTraceAdmin
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.629 sec - in org.apache.hadoop.tracing.TestTraceAdmin
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.tracing.TestTracing
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.193 sec - in org.apache.hadoop.tracing.TestTracing
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.tracing.TestTracingShortCircuitLocalRead
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.269 sec - in org.apache.hadoop.tracing.TestTracingShortCircuitLocalRead
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractAppend
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 4.685 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractAppend
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractSeek
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.987 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractSeek
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractMkdir
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.411 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractMkdir
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractRootDirectory
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.78 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractRootDirectory
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractRename
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.63 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractRename
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractCreate
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.534 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractCreate
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractConcat
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.387 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractConcat
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractOpen
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.589 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractOpen
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.contract.hdfs.TestHDFSContractDelete
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.371 sec - in org.apache.hadoop.fs.contract.hdfs.TestHDFSContractDelete
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestSymlinkHdfsFileSystem
+Tests run: 72, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 8.108 sec - in org.apache.hadoop.fs.TestSymlinkHdfsFileSystem
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestResolveHdfsSymlink
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.621 sec - in org.apache.hadoop.fs.TestResolveHdfsSymlink
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestUrlStreamHandlerFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.307 sec - in org.apache.hadoop.fs.TestUrlStreamHandlerFactory
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestXAttr
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec - in org.apache.hadoop.fs.TestXAttr
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestEnhancedByteBufferAccess
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 0.322 sec - in org.apache.hadoop.fs.TestEnhancedByteBufferAccess
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.permission.TestStickyBit
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.206 sec - in org.apache.hadoop.fs.permission.TestStickyBit
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestVolumeId
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.256 sec - in org.apache.hadoop.fs.TestVolumeId
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestUnbuffer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.621 sec - in org.apache.hadoop.fs.TestUnbuffer
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestUrlStreamHandler
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.217 sec - in org.apache.hadoop.fs.TestUrlStreamHandler
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.153 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsHdfs
+Tests run: 54, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.029 sec - in org.apache.hadoop.fs.viewfs.TestViewFsHdfs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsAtHdfsRoot
+Tests run: 54, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.483 sec - in org.apache.hadoop.fs.viewfs.TestViewFsAtHdfsRoot
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsDefaultValue
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.47 sec - in org.apache.hadoop.fs.viewfs.TestViewFsDefaultValue
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsWithXAttrs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.272 sec - in org.apache.hadoop.fs.viewfs.TestViewFsWithXAttrs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemHdfs
+Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.469 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemHdfs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemWithXAttrs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.257 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemWithXAttrs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemWithAcls
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.157 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemWithAcls
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsFileStatusHdfs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.781 sec - in org.apache.hadoop.fs.viewfs.TestViewFsFileStatusHdfs
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.viewfs.TestViewFsWithAcls
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.107 sec - in org.apache.hadoop.fs.viewfs.TestViewFsWithAcls
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestGlobPaths
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 4.61 sec - in org.apache.hadoop.fs.TestGlobPaths
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.loadGenerator.TestLoadGenerator
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.375 sec - in org.apache.hadoop.fs.loadGenerator.TestLoadGenerator
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestHdfsNativeCodeLoader
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec - in org.apache.hadoop.fs.TestHdfsNativeCodeLoader
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestSymlinkHdfsFileContext
+Tests run: 69, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.847 sec - in org.apache.hadoop.fs.TestSymlinkHdfsFileContext
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestFcHdfsPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.212 sec - in org.apache.hadoop.fs.TestFcHdfsPermission
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.shell.TestHdfsTextCommand
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.167 sec - in org.apache.hadoop.fs.shell.TestHdfsTextCommand
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestSymlinkHdfsDisable
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.639 sec - in org.apache.hadoop.fs.TestSymlinkHdfsDisable
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestFcHdfsCreateMkdir
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.151 sec - in org.apache.hadoop.fs.TestFcHdfsCreateMkdir
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestHDFSFileContextMainOperations
+Tests run: 68, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.955 sec - in org.apache.hadoop.fs.TestHDFSFileContextMainOperations
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.fs.TestFcHdfsSetUMask
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.323 sec - in org.apache.hadoop.fs.TestFcHdfsSetUMask
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=768m; support was removed in 8.0
+Running org.apache.hadoop.net.TestNetworkTopology
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.493 sec - in org.apache.hadoop.net.TestNetworkTopology
+
+Results :
+
+Tests in error: 
+  TestMultiThreadedHflush.testHflushWhileClosing:154 » IO Cannot lock storage /h...
+  TestMultiThreadedHflush.testMultipleHflushersRepl3:122->doTestMultipleHflushers:129 » FileNotFound
+  TestGetBlocks.testReadSelectNonStaleDatanode:96 » InconsistentFSState Director...
+
+Tests run: 3328, Failures: 0, Errors: 3, Skipped: 117
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12:53 h
+[INFO] Finished at: 2025-05-18T10:46:05+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project hadoop-hdfs: There was a timeout or other error in the fork -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

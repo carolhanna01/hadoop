@@ -1,0 +1,271 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Vinayakumar B
+        '@username': vinayakumarb
+      attachments:
+        attachment:
+          '@author': vinayakumarb
+          '@created': Wed, 8 Apr 2015 10:51:37 +0000
+          '@id': '12723894'
+          '@name': HDFS-8096-01.patch
+          '@size': '5788'
+      comments:
+        comment:
+        - '#text': '<p>Attached the patch for the same.<br/>
+
+            Please review.</p>'
+          '@author': vinayrpet
+          '@created': Wed, 8 Apr 2015 10:51:37 +0000
+          '@id': '14485063'
+        - '#text': '<p>Precommit build passed but failed to login to Jira and comment.</p>
+
+
+            <p><a href="https://builds.apache.org/job/PreCommit-HDFS-Build/10209/console"
+            class="external-link" target="_blank" rel="nofollow noopener">https://builds.apache.org/job/PreCommit-HDFS-Build/10209/console</a></p>'
+          '@author': vinayrpet
+          '@created': Thu, 9 Apr 2015 05:56:21 +0000
+          '@id': '14486768'
+        - '#text': '<p>Thanks Vinay for the patch. Makesense to me for incrementing
+            the metric count only when real transfer happened. I agree for having
+            test for intermediate failures would be difficult. Thanks for having one
+            positive test here.<br/>
+
+            +1</p>'
+          '@author': umamaheswararao
+          '@created': Thu, 9 Apr 2015 06:14:58 +0000
+          '@id': '14486802'
+        - '#text': '<p>Thanks <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=umamaheswararao"
+            class="user-hover" rel="umamaheswararao">umamaheswararao</a> for review.<br/>
+
+            Committed to trunk and branch-2</p>'
+          '@author': vinayrpet
+          '@created': Thu, 9 Apr 2015 06:30:08 +0000
+          '@id': '14486821'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-trunk-Commit #7544 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-trunk-Commit/7544/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-trunk-Commit/7544/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 06:34:33 +0000
+          '@id': '14486826'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Yarn-trunk-Java8 #158 (See <a\
+            \ href=\"https://builds.apache.org/job/Hadoop-Yarn-trunk-Java8/158/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Yarn-trunk-Java8/158/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 10:41:14 +0000
+          '@id': '14487118'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Hdfs-trunk #2090 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk/2090/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk/2090/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 11:34:54 +0000
+          '@id': '14487179'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Hdfs-trunk-Java8 #149 (See <a\
+            \ href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk-Java8/149/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk-Java8/149/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 11:35:16 +0000
+          '@id': '14487197'
+        - '#text': "<p>SUCCESS: Integrated in Hadoop-Yarn-trunk #892 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Yarn-trunk/892/\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Yarn-trunk/892/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 11:56:05 +0000
+          '@id': '14487236'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Mapreduce-trunk-Java8 #159 (See\
+            \ <a href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Java8/159/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Java8/159/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 18:14:16 +0000
+          '@id': '14487808'
+        - '#text': "<p>FAILURE: Integrated in Hadoop-Mapreduce-trunk #2108 (See <a\
+            \ href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk/2108/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk/2108/</a>)<br/>\n\
+            <a href=\"https://issues.apache.org/jira/browse/HDFS-8096\" title=\"DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers\" class=\"\
+            issue-link\" data-issue-key=\"HDFS-8096\"><del>HDFS-8096</del></a>. DatanodeMetrics#blocksReplicated\
+            \ will get incremented early and even for failed transfers (Contributed\
+            \ by Vinayakumar B) (vinayakumarb: rev 9d8952f97f638ede27e4336b9601507d7bb1de7b)</p>\n\
+            <ul>\n\t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPOfferService.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/metrics/DataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java</li>\n\
+            \t<li>hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n</ul>"
+          '@author': hudson
+          '@created': Thu, 9 Apr 2015 18:32:53 +0000
+          '@id': '14487900'
+      component: datanode
+      created: Wed, 8 Apr 2015 10:26:39 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 10 years, 7 weeks, 2 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i2cys7:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<div class=\"code panel\" style=\"border-width: 1px;\"><div class=\"\
+        codeContent panelContent\">\n<pre class=\"code-java\">    <span class=\"code-keyword\"\
+        >case</span> DatanodeProtocol.DNA_TRANSFER:\n      <span class=\"code-comment\"\
+        >// Send a copy of a block to another datanode\n</span>      dn.transferBlocks(bcmd.getBlockPoolId(),\
+        \ bcmd.getBlocks(),\n          bcmd.getTargets(), bcmd.getTargetStorageTypes());\n\
+        \      dn.metrics.incrBlocksReplicated(bcmd.getBlocks().length);</pre>\n</div></div>\n\
+        <p>In the above code to handle replication transfers from namenode, <tt>DatanodeMetrics#blocksReplicated</tt>\
+        \ is getting incremented early, since the transfer will happen in background.\
+        \ <br/>\nAnd even failed transfers also getting counted.</p>\n\n<p>Correct\
+        \ place to increment this counter is <tt>DataTransfer#run()</tt>.</p>"
+      due: null
+      environment: null
+      fixVersion:
+      - 2.8.0
+      - 3.0.0-alpha1
+      key:
+        '#text': HDFS-8096
+        '@id': '12819274'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HDFS-8096
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop HDFS
+        '@id': '12310942'
+        '@key': HDFS
+      reporter:
+        '#text': Vinayakumar B
+        '@username': vinayakumarb
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 9 Apr 2015 06:30:29 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: DatanodeMetrics#blocksReplicated will get incremented early and even
+        for failed transfers
+      title: '[HDFS-8096] DatanodeMetrics#blocksReplicated will get incremented early
+        and even for failed transfers'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 30 Aug 2016 01:37:09 +0000
+      votes: '0'
+      watches: '3'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
