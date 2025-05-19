@@ -156,10 +156,6 @@ public class OptionsParser {
       try {
         Integer mapBandwidth = Integer.parseInt(
             getVal(command, DistCpOptionSwitch.BANDWIDTH.getSwitch()).trim());
-        if (mapBandwidth.intValue() <= 0) {
-          throw new IllegalArgumentException("Bandwidth specified is not positive: " +
-              mapBandwidth);
-        }
         option.setMapBandwidth(mapBandwidth);
       } catch (NumberFormatException e) {
         throw new IllegalArgumentException("Bandwidth specified is invalid: " +
