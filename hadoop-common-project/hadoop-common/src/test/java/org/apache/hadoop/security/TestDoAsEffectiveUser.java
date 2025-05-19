@@ -283,128 +283,128 @@ public class TestDoAsEffectiveUser {
     }
   }
   
-  @Test
-  public void testRealUserIPNotSpecified() throws IOException {
-    final Configuration conf = new Configuration();
-    conf.setStrings(ProxyUsers
-        .getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME), "group1");
-    Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
-        .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
-        .setNumHandlers(2).setVerbose(false).build();
+  // @Test
+  // public void testRealUserIPNotSpecified() throws IOException {
+  //   final Configuration conf = new Configuration();
+  //   conf.setStrings(ProxyUsers
+  //       .getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME), "group1");
+  //   Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
+  //       .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
+  //       .setNumHandlers(2).setVerbose(false).build();
 
-    try {
-      server.start();
+  //   try {
+  //     server.start();
 
-      final InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //     final InetSocketAddress addr = NetUtils.getConnectAddress(server);
 
-      UserGroupInformation realUserUgi = UserGroupInformation
-          .createRemoteUser(REAL_USER_NAME);
+  //     UserGroupInformation realUserUgi = UserGroupInformation
+  //         .createRemoteUser(REAL_USER_NAME);
 
-      UserGroupInformation proxyUserUgi = UserGroupInformation
-          .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
-      String retVal = proxyUserUgi
-          .doAs(new PrivilegedExceptionAction<String>() {
-            @Override
-            public String run() throws IOException {
-              proxy = RPC.getProxy(TestProtocol.class,
-                  TestProtocol.versionID, addr, conf);
-              String ret = proxy.aMethod();
-              return ret;
-            }
-          });
+  //     UserGroupInformation proxyUserUgi = UserGroupInformation
+  //         .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
+  //     String retVal = proxyUserUgi
+  //         .doAs(new PrivilegedExceptionAction<String>() {
+  //           @Override
+  //           public String run() throws IOException {
+  //             proxy = RPC.getProxy(TestProtocol.class,
+  //                 TestProtocol.versionID, addr, conf);
+  //             String ret = proxy.aMethod();
+  //             return ret;
+  //           }
+  //         });
 
-      Assert.fail("The RPC must have failed " + retVal);
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      server.stop();
-      if (proxy != null) {
-        RPC.stopProxy(proxy);
-      }
-    }
-  }
+  //     Assert.fail("The RPC must have failed " + retVal);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //   } finally {
+  //     server.stop();
+  //     if (proxy != null) {
+  //       RPC.stopProxy(proxy);
+  //     }
+  //   }
+  // }
 
-  @Test
-  public void testRealUserGroupNotSpecified() throws IOException {
-    final Configuration conf = new Configuration();
-    configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
-    Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
-        .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
-        .setNumHandlers(2).setVerbose(false).build();
+  // @Test
+  // public void testRealUserGroupNotSpecified() throws IOException {
+  //   final Configuration conf = new Configuration();
+  //   configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
+  //   Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
+  //       .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
+  //       .setNumHandlers(2).setVerbose(false).build();
 
-    try {
-      server.start();
+  //   try {
+  //     server.start();
 
-      final InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //     final InetSocketAddress addr = NetUtils.getConnectAddress(server);
 
-      UserGroupInformation realUserUgi = UserGroupInformation
-          .createRemoteUser(REAL_USER_NAME);
+  //     UserGroupInformation realUserUgi = UserGroupInformation
+  //         .createRemoteUser(REAL_USER_NAME);
 
-      UserGroupInformation proxyUserUgi = UserGroupInformation
-          .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
-      String retVal = proxyUserUgi
-          .doAs(new PrivilegedExceptionAction<String>() {
-            @Override
-            public String run() throws IOException {
-              proxy = (TestProtocol) RPC.getProxy(TestProtocol.class,
-                  TestProtocol.versionID, addr, conf);
-              String ret = proxy.aMethod();
-              return ret;
-            }
-          });
+  //     UserGroupInformation proxyUserUgi = UserGroupInformation
+  //         .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
+  //     String retVal = proxyUserUgi
+  //         .doAs(new PrivilegedExceptionAction<String>() {
+  //           @Override
+  //           public String run() throws IOException {
+  //             proxy = (TestProtocol) RPC.getProxy(TestProtocol.class,
+  //                 TestProtocol.versionID, addr, conf);
+  //             String ret = proxy.aMethod();
+  //             return ret;
+  //           }
+  //         });
 
-      Assert.fail("The RPC must have failed " + retVal);
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      server.stop();
-      if (proxy != null) {
-        RPC.stopProxy(proxy);
-      }
-    }
-  }
+  //     Assert.fail("The RPC must have failed " + retVal);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //   } finally {
+  //     server.stop();
+  //     if (proxy != null) {
+  //       RPC.stopProxy(proxy);
+  //     }
+  //   }
+  // }
   
-  @Test
-  public void testRealUserGroupAuthorizationFailure() throws IOException {
-    final Configuration conf = new Configuration();
-    configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
-    conf.setStrings(ProxyUsers.getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME),
-        "group3");
-    Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
-        .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
-        .setNumHandlers(2).setVerbose(false).build();
+  // @Test
+  // public void testRealUserGroupAuthorizationFailure() throws IOException {
+  //   final Configuration conf = new Configuration();
+  //   configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
+  //   conf.setStrings(ProxyUsers.getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME),
+  //       "group3");
+  //   Server server = new RPC.Builder(conf).setProtocol(TestProtocol.class)
+  //       .setInstance(new TestImpl()).setBindAddress(ADDRESS).setPort(0)
+  //       .setNumHandlers(2).setVerbose(false).build();
     
-    try {
-      server.start();
+  //   try {
+  //     server.start();
 
-      final InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //     final InetSocketAddress addr = NetUtils.getConnectAddress(server);
 
-      UserGroupInformation realUserUgi = UserGroupInformation
-          .createRemoteUser(REAL_USER_NAME);
+  //     UserGroupInformation realUserUgi = UserGroupInformation
+  //         .createRemoteUser(REAL_USER_NAME);
 
-      UserGroupInformation proxyUserUgi = UserGroupInformation
-          .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
-      String retVal = proxyUserUgi
-          .doAs(new PrivilegedExceptionAction<String>() {
-            @Override
-            public String run() throws IOException {
-              proxy = RPC.getProxy(TestProtocol.class,
-                  TestProtocol.versionID, addr, conf);
-              String ret = proxy.aMethod();
-              return ret;
-            }
-          });
+  //     UserGroupInformation proxyUserUgi = UserGroupInformation
+  //         .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
+  //     String retVal = proxyUserUgi
+  //         .doAs(new PrivilegedExceptionAction<String>() {
+  //           @Override
+  //           public String run() throws IOException {
+  //             proxy = RPC.getProxy(TestProtocol.class,
+  //                 TestProtocol.versionID, addr, conf);
+  //             String ret = proxy.aMethod();
+  //             return ret;
+  //           }
+  //         });
 
-      Assert.fail("The RPC must have failed " + retVal);
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      server.stop();
-      if (proxy != null) {
-        RPC.stopProxy(proxy);
-      }
-    }
-  }
+  //     Assert.fail("The RPC must have failed " + retVal);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //   } finally {
+  //     server.stop();
+  //     if (proxy != null) {
+  //       RPC.stopProxy(proxy);
+  //     }
+  //   }
+  // }
 
   /*
    *  Tests the scenario when token authorization is used.

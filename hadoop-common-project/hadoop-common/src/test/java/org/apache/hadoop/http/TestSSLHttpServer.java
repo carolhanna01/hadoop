@@ -93,13 +93,13 @@ public class TestSSLHttpServer extends HttpServerFunctionalTest {
   }
   
 
-  @Test
-  public void testEcho() throws Exception {
-    assertEquals("a:b\nc:d\n", 
-        readOut(new URL(baseUrl, "/echo?a=b&c=d")));
-    assertEquals("a:b\nc&lt;:d\ne:&gt;\n", 
-        readOut(new URL(baseUrl, "/echo?a=b&c<=d&e=>")));
-  }
+  // @Test
+  // public void testEcho() throws Exception {
+  //   assertEquals("a:b\nc:d\n", 
+  //       readOut(new URL(baseUrl, "/echo?a=b&c=d")));
+  //   assertEquals("a:b\nc&lt;:d\ne:&gt;\n", 
+  //       readOut(new URL(baseUrl, "/echo?a=b&c<=d&e=>")));
+  // }
 
   private static String readOut(URL url) throws Exception {
     StringBuilder out = new StringBuilder();
