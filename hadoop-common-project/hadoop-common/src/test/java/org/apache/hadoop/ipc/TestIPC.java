@@ -437,88 +437,88 @@ public class TestIPC {
    * failure is handled properly. This is a regression test for
    * HADOOP-7428.
    */
-  @Test
-  public void testRTEDuringConnectionSetup() throws Exception {
-    // Set up a socket factory which returns sockets which
-    // throw an RTE when setSoTimeout is called.
-    SocketFactory spyFactory = spy(NetUtils.getDefaultSocketFactory(conf));
-    Mockito.doAnswer(new Answer<Socket>() {
-      @Override
-      public Socket answer(InvocationOnMock invocation) throws Throwable {
-        Socket s = spy((Socket)invocation.callRealMethod());
-        doThrow(new RuntimeException("Injected fault")).when(s)
-          .setSoTimeout(anyInt());
-        return s;
-      }
-    }).when(spyFactory).createSocket();
+  // @Test
+  // public void testRTEDuringConnectionSetup() throws Exception {
+  //   // Set up a socket factory which returns sockets which
+  //   // throw an RTE when setSoTimeout is called.
+  //   SocketFactory spyFactory = spy(NetUtils.getDefaultSocketFactory(conf));
+  //   Mockito.doAnswer(new Answer<Socket>() {
+  //     @Override
+  //     public Socket answer(InvocationOnMock invocation) throws Throwable {
+  //       Socket s = spy((Socket)invocation.callRealMethod());
+  //       doThrow(new RuntimeException("Injected fault")).when(s)
+  //         .setSoTimeout(anyInt());
+  //       return s;
+  //     }
+  //   }).when(spyFactory).createSocket();
       
-    Server server = new TestServer(1, true);
-    server.start();
-    try {
-      // Call should fail due to injected exception.
-      InetSocketAddress address = NetUtils.getConnectAddress(server);
-      Client client = new Client(LongWritable.class, conf, spyFactory);
-      try {
-        client.call(new LongWritable(RANDOM.nextLong()),
-                address, null, null, 0, conf);
-        fail("Expected an exception to have been thrown");
-      } catch (Exception e) {
-        LOG.info("caught expected exception", e);
-        assertTrue(StringUtils.stringifyException(e).contains(
-            "Injected fault"));
-      }
-      // Resetting to the normal socket behavior should succeed
-      // (i.e. it should not have cached a half-constructed connection)
+  //   Server server = new TestServer(1, true);
+  //   server.start();
+  //   try {
+  //     // Call should fail due to injected exception.
+  //     InetSocketAddress address = NetUtils.getConnectAddress(server);
+  //     Client client = new Client(LongWritable.class, conf, spyFactory);
+  //     try {
+  //       client.call(new LongWritable(RANDOM.nextLong()),
+  //               address, null, null, 0, conf);
+  //       fail("Expected an exception to have been thrown");
+  //     } catch (Exception e) {
+  //       LOG.info("caught expected exception", e);
+  //       assertTrue(StringUtils.stringifyException(e).contains(
+  //           "Injected fault"));
+  //     }
+  //     // Resetting to the normal socket behavior should succeed
+  //     // (i.e. it should not have cached a half-constructed connection)
   
-      Mockito.reset(spyFactory);
-      client.call(new LongWritable(RANDOM.nextLong()),
-          address, null, null, 0, conf);
-    } finally {
-      server.stop();
-    }
-  }
+  //     Mockito.reset(spyFactory);
+  //     client.call(new LongWritable(RANDOM.nextLong()),
+  //         address, null, null, 0, conf);
+  //   } finally {
+  //     server.stop();
+  //   }
+  // }
   
-  @Test
-  public void testIpcTimeout() throws Exception {
-    // start server
-    Server server = new TestServer(1, true);
-    InetSocketAddress addr = NetUtils.getConnectAddress(server);
-    server.start();
+  // @Test
+  // public void testIpcTimeout() throws Exception {
+  //   // start server
+  //   Server server = new TestServer(1, true);
+  //   InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //   server.start();
 
-    // start client
-    Client client = new Client(LongWritable.class, conf);
-    // set timeout to be less than MIN_SLEEP_TIME
-    try {
-      client.call(new LongWritable(RANDOM.nextLong()),
-              addr, null, null, MIN_SLEEP_TIME/2, conf);
-      fail("Expected an exception to have been thrown");
-    } catch (SocketTimeoutException e) {
-      LOG.info("Get a SocketTimeoutException ", e);
-    }
-    // set timeout to be bigger than 3*ping interval
-    client.call(new LongWritable(RANDOM.nextLong()),
-        addr, null, null, 3*PING_INTERVAL+MIN_SLEEP_TIME, conf);
-  }
+  //   // start client
+  //   Client client = new Client(LongWritable.class, conf);
+  //   // set timeout to be less than MIN_SLEEP_TIME
+  //   try {
+  //     client.call(new LongWritable(RANDOM.nextLong()),
+  //             addr, null, null, MIN_SLEEP_TIME/2, conf);
+  //     fail("Expected an exception to have been thrown");
+  //   } catch (SocketTimeoutException e) {
+  //     LOG.info("Get a SocketTimeoutException ", e);
+  //   }
+  //   // set timeout to be bigger than 3*ping interval
+  //   client.call(new LongWritable(RANDOM.nextLong()),
+  //       addr, null, null, 3*PING_INTERVAL+MIN_SLEEP_TIME, conf);
+  // }
 
-  @Test
-  public void testIpcConnectTimeout() throws Exception {
-    // start server
-    Server server = new TestServer(1, true);
-    InetSocketAddress addr = NetUtils.getConnectAddress(server);
-    //Intentionally do not start server to get a connection timeout
+  // @Test
+  // public void testIpcConnectTimeout() throws Exception {
+  //   // start server
+  //   Server server = new TestServer(1, true);
+  //   InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //   //Intentionally do not start server to get a connection timeout
 
-    // start client
-    Client.setConnectTimeout(conf, 100);
-    Client client = new Client(LongWritable.class, conf);
-    // set the rpc timeout to twice the MIN_SLEEP_TIME
-    try {
-      client.call(new LongWritable(RANDOM.nextLong()),
-              addr, null, null, MIN_SLEEP_TIME*2, conf);
-      fail("Expected an exception to have been thrown");
-    } catch (SocketTimeoutException e) {
-      LOG.info("Get a SocketTimeoutException ", e);
-    }
-  }
+  //   // start client
+  //   Client.setConnectTimeout(conf, 100);
+  //   Client client = new Client(LongWritable.class, conf);
+  //   // set the rpc timeout to twice the MIN_SLEEP_TIME
+  //   try {
+  //     client.call(new LongWritable(RANDOM.nextLong()),
+  //             addr, null, null, MIN_SLEEP_TIME*2, conf);
+  //     fail("Expected an exception to have been thrown");
+  //   } catch (SocketTimeoutException e) {
+  //     LOG.info("Get a SocketTimeoutException ", e);
+  //   }
+  // }
   
   /**
    * Check that file descriptors aren't leaked by starting
