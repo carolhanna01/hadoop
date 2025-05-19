@@ -88,10 +88,7 @@ Release 0.23.4 - UNRELEASED
 
   IMPROVEMENTS
 
-    Change package of YarnClient to org.apache.hadoop. (Bikas Saha via vinodkv)
-
-    YARN-108. FSDownload can create cache directories with the wrong
-    permissions (Jason Lowe via bobby)
+     Change package of YarnClient to org.apache.hadoop. (Bikas Saha via vinodkv)
 
   OPTIMIZATIONS
 
