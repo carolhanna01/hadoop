@@ -1,0 +1,333 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Chris Nauroth
+        '@username': cnauroth
+      attachments:
+        attachment:
+        - '@author': cnauroth
+          '@created': Wed, 10 Apr 2013 05:04:38 +0000
+          '@id': '12577954'
+          '@name': HADOOP-9467-branch-1.1.patch
+          '@size': '6282'
+        - '@author': cnauroth
+          '@created': Wed, 10 Apr 2013 05:06:42 +0000
+          '@id': '12577955'
+          '@name': HADOOP-9467.1.patch
+          '@size': '6365'
+      comments:
+        comment:
+        - '#text': '<p>This changes the filtering to consider both record name and
+            tags.  I''ve also added unit tests to cover these cases.</p>
+
+
+            <p>I''ve attached patches for trunk and branch-1.  Please commit the branch-1
+            patch to branch-1-win also.</p>
+
+
+            <p>Credit for this patch should go to both me and Ganeshan Iyer.  Thanks!</p>'
+          '@author': cnauroth
+          '@created': Wed, 10 Apr 2013 05:06:42 +0000
+          '@id': '13627478'
+        - '#text': "<p><font color=\"green\">+1 overall</font>.  Here are the results\
+            \ of testing the latest attachment <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12577955/HADOOP-9467.1.patch\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12577955/HADOOP-9467.1.patch</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    <font color=\"green\">+1 @author</font>.\
+            \  The patch does not contain any @author tags.</p>\n\n<p>    <font color=\"\
+            green\">+1 tests included</font>.  The patch appears to include 1 new\
+            \ or modified test files.</p>\n\n<p>    <font color=\"green\">+1 javac</font>.\
+            \  The applied patch does not increase the total number of javac compiler\
+            \ warnings.</p>\n\n<p>    <font color=\"green\">+1 javadoc</font>.  The\
+            \ javadoc tool did not generate any warning messages.</p>\n\n<p>    <font\
+            \ color=\"green\">+1 eclipse:eclipse</font>.  The patch built with eclipse:eclipse.</p>\n\
+            \n<p>    <font color=\"green\">+1 findbugs</font>.  The patch does not\
+            \ introduce any new Findbugs (version 1.3.9) warnings.</p>\n\n<p>    <font\
+            \ color=\"green\">+1 release audit</font>.  The applied patch does not\
+            \ increase the total number of release audit warnings.</p>\n\n<p>    <font\
+            \ color=\"green\">+1 core tests</font>.  The patch passed unit tests in\
+            \ hadoop-common-project/hadoop-common.</p>\n\n<p>    <font color=\"green\"\
+            >+1 contrib tests</font>.  The patch passed contrib unit tests.</p>\n\n\
+            <p>Test results: <a href=\"https://builds.apache.org/job/PreCommit-HADOOP-Build/2433//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/2433//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-HADOOP-Build/2433//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/2433//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Wed, 10 Apr 2013 05:48:37 +0000
+          '@id': '13627513'
+        - '#text': <p>The patches lgtm. +1. Thanks Chris and Ganeshan! Will commit
+            shortly.</p>
+          '@author': vicaya
+          '@created': Wed, 10 Apr 2013 06:49:25 +0000
+          '@id': '13627543'
+        - '#text': "<p>Integrated in Hadoop-trunk-Commit #3588 (See <a href=\"https://builds.apache.org/job/Hadoop-trunk-Commit/3588/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-trunk-Commit/3588/</a>)<br/>\n \
+            \   <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>.\
+            \ Metrics2 record filter should check name as well as tags. (Ganeshan\
+            \ Iyler via llu) (Revision 1466377)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/MetricsFilter.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/metrics2/filter/TestPatternFilter.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 10 Apr 2013 08:36:00 +0000
+          '@id': '13627607'
+        - '#text': "<p>Integrated in Hadoop-Yarn-trunk #179 (See <a href=\"https://builds.apache.org/job/Hadoop-Yarn-trunk/179/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Yarn-trunk/179/</a>)<br/>\n    <a\
+            \ href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>.\
+            \ Metrics2 record filter should check name as well as tags. (Ganeshan\
+            \ Iyler via llu) (Revision 1466377)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/MetricsFilter.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/metrics2/filter/TestPatternFilter.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 10 Apr 2013 10:49:11 +0000
+          '@id': '13627674'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #1368 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/1368/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/1368/</a>)<br/>\n   \
+            \ <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>.\
+            \ Metrics2 record filter should check name as well as tags. (Ganeshan\
+            \ Iyler via llu) (Revision 1466377)</p>\n\n<p>     Result = FAILURE<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/MetricsFilter.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/metrics2/filter/TestPatternFilter.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 10 Apr 2013 13:06:42 +0000
+          '@id': '13627763'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #1395 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1395/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1395/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>.\
+            \ Metrics2 record filter should check name as well as tags. (Ganeshan\
+            \ Iyler via llu) (Revision 1466377)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1466377</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/MetricsFilter.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/metrics2/filter/TestPatternFilter.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 10 Apr 2013 14:06:24 +0000
+          '@id': '13627818'
+        - '#text': <p>Luke, thank you for the quick review and commit!</p>
+          '@author': cnauroth
+          '@created': Wed, 10 Apr 2013 14:49:26 +0000
+          '@id': '13627853'
+        - '#text': <p>Luke, when committing please add both the contributors name.
+            Can you please update the CHANGES.txt to include Chris's name?</p>
+          '@author': sureshms
+          '@created': Wed, 17 Apr 2013 00:33:10 +0000
+          '@id': '13633604'
+        - '#text': <p>Sure, will do. Looks like I misread Chris' credit line <img
+            class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/smile.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/></p>
+          '@author': vicaya
+          '@created': Wed, 17 Apr 2013 02:21:29 +0000
+          '@id': '13633688'
+        - '#text': "<p>Integrated in Hadoop-trunk-Commit #3619 (See <a href=\"https://builds.apache.org/job/Hadoop-trunk-Commit/3619/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-trunk-Commit/3619/</a>)<br/>\n \
+            \   Fix <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\"\
+            \ title=\"Metrics2 record filtering (.record.filter.include/exclude) does\
+            \ not filter by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"\
+            ><del>HADOOP-9467</del></a> attribution. (Revision 1468731)</p>\n\n<p>\
+            \     Result = SUCCESS<br/>\nllu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 17 Apr 2013 03:05:59 +0000
+          '@id': '13633704'
+        - '#text': '<p>No worries, Luke.  <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/smile.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/>  Thanks for
+            taking the time to correct it.</p>
+
+
+            <p>Suresh, thank you for spotting this and requesting the correction.  I
+            hadn''t noticed it myself.</p>'
+          '@author': cnauroth
+          '@created': Wed, 17 Apr 2013 03:21:47 +0000
+          '@id': '13633715'
+        - '#text': "<p>Integrated in Hadoop-Yarn-trunk #186 (See <a href=\"https://builds.apache.org/job/Hadoop-Yarn-trunk/186/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Yarn-trunk/186/</a>)<br/>\n    Fix\
+            \ <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>\
+            \ attribution. (Revision 1468731)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 17 Apr 2013 10:49:17 +0000
+          '@id': '13633948'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #1375 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/1375/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/1375/</a>)<br/>\n   \
+            \ Fix <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\" title=\"\
+            Metrics2 record filtering (.record.filter.include/exclude) does not filter\
+            \ by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"><del>HADOOP-9467</del></a>\
+            \ attribution. (Revision 1468731)</p>\n\n<p>     Result = FAILURE<br/>\n\
+            llu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 17 Apr 2013 13:06:38 +0000
+          '@id': '13634001'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #1402 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1402/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1402/</a>)<br/>\n\
+            \    Fix <a href=\"https://issues.apache.org/jira/browse/HADOOP-9467\"\
+            \ title=\"Metrics2 record filtering (.record.filter.include/exclude) does\
+            \ not filter by name\" class=\"issue-link\" data-issue-key=\"HADOOP-9467\"\
+            ><del>HADOOP-9467</del></a> attribution. (Revision 1468731)</p>\n\n<p>\
+            \     Result = SUCCESS<br/>\nllu : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1468731</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Wed, 17 Apr 2013 14:07:38 +0000
+          '@id': '13634057'
+      component: metrics
+      created: Wed, 10 Apr 2013 04:21:00 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '2.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '322182'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 12 years, 6 weeks, 5 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i1jl6n:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '322527'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+            - '#text': 1.2.0
+              '@id': '12321659'
+            - '#text': 1-win
+              '@id': '12320361'
+            - '#text': 2.0.4-alpha
+              '@id': '12324135'
+      description: <p>Filtering by record considers only the record's tag for filtering
+        and not the record's name.</p>
+      due: null
+      environment: null
+      fixVersion:
+      - 1.2.0
+      - 2.0.4-alpha
+      key:
+        '#text': HADOOP-9467
+        '@id': '12641767'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HADOOP-9467
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop Common
+        '@id': '12310240'
+        '@key': HADOOP
+      reporter:
+        '#text': Chris Nauroth
+        '@username': cnauroth
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 10 Apr 2013 08:50:32 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Metrics2 record filtering (.record.filter.include/exclude) does not
+        filter by name
+      title: '[HADOOP-9467] Metrics2 record filtering (.record.filter.include/exclude)
+        does not filter by name'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 12 May 2016 18:25:41 +0000
+      version:
+      - 1.2.0
+      - 1-win
+      - 2.0.4-alpha
+      - 3.0.0-alpha1
+      votes: '0'
+      watches: '6'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
