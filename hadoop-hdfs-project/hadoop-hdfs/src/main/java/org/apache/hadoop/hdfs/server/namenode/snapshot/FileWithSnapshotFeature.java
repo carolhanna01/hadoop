@@ -159,7 +159,7 @@ public class FileWithSnapshotFeature implements INode.Feature {
         // resize the array.  
         final BlockInfo[] newBlocks;
         if (n == 0) {
-          newBlocks = BlockInfo.EMPTY_ARRAY;
+          newBlocks = null;
         } else {
           newBlocks = new BlockInfo[n];
           System.arraycopy(oldBlocks, 0, newBlocks, 0, n);
