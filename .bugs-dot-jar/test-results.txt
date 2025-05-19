@@ -1,0 +1,549 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.hadoop:hadoop-common >-------------------
+[INFO] Building Apache Hadoop Common 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hadoop-common ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-testdirs) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-dir
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:add-source (add-source) @ hadoop-common ---
+[INFO] Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/generated-sources/java added.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:add-test-source (add-test-source) @ hadoop-common ---
+[INFO] Test Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/generated-test-sources/java added.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (compile-proto) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (save-version) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:build-classpath (build-classpath) @ hadoop-common ---
+[INFO] Wrote classpath file '/home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/classes/mrapp-generated-classpath'.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ hadoop-common ---
+[INFO] Compiling 623 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[25,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[53,18] ResolverConfiguration is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[54,19] IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/LdapGroupsMapping.java:[220,27] LdapCtxFactory is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[117,19] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[123,21] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/FastByteComparisons.java:[128,28] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[518,8] ResolverConfiguration is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[535,10] IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[537,20] IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[539,17] IPAddressUtil is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/security/SecurityUtil.java:[541,20] IPAddressUtil is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- avro-maven-plugin:1.5.3:schema (generate-avro-test-sources) @ hadoop-common ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (compile-test-proto) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (generate-test-sources) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-log-dir) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/log
+     [copy] Copying 4 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-classes
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ hadoop-common ---
+[INFO] Compiling 303 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12:test (default-test) @ hadoop-common ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.ha.TestActiveStandbyElector
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.425 sec
+Running org.apache.hadoop.ha.TestActiveStandbyElectorRealZK
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.224 sec
+Running org.apache.hadoop.ha.TestZKFailoverController
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.436 sec
+Running org.apache.hadoop.ha.TestFailoverController
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.497 sec
+Running org.apache.hadoop.ha.TestHAAdmin
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 sec
+Running org.apache.hadoop.ha.TestSshFenceByTcpPort
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 3.331 sec
+Running org.apache.hadoop.ha.TestShellCommandFencer
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.499 sec
+Running org.apache.hadoop.ha.TestHealthMonitor
+Exception: java.lang.RuntimeException thrown from the UncaughtExceptionHandler in thread "Health Monitor for DummyHAService #3"
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.055 sec
+Running org.apache.hadoop.ha.TestNodeFencer
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.483 sec
+Running org.apache.hadoop.ipc.TestMiniRPCBenchmark
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.347 sec
+Running org.apache.hadoop.ipc.TestRPCCompatibility
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.696 sec
+Running org.apache.hadoop.ipc.TestSocketFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.16 sec
+Running org.apache.hadoop.ipc.TestIPCServerResponder
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.16 sec
+Running org.apache.hadoop.ipc.TestRPCCallBenchmark
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.491 sec
+Running org.apache.hadoop.ipc.TestSaslRPC
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.097 sec
+Running org.apache.hadoop.ipc.TestIPC
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.038 sec
+Running org.apache.hadoop.ipc.TestRPC
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.314 sec
+Running org.apache.hadoop.ipc.TestServer
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec
+Running org.apache.hadoop.ipc.TestMultipleProtocolServer
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.526 sec
+Running org.apache.hadoop.ipc.TestProtoBufRpc
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.624 sec
+Running org.apache.hadoop.http.TestHttpServer
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.468 sec
+Running org.apache.hadoop.http.TestGlobalFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.63 sec
+Running org.apache.hadoop.http.TestServletFilter
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.803 sec
+Running org.apache.hadoop.http.TestHttpServerWebapps
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.29 sec
+Running org.apache.hadoop.http.TestHtmlQuoting
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 sec
+Running org.apache.hadoop.http.lib.TestStaticUserWebFilter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.346 sec
+Running org.apache.hadoop.http.TestPathFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.659 sec
+Running org.apache.hadoop.http.TestHttpServerLifecycle
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.983 sec
+Running org.apache.hadoop.util.TestAsyncDiskService
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+Running org.apache.hadoop.util.TestRunJar
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+Running org.apache.hadoop.util.TestShell
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.215 sec
+Running org.apache.hadoop.util.TestStringUtils
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+Running org.apache.hadoop.util.TestProtoUtil
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+Running org.apache.hadoop.util.TestShutdownHookManager
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec
+Running org.apache.hadoop.util.TestDataChecksum
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+Running org.apache.hadoop.util.TestVersionUtil
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Running org.apache.hadoop.util.TestHostsFileReader
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 sec
+Running org.apache.hadoop.util.TestJarFinder
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.365 sec
+Running org.apache.hadoop.util.TestDiskChecker
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.399 sec
+Running org.apache.hadoop.util.TestOptions
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+Running org.apache.hadoop.util.TestGenericOptionsParser
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.43 sec
+Running org.apache.hadoop.util.TestReflectionUtils
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.279 sec
+Running org.apache.hadoop.util.TestGenericsUtil
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 sec
+Running org.apache.hadoop.util.TestPureJavaCrc32
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.378 sec
+Running org.apache.hadoop.util.TestIndexedSort
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.45 sec
+Running org.apache.hadoop.metrics.TestMetricsServlet
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+Running org.apache.hadoop.metrics.spi.TestOutputRecord
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+Running org.apache.hadoop.metrics.ganglia.TestGangliaContext
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec
+Running org.apache.hadoop.io.serializer.TestSerializationFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.189 sec
+Running org.apache.hadoop.io.serializer.TestWritableSerialization
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 sec
+Running org.apache.hadoop.io.serializer.avro.TestAvroSerialization
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.388 sec
+Running org.apache.hadoop.io.TestBoundedByteArrayOutputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running org.apache.hadoop.io.TestBloomMapFile
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.769 sec
+Running org.apache.hadoop.io.TestTextNonUTF8
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
+Running org.apache.hadoop.io.TestMapFile
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.461 sec
+Running org.apache.hadoop.io.retry.TestFailoverProxy
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.709 sec
+Running org.apache.hadoop.io.retry.TestRetryProxy
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec
+Running org.apache.hadoop.io.TestArrayPrimitiveWritable
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+Running org.apache.hadoop.io.TestUTF8
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.22 sec
+Running org.apache.hadoop.io.TestObjectWritableProtos
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.244 sec
+Running org.apache.hadoop.io.TestArrayFile
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.881 sec
+Running org.apache.hadoop.io.TestVersionedWritable
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running org.apache.hadoop.io.TestMD5Hash
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+Running org.apache.hadoop.io.TestDataByteBuffers
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 sec
+Running org.apache.hadoop.io.TestGenericWritable
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.229 sec
+Running org.apache.hadoop.io.TestDefaultStringifier
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.275 sec
+Running org.apache.hadoop.io.TestIOUtils
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.212 sec
+Running org.apache.hadoop.io.TestSecureIOUtils
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.354 sec
+Running org.apache.hadoop.io.compress.TestBlockDecompressorStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running org.apache.hadoop.io.compress.TestCodec
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.905 sec
+Running org.apache.hadoop.io.compress.TestCodecFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.22 sec
+Running org.apache.hadoop.io.TestWritableName
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.117 sec
+Running org.apache.hadoop.io.TestWritable
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec
+Running org.apache.hadoop.io.nativeio.TestNativeIO
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 0.139 sec
+Running org.apache.hadoop.io.TestSequenceFile
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.117 sec
+Running org.apache.hadoop.io.TestText
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.508 sec
+Running org.apache.hadoop.io.TestSequenceFileSerialization
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.445 sec
+Running org.apache.hadoop.io.TestArrayWritable
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running org.apache.hadoop.io.TestBytesWritable
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+Running org.apache.hadoop.io.TestSequenceFileSync
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.54 sec
+Running org.apache.hadoop.io.TestEnumSetWritable
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.302 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileLzoCodecsStreams
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileUnsortedByteArrays
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.467 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileStreams
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.895 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileLzoCodecsByteArrays
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileComparators
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.433 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileSplit
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.286 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileSeqFileComparison
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.183 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileComparator2
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.687 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileByteArrays
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.506 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileSeek
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.941 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsByteArrays
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.836 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsJClassComparatorByteArrays
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.824 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsStreams
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.907 sec
+Running org.apache.hadoop.io.file.tfile.TestTFile
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.709 sec
+Running org.apache.hadoop.io.file.tfile.TestVLong
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.043 sec
+Running org.apache.hadoop.io.file.tfile.TestTFileJClassComparatorByteArrays
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.551 sec
+Running org.apache.hadoop.io.TestBooleanWritable
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec
+Running org.apache.hadoop.io.TestWritableUtils
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec
+Running org.apache.hadoop.io.TestMapWritable
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.134 sec
+Running org.apache.hadoop.io.TestSortedMapWritable
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec
+Running org.apache.hadoop.io.TestSetFile
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.756 sec
+Running org.apache.hadoop.record.TestRecordIO
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 sec
+Running org.apache.hadoop.record.TestRecordVersioning
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+Running org.apache.hadoop.record.TestBuffer
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running org.apache.hadoop.cli.TestCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.489 sec
+Running org.apache.hadoop.security.TestUserGroupInformation
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.472 sec
+Running org.apache.hadoop.security.TestAuthenticationFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.315 sec
+Running org.apache.hadoop.security.token.TestToken
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec
+Running org.apache.hadoop.security.token.delegation.TestDelegationToken
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.429 sec
+Running org.apache.hadoop.security.authorize.TestAccessControlList
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.286 sec
+Running org.apache.hadoop.security.authorize.TestProxyUsers
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.326 sec
+Running org.apache.hadoop.security.TestJNIGroupsMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.138 sec
+Running org.apache.hadoop.security.TestGroupsCaching
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.198 sec
+Running org.apache.hadoop.security.TestCredentials
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.227 sec
+Running org.apache.hadoop.security.TestUGIWithSecurityOn
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.06 sec
+Running org.apache.hadoop.security.TestLdapGroupsMapping
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.373 sec
+Running org.apache.hadoop.security.TestDoAsEffectiveUser
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.84 sec
+Running org.apache.hadoop.security.TestUserFromEnv
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec
+Running org.apache.hadoop.security.TestSecurityUtil
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.413 sec
+Running org.apache.hadoop.metrics2.filter.TestPatternFilter
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 sec
+Running org.apache.hadoop.metrics2.source.TestJvmMetrics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.278 sec
+Running org.apache.hadoop.metrics2.util.TestMetricsCache
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.09 sec
+Running org.apache.hadoop.metrics2.util.TestSampleStat
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running org.apache.hadoop.metrics2.lib.TestMutableMetrics
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.311 sec
+Running org.apache.hadoop.metrics2.lib.TestInterns
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+Running org.apache.hadoop.metrics2.lib.TestUniqNames
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running org.apache.hadoop.metrics2.lib.TestMetricsRegistry
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 sec
+Running org.apache.hadoop.metrics2.lib.TestMetricsAnnotations
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.315 sec
+Running org.apache.hadoop.metrics2.impl.TestSinkQueue
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.393 sec
+Running org.apache.hadoop.metrics2.impl.TestMetricsCollectorImpl
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 sec
+Running org.apache.hadoop.metrics2.impl.TestGangliaMetrics
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.392 sec
+Running org.apache.hadoop.metrics2.impl.TestMetricsVisitor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.253 sec
+Running org.apache.hadoop.metrics2.impl.TestMetricsConfig
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.218 sec
+Running org.apache.hadoop.metrics2.impl.TestMetricsSystemImpl
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.51 sec
+Running org.apache.hadoop.jmx.TestJMXJsonServlet
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.86 sec
+Running org.apache.hadoop.conf.TestGetInstances
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 sec
+Running org.apache.hadoop.conf.TestReconfiguration
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.786 sec
+Running org.apache.hadoop.conf.TestConfServlet
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.275 sec
+Running org.apache.hadoop.conf.TestDeprecatedKeys
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.27 sec
+Running org.apache.hadoop.conf.TestConfigurationDeprecation
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.282 sec
+Running org.apache.hadoop.conf.TestConfigurationSubclass
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 sec
+Running org.apache.hadoop.conf.TestConfiguration
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.243 sec
+Running org.apache.hadoop.test.TestMultithreadedTestUtil
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.122 sec
+Running org.apache.hadoop.fs.TestFilterFileSystem
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.473 sec
+Running org.apache.hadoop.fs.TestTruncatedInputBug
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.361 sec
+Running org.apache.hadoop.fs.TestLocalFSFileContextMainOperations
+Tests run: 55, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.297 sec
+Running org.apache.hadoop.fs.TestFcLocalFsPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.462 sec
+Running org.apache.hadoop.fs.TestHarFileSystem
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.284 sec
+Running org.apache.hadoop.fs.s3native.TestInMemoryNativeS3FileSystemContract
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.651 sec
+Running org.apache.hadoop.fs.TestHardLink
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.26 sec
+Running org.apache.hadoop.fs.TestGlobPattern
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec
+Running org.apache.hadoop.fs.permission.TestFsPermission
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.275 sec
+Running org.apache.hadoop.fs.TestFileContextResolveAfs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.395 sec
+Running org.apache.hadoop.fs.TestCommandFormat
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running org.apache.hadoop.fs.TestFileStatus
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 sec
+Running org.apache.hadoop.fs.TestListFiles
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.425 sec
+Running org.apache.hadoop.fs.TestFsShellCopy
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.819 sec
+Running org.apache.hadoop.fs.TestBlockLocation
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running org.apache.hadoop.fs.TestFileContextDeleteOnExit
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.395 sec
+Running org.apache.hadoop.fs.TestAvroFSInput
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 sec
+Running org.apache.hadoop.fs.TestDFVariations
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.179 sec
+Running org.apache.hadoop.fs.TestLocalDirAllocator
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.568 sec
+Running org.apache.hadoop.fs.TestDU
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.189 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemDelegation
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.304 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFsLocalFs
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.713 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFsConfig
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.253 sec
+Running org.apache.hadoop.fs.viewfs.TestFcCreateMkdirLocalFs
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.612 sec
+Running org.apache.hadoop.fs.viewfs.TestFcPermissionsLocalFs
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.61 sec
+Running org.apache.hadoop.fs.viewfs.TestChRootedFileSystem
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.524 sec
+Running org.apache.hadoop.fs.viewfs.TestViewfsFileStatus
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.559 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemWithAuthorityLocalFileSystem
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.078 sec
+Running org.apache.hadoop.fs.viewfs.TestFSMainOperationsLocalFileSystem
+Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.407 sec
+Running org.apache.hadoop.fs.viewfs.TestFcMainOperationsLocalFs
+Tests run: 54, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.92 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemLocalFileSystem
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.09 sec
+Running org.apache.hadoop.fs.viewfs.TestChRootedFs
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.637 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFsWithAuthorityLocalFs
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.76 sec
+Running org.apache.hadoop.fs.TestFSMainOperationsLocalFileSystem
+Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.93 sec
+Running org.apache.hadoop.fs.s3.TestS3FileSystem
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 sec
+Running org.apache.hadoop.fs.s3.TestInMemoryS3FileSystemContract
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.496 sec
+Running org.apache.hadoop.fs.s3.TestS3Credentials
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec
+Running org.apache.hadoop.fs.s3.TestINode
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running org.apache.hadoop.fs.TestChecksumFileSystem
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.483 sec
+Running org.apache.hadoop.fs.TestS3_LocalFileContextURI
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.834 sec
+Running org.apache.hadoop.fs.TestFileSystemCanonicalization
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 sec
+Running org.apache.hadoop.fs.kfs.TestKosmosFileSystem
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.416 sec
+Running org.apache.hadoop.fs.TestFcLocalFsUtil
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.427 sec
+Running org.apache.hadoop.fs.TestFilterFs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.144 sec
+Running org.apache.hadoop.fs.TestFileSystemCaching
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.492 sec
+Running org.apache.hadoop.fs.shell.TestPathExceptions
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running org.apache.hadoop.fs.shell.TestCommandFactory
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.142 sec
+Running org.apache.hadoop.fs.shell.TestPathData
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.383 sec
+Running org.apache.hadoop.fs.TestFileUtil
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.44 sec
+Running org.apache.hadoop.fs.TestFsShellReturnCode
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.972 sec
+Running org.apache.hadoop.fs.TestAfsCheckPath
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+Running org.apache.hadoop.fs.TestLocalFSFileContextCreateMkdir
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.489 sec
+Running org.apache.hadoop.fs.TestLocal_S3FileContextURI
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.797 sec
+Running org.apache.hadoop.fs.TestLocalFSFileContextSymlink
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 1.585 sec
+Running org.apache.hadoop.fs.TestTrash
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.657 sec
+Running org.apache.hadoop.fs.TestPath
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.588 sec
+Running org.apache.hadoop.fs.TestLocalFsFCStatistics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.374 sec
+Running org.apache.hadoop.fs.TestGetFileBlockLocations
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.429 sec
+Running org.apache.hadoop.fs.TestLocalFileSystem
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.599 sec
+Running org.apache.hadoop.fs.TestLocalFileSystemPermission
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.389 sec
+Running org.apache.hadoop.fs.TestGlobExpander
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running org.apache.hadoop.net.TestStaticMapping
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.28 sec
+Running org.apache.hadoop.net.TestScriptBasedMapping
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.235 sec
+Running org.apache.hadoop.net.TestSwitchMapping
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 sec
+Running org.apache.hadoop.net.TestSocketIOWithTimeout
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.144 sec
+Running org.apache.hadoop.net.TestTableMapping
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.306 sec
+Running org.apache.hadoop.net.TestDNS
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 sec
+Running org.apache.hadoop.net.TestNetUtils
+Tests run: 38, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.312 sec <<< FAILURE!
+Running org.apache.hadoop.log.TestLog4Json
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 sec
+Running org.apache.hadoop.log.TestLogLevel
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.512 sec
+
+Results :
+
+Failed tests:   testNormalizeHostName(org.apache.hadoop.net.TestNetUtils)
+
+Tests run: 1589, Failures: 1, Errors: 0, Skipped: 16
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:56 min
+[INFO] Finished at: 2025-05-19T23:24:10+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12:test (default-test) on project hadoop-common: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
