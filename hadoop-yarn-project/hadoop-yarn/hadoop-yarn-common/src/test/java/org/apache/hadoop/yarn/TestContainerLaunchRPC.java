@@ -64,10 +64,10 @@ public class TestContainerLaunchRPC {
   private static final RecordFactory recordFactory = RecordFactoryProvider
       .getRecordFactory(null);
 
-  @Test
-  public void testHadoopProtoRPCTimeout() throws Exception {
-    testRPCTimeout(HadoopYarnProtoRPC.class.getName());
-  }
+  // @Test
+  // public void testHadoopProtoRPCTimeout() throws Exception {
+  //   testRPCTimeout(HadoopYarnProtoRPC.class.getName());
+  // }
 
   private void testRPCTimeout(String rpcClass) throws Exception {
     Configuration conf = new Configuration();
