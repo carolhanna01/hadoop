@@ -1,0 +1,146 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.apache.hadoop:hadoop-yarn-common >----------------
+[INFO] Building hadoop-yarn-common 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-testdirs) @ hadoop-yarn-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-protobuf-generated-sources-directory) @ hadoop-yarn-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:build-classpath (build-classpath) @ hadoop-yarn-common ---
+[INFO] Skipped writing classpath file '/home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/classes/mrapp-generated-classpath'.  No changes found.
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2:exec (generate-sources) @ hadoop-yarn-common ---
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2:exec (generate-version) @ hadoop-yarn-common ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:add-source (add-source) @ hadoop-yarn-common ---
+[INFO] Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/generated-sources/proto added.
+[INFO] Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/generated-sources/version added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-yarn-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hadoop-yarn-common ---
+[INFO] Compiling 2 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-yarn-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hadoop-yarn-common ---
+[INFO] Compiling 1 source file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/test-classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.1:test-jar (default) @ hadoop-yarn-common ---
+[INFO] Building jar: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/hadoop-yarn-common-3.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12:test (default-test) @ hadoop-yarn-common ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.yarn.webapp.view.TestTwoColumnCssPage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.081 sec
+Running org.apache.hadoop.yarn.webapp.view.TestHtmlBlock
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.585 sec
+Running org.apache.hadoop.yarn.webapp.view.TestCommonViews
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.859 sec
+Running org.apache.hadoop.yarn.webapp.view.TestTwoColumnLayout
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.846 sec
+Running org.apache.hadoop.yarn.webapp.view.TestHtmlPage
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec
+Running org.apache.hadoop.yarn.webapp.TestSubViews
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.597 sec
+Running org.apache.hadoop.yarn.webapp.TestWebApp
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.831 sec
+Running org.apache.hadoop.yarn.webapp.TestParseRoute
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.206 sec
+Running org.apache.hadoop.yarn.webapp.test.TestWebAppTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.448 sec
+Running org.apache.hadoop.yarn.webapp.hamlet.TestParseSelector
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec
+Running org.apache.hadoop.yarn.webapp.hamlet.TestHamlet
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.413 sec
+Running org.apache.hadoop.yarn.webapp.hamlet.TestHamletImpl
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.377 sec
+Running org.apache.hadoop.yarn.TestRecordFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.167 sec
+Running org.apache.hadoop.yarn.util.TestCompositeService
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.139 sec
+Running org.apache.hadoop.yarn.util.TestProcfsBasedProcessTree
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.488 sec
+Running org.apache.hadoop.yarn.util.TestRackResolverScriptBasedMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.207 sec
+Running org.apache.hadoop.yarn.util.TestFSDownload
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.863 sec <<< FAILURE!
+Running org.apache.hadoop.yarn.util.TestConverterUtils
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 sec
+Running org.apache.hadoop.yarn.util.TestLinuxResourceCalculatorPlugin
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.201 sec
+Running org.apache.hadoop.yarn.util.TestYarnVersionInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+Running org.apache.hadoop.yarn.util.TestRackResolver
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.216 sec
+Running org.apache.hadoop.yarn.logaggregation.TestLogDumper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.47 sec
+Running org.apache.hadoop.yarn.logaggregation.TestAggregatedLogDeletionService
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.573 sec
+Running org.apache.hadoop.yarn.logaggregation.TestAggregatedLogFormat
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.634 sec
+Running org.apache.hadoop.yarn.TestRpcFactoryProvider
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.197 sec
+Running org.apache.hadoop.yarn.service.TestServiceLifecycle
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec
+Running org.apache.hadoop.yarn.service.TestServiceOperations
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 sec
+Running org.apache.hadoop.yarn.TestRPC
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.713 sec
+Running org.apache.hadoop.yarn.conf.TestYarnConfiguration
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.293 sec
+Running org.apache.hadoop.yarn.api.TestContainerId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 sec
+Running org.apache.hadoop.yarn.api.TestNodeId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.223 sec
+Running org.apache.hadoop.yarn.api.TestApplicationAttemptId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 sec
+Running org.apache.hadoop.yarn.api.TestApplicationId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.227 sec
+Running org.apache.hadoop.yarn.TestRPCFactories
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.38 sec
+
+Results :
+
+Failed tests:   testDownload(org.apache.hadoop.yarn.util.TestFSDownload): Cache directory permissions are incorrect expected:<rwxr-xr-x> but was:<rwx------>
+
+Tests run: 99, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.654 s
+[INFO] Finished at: 2025-05-19T23:42:19+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12:test (default-test) on project hadoop-yarn-common: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

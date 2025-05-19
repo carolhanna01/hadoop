@@ -1,0 +1,281 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Jason Darrell Lowe
+        '@username': jlowe
+      attachments:
+        attachment:
+          '@author': jlowe
+          '@created': Mon, 17 Sep 2012 19:56:37 +0000
+          '@id': '12545462'
+          '@name': YARN-108.patch
+          '@size': '3551'
+      comments:
+        comment:
+        - '#text': <p>Patch to have FSDownload explicitly set the permissions of directories
+            after creating them if the umask is too restrictive to set the requested
+            permissions on create.</p>
+          '@author': jlowe
+          '@created': Mon, 17 Sep 2012 19:56:37 +0000
+          '@id': '13457264'
+        - '#text': "<p>+1 overall.  Here are the results of testing the latest attachment\
+            \ <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12545462/YARN-108.patch\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12545462/YARN-108.patch</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    +1 @author.  The patch does\
+            \ not contain any @author tags.</p>\n\n<p>    +1 tests included.  The\
+            \ patch appears to include 1 new or modified test files.</p>\n\n<p>  \
+            \  +1 javac.  The applied patch does not increase the total number of\
+            \ javac compiler warnings.</p>\n\n<p>    +1 javadoc.  The javadoc tool\
+            \ did not generate any warning messages.</p>\n\n<p>    +1 eclipse:eclipse.\
+            \  The patch built with eclipse:eclipse.</p>\n\n<p>    +1 findbugs.  The\
+            \ patch does not introduce any new Findbugs (version 1.3.9) warnings.</p>\n\
+            \n<p>    +1 release audit.  The applied patch does not increase the total\
+            \ number of release audit warnings.</p>\n\n<p>    +1 core tests.  The\
+            \ patch passed unit tests in hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common.</p>\n\
+            \n<p>    +1 contrib tests.  The patch passed contrib unit tests.</p>\n\
+            \n<p>Test results: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/40//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/40//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-YARN-Build/40//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-YARN-Build/40//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Mon, 17 Sep 2012 20:44:27 +0000
+          '@id': '13457303'
+        - '#text': <p>The change looks good to me and Jenkis is OK with it +1. I'll
+            check it in.</p>
+          '@author': revans2
+          '@created': Mon, 17 Sep 2012 21:01:57 +0000
+          '@id': '13457322'
+        - '#text': '<p>Thanks Jason,</p>
+
+
+            <p>I put this into trunk, branch-2, and branch-0.23</p>'
+          '@author': revans2
+          '@created': Mon, 17 Sep 2012 21:15:14 +0000
+          '@id': '13457334'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk-Commit #2738 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Common-trunk-Commit/2738/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Common-trunk-Commit/2738/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/YARN-108\" title=\"\
+            FSDownload can create cache directories with the wrong permissions\" class=\"\
+            issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>. FSDownload\
+            \ can create cache directories with the wrong permissions (Jason Lowe\
+            \ via bobby) (Revision 1386838)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 17 Sep 2012 21:15:23 +0000
+          '@id': '13457335'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk-Commit #2801 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/2801/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/2801/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/YARN-108\" title=\"\
+            FSDownload can create cache directories with the wrong permissions\" class=\"\
+            issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>. FSDownload\
+            \ can create cache directories with the wrong permissions (Jason Lowe\
+            \ via bobby) (Revision 1386838)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 17 Sep 2012 21:18:34 +0000
+          '@id': '13457339'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk-Commit #2762 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/2762/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/2762/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/YARN-108\" title=\"\
+            FSDownload can create cache directories with the wrong permissions\" class=\"\
+            issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>. FSDownload\
+            \ can create cache directories with the wrong permissions (Jason Lowe\
+            \ via bobby) (Revision 1386838)</p>\n\n<p>     Result = FAILURE<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Mon, 17 Sep 2012 22:00:38 +0000
+          '@id': '13457397'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-0.23-Build #378 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/378/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/378/</a>)<br/>\n\
+            \    svn merge -c 1386838 FIXES: <a href=\"https://issues.apache.org/jira/browse/YARN-108\"\
+            \ title=\"FSDownload can create cache directories with the wrong permissions\"\
+            \ class=\"issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>.\
+            \ FSDownload can create cache directories with the wrong permissions (Jason\
+            \ Lowe via bobby) (Revision 1386844)</p>\n\n<p>     Result = UNSTABLE<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386844\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386844</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Tue, 18 Sep 2012 12:40:19 +0000
+          '@id': '13457781'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #1169 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/1169/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/1169/</a>)<br/>\n   \
+            \ <a href=\"https://issues.apache.org/jira/browse/YARN-108\" title=\"\
+            FSDownload can create cache directories with the wrong permissions\" class=\"\
+            issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>. FSDownload\
+            \ can create cache directories with the wrong permissions (Jason Lowe\
+            \ via bobby) (Revision 1386838)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Tue, 18 Sep 2012 12:58:02 +0000
+          '@id': '13457789'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #1200 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1200/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1200/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/YARN-108\" title=\"\
+            FSDownload can create cache directories with the wrong permissions\" class=\"\
+            issue-link\" data-issue-key=\"YARN-108\"><del>YARN-108</del></a>. FSDownload\
+            \ can create cache directories with the wrong permissions (Jason Lowe\
+            \ via bobby) (Revision 1386838)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1386838</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-yarn-project/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Tue, 18 Sep 2012 13:59:42 +0000
+          '@id': '13457831'
+      component: nodemanager
+      created: Mon, 17 Sep 2012 19:26:14 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '247037'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 12 years, 36 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i07y47:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '44294'
+      description: '<p>When the cluster is configured with a restrictive umask, e.g.:
+        <tt>fs.permissions.umask-mode=0077</tt>, the nodemanager can end up creating
+        directory entries in the public cache with the wrong permissions.  The permissions
+        can end up where only the nodemanager user can access files in the public
+        cache, preventing jobs from running properly.</p>'
+      due: null
+      environment: null
+      fixVersion:
+      - 2.0.2-alpha
+      - 0.23.4
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          inwardlinks:
+            '@description': is related to
+            issuelink:
+              issuekey:
+                '#text': YARN-88
+                '@id': '12606429'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+              issuekey:
+                '#text': YARN-87
+                '@id': '12606315'
+      key:
+        '#text': YARN-108
+        '@id': '12607940'
+      labels: null
+      link: https://issues.apache.org/jira/browse/YARN-108
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      project:
+        '#text': Hadoop YARN
+        '@id': '12313722'
+        '@key': YARN
+      reporter:
+        '#text': Jason Darrell Lowe
+        '@username': jlowe
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Mon, 17 Sep 2012 21:15:14 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: FSDownload can create cache directories with the wrong permissions
+      title: '[YARN-108] FSDownload can create cache directories with the wrong permissions'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 11 Oct 2012 17:48:00 +0000
+      version:
+      - 0.23.3
+      - 2.0.0-alpha
+      votes: '0'
+      watches: '5'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

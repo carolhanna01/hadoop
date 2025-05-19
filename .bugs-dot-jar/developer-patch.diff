@@ -1,0 +1,82 @@
+diff --git a/hadoop-yarn-project/CHANGES.txt b/hadoop-yarn-project/CHANGES.txt
+index 325d16a696..5027787d8a 100644
+--- a/hadoop-yarn-project/CHANGES.txt
++++ b/hadoop-yarn-project/CHANGES.txt
+@@ -88,7 +88,10 @@ Release 0.23.4 - UNRELEASED
+ 
+   IMPROVEMENTS
+ 
+-     Change package of YarnClient to org.apache.hadoop. (Bikas Saha via vinodkv)
++    Change package of YarnClient to org.apache.hadoop. (Bikas Saha via vinodkv)
++
++    YARN-108. FSDownload can create cache directories with the wrong
++    permissions (Jason Lowe via bobby)
+ 
+   OPTIMIZATIONS
+ 
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java
+index 24a23c8c0c..a6c7b6e62a 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/FSDownload.java
+@@ -82,6 +82,13 @@ public class FSDownload implements Callable<Path> {
+     return resource;
+   }
+ 
++  private void createDir(Path path, FsPermission perm) throws IOException {
++    files.mkdir(path, perm, false);
++    if (!perm.equals(files.getUMask().applyUMask(perm))) {
++      files.setPermission(path, perm);
++    }
++  }
++
+   private Path copy(Path sCopy, Path dstdir) throws IOException {
+     FileSystem sourceFs = sCopy.getFileSystem(conf);
+     Path dCopy = new Path(dstdir, sCopy.getName() + ".tmp");
+@@ -144,9 +151,9 @@ public class FSDownload implements Callable<Path> {
+     } while (files.util().exists(tmp));
+     destDirPath = tmp;
+ 
+-    files.mkdir(destDirPath, cachePerms, false);
++    createDir(destDirPath, cachePerms);
+     final Path dst_work = new Path(destDirPath + "_tmp");
+-    files.mkdir(dst_work, cachePerms, false);
++    createDir(dst_work, cachePerms);
+ 
+     Path dFinal = files.makeQualified(new Path(dst_work, sCopy.getName()));
+     try {
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java
+index fe1f3ac003..e7da8ca57e 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/util/TestFSDownload.java
+@@ -42,6 +42,7 @@ import junit.framework.Assert;
+ import org.apache.commons.logging.Log;
+ import org.apache.commons.logging.LogFactory;
+ import org.apache.hadoop.conf.Configuration;
++import org.apache.hadoop.fs.CommonConfigurationKeys;
+ import org.apache.hadoop.fs.FSDataOutputStream;
+ import org.apache.hadoop.fs.FileContext;
+ import org.apache.hadoop.fs.FileStatus;
+@@ -115,6 +116,7 @@ public class TestFSDownload {
+   public void testDownload() throws IOException, URISyntaxException,
+       InterruptedException {
+     Configuration conf = new Configuration();
++    conf.set(CommonConfigurationKeys.FS_PERMISSIONS_UMASK_KEY, "077");
+     FileContext files = FileContext.getLocalFSFileContext(conf);
+     final Path basedir = files.makeQualified(new Path("target",
+       TestFSDownload.class.getSimpleName()));
+@@ -162,8 +164,14 @@ public class TestFSDownload {
+         Path localized = p.getValue().get();
+         assertEquals(sizes[Integer.valueOf(localized.getName())], p.getKey()
+             .getSize());
+-        FileStatus status = files.getFileStatus(localized);
++
++        FileStatus status = files.getFileStatus(localized.getParent());
+         FsPermission perm = status.getPermission();
++        assertEquals("Cache directory permissions are incorrect",
++            new FsPermission((short)0755), perm);
++
++        status = files.getFileStatus(localized);
++        perm = status.getPermission();
+         System.out.println("File permission " + perm + 
+             " for rsrc vis " + p.getKey().getVisibility().name());
+         assert(rsrcVis.containsKey(p.getKey()));
