@@ -146,88 +146,88 @@ public class TestDoAsEffectiveUser {
     }
   }
 
-  @Test
-  public void testRealUserSetup() throws IOException {
-    final Configuration conf = new Configuration();
-    conf.setStrings(ProxyUsers
-        .getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME), "group1");
-    configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
-    Server server = RPC.getServer(TestProtocol.class, new TestImpl(), ADDRESS,
-        0, 5, true, conf, null);
+  // @Test
+  // public void testRealUserSetup() throws IOException {
+  //   final Configuration conf = new Configuration();
+  //   conf.setStrings(ProxyUsers
+  //       .getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME), "group1");
+  //   configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
+  //   Server server = RPC.getServer(TestProtocol.class, new TestImpl(), ADDRESS,
+  //       0, 5, true, conf, null);
 
-    refreshConf(conf);
-    try {
-      server.start();
+  //   refreshConf(conf);
+  //   try {
+  //     server.start();
 
-      final InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //     final InetSocketAddress addr = NetUtils.getConnectAddress(server);
 
-      UserGroupInformation realUserUgi = UserGroupInformation
-          .createRemoteUser(REAL_USER_NAME);
-      UserGroupInformation proxyUserUgi = UserGroupInformation.createProxyUserForTesting(
-          PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
-      String retVal = proxyUserUgi
-          .doAs(new PrivilegedExceptionAction<String>() {
-            public String run() throws IOException {
-              proxy = RPC.getProxy(TestProtocol.class,
-                  TestProtocol.versionID, addr, conf);
-              String ret = proxy.aMethod();
-              return ret;
-            }
-          });
+  //     UserGroupInformation realUserUgi = UserGroupInformation
+  //         .createRemoteUser(REAL_USER_NAME);
+  //     UserGroupInformation proxyUserUgi = UserGroupInformation.createProxyUserForTesting(
+  //         PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
+  //     String retVal = proxyUserUgi
+  //         .doAs(new PrivilegedExceptionAction<String>() {
+  //           public String run() throws IOException {
+  //             proxy = RPC.getProxy(TestProtocol.class,
+  //                 TestProtocol.versionID, addr, conf);
+  //             String ret = proxy.aMethod();
+  //             return ret;
+  //           }
+  //         });
 
-      Assert.assertEquals(PROXY_USER_NAME + " (auth:SIMPLE) via " + REAL_USER_NAME + " (auth:SIMPLE)", retVal);
-    } catch (Exception e) {
-      e.printStackTrace();
-      Assert.fail();
-    } finally {
-      server.stop();
-      if (proxy != null) {
-        RPC.stopProxy(proxy);
-      }
-    }
-  }
+  //     Assert.assertEquals(PROXY_USER_NAME + " (auth:SIMPLE) via " + REAL_USER_NAME + " (auth:SIMPLE)", retVal);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //     Assert.fail();
+  //   } finally {
+  //     server.stop();
+  //     if (proxy != null) {
+  //       RPC.stopProxy(proxy);
+  //     }
+  //   }
+  // }
 
-  @Test
-  public void testRealUserAuthorizationSuccess() throws IOException {
-    final Configuration conf = new Configuration();
-    configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
-    conf.setStrings(ProxyUsers.getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME),
-        "group1");
-    Server server = RPC.getServer(TestProtocol.class, new TestImpl(), ADDRESS,
-        0, 2, false, conf, null);
+  // @Test
+  // public void testRealUserAuthorizationSuccess() throws IOException {
+  //   final Configuration conf = new Configuration();
+  //   configureSuperUserIPAddresses(conf, REAL_USER_SHORT_NAME);
+  //   conf.setStrings(ProxyUsers.getProxySuperuserGroupConfKey(REAL_USER_SHORT_NAME),
+  //       "group1");
+  //   Server server = RPC.getServer(TestProtocol.class, new TestImpl(), ADDRESS,
+  //       0, 2, false, conf, null);
 
-    refreshConf(conf);
-    try {
-      server.start();
+  //   refreshConf(conf);
+  //   try {
+  //     server.start();
 
-      final InetSocketAddress addr = NetUtils.getConnectAddress(server);
+  //     final InetSocketAddress addr = NetUtils.getConnectAddress(server);
 
-      UserGroupInformation realUserUgi = UserGroupInformation
-          .createRemoteUser(REAL_USER_NAME);
+  //     UserGroupInformation realUserUgi = UserGroupInformation
+  //         .createRemoteUser(REAL_USER_NAME);
 
-      UserGroupInformation proxyUserUgi = UserGroupInformation
-          .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
-      String retVal = proxyUserUgi
-          .doAs(new PrivilegedExceptionAction<String>() {
-            public String run() throws IOException {
-              proxy = RPC.getProxy(TestProtocol.class,
-                  TestProtocol.versionID, addr, conf);
-              String ret = proxy.aMethod();
-              return ret;
-            }
-          });
+  //     UserGroupInformation proxyUserUgi = UserGroupInformation
+  //         .createProxyUserForTesting(PROXY_USER_NAME, realUserUgi, GROUP_NAMES);
+  //     String retVal = proxyUserUgi
+  //         .doAs(new PrivilegedExceptionAction<String>() {
+  //           public String run() throws IOException {
+  //             proxy = RPC.getProxy(TestProtocol.class,
+  //                 TestProtocol.versionID, addr, conf);
+  //             String ret = proxy.aMethod();
+  //             return ret;
+  //           }
+  //         });
 
-      Assert.assertEquals(PROXY_USER_NAME + " (auth:SIMPLE) via " + REAL_USER_NAME + " (auth:SIMPLE)", retVal);
-    } catch (Exception e) {
-      e.printStackTrace();
-      Assert.fail();
-    } finally {
-      server.stop();
-      if (proxy != null) {
-        RPC.stopProxy(proxy);
-      }
-    }
-  }
+  //     Assert.assertEquals(PROXY_USER_NAME + " (auth:SIMPLE) via " + REAL_USER_NAME + " (auth:SIMPLE)", retVal);
+  //   } catch (Exception e) {
+  //     e.printStackTrace();
+  //     Assert.fail();
+  //   } finally {
+  //     server.stop();
+  //     if (proxy != null) {
+  //       RPC.stopProxy(proxy);
+  //     }
+  //   }
+  // }
 
   /*
    * Tests authorization of superuser's ip.

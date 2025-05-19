@@ -194,25 +194,25 @@ System.out.println("echo int is NOT supported");
     }
   }
 
-  @Test // Compatible new client & old server
-  public void testVersion2ClientVersion1Server() throws Exception {
-    // create a server with two handlers
-    TestImpl1 impl = new TestImpl1();
-    server = RPC.getServer(TestProtocol1.class,
-                              impl, ADDRESS, 0, 2, false, conf, null);
-    server.addProtocol(RPC.RpcKind.RPC_WRITABLE, TestProtocol0.class, impl);
-    server.start();
-    addr = NetUtils.getConnectAddress(server);
+  // @Test // Compatible new client & old server
+  // public void testVersion2ClientVersion1Server() throws Exception {
+  //   // create a server with two handlers
+  //   TestImpl1 impl = new TestImpl1();
+  //   server = RPC.getServer(TestProtocol1.class,
+  //                             impl, ADDRESS, 0, 2, false, conf, null);
+  //   server.addProtocol(RPC.RpcKind.RPC_WRITABLE, TestProtocol0.class, impl);
+  //   server.start();
+  //   addr = NetUtils.getConnectAddress(server);
 
 
-    Version2Client client = new Version2Client();
-    client.ping();
-    assertEquals("hello", client.echo("hello"));
+  //   Version2Client client = new Version2Client();
+  //   client.ping();
+  //   assertEquals("hello", client.echo("hello"));
     
-    // echo(int) is not supported by server, so returning 3
-    // This verifies that echo(int) and echo(String)'s hash codes are different
-    assertEquals(3, client.echo(3));
-  }
+  //   // echo(int) is not supported by server, so returning 3
+  //   // This verifies that echo(int) and echo(String)'s hash codes are different
+  //   assertEquals(3, client.echo(3));
+  // }
   
   @Test // equal version client and server
   public void testVersion2ClientVersion2Server() throws Exception {

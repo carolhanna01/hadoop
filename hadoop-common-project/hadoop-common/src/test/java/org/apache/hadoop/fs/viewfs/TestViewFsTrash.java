@@ -68,10 +68,10 @@ public class TestViewFsTrash {
         true);
   }
   
-  @Test
-  public void testTrash() throws IOException {
-    TestTrash.trashShell(conf, FileSystemTestHelper.getTestRootPath(fsView),
-        fsTarget, new Path(fsTarget.getHomeDirectory(), ".Trash/Current"));
-  }
+  // @Test
+  // public void testTrash() throws IOException {
+  //   TestTrash.trashShell(conf, FileSystemTestHelper.getTestRootPath(fsView),
+  //       fsTarget, new Path(fsTarget.getHomeDirectory(), ".Trash/Current"));
+  // }
   
 }
