@@ -1,0 +1,988 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.hadoop:hadoop-hdfs >--------------------
+[INFO] Building Apache Hadoop HDFS 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hadoop-hdfs ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-testdirs) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-dir
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-SNAPSHOT:protoc (compile-protoc) @ hadoop-hdfs ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-hdfs ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hadoop-hdfs ---
+[INFO] Compiling 577 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[39,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[32,48] OutputFormat is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[33,48] XMLSerializer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[53,23] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[55,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[57,16] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/shortcircuit/ShortCircuitShm.java:[59,14] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[55,4] OutputFormat is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[55,33] OutputFormat is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[59,4] XMLSerializer is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/offlineEditsViewer/XmlEditsVisitor.java:[59,35] XMLSerializer is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-web-xmls) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/hdfs/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/secondary/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/datanode/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/journal/WEB-INF
+     [copy] Copying 22 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-hdfs ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (create-log-dir) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/log
+     [copy] Copying 26 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hadoop-hdfs ---
+[INFO] Compiling 481 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[66,30] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[224,10] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[230,11] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[230,39] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[232,6] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[235,24] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[254,4] NameService is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDFSClientFailover.java:[273,4] NameService is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ hadoop-hdfs ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.TestRefreshCallQueue
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.489 sec - in org.apache.hadoop.TestRefreshCallQueue
+Running org.apache.hadoop.TestGenericRefresh
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.062 sec - in org.apache.hadoop.TestGenericRefresh
+Running org.apache.hadoop.hdfs.TestRead
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.93 sec - in org.apache.hadoop.hdfs.TestRead
+Running org.apache.hadoop.hdfs.TestFileAppend
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.398 sec - in org.apache.hadoop.hdfs.TestFileAppend
+Running org.apache.hadoop.hdfs.TestDefaultNameNodePort
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 sec - in org.apache.hadoop.hdfs.TestDefaultNameNodePort
+Running org.apache.hadoop.hdfs.TestFSOutputSummer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.499 sec - in org.apache.hadoop.hdfs.TestFSOutputSummer
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitReadUnCached
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.107 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitReadUnCached
+Running org.apache.hadoop.hdfs.TestInjectionForSimulatedStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.678 sec - in org.apache.hadoop.hdfs.TestInjectionForSimulatedStorage
+Running org.apache.hadoop.hdfs.TestMissingBlocksAlert
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.943 sec - in org.apache.hadoop.hdfs.TestMissingBlocksAlert
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.775 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancer
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.11 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancer
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.937 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithNodeGroup
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithEncryptedTransfer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.717 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithEncryptedTransfer
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.022 sec - in org.apache.hadoop.hdfs.server.balancer.TestBalancerWithHANameNodes
+Running org.apache.hadoop.hdfs.server.namenode.TestListCorruptFileBlocks
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.105 sec - in org.apache.hadoop.hdfs.server.namenode.TestListCorruptFileBlocks
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogRace
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.547 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogRace
+Running org.apache.hadoop.hdfs.server.namenode.TestAclTransformation
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 sec - in org.apache.hadoop.hdfs.server.namenode.TestAclTransformation
+Running org.apache.hadoop.hdfs.server.namenode.TestParallelImageWrite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.134 sec - in org.apache.hadoop.hdfs.server.namenode.TestParallelImageWrite
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestNNHealthCheck
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.946 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestNNHealthCheck
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestRetryCacheWithHA
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.775 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestRetryCacheWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAFsck
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.539 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAFsck
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.221 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyCheckpoints
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.306 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyCheckpoints
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailureToReadEdits
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.114 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailureToReadEdits
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestGetGroupsWithHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.651 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestGetGroupsWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencing
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.615 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencing
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAConfiguration
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.59 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAConfiguration
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogsDuringFailover
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.009 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogsDuringFailover
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandbyWithQJM
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.53 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandbyWithQJM
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestLossyRetryInvocationHandler
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.165 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestLossyRetryInvocationHandler
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAMetrics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.253 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAMetrics
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestPendingCorruptDnMessages
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.611 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestPendingCorruptDnMessages
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHarFileSystemWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.065 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHarFileSystemWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 65.219 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandby
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.54 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestBootstrapStandby
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.224 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestXAttrsWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.082 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestXAttrsWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.624 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDelegationTokensWithHA
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.124 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDelegationTokensWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestQuotasWithHA
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.215 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestQuotasWithHA
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencingWithReplication
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.376 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDNFencingWithReplication
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHAAppend
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.407 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHAAppend
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStateTransitionFailure
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.1 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStateTransitionFailure
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.028 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestDFSZKFailoverController
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.973 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestDFSZKFailoverController
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 89.525 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestPipelinesFailover
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestInitializeSharedEdits
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.444 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestInitializeSharedEdits
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestFailoverWithBlockTokensEnabled
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.299 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestFailoverWithBlockTokensEnabled
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogTailer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.365 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestEditLogTailer
+Running org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.041 sec - in org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode
+Running org.apache.hadoop.hdfs.server.namenode.TestFavoredNodesEndToEnd
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.198 sec - in org.apache.hadoop.hdfs.server.namenode.TestFavoredNodesEndToEnd
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRecovery
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to java_pid3066377.hprof ...
+Heap dump file created [43341526 bytes in 0.090 secs]
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.315 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRecovery
+Running org.apache.hadoop.hdfs.server.namenode.TestSecurityTokenEditLog
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.514 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecurityTokenEditLog
+Running org.apache.hadoop.hdfs.server.namenode.TestGenericJournalConf
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.752 sec - in org.apache.hadoop.hdfs.server.namenode.TestGenericJournalConf
+Running org.apache.hadoop.hdfs.server.namenode.TestFSPermissionChecker
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.743 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSPermissionChecker
+Running org.apache.hadoop.hdfs.server.namenode.TestNameCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameCache
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNNMetricFilesInGetListingOps
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.635 sec - in org.apache.hadoop.hdfs.server.namenode.metrics.TestNNMetricFilesInGetListingOps
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNameNodeMetrics
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.395 sec - in org.apache.hadoop.hdfs.server.namenode.metrics.TestNameNodeMetrics
+Running org.apache.hadoop.hdfs.server.namenode.TestEditsDoubleBuffer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditsDoubleBuffer
+Running org.apache.hadoop.hdfs.server.namenode.TestPathComponents
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 sec - in org.apache.hadoop.hdfs.server.namenode.TestPathComponents
+Running org.apache.hadoop.hdfs.server.namenode.TestStorageRestore
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.443 sec - in org.apache.hadoop.hdfs.server.namenode.TestStorageRestore
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeXAttr
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.501 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeXAttr
+Running org.apache.hadoop.hdfs.server.namenode.TestLeaseManager
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.53 sec - in org.apache.hadoop.hdfs.server.namenode.TestLeaseManager
+Running org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 74.382 sec - in org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives
+Running org.apache.hadoop.hdfs.server.namenode.TestStartupProgressServlet
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.277 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartupProgressServlet
+Running org.apache.hadoop.hdfs.server.namenode.TestMetaSave
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.189 sec - in org.apache.hadoop.hdfs.server.namenode.TestMetaSave
+Running org.apache.hadoop.hdfs.server.namenode.TestFSDirectory
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.724 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSDirectory
+Running org.apache.hadoop.hdfs.server.namenode.TestCreateEditsLog
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.183 sec - in org.apache.hadoop.hdfs.server.namenode.TestCreateEditsLog
+Running org.apache.hadoop.hdfs.server.namenode.TestProcessCorruptBlocks
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.558 sec - in org.apache.hadoop.hdfs.server.namenode.TestProcessCorruptBlocks
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogAutoroll
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.28 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogAutoroll
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogJournalFailures
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.492 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogJournalFailures
+Running org.apache.hadoop.hdfs.server.namenode.TestSnapshotPathINodes
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.333 sec - in org.apache.hadoop.hdfs.server.namenode.TestSnapshotPathINodes
+Running org.apache.hadoop.hdfs.server.namenode.TestAuditLogger
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.884 sec - in org.apache.hadoop.hdfs.server.namenode.TestAuditLogger
+Running org.apache.hadoop.hdfs.server.namenode.TestBlockUnderConstruction
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.276 sec - in org.apache.hadoop.hdfs.server.namenode.TestBlockUnderConstruction
+Running org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgressMetrics
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 sec - in org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgressMetrics
+Running org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgress
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.299 sec - in org.apache.hadoop.hdfs.server.namenode.startupprogress.TestStartupProgress
+Running org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.115 sec - in org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace
+Running org.apache.hadoop.hdfs.server.namenode.TestDeadDatanode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.921 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeadDatanode
+Running org.apache.hadoop.hdfs.server.namenode.TestFsLimits
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.825 sec - in org.apache.hadoop.hdfs.server.namenode.TestFsLimits
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImage
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.024 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImage
+Running org.apache.hadoop.hdfs.server.namenode.TestHostsFiles
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.522 sec - in org.apache.hadoop.hdfs.server.namenode.TestHostsFiles
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogFileOutputStream
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.35 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogFileOutputStream
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithSnapshot
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.597 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.TestStartup
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.526 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartup
+Running org.apache.hadoop.hdfs.server.namenode.TestFileContextXAttr
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.428 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileContextXAttr
+Running org.apache.hadoop.hdfs.server.namenode.TestNamenodeCapacityReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.841 sec - in org.apache.hadoop.hdfs.server.namenode.TestNamenodeCapacityReport
+Running org.apache.hadoop.hdfs.server.namenode.TestSequentialBlockId
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.71 sec - in org.apache.hadoop.hdfs.server.namenode.TestSequentialBlockId
+Running org.apache.hadoop.hdfs.server.namenode.TestDeduplicationMap
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeduplicationMap
+Running org.apache.hadoop.hdfs.server.namenode.TestStartupOptionUpgrade
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.338 sec - in org.apache.hadoop.hdfs.server.namenode.TestStartupOptionUpgrade
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRetryCacheMetrics
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.555 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRetryCacheMetrics
+Running org.apache.hadoop.hdfs.server.namenode.TestSecureNameNode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.052 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecureNameNode
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckPointForSecurityTokens
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.262 sec - in org.apache.hadoop.hdfs.server.namenode.TestCheckPointForSecurityTokens
+Running org.apache.hadoop.hdfs.server.namenode.TestClusterId
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.974 sec - in org.apache.hadoop.hdfs.server.namenode.TestClusterId
+Running org.apache.hadoop.hdfs.server.namenode.TestFSEditLogLoader
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.814 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSEditLogLoader
+Running org.apache.hadoop.hdfs.server.namenode.TestFSNamesystemMBean
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.443 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSNamesystemMBean
+Running org.apache.hadoop.hdfs.server.namenode.TestFSNamesystem
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.048 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSNamesystem
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourcePolicy
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.16 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourcePolicy
+Running org.apache.hadoop.hdfs.server.namenode.TestAclConfigFlag
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.361 sec - in org.apache.hadoop.hdfs.server.namenode.TestAclConfigFlag
+Running org.apache.hadoop.hdfs.server.namenode.TestSecureNameNodeWithExternalKdc
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.062 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecureNameNodeWithExternalKdc
+Running org.apache.hadoop.hdfs.server.namenode.TestDeleteRace
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.327 sec - in org.apache.hadoop.hdfs.server.namenode.TestDeleteRace
+Running org.apache.hadoop.hdfs.server.namenode.TestHDFSConcat
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.24 sec - in org.apache.hadoop.hdfs.server.namenode.TestHDFSConcat
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotStatsMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.773 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotStatsMXBean
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestINodeFileUnderConstructionWithSnapshot
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.657 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestINodeFileUnderConstructionWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotFileLength
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.415 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotFileLength
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.929 sec <<< FAILURE! - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap
+testDeletionOfLaterBlocksWithZeroSizeFirstBlock(org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap)  Time elapsed: 0.783 sec  <<< ERROR!
+java.io.IOException: Failed to save in any storage directories while saving namespace.
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.saveFSImageInAllDirs(FSImage.java:1089)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.saveNamespace(FSImage.java:1038)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.saveNamespace(FSImage.java:1018)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.saveNamespace(FSNamesystem.java:4910)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.saveNamespace(NameNodeRpcServer.java:860)
+	at org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotBlocksMap.testDeletionOfLaterBlocksWithZeroSizeFirstBlock(TestSnapshotBlocksMap.java:434)
+
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSetQuotaWithSnapshot
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.82 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSetQuotaWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.621 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotRename
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.857 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotRename
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestFullPathNameWithSnapshot
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.843 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestFullPathNameWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.982 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestXAttrWithSnapshot
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.435 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestXAttrWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestDisallowModifyROSnapshot
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.192 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestDisallowModifyROSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestRenameWithSnapshots
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.237 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestRenameWithSnapshots
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestCheckpointsWithSnapshots
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.531 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestCheckpointsWithSnapshots
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotManager
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.287 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotManager
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotReplication
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.428 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotReplication
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotMetrics
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.195 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotMetrics
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotListing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.303 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotListing
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshot
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.61 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestAclWithSnapshot
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.253 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestAclWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshottableDirListing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.174 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshottableDirListing
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotNameWithInvalidCharacters
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.617 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotNameWithInvalidCharacters
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDiffReport
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.597 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDiffReport
+Running org.apache.hadoop.hdfs.server.namenode.snapshot.TestOpenFilesWithSnapshot
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 94.331 sec - in org.apache.hadoop.hdfs.server.namenode.snapshot.TestOpenFilesWithSnapshot
+Running org.apache.hadoop.hdfs.server.namenode.TestCommitBlockSynchronization
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.838 sec - in org.apache.hadoop.hdfs.server.namenode.TestCommitBlockSynchronization
+Running org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.88 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi
+Running org.apache.hadoop.hdfs.server.namenode.TestFsck
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.924 sec - in org.apache.hadoop.hdfs.server.namenode.TestFsck
+Running org.apache.hadoop.hdfs.server.namenode.TestNamenodeRetryCache
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.439 sec - in org.apache.hadoop.hdfs.server.namenode.TestNamenodeRetryCache
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionManager
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.53 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionManager
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageStorageInspector
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.218 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageStorageInspector
+Running org.apache.hadoop.hdfs.server.namenode.TestFileJournalManager
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.329 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileJournalManager
+Running org.apache.hadoop.hdfs.server.namenode.TestFileLimit
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.567 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileLimit
+Running org.apache.hadoop.hdfs.server.namenode.TestAuditLogs
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.756 sec - in org.apache.hadoop.hdfs.server.namenode.TestAuditLogs
+Running org.apache.hadoop.hdfs.server.namenode.TestFileContextAcl
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.433 sec - in org.apache.hadoop.hdfs.server.namenode.TestFileContextAcl
+Running org.apache.hadoop.hdfs.server.namenode.TestNameEditsConfigs
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.677 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameEditsConfigs
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeOptionParsing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.264 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeOptionParsing
+Running org.apache.hadoop.hdfs.server.namenode.TestSecondaryNameNodeUpgrade
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.987 sec - in org.apache.hadoop.hdfs.server.namenode.TestSecondaryNameNodeUpgrade
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionFunctional
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.676 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionFunctional
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckpoint
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.058 sec - in org.apache.hadoop.hdfs.server.namenode.TestCheckpoint
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLog
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.396 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLog
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRespectsBindHostKeys
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.805 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRespectsBindHostKeys
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.878 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeMXBean
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogFileInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.515 sec - in org.apache.hadoop.hdfs.server.namenode.TestEditLogFileInputStream
+Running org.apache.hadoop.hdfs.server.namenode.TestDiskspaceQuotaUpdate
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.892 sec - in org.apache.hadoop.hdfs.server.namenode.TestDiskspaceQuotaUpdate
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithXAttr
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.331 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithXAttr
+Running org.apache.hadoop.hdfs.server.namenode.TestValidateConfigurationSettings
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.594 sec - in org.apache.hadoop.hdfs.server.namenode.TestValidateConfigurationSettings
+Running org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.184 sec - in org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus
+Running org.apache.hadoop.hdfs.server.namenode.TestNNThroughputBenchmark
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.736 sec - in org.apache.hadoop.hdfs.server.namenode.TestNNThroughputBenchmark
+Running org.apache.hadoop.hdfs.server.namenode.TestTransferFsImage
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.673 sec - in org.apache.hadoop.hdfs.server.namenode.TestTransferFsImage
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.635 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl
+Running org.apache.hadoop.hdfs.server.namenode.TestBackupNode
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.706 sec - in org.apache.hadoop.hdfs.server.namenode.TestBackupNode
+Running org.apache.hadoop.hdfs.server.namenode.web.resources.TestWebHdfsDataLocality
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.438 sec - in org.apache.hadoop.hdfs.server.namenode.web.resources.TestWebHdfsDataLocality
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageWithAcl
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 92.225 sec - in org.apache.hadoop.hdfs.server.namenode.TestFSImageWithAcl
+Running org.apache.hadoop.hdfs.server.namenode.TestAddBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.113 sec - in org.apache.hadoop.hdfs.server.namenode.TestAddBlock
+Running org.apache.hadoop.hdfs.server.namenode.TestXAttrConfigFlag
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.685 sec - in org.apache.hadoop.hdfs.server.namenode.TestXAttrConfigFlag
+Running org.apache.hadoop.hdfs.server.namenode.TestLargeDirectoryDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.289 sec - in org.apache.hadoop.hdfs.server.namenode.TestLargeDirectoryDelete
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeRpcServer
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.263 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeRpcServer
+Running org.apache.hadoop.hdfs.server.namenode.TestAllowFormat
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.961 sec - in org.apache.hadoop.hdfs.server.namenode.TestAllowFormat
+Running org.apache.hadoop.hdfs.server.namenode.TestAddBlockRetry
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.846 sec - in org.apache.hadoop.hdfs.server.namenode.TestAddBlockRetry
+Running org.apache.hadoop.hdfs.server.namenode.TestINodeFile
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.772 sec - in org.apache.hadoop.hdfs.server.namenode.TestINodeFile
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourceChecker
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.995 sec - in org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourceChecker
+Running org.apache.hadoop.hdfs.server.namenode.TestGetImageServlet
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.422 sec - in org.apache.hadoop.hdfs.server.namenode.TestGetImageServlet
+Running org.apache.hadoop.hdfs.server.common.TestGetUriFromString
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in org.apache.hadoop.hdfs.server.common.TestGetUriFromString
+Running org.apache.hadoop.hdfs.server.common.TestJspHelper
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.545 sec - in org.apache.hadoop.hdfs.server.common.TestJspHelper
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestCachedBlocksList
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestCachedBlocksList
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestOverReplicatedBlocks
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.966 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestOverReplicatedBlocks
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlockQueues
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlockQueues
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicy
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.425 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicy
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHostFileManager
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.456 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHostFileManager
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestComputeInvalidateWork
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.708 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestComputeInvalidateWork
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingInvalidateBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.698 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingInvalidateBlock
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyConsiderLoad
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.198 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyConsiderLoad
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestCorruptReplicaInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.167 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestCorruptReplicaInfo
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestNodeCount
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.983 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestNodeCount
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyWithNodeGroup
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.422 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicyWithNodeGroup
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeManager
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.371 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeManager
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlocksWithNotEnoughRacks
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.625 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlocksWithNotEnoughRacks
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeDescriptor
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeDescriptor
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfo
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfo
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestRBWBlockInvalidation
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.187 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestRBWBlockInvalidation
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingDataNodeMessages
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingDataNodeMessages
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingReplication
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.041 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestPendingReplication
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.777 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlocks
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.18 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlocks
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.009 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHost2NodesMap
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHost2NodesMap
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHeartbeatHandling
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.605 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestHeartbeatHandling
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoUnderConstruction
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec - in org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoUnderConstruction
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockRecovery
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.904 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockRecovery
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.633 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockPoolManager
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.466 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockPoolManager
+Running org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.044 sec - in org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool
+Running org.apache.hadoop.hdfs.server.datanode.TestTransferRbw
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.185 sec - in org.apache.hadoop.hdfs.server.datanode.TestTransferRbw
+Running org.apache.hadoop.hdfs.server.datanode.TestReadOnlySharedStorage
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.858 sec - in org.apache.hadoop.hdfs.server.datanode.TestReadOnlySharedStorage
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.603 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeInitStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.737 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeInitStorage
+Running org.apache.hadoop.hdfs.server.datanode.TestHSync
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.76 sec - in org.apache.hadoop.hdfs.server.datanode.TestHSync
+Running org.apache.hadoop.hdfs.server.datanode.TestDataDirs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.384 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataDirs
+Running org.apache.hadoop.hdfs.server.datanode.TestDiskError
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.967 sec - in org.apache.hadoop.hdfs.server.datanode.TestDiskError
+Running org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.53 sec - in org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockHasMultipleReplicasOnSameDN
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.201 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockHasMultipleReplicasOnSameDN
+Running org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCache
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91.335 sec - in org.apache.hadoop.hdfs.server.datanode.TestFsDatasetCache
+Running org.apache.hadoop.hdfs.server.datanode.TestIncrementalBlockReports
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.024 sec - in org.apache.hadoop.hdfs.server.datanode.TestIncrementalBlockReports
+Running org.apache.hadoop.hdfs.server.datanode.TestNNHandlesCombinedBlockReport
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.175 sec - in org.apache.hadoop.hdfs.server.datanode.TestNNHandlesCombinedBlockReport
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeRollingUpgrade
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.756 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeRollingUpgrade
+Running org.apache.hadoop.hdfs.server.datanode.TestIncrementalBrVariations
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.011 sec - in org.apache.hadoop.hdfs.server.datanode.TestIncrementalBrVariations
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockPoolSliceStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockPoolSliceStorage
+Running org.apache.hadoop.hdfs.server.datanode.TestSimulatedFSDataset
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.437 sec - in org.apache.hadoop.hdfs.server.datanode.TestSimulatedFSDataset
+Running org.apache.hadoop.hdfs.server.datanode.TestDnRespectsBlockReportSplitThreshold
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.511 sec - in org.apache.hadoop.hdfs.server.datanode.TestDnRespectsBlockReportSplitThreshold
+Running org.apache.hadoop.hdfs.server.datanode.TestCachingStrategy
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.282 sec - in org.apache.hadoop.hdfs.server.datanode.TestCachingStrategy
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeStartupOptions
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec - in org.apache.hadoop.hdfs.server.datanode.TestDatanodeStartupOptions
+Running org.apache.hadoop.hdfs.server.datanode.TestNNHandlesBlockReportPerStorage
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.078 sec - in org.apache.hadoop.hdfs.server.datanode.TestNNHandlesBlockReportPerStorage
+Running org.apache.hadoop.hdfs.server.datanode.TestMultipleNNDataBlockScanner
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 146.557 sec - in org.apache.hadoop.hdfs.server.datanode.TestMultipleNNDataBlockScanner
+Running org.apache.hadoop.hdfs.server.datanode.TestStorageReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.058 sec - in org.apache.hadoop.hdfs.server.datanode.TestStorageReport
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.TestAvailableSpaceVolumeChoosingPolicy
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.67 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.TestAvailableSpaceVolumeChoosingPolicy
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.TestRoundRobinVolumeChoosingPolicy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.TestRoundRobinVolumeChoosingPolicy
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestDatanodeRestart
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.515 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestDatanodeRestart
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestInterDatanodeProtocol
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.034 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestInterDatanodeProtocol
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestWriteToReplica
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.519 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestWriteToReplica
+Running org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestReplicaMap
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec - in org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestReplicaMap
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.204 sec - in org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.297 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.849 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.243 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.28 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeRegister
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.441 sec - in org.apache.hadoop.hdfs.server.datanode.TestDatanodeRegister
+Running org.apache.hadoop.hdfs.server.datanode.web.resources.TestDatanodeWebHdfsMethods
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.403 sec - in org.apache.hadoop.hdfs.server.datanode.web.resources.TestDatanodeWebHdfsMethods
+Running org.apache.hadoop.hdfs.server.datanode.TestBPOfferService
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.103 sec - in org.apache.hadoop.hdfs.server.datanode.TestBPOfferService
+Running org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.773 sec - in org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes
+Running org.apache.hadoop.hdfs.server.datanode.TestStartSecureDataNode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.05 sec - in org.apache.hadoop.hdfs.server.datanode.TestStartSecureDataNode
+Running org.apache.hadoop.hdfs.server.datanode.TestHdfsServerConstants
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec - in org.apache.hadoop.hdfs.server.datanode.TestHdfsServerConstants
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.843 sec - in org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean
+Running org.apache.hadoop.hdfs.TestClientReportBadBlock
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 62.442 sec - in org.apache.hadoop.hdfs.TestClientReportBadBlock
+Running org.apache.hadoop.hdfs.TestPread
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 87.101 sec - in org.apache.hadoop.hdfs.TestPread
+Running org.apache.hadoop.hdfs.TestFsShellPermission
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.76 sec - in org.apache.hadoop.hdfs.TestFsShellPermission
+Running org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.499 sec - in org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure
+Running org.apache.hadoop.hdfs.TestDFSFinalize
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.521 sec - in org.apache.hadoop.hdfs.TestDFSFinalize
+Running org.apache.hadoop.hdfs.TestFileCorruption
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.477 sec - in org.apache.hadoop.hdfs.TestFileCorruption
+Running org.apache.hadoop.hdfs.TestAppendDifferentChecksum
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.9 sec - in org.apache.hadoop.hdfs.TestAppendDifferentChecksum
+Running org.apache.hadoop.hdfs.util.TestBestEffortLongFile
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec - in org.apache.hadoop.hdfs.util.TestBestEffortLongFile
+Running org.apache.hadoop.hdfs.util.TestMD5FileUtils
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 sec - in org.apache.hadoop.hdfs.util.TestMD5FileUtils
+Running org.apache.hadoop.hdfs.util.TestLightWeightLinkedSet
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec - in org.apache.hadoop.hdfs.util.TestLightWeightLinkedSet
+Running org.apache.hadoop.hdfs.util.TestXMLUtils
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec - in org.apache.hadoop.hdfs.util.TestXMLUtils
+Running org.apache.hadoop.hdfs.util.TestAtomicFileOutputStream
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec - in org.apache.hadoop.hdfs.util.TestAtomicFileOutputStream
+Running org.apache.hadoop.hdfs.util.TestExactSizeInputStream
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec - in org.apache.hadoop.hdfs.util.TestExactSizeInputStream
+Running org.apache.hadoop.hdfs.util.TestDirectBufferPool
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec - in org.apache.hadoop.hdfs.util.TestDirectBufferPool
+Running org.apache.hadoop.hdfs.util.TestLightWeightHashSet
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec - in org.apache.hadoop.hdfs.util.TestLightWeightHashSet
+Running org.apache.hadoop.hdfs.util.TestCyclicIteration
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in org.apache.hadoop.hdfs.util.TestCyclicIteration
+Running org.apache.hadoop.hdfs.util.TestDiff
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.633 sec - in org.apache.hadoop.hdfs.util.TestDiff
+Running org.apache.hadoop.hdfs.util.TestChunkedArrayList
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 sec - in org.apache.hadoop.hdfs.util.TestChunkedArrayList
+Running org.apache.hadoop.hdfs.TestDFSClientExcludedNodes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.201 sec - in org.apache.hadoop.hdfs.TestDFSClientExcludedNodes
+Running org.apache.hadoop.hdfs.TestFileCreationEmpty
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.052 sec - in org.apache.hadoop.hdfs.TestFileCreationEmpty
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitReadNoChecksum
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.121 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitReadNoChecksum
+Running org.apache.hadoop.hdfs.TestIsMethodSupported
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.918 sec - in org.apache.hadoop.hdfs.TestIsMethodSupported
+Running org.apache.hadoop.hdfs.TestBlockMissingException
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.48 sec - in org.apache.hadoop.hdfs.TestBlockMissingException
+Running org.apache.hadoop.hdfs.TestSetrepIncreasing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.15 sec - in org.apache.hadoop.hdfs.TestSetrepIncreasing
+Running org.apache.hadoop.hdfs.TestLeaseRecovery2
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 59.326 sec - in org.apache.hadoop.hdfs.TestLeaseRecovery2
+Running org.apache.hadoop.hdfs.TestRollingUpgradeDowngrade
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.221 sec - in org.apache.hadoop.hdfs.TestRollingUpgradeDowngrade
+Running org.apache.hadoop.hdfs.TestFileCreationDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.947 sec - in org.apache.hadoop.hdfs.TestFileCreationDelete
+Running org.apache.hadoop.hdfs.TestFileAppendRestart
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.883 sec - in org.apache.hadoop.hdfs.TestFileAppendRestart
+Running org.apache.hadoop.hdfs.TestPersistBlocks
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.509 sec - in org.apache.hadoop.hdfs.TestPersistBlocks
+Running org.apache.hadoop.hdfs.TestDFSRemove
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.137 sec - in org.apache.hadoop.hdfs.TestDFSRemove
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitLegacyRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.611 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitLegacyRead
+Running org.apache.hadoop.hdfs.TestDatanodeRegistration
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.655 sec - in org.apache.hadoop.hdfs.TestDatanodeRegistration
+Running org.apache.hadoop.hdfs.TestParallelRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.964 sec - in org.apache.hadoop.hdfs.TestParallelRead
+Running org.apache.hadoop.hdfs.TestClose
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.838 sec - in org.apache.hadoop.hdfs.TestClose
+Running org.apache.hadoop.hdfs.TestFileAppend2
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.189 sec - in org.apache.hadoop.hdfs.TestFileAppend2
+Running org.apache.hadoop.hdfs.TestDataTransferProtocol
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.883 sec - in org.apache.hadoop.hdfs.TestDataTransferProtocol
+Running org.apache.hadoop.hdfs.TestHttpPolicy
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 sec - in org.apache.hadoop.hdfs.TestHttpPolicy
+Running org.apache.hadoop.hdfs.TestDFSAddressConfig
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.549 sec - in org.apache.hadoop.hdfs.TestDFSAddressConfig
+Running org.apache.hadoop.hdfs.TestFileConcurrentReader
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.424 sec - in org.apache.hadoop.hdfs.TestFileConcurrentReader
+Running org.apache.hadoop.hdfs.TestListFilesInFileContext
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.391 sec - in org.apache.hadoop.hdfs.TestListFilesInFileContext
+Running org.apache.hadoop.hdfs.TestSetrepDecreasing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.326 sec - in org.apache.hadoop.hdfs.TestSetrepDecreasing
+Running org.apache.hadoop.hdfs.TestReplication
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.766 sec - in org.apache.hadoop.hdfs.TestReplication
+Running org.apache.hadoop.hdfs.TestDFSClientFailover
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.596 sec - in org.apache.hadoop.hdfs.TestDFSClientFailover
+Running org.apache.hadoop.hdfs.TestDataTransferKeepalive
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.636 sec - in org.apache.hadoop.hdfs.TestDataTransferKeepalive
+Running org.apache.hadoop.hdfs.TestRenameWhileOpen
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.319 sec - in org.apache.hadoop.hdfs.TestRenameWhileOpen
+Running org.apache.hadoop.hdfs.TestLeaseRenewer
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.769 sec - in org.apache.hadoop.hdfs.TestLeaseRenewer
+Running org.apache.hadoop.hdfs.TestListFilesInDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.017 sec - in org.apache.hadoop.hdfs.TestListFilesInDFS
+Running org.apache.hadoop.hdfs.TestFetchImage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.059 sec - in org.apache.hadoop.hdfs.TestFetchImage
+Running org.apache.hadoop.hdfs.TestDatanodeDeath
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 141.115 sec - in org.apache.hadoop.hdfs.TestDatanodeDeath
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitCache
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 10.814 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitCache
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 10, Time elapsed: 0.173 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead
+Running org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitShm
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.094 sec - in org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitShm
+Running org.apache.hadoop.hdfs.TestParallelShortCircuitRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.107 sec - in org.apache.hadoop.hdfs.TestParallelShortCircuitRead
+Running org.apache.hadoop.hdfs.TestFileStatus
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.041 sec - in org.apache.hadoop.hdfs.TestFileStatus
+Running org.apache.hadoop.hdfs.TestLargeBlock
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.512 sec - in org.apache.hadoop.hdfs.TestLargeBlock
+Running org.apache.hadoop.hdfs.TestDFSRename
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.366 sec - in org.apache.hadoop.hdfs.TestDFSRename
+Running org.apache.hadoop.hdfs.TestDFSOutputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.836 sec - in org.apache.hadoop.hdfs.TestDFSOutputStream
+Running org.apache.hadoop.hdfs.TestDisableConnCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.892 sec - in org.apache.hadoop.hdfs.TestDisableConnCache
+Running org.apache.hadoop.hdfs.TestDFSPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.405 sec - in org.apache.hadoop.hdfs.TestDFSPermission
+Running org.apache.hadoop.hdfs.security.token.block.TestBlockToken
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.007 sec - in org.apache.hadoop.hdfs.security.token.block.TestBlockToken
+Running org.apache.hadoop.hdfs.security.TestClientProtocolWithDelegationToken
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.769 sec - in org.apache.hadoop.hdfs.security.TestClientProtocolWithDelegationToken
+Running org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.818 sec - in org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser
+Running org.apache.hadoop.hdfs.security.TestDelegationToken
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.585 sec - in org.apache.hadoop.hdfs.security.TestDelegationToken
+Running org.apache.hadoop.hdfs.TestFileCreationClient
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.492 sec - in org.apache.hadoop.hdfs.TestFileCreationClient
+Running org.apache.hadoop.hdfs.protocol.TestAnnotations
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 sec - in org.apache.hadoop.hdfs.protocol.TestAnnotations
+Running org.apache.hadoop.hdfs.protocol.datatransfer.TestPacketReceiver
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 sec - in org.apache.hadoop.hdfs.protocol.datatransfer.TestPacketReceiver
+Running org.apache.hadoop.hdfs.protocol.TestExtendedBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in org.apache.hadoop.hdfs.protocol.TestExtendedBlock
+Running org.apache.hadoop.hdfs.protocol.TestLayoutVersion
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec - in org.apache.hadoop.hdfs.protocol.TestLayoutVersion
+Running org.apache.hadoop.hdfs.TestBlockReaderLocalLegacy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.696 sec - in org.apache.hadoop.hdfs.TestBlockReaderLocalLegacy
+Running org.apache.hadoop.hdfs.TestWriteRead
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.011 sec - in org.apache.hadoop.hdfs.TestWriteRead
+Running org.apache.hadoop.hdfs.TestClientProtocolForPipelineRecovery
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.496 sec - in org.apache.hadoop.hdfs.TestClientProtocolForPipelineRecovery
+Running org.apache.hadoop.hdfs.TestMiniDFSCluster
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.695 sec - in org.apache.hadoop.hdfs.TestMiniDFSCluster
+Running org.apache.hadoop.hdfs.TestCrcCorruption
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.648 sec - in org.apache.hadoop.hdfs.TestCrcCorruption
+Running org.apache.hadoop.hdfs.TestSmallBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.697 sec - in org.apache.hadoop.hdfs.TestSmallBlock
+Running org.apache.hadoop.hdfs.TestRestartDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.329 sec - in org.apache.hadoop.hdfs.TestRestartDFS
+Running org.apache.hadoop.hdfs.TestDeprecatedKeys
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.189 sec - in org.apache.hadoop.hdfs.TestDeprecatedKeys
+Running org.apache.hadoop.hdfs.TestDFSClientRetries
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 136.23 sec - in org.apache.hadoop.hdfs.TestDFSClientRetries
+Running org.apache.hadoop.hdfs.TestHFlush
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.229 sec - in org.apache.hadoop.hdfs.TestHFlush
+Running org.apache.hadoop.hdfs.TestSnapshotCommands
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.178 sec - in org.apache.hadoop.hdfs.TestSnapshotCommands
+Running org.apache.hadoop.hdfs.TestModTime
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.472 sec - in org.apache.hadoop.hdfs.TestModTime
+Running org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.418 sec - in org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart
+Running org.apache.hadoop.hdfs.TestDatanodeReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.269 sec - in org.apache.hadoop.hdfs.TestDatanodeReport
+Running org.apache.hadoop.hdfs.TestRollingUpgrade
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.596 sec - in org.apache.hadoop.hdfs.TestRollingUpgrade
+Running org.apache.hadoop.hdfs.TestConnCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.693 sec - in org.apache.hadoop.hdfs.TestConnCache
+Running org.apache.hadoop.hdfs.TestDatanodeBlockScanner
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 123.972 sec - in org.apache.hadoop.hdfs.TestDatanodeBlockScanner
+Running org.apache.hadoop.hdfs.TestWriteConfigurationToDFS
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.659 sec - in org.apache.hadoop.hdfs.TestWriteConfigurationToDFS
+Running org.apache.hadoop.hdfs.TestClientBlockVerification
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.244 sec - in org.apache.hadoop.hdfs.TestClientBlockVerification
+Running org.apache.hadoop.hdfs.TestSeekBug
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.325 sec - in org.apache.hadoop.hdfs.TestSeekBug
+Running org.apache.hadoop.hdfs.TestLease
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.114 sec - in org.apache.hadoop.hdfs.TestLease
+Running org.apache.hadoop.hdfs.TestDFSMkdirs
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.192 sec - in org.apache.hadoop.hdfs.TestDFSMkdirs
+Running org.apache.hadoop.hdfs.TestDFSUpgradeFromImage
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.856 sec - in org.apache.hadoop.hdfs.TestDFSUpgradeFromImage
+Running org.apache.hadoop.hdfs.TestSetTimes
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.178 sec - in org.apache.hadoop.hdfs.TestSetTimes
+Running org.apache.hadoop.hdfs.TestEncryptedTransfer
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 130.404 sec - in org.apache.hadoop.hdfs.TestEncryptedTransfer
+Running org.apache.hadoop.hdfs.TestDFSShellGenericOptions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.939 sec - in org.apache.hadoop.hdfs.TestDFSShellGenericOptions
+Running org.apache.hadoop.hdfs.TestHDFSTrash
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.545 sec - in org.apache.hadoop.hdfs.TestHDFSTrash
+Running org.apache.hadoop.hdfs.TestHDFSFileSystemContract
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.094 sec - in org.apache.hadoop.hdfs.TestHDFSFileSystemContract
+Running org.apache.hadoop.hdfs.tools.TestGetConf
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.517 sec - in org.apache.hadoop.hdfs.tools.TestGetConf
+Running org.apache.hadoop.hdfs.tools.TestDFSHAAdmin
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.792 sec - in org.apache.hadoop.hdfs.tools.TestDFSHAAdmin
+Running org.apache.hadoop.hdfs.tools.offlineEditsViewer.TestOfflineEditsViewer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.188 sec - in org.apache.hadoop.hdfs.tools.offlineEditsViewer.TestOfflineEditsViewer
+Running org.apache.hadoop.hdfs.tools.TestDelegationTokenFetcher
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.483 sec - in org.apache.hadoop.hdfs.tools.TestDelegationTokenFetcher
+Running org.apache.hadoop.hdfs.tools.TestDFSHAAdminMiniCluster
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.259 sec - in org.apache.hadoop.hdfs.tools.TestDFSHAAdminMiniCluster
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewerForAcl
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.2 sec - in org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewerForAcl
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewer
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.428 sec - in org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewer
+Running org.apache.hadoop.hdfs.tools.TestGetGroups
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.663 sec - in org.apache.hadoop.hdfs.tools.TestGetGroups
+Running org.apache.hadoop.hdfs.protocolPB.TestPBHelper
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.409 sec - in org.apache.hadoop.hdfs.protocolPB.TestPBHelper
+Running org.apache.hadoop.hdfs.TestFSInputChecker
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.109 sec - in org.apache.hadoop.hdfs.TestFSInputChecker
+Running org.apache.hadoop.hdfs.TestDFSStartupVersions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.891 sec - in org.apache.hadoop.hdfs.TestDFSStartupVersions
+Running org.apache.hadoop.hdfs.TestHDFSServerPorts
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.464 sec - in org.apache.hadoop.hdfs.TestHDFSServerPorts
+Running org.apache.hadoop.hdfs.TestDecommission
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 139.739 sec - in org.apache.hadoop.hdfs.TestDecommission
+Running org.apache.hadoop.hdfs.TestSafeMode
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.186 sec - in org.apache.hadoop.hdfs.TestSafeMode
+Running org.apache.hadoop.hdfs.TestLocalDFS
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.06 sec - in org.apache.hadoop.hdfs.TestLocalDFS
+Running org.apache.hadoop.hdfs.TestBlockReaderLocal
+Tests run: 37, Failures: 0, Errors: 0, Skipped: 37, Time elapsed: 0.194 sec - in org.apache.hadoop.hdfs.TestBlockReaderLocal
+Running org.apache.hadoop.hdfs.TestDatanodeConfig
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 2.216 sec - in org.apache.hadoop.hdfs.TestDatanodeConfig
+Running org.apache.hadoop.hdfs.TestQuota
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.451 sec - in org.apache.hadoop.hdfs.TestQuota
+Running org.apache.hadoop.hdfs.TestBalancerBandwidth
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.945 sec - in org.apache.hadoop.hdfs.TestBalancerBandwidth
+Running org.apache.hadoop.hdfs.TestDistributedFileSystem
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.054 sec - in org.apache.hadoop.hdfs.TestDistributedFileSystem
+Running org.apache.hadoop.hdfs.TestFileAppend4
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.624 sec - in org.apache.hadoop.hdfs.TestFileAppend4
+Running org.apache.hadoop.hdfs.TestHdfsAdmin
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.106 sec - in org.apache.hadoop.hdfs.TestHdfsAdmin
+Running org.apache.hadoop.hdfs.TestAbandonBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.914 sec - in org.apache.hadoop.hdfs.TestAbandonBlock
+Running org.apache.hadoop.hdfs.TestFileAppend3
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.936 sec - in org.apache.hadoop.hdfs.TestFileAppend3
+Running org.apache.hadoop.hdfs.TestPipelines
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.384 sec - in org.apache.hadoop.hdfs.TestPipelines
+Running org.apache.hadoop.hdfs.TestGetFileChecksum
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.151 sec - in org.apache.hadoop.hdfs.TestGetFileChecksum
+Running org.apache.hadoop.hdfs.web.resources.TestParam
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.319 sec - in org.apache.hadoop.hdfs.web.resources.TestParam
+Running org.apache.hadoop.hdfs.web.TestWebHdfsContentLength
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.552 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsContentLength
+Running org.apache.hadoop.hdfs.web.TestFSMainOperationsWebHdfs
+Tests run: 50, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.248 sec - in org.apache.hadoop.hdfs.web.TestFSMainOperationsWebHdfs
+Running org.apache.hadoop.hdfs.web.TestWebHdfsUrl
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.735 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsUrl
+Running org.apache.hadoop.hdfs.web.TestWebHDFSAcl
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.451 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSAcl
+Running org.apache.hadoop.hdfs.web.TestTokenAspect
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.698 sec - in org.apache.hadoop.hdfs.web.TestTokenAspect
+Running org.apache.hadoop.hdfs.web.TestJsonUtil
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec - in org.apache.hadoop.hdfs.web.TestJsonUtil
+Running org.apache.hadoop.hdfs.web.TestWebHdfsTokens
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.62 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsTokens
+Running org.apache.hadoop.hdfs.web.TestOffsetUrlInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in org.apache.hadoop.hdfs.web.TestOffsetUrlInputStream
+Running org.apache.hadoop.hdfs.web.TestWebHDFSForHA
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.099 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSForHA
+Running org.apache.hadoop.hdfs.web.TestWebHdfsWithAuthenticationFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.509 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsWithAuthenticationFilter
+Running org.apache.hadoop.hdfs.web.TestWebHdfsFileSystemContract
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.083 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsFileSystemContract
+Running org.apache.hadoop.hdfs.web.TestWebHdfsWithMultipleNameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.363 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsWithMultipleNameNodes
+Running org.apache.hadoop.hdfs.web.TestURLConnectionFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 sec - in org.apache.hadoop.hdfs.web.TestURLConnectionFactory
+Running org.apache.hadoop.hdfs.web.TestByteRangeInputStream
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.195 sec - in org.apache.hadoop.hdfs.web.TestByteRangeInputStream
+Running org.apache.hadoop.hdfs.web.TestWebHDFSXAttr
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.284 sec - in org.apache.hadoop.hdfs.web.TestWebHDFSXAttr
+Running org.apache.hadoop.hdfs.web.TestWebHDFS
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91.739 sec - in org.apache.hadoop.hdfs.web.TestWebHDFS
+Running org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.692 sec - in org.apache.hadoop.hdfs.web.TestWebHdfsTimeouts
+Running org.apache.hadoop.hdfs.web.TestAuthFilter
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.287 sec - in org.apache.hadoop.hdfs.web.TestAuthFilter
+Running org.apache.hadoop.hdfs.TestParallelUnixDomainRead
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.109 sec - in org.apache.hadoop.hdfs.TestParallelUnixDomainRead
+Running org.apache.hadoop.hdfs.TestDFSUpgrade
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.104 sec - in org.apache.hadoop.hdfs.TestDFSUpgrade
+Running org.apache.hadoop.hdfs.TestPeerCache
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.211 sec - in org.apache.hadoop.hdfs.TestPeerCache
+Running org.apache.hadoop.hdfs.TestMultiThreadedHflush
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.662 sec - in org.apache.hadoop.hdfs.TestMultiThreadedHflush
+Running org.apache.hadoop.hdfs.TestGetBlocks
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.494 sec - in org.apache.hadoop.hdfs.TestGetBlocks
+Running org.apache.hadoop.hdfs.TestDFSStorageStateRecovery
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.964 sec - in org.apache.hadoop.hdfs.TestDFSStorageStateRecovery
+Running org.apache.hadoop.hdfs.TestDFSUtil
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.764 sec - in org.apache.hadoop.hdfs.TestDFSUtil
+Running org.apache.hadoop.hdfs.TestDFSShell
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.418 sec - in org.apache.hadoop.hdfs.TestDFSShell
+Running org.apache.hadoop.hdfs.TestReadWhileWriting
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.423 sec - in org.apache.hadoop.hdfs.TestReadWhileWriting
+Running org.apache.hadoop.hdfs.TestBlockReaderFactory
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 0.118 sec - in org.apache.hadoop.hdfs.TestBlockReaderFactory
+Running org.apache.hadoop.hdfs.TestLeaseRecovery
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.997 sec - in org.apache.hadoop.hdfs.TestLeaseRecovery
+Running org.apache.hadoop.hdfs.TestParallelReadUtil
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.018 sec - in org.apache.hadoop.hdfs.TestParallelReadUtil
+Running org.apache.hadoop.hdfs.TestFileCreation
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 72.379 sec - in org.apache.hadoop.hdfs.TestFileCreation
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.822 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeMXBean
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournalNode
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.47 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournalNode
+Running org.apache.hadoop.hdfs.qjournal.server.TestJournal
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.872 sec - in org.apache.hadoop.hdfs.qjournal.server.TestJournal
+Running org.apache.hadoop.hdfs.qjournal.TestNNWithQJM
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.213 sec - in org.apache.hadoop.hdfs.qjournal.TestNNWithQJM
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManager
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.825 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManager
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumCall
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumCall
+Running org.apache.hadoop.hdfs.qjournal.client.TestQJMWithFaults
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 126.766 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQJMWithFaults
+Running org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManagerUnit
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.698 sec - in org.apache.hadoop.hdfs.qjournal.client.TestQuorumJournalManagerUnit
+Running org.apache.hadoop.hdfs.qjournal.client.TestSegmentRecoveryComparator
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 sec - in org.apache.hadoop.hdfs.qjournal.client.TestSegmentRecoveryComparator
+Running org.apache.hadoop.hdfs.qjournal.client.TestIPCLoggerChannel
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.488 sec - in org.apache.hadoop.hdfs.qjournal.client.TestIPCLoggerChannel
+Running org.apache.hadoop.hdfs.qjournal.client.TestEpochsAreUnique
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.933 sec - in org.apache.hadoop.hdfs.qjournal.client.TestEpochsAreUnique
+Running org.apache.hadoop.hdfs.qjournal.TestMiniJournalCluster
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.983 sec - in org.apache.hadoop.hdfs.qjournal.TestMiniJournalCluster
+Running org.apache.hadoop.hdfs.TestRollingUpgradeRollback
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.249 sec - in org.apache.hadoop.hdfs.TestRollingUpgradeRollback
+Running org.apache.hadoop.hdfs.TestDFSRollback
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.133 sec - in org.apache.hadoop.hdfs.TestDFSRollback
+Running org.apache.hadoop.hdfs.TestBlocksScheduledCounter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.581 sec - in org.apache.hadoop.hdfs.TestBlocksScheduledCounter
+Running org.apache.hadoop.cli.TestHDFSCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.216 sec - in org.apache.hadoop.cli.TestHDFSCLI
+Running org.apache.hadoop.cli.TestAclCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.118 sec - in org.apache.hadoop.cli.TestAclCLI
+Running org.apache.hadoop.cli.TestCacheAdminCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.474 sec - in org.apache.hadoop.cli.TestCacheAdminCLI
+Running org.apache.hadoop.cli.TestXAttrCLI
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.829 sec - in org.apache.hadoop.cli.TestXAttrCLI
+Running org.apache.hadoop.security.TestPermission
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.039 sec - in org.apache.hadoop.security.TestPermission
+Running org.apache.hadoop.security.TestRefreshUserMappings
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.386 sec - in org.apache.hadoop.security.TestRefreshUserMappings
+Running org.apache.hadoop.security.TestPermissionSymlinks
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.677 sec - in org.apache.hadoop.security.TestPermissionSymlinks
+Running org.apache.hadoop.tools.TestTools
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.596 sec - in org.apache.hadoop.tools.TestTools
+Running org.apache.hadoop.tools.TestJMXGet
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.731 sec - in org.apache.hadoop.tools.TestJMXGet
+Running org.apache.hadoop.fs.TestSymlinkHdfsFileSystem
+Tests run: 72, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 4.871 sec - in org.apache.hadoop.fs.TestSymlinkHdfsFileSystem
+Running org.apache.hadoop.fs.TestResolveHdfsSymlink
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.857 sec - in org.apache.hadoop.fs.TestResolveHdfsSymlink
+Running org.apache.hadoop.fs.TestUrlStreamHandlerFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.673 sec - in org.apache.hadoop.fs.TestUrlStreamHandlerFactory
+Running org.apache.hadoop.fs.TestXAttr
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec - in org.apache.hadoop.fs.TestXAttr
+Running org.apache.hadoop.fs.TestEnhancedByteBufferAccess
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 0.191 sec - in org.apache.hadoop.fs.TestEnhancedByteBufferAccess
+Running org.apache.hadoop.fs.permission.TestStickyBit
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.427 sec - in org.apache.hadoop.fs.permission.TestStickyBit
+Running org.apache.hadoop.fs.TestVolumeId
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 sec - in org.apache.hadoop.fs.TestVolumeId
+Running org.apache.hadoop.fs.TestUrlStreamHandler
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.183 sec - in org.apache.hadoop.fs.TestUrlStreamHandler
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.455 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot
+Running org.apache.hadoop.fs.viewfs.TestViewFsHdfs
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.608 sec - in org.apache.hadoop.fs.viewfs.TestViewFsHdfs
+Running org.apache.hadoop.fs.viewfs.TestViewFsAtHdfsRoot
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.816 sec - in org.apache.hadoop.fs.viewfs.TestViewFsAtHdfsRoot
+Running org.apache.hadoop.fs.viewfs.TestViewFsDefaultValue
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.698 sec - in org.apache.hadoop.fs.viewfs.TestViewFsDefaultValue
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemHdfs
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.733 sec - in org.apache.hadoop.fs.viewfs.TestViewFileSystemHdfs
+Running org.apache.hadoop.fs.viewfs.TestViewFsFileStatusHdfs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.743 sec - in org.apache.hadoop.fs.viewfs.TestViewFsFileStatusHdfs
+Running org.apache.hadoop.fs.TestGlobPaths
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 2.606 sec - in org.apache.hadoop.fs.TestGlobPaths
+Running org.apache.hadoop.fs.loadGenerator.TestLoadGenerator
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.1 sec - in org.apache.hadoop.fs.loadGenerator.TestLoadGenerator
+Running org.apache.hadoop.fs.TestHdfsNativeCodeLoader
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec - in org.apache.hadoop.fs.TestHdfsNativeCodeLoader
+Running org.apache.hadoop.fs.TestSymlinkHdfsFileContext
+Tests run: 69, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.019 sec - in org.apache.hadoop.fs.TestSymlinkHdfsFileContext
+Running org.apache.hadoop.fs.TestFcHdfsPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.113 sec - in org.apache.hadoop.fs.TestFcHdfsPermission
+Running org.apache.hadoop.fs.shell.TestHdfsTextCommand
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.213 sec - in org.apache.hadoop.fs.shell.TestHdfsTextCommand
+Running org.apache.hadoop.fs.TestSymlinkHdfsDisable
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.678 sec - in org.apache.hadoop.fs.TestSymlinkHdfsDisable
+Running org.apache.hadoop.fs.TestFcHdfsCreateMkdir
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.121 sec - in org.apache.hadoop.fs.TestFcHdfsCreateMkdir
+Running org.apache.hadoop.fs.TestHDFSFileContextMainOperations
+Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.066 sec - in org.apache.hadoop.fs.TestHDFSFileContextMainOperations
+Running org.apache.hadoop.fs.TestFcHdfsSetUMask
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.203 sec - in org.apache.hadoop.fs.TestFcHdfsSetUMask
+Running org.apache.hadoop.net.TestNetworkTopology
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.075 sec - in org.apache.hadoop.net.TestNetworkTopology
+
+Results :
+
+Tests in error: 
+  TestSnapshotBlocksMap.testDeletionOfLaterBlocksWithZeroSizeFirstBlock:434 » IO
+
+Tests run: 2754, Failures: 0, Errors: 1, Skipped: 100
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:35 h
+[INFO] Finished at: 2025-05-19T07:13:39+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project hadoop-hdfs: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
