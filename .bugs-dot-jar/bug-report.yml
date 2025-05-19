@@ -1,0 +1,414 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Sandy Ryza
+        '@username': sandyr
+      attachments:
+        attachment:
+        - '@author': sandyr
+          '@created': Fri, 7 Sep 2012 00:55:00 +0000
+          '@id': '12544146'
+          '@name': HADOOP-8775.patch
+          '@size': '2355'
+        - '@author': sandyr
+          '@created': Thu, 6 Sep 2012 19:45:13 +0000
+          '@id': '12544100'
+          '@name': diff2.txt
+          '@size': '1192'
+      comments:
+        comment:
+        - '#text': <p>I made it throw an IllegalArgumentException, as it would do
+            if the bandwidth entered were not an integer.</p>
+          '@author': sandyr
+          '@created': Thu, 6 Sep 2012 19:47:28 +0000
+          '@id': '13449985'
+        - '#text': "<p>-1 overall.  Here are the results of testing the latest attachment\
+            \ <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12544100/diff2.txt\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12544100/diff2.txt</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    +1 @author.  The patch does\
+            \ not contain any @author tags.</p>\n\n<p>    -1 tests included.  The\
+            \ patch doesn't appear to include any new or modified tests.<br/>\n  \
+            \                      Please justify why no new tests are needed for\
+            \ this patch.<br/>\n                        Also please list what manual\
+            \ steps were performed to verify this patch.</p>\n\n<p>    +1 javac. \
+            \ The applied patch does not increase the total number of javac compiler\
+            \ warnings.</p>\n\n<p>    +1 javadoc.  The javadoc tool did not generate\
+            \ any warning messages.</p>\n\n<p>    +1 eclipse:eclipse.  The patch built\
+            \ with eclipse:eclipse.</p>\n\n<p>    +1 findbugs.  The patch does not\
+            \ introduce any new Findbugs (version 1.3.9) warnings.</p>\n\n<p>    +1\
+            \ release audit.  The applied patch does not increase the total number\
+            \ of release audit warnings.</p>\n\n<p>    +1 core tests.  The patch passed\
+            \ unit tests in hadoop-tools/hadoop-distcp.</p>\n\n<p>    +1 contrib tests.\
+            \  The patch passed contrib unit tests.</p>\n\n<p>Test results: <a href=\"\
+            https://builds.apache.org/job/PreCommit-HADOOP-Build/1417//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/1417//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-HADOOP-Build/1417//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/1417//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Thu, 6 Sep 2012 20:18:26 +0000
+          '@id': '13450012'
+        - '#text': '<p>The patch looks pretty good to me, but it should be pretty
+            easy to add a little test case for this. See TestOptionsParser for some
+            examples. There''s even one in there which tests the bandwidth option.</p>
+
+
+            <p>Also, please don''t set the "fix versions" field until the JIRA is
+            actually committed. Use the "target versions" field to express what versions
+            you''d like to see this JIRA committed to.</p>
+
+
+            <p>Also, per the <a href="http://wiki.apache.org/hadoop/HowToContribute"
+            class="external-link" target="_blank" rel="nofollow noopener">how to contribute
+            wiki</a>, please name patch files using the form "<a href="https://issues.apache.org/jira/browse/HADOOP-8775"
+            title="MR2 distcp permits non-positive value to -bandwidth option which
+            causes job never to complete" class="issue-link" data-issue-key="HADOOP-8775"><del>HADOOP-8775</del></a>.patch"
+            instead of "diff2.txt".</p>'
+          '@author': atm
+          '@created': Thu, 6 Sep 2012 23:49:27 +0000
+          '@id': '13450180'
+        - '#text': <p>Thanks a lot for addressing my comments, Sandy. The latest patch
+            looks good to me. +1 pending a clean Jenkins report.</p>
+          '@author': atm
+          '@created': Fri, 7 Sep 2012 00:58:30 +0000
+          '@id': '13450238'
+        - '#text': "<p>+1 overall.  Here are the results of testing the latest attachment\
+            \ <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12544146/HADOOP-8775.patch\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12544146/HADOOP-8775.patch</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    +1 @author.  The patch does\
+            \ not contain any @author tags.</p>\n\n<p>    +1 tests included.  The\
+            \ patch appears to include 1 new or modified test files.</p>\n\n<p>  \
+            \  +1 javac.  The applied patch does not increase the total number of\
+            \ javac compiler warnings.</p>\n\n<p>    +1 javadoc.  The javadoc tool\
+            \ did not generate any warning messages.</p>\n\n<p>    +1 eclipse:eclipse.\
+            \  The patch built with eclipse:eclipse.</p>\n\n<p>    +1 findbugs.  The\
+            \ patch does not introduce any new Findbugs (version 1.3.9) warnings.</p>\n\
+            \n<p>    +1 release audit.  The applied patch does not increase the total\
+            \ number of release audit warnings.</p>\n\n<p>    +1 core tests.  The\
+            \ patch passed unit tests in hadoop-tools/hadoop-distcp.</p>\n\n<p>  \
+            \  +1 contrib tests.  The patch passed contrib unit tests.</p>\n\n<p>Test\
+            \ results: <a href=\"https://builds.apache.org/job/PreCommit-HADOOP-Build/1421//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/1421//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-HADOOP-Build/1421//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HADOOP-Build/1421//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Fri, 7 Sep 2012 02:22:17 +0000
+          '@id': '13450275'
+        - '#text': <p>I've just committed this to trunk and branch-2. Thanks a lot
+            for the contribution, Sandy.</p>
+          '@author': atm
+          '@created': Fri, 7 Sep 2012 18:42:14 +0000
+          '@id': '13450879'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk-Commit #2708 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Common-trunk-Commit/2708/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Common-trunk-Commit/2708/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\" title=\"\
+            MR2 distcp permits non-positive value to -bandwidth option which causes\
+            \ job never to complete\" class=\"issue-link\" data-issue-key=\"HADOOP-8775\"\
+            ><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive value to\
+            \ -bandwidth option which causes job never to complete. Contributed by\
+            \ Sandy Ryza. (Revision 1382119)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            atm : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Fri, 7 Sep 2012 18:46:25 +0000
+          '@id': '13450886'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk-Commit #2771 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/2771/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/2771/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\" title=\"\
+            MR2 distcp permits non-positive value to -bandwidth option which causes\
+            \ job never to complete\" class=\"issue-link\" data-issue-key=\"HADOOP-8775\"\
+            ><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive value to\
+            \ -bandwidth option which causes job never to complete. Contributed by\
+            \ Sandy Ryza. (Revision 1382119)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            atm : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Fri, 7 Sep 2012 18:47:15 +0000
+          '@id': '13450888'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk-Commit #2732 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/2732/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/2732/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\" title=\"\
+            MR2 distcp permits non-positive value to -bandwidth option which causes\
+            \ job never to complete\" class=\"issue-link\" data-issue-key=\"HADOOP-8775\"\
+            ><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive value to\
+            \ -bandwidth option which causes job never to complete. Contributed by\
+            \ Sandy Ryza. (Revision 1382119)</p>\n\n<p>     Result = FAILURE<br/>\n\
+            atm : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Fri, 7 Sep 2012 19:29:29 +0000
+          '@id': '13450909'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #1159 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/1159/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/1159/</a>)<br/>\n   \
+            \ <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\" title=\"\
+            MR2 distcp permits non-positive value to -bandwidth option which causes\
+            \ job never to complete\" class=\"issue-link\" data-issue-key=\"HADOOP-8775\"\
+            ><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive value to\
+            \ -bandwidth option which causes job never to complete. Contributed by\
+            \ Sandy Ryza. (Revision 1382119)</p>\n\n<p>     Result = FAILURE<br/>\n\
+            atm : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 8 Sep 2012 13:03:30 +0000
+          '@id': '13451331'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #1190 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1190/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk/1190/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\" title=\"\
+            MR2 distcp permits non-positive value to -bandwidth option which causes\
+            \ job never to complete\" class=\"issue-link\" data-issue-key=\"HADOOP-8775\"\
+            ><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive value to\
+            \ -bandwidth option which causes job never to complete. Contributed by\
+            \ Sandy Ryza. (Revision 1382119)</p>\n\n<p>     Result = SUCCESS<br/>\n\
+            atm : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1382119</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 8 Sep 2012 14:00:00 +0000
+          '@id': '13451338'
+        - '#text': <p>I pulled this into branch-0.23</p>
+          '@author': revans2
+          '@created': Mon, 1 Oct 2012 19:00:38 +0000
+          '@id': '13467102'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-0.23-Build #392 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/392/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/392/</a>)<br/>\n\
+            \    svn merge -c 1382119 FIXES: <a href=\"https://issues.apache.org/jira/browse/HADOOP-8775\"\
+            \ title=\"MR2 distcp permits non-positive value to -bandwidth option which\
+            \ causes job never to complete\" class=\"issue-link\" data-issue-key=\"\
+            HADOOP-8775\"><del>HADOOP-8775</del></a>. MR2 distcp permits non-positive\
+            \ value to -bandwidth option which causes job never to complete. Contributed\
+            \ by Sandy Ryza. (Revision 1392519)</p>\n\n<p>     Result = UNSTABLE<br/>\n\
+            bobby : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1392519\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1392519</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-common-project/hadoop-common/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-tools/hadoop-distcp/src/main/java/org/apache/hadoop/tools/OptionsParser.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-tools/hadoop-distcp/src/test/java/org/apache/hadoop/tools/TestOptionsParser.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Tue, 2 Oct 2012 12:41:34 +0000
+          '@id': '13467665'
+      created: Thu, 6 Sep 2012 19:38:33 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '2.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '240760'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 12 years, 34 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i015cv:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '4637'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 2.0.2-alpha
+              '@id': '12322473'
+      description: '<p>The likelihood that someone would want to enter a non-positive
+        value for -bandwidth seems really low. However, the job would never complete
+        if a non-positive value was specified. It''d just get stuck at map 100%. Luckily,
+        a positive value would always lead to the job completing.</p>
+
+
+        <div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent
+        panelContent">
+
+        <pre>bash-4.1$ hadoop distcp -bandwidth 0 hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir
+        hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir58
+
+        hadoop distcp -bandwidth 0 hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir
+        hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir58
+
+        12/05/23 15:53:01 INFO tools.DistCp: Input Options: DistCpOptions{atomicCommit=false,
+        syncFolder=false, deleteMissing=false, ignoreFailures=false, maxMaps=20, sslConfigurationFile=''null'',
+        copyStrategy=''uniformsiz\
+
+        e'', sourceFileListing=null, sourcePaths=[hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir],
+        targetPath=hdfs://c1204.hal.cloudera.com:17020/user/hdfs/in-dir58}
+
+        12/05/23 15:53:02 WARN conf.Configuration: io.sort.mb is deprecated. Instead,
+        use mapreduce.task.io.sort.mb
+
+        12/05/23 15:53:02 WARN conf.Configuration: io.sort.factor is deprecated. Instead,
+        use mapreduce.task.io.sort.factor
+
+        12/05/23 15:53:02 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+
+        12/05/23 15:53:03 INFO mapreduce.JobSubmitter: number of splits:3
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.jar is deprecated. Instead,
+        use mapreduce.job.jar
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.map.tasks.speculative.execution
+        is deprecated. Instead, use mapreduce.map.speculative
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.reduce.tasks is deprecated.
+        Instead, use mapreduce.job.reduces
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.mapoutput.value.class is
+        deprecated. Instead, use mapreduce.map.output.value.class
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapreduce.map.class is deprecated.
+        Instead, use mapreduce.job.map.class
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.job.name is deprecated.
+        Instead, use mapreduce.job.name
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapreduce.inputformat.class is
+        deprecated. Instead, use mapreduce.job.inputformat.class
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.output.dir is deprecated.
+        Instead, use mapreduce.output.fileoutputformat.outputdir
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapreduce.outputformat.class is
+        deprecated. Instead, use mapreduce.job.outputformat.class
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.map.tasks is deprecated.
+        Instead, use mapreduce.job.maps
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.mapoutput.key.class is deprecated.
+        Instead, use mapreduce.map.output.key.class
+
+        12/05/23 15:53:04 WARN conf.Configuration: mapred.working.dir is deprecated.
+        Instead, use mapreduce.job.working.dir
+
+        12/05/23 15:53:04 INFO mapred.ResourceMgrDelegate: Submitted application application_1337808305464_0014
+        to ResourceManager at c1204.hal.cloudera.com/172.29.98.195:8040
+
+        12/05/23 15:53:04 INFO mapreduce.Job: The url to track the job: http://auto0:8088/proxy/application_1337808305464_0014/
+
+        12/05/23 15:53:04 INFO tools.DistCp: DistCp job-id: job_1337808305464_0014
+
+        12/05/23 15:53:04 INFO mapreduce.Job: Running job: job_1337808305464_0014
+
+        12/05/23 15:53:09 INFO mapreduce.Job: Job job_1337808305464_0014 running in
+        uber mode : false
+
+        12/05/23 15:53:09 INFO mapreduce.Job:  map 0% reduce 0%
+
+        12/05/23 15:53:14 INFO mapreduce.Job:  map 33% reduce 0%
+
+        12/05/23 15:53:19 INFO mapreduce.Job:  map 100% reduce 0%
+
+        </pre>
+
+        </div></div>'
+      due: null
+      environment: null
+      fixVersion:
+      - 2.0.2-alpha
+      - 0.23.5
+      key:
+        '#text': HADOOP-8775
+        '@id': '12606475'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HADOOP-8775
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop Common
+        '@id': '12310240'
+        '@key': HADOOP
+      reporter:
+        '#text': Sandy Ryza
+        '@username': sandyr
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Fri, 7 Sep 2012 18:42:14 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: MR2 distcp permits non-positive value to -bandwidth option which causes
+        job never to complete
+      title: '[HADOOP-8775] MR2 distcp permits non-positive value to -bandwidth option
+        which causes job never to complete'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 11 Oct 2012 17:45:09 +0000
+      version: 2.0.0-alpha
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

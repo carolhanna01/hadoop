@@ -1,0 +1,101 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.hadoop:hadoop-distcp >-------------------
+[INFO] Building Apache Hadoop Distributed Copy 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hadoop-distcp ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-testdirs) @ hadoop-distcp ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/test-dir
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:build-classpath (build-classpath) @ hadoop-distcp ---
+[INFO] Wrote classpath file '/home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/classes/mrapp-generated-classpath'.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-distcp ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hadoop-distcp ---
+[INFO] Compiling 21 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-distcp ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hadoop-distcp ---
+[INFO] Compiling 16 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12:test (default-test) @ hadoop-distcp ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.tools.util.TestRetriableCommand
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.365 sec
+Running org.apache.hadoop.tools.util.TestThrottledInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.307 sec
+Running org.apache.hadoop.tools.util.TestDistCpUtils
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.205 sec
+Running org.apache.hadoop.tools.TestOptionsParser
+Tests run: 25, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.228 sec <<< FAILURE!
+Running org.apache.hadoop.tools.TestDistCp
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.023 sec
+Running org.apache.hadoop.tools.TestDistCpViewFs
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.216 sec
+Running org.apache.hadoop.tools.TestFileBasedCopyListing
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.802 sec
+Running org.apache.hadoop.tools.mapred.TestUniformSizeInputFormat
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.124 sec <<< FAILURE!
+Running org.apache.hadoop.tools.mapred.TestCopyOutputFormat
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.468 sec
+Running org.apache.hadoop.tools.mapred.lib.TestDynamicInputFormat
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.92 sec
+Running org.apache.hadoop.tools.mapred.TestCopyCommitter
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.25 sec <<< FAILURE!
+Running org.apache.hadoop.tools.mapred.TestCopyMapper
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.943 sec
+Running org.apache.hadoop.tools.TestGlobbedCopyListing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.723 sec
+Running org.apache.hadoop.tools.TestIntegration
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.051 sec
+Running org.apache.hadoop.tools.TestCopyListing
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.864 sec
+
+Results :
+
+Failed tests:   testGetSplits(org.apache.hadoop.tools.mapred.TestUniformSizeInputFormat): expected:<2158> but was:<2036>
+  testNoCommitAction(org.apache.hadoop.tools.mapred.TestCopyCommitter): Commit failed
+  testNoCommitAction(org.apache.hadoop.tools.mapred.TestCopyCommitter): Expected meta folder to be deleted
+
+Tests in error: 
+  testParseNonPositiveBandwidth(org.apache.hadoop.tools.TestOptionsParser): Unexpected exception, expected<java.lang.IllegalArgumentException> but was<java.lang.AssertionError>
+  testParseZeroBandwidth(org.apache.hadoop.tools.TestOptionsParser): Unexpected exception, expected<java.lang.IllegalArgumentException> but was<java.lang.AssertionError>
+
+Tests run: 109, Failures: 3, Errors: 2, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:30 min
+[INFO] Finished at: 2025-05-19T21:31:00+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12:test (default-test) on project hadoop-distcp: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-tools/hadoop-distcp/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
