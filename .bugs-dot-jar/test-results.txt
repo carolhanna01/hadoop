@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.hadoop:hadoop-common >-------------------
+[INFO] Building Apache Hadoop Common 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-testdirs) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-SNAPSHOT:protoc (compile-protoc) @ hadoop-common ---
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-SNAPSHOT:version-info (version-info) @ hadoop-common ---
+[WARNING] [svn, info] failed: java.io.IOException: Cannot run program "svn": error=2, No such file or directory
+[INFO] SCM: GIT
+[INFO] Computed MD5: f75291cc8251b74f9ec449ff278b6ec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hadoop-common ---
+[INFO] Compiling 13 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/classes
+[INFO] 
+[INFO] --- avro-maven-plugin:1.5.3:schema (generate-avro-test-sources) @ hadoop-common ---
+[INFO] 
+[INFO] --- hadoop-maven-plugins:3.0.0-SNAPSHOT:protoc (compile-test-protoc) @ hadoop-common ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-common ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-log-dir) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (copy-test-tarballs) @ hadoop-common ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ hadoop-common ---
+[INFO] Compiling 3 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[69,37] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[ERROR]   required: no arguments
+  found: UnreliableInterface
+  reason: actual and formal argument lists differ in length
+/home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[86,37] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[ERROR]   required: no arguments
+  found: ProtocolTranslator
+  reason: actual and formal argument lists differ in length
+/home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[91,38] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.108 s
+[INFO] Finished at: 2025-05-19T17:14:05+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.5.1:testCompile (default-testCompile) on project hadoop-common: Compilation failure: Compilation failure: 
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[69,37] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found: UnreliableInterface
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[86,37] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found: ProtocolTranslator
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/retry/TestRetryProxy.java:[91,38] error: method isRpcInvocation in class RetryInvocationHandler cannot be applied to given types;
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
