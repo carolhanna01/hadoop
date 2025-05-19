@@ -57,7 +57,7 @@ public abstract class MetricsFilter implements MetricsPlugin {
    * @return  true to accept; false otherwise.
    */
   public boolean accepts(MetricsRecord record) {
-    return accepts(record.name()) && accepts(record.tags());
+    return accepts(record.tags());
   }
 
 }
