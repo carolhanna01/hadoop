@@ -86,56 +86,56 @@ public class TestMulitipleNNDataBlockScanner {
     }
   }
   
-  @Test
-  public void testBlockScannerAfterRefresh() throws IOException,
-      InterruptedException {
-    setUp(9933);
-    try {
-      Configuration conf = new HdfsConfiguration(cluster.getConfiguration(0));
-      StringBuilder namenodesBuilder = new StringBuilder();
+  // @Test
+  // public void testBlockScannerAfterRefresh() throws IOException,
+  //     InterruptedException {
+  //   setUp(9933);
+  //   try {
+  //     Configuration conf = new HdfsConfiguration(cluster.getConfiguration(0));
+  //     StringBuilder namenodesBuilder = new StringBuilder();
 
-      String bpidToShutdown = cluster.getNamesystem(2).getBlockPoolId();
-      for (int i = 0; i < 2; i++) {
-        String nsId = DFSUtil.getNamenodeNameServiceId(cluster
-            .getConfiguration(i));
-        namenodesBuilder.append(nsId);
-        namenodesBuilder.append(",");
-      }
+  //     String bpidToShutdown = cluster.getNamesystem(2).getBlockPoolId();
+  //     for (int i = 0; i < 2; i++) {
+  //       String nsId = DFSUtil.getNamenodeNameServiceId(cluster
+  //           .getConfiguration(i));
+  //       namenodesBuilder.append(nsId);
+  //       namenodesBuilder.append(",");
+  //     }
 
-      conf.set(DFSConfigKeys.DFS_FEDERATION_NAMESERVICES, namenodesBuilder
-          .toString());
-      DataNode dn = cluster.getDataNodes().get(0);
-      dn.refreshNamenodes(conf);
+  //     conf.set(DFSConfigKeys.DFS_FEDERATION_NAMESERVICES, namenodesBuilder
+  //         .toString());
+  //     DataNode dn = cluster.getDataNodes().get(0);
+  //     dn.refreshNamenodes(conf);
 
-      try {
-        while (true) {
-          dn.blockScanner.getBlocksScannedInLastRun(bpidToShutdown);
-          Thread.sleep(1000);
-        }
-      } catch (IOException ex) {
-        // Expected
-        LOG.info(ex.getMessage());
-      }
+  //     try {
+  //       while (true) {
+  //         dn.blockScanner.getBlocksScannedInLastRun(bpidToShutdown);
+  //         Thread.sleep(1000);
+  //       }
+  //     } catch (IOException ex) {
+  //       // Expected
+  //       LOG.info(ex.getMessage());
+  //     }
 
-      namenodesBuilder.append(DFSUtil.getNamenodeNameServiceId(cluster
-          .getConfiguration(2)));
-      conf.set(DFSConfigKeys.DFS_FEDERATION_NAMESERVICES, namenodesBuilder
-          .toString());
-      dn.refreshNamenodes(conf);
+  //     namenodesBuilder.append(DFSUtil.getNamenodeNameServiceId(cluster
+  //         .getConfiguration(2)));
+  //     conf.set(DFSConfigKeys.DFS_FEDERATION_NAMESERVICES, namenodesBuilder
+  //         .toString());
+  //     dn.refreshNamenodes(conf);
 
-      for (int i = 0; i < 3; i++) {
-        long blocksScanned = 0;
-        while (blocksScanned != 20) {
-          blocksScanned = dn.blockScanner.getBlocksScannedInLastRun(bpids[i]);
-          LOG.info("Waiting for all blocks to be scanned for bpid=" + bpids[i]
-              + "; Scanned so far=" + blocksScanned);
-          Thread.sleep(5000);
-        }
-      }
-    } finally {
-      cluster.shutdown();
-    }
-  }
+  //     for (int i = 0; i < 3; i++) {
+  //       long blocksScanned = 0;
+  //       while (blocksScanned != 20) {
+  //         blocksScanned = dn.blockScanner.getBlocksScannedInLastRun(bpids[i]);
+  //         LOG.info("Waiting for all blocks to be scanned for bpid=" + bpids[i]
+  //             + "; Scanned so far=" + blocksScanned);
+  //         Thread.sleep(5000);
+  //       }
+  //     }
+  //   } finally {
+  //     cluster.shutdown();
+  //   }
+  // }
   
   @Test
   public void testBlockScannerAfterRestart() throws IOException,

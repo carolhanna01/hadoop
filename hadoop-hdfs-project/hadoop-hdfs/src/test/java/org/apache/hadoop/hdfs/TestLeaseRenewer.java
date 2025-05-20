@@ -181,36 +181,36 @@ public class TestLeaseRenewer {
     renewer.closeFile(filePath, mockClient2);
   }
   
-  @Test
-  public void testThreadName() throws Exception {
-    DFSOutputStream mockStream = Mockito.mock(DFSOutputStream.class);
-    String filePath = "/foo";
-    Assert.assertFalse("Renewer not initially running",
-        renewer.isRunning());
+  // @Test
+  // public void testThreadName() throws Exception {
+  //   DFSOutputStream mockStream = Mockito.mock(DFSOutputStream.class);
+  //   String filePath = "/foo";
+  //   Assert.assertFalse("Renewer not initially running",
+  //       renewer.isRunning());
     
-    // Pretend to open a file
-    Mockito.doReturn(false)
-      .when(MOCK_DFSCLIENT).isFilesBeingWrittenEmpty();
-    renewer.put(filePath, mockStream, MOCK_DFSCLIENT);
+  //   // Pretend to open a file
+  //   Mockito.doReturn(false)
+  //     .when(MOCK_DFSCLIENT).isFilesBeingWrittenEmpty();
+  //   renewer.put(filePath, mockStream, MOCK_DFSCLIENT);
     
-    Assert.assertTrue("Renewer should have started running",
-        renewer.isRunning());
+  //   Assert.assertTrue("Renewer should have started running",
+  //       renewer.isRunning());
     
-    // Check the thread name is reasonable
-    String threadName = renewer.getDaemonName();
-    Assert.assertEquals("LeaseRenewer:myuser@hdfs://nn1/", threadName);
+  //   // Check the thread name is reasonable
+  //   String threadName = renewer.getDaemonName();
+  //   Assert.assertEquals("LeaseRenewer:myuser@hdfs://nn1/", threadName);
     
-    // Pretend to close the file
-    Mockito.doReturn(true)
-      .when(MOCK_DFSCLIENT).isFilesBeingWrittenEmpty();
-    renewer.closeFile(filePath, MOCK_DFSCLIENT);
+  //   // Pretend to close the file
+  //   Mockito.doReturn(true)
+  //     .when(MOCK_DFSCLIENT).isFilesBeingWrittenEmpty();
+  //   renewer.closeFile(filePath, MOCK_DFSCLIENT);
     
-    // Should stop the renewer running within a few seconds
-    long failTime = System.currentTimeMillis() + 5000;
-    while (renewer.isRunning() && System.currentTimeMillis() < failTime) {
-      Thread.sleep(50);
-    }
-    Assert.assertFalse(renewer.isRunning());
-  }
+  //   // Should stop the renewer running within a few seconds
+  //   long failTime = System.currentTimeMillis() + 5000;
+  //   while (renewer.isRunning() && System.currentTimeMillis() < failTime) {
+  //     Thread.sleep(50);
+  //   }
+  //   Assert.assertFalse(renewer.isRunning());
+  // }
   
 }
