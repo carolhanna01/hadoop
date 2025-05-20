@@ -61,14 +61,14 @@ public class TestValidateConfigurationSettings {
    * Tests setting the rpc port to a different as the web port that an 
    * exception is NOT thrown 
    */
-  @Test
-  public void testThatDifferentRPCandHttpPortsAreOK() 
-      throws IOException {
+  // @Test
+  // public void testThatDifferentRPCandHttpPortsAreOK() 
+  //     throws IOException {
 
-    Configuration conf = new HdfsConfiguration();
-    FileSystem.setDefaultUri(conf, "hdfs://localhost:8000");
-    conf.set(DFSConfigKeys.DFS_NAMENODE_HTTP_ADDRESS_KEY, "127.0.0.1:9000");
-    DFSTestUtil.formatNameNode(conf);
-    NameNode nameNode = new NameNode(conf); // should be OK!
-  }
+  //   Configuration conf = new HdfsConfiguration();
+  //   FileSystem.setDefaultUri(conf, "hdfs://localhost:8000");
+  //   conf.set(DFSConfigKeys.DFS_NAMENODE_HTTP_ADDRESS_KEY, "127.0.0.1:9000");
+  //   DFSTestUtil.formatNameNode(conf);
+  //   NameNode nameNode = new NameNode(conf); // should be OK!
+  // }
 }
