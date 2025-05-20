@@ -1,0 +1,345 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Todd Lipcon
+        '@username': tlipcon
+      attachments:
+        attachment:
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:28:46 +0000
+          '@id': '12515017'
+          '@name': hdfs-2969.txt
+          '@size': '3428'
+      comments:
+        comment:
+        - '#text': "<p>Following code is obviously wrong:</p>\n<div class=\"code panel\"\
+            \ style=\"border-width: 1px;\"><div class=\"codeContent panelContent\"\
+            >\n<pre class=\"code-java\">    ExtendedBlock b = (ExtendedBlock)o;\n\
+            \    <span class=\"code-keyword\">return</span> b.block.equals(block)\
+            \ || b.poolId.equals(poolId);\n</pre>\n</div></div>"
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:20:37 +0000
+          '@id': '13210509'
+        - '#text': <p>Attached patch has a unit test and fix</p>
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:28:46 +0000
+          '@id': '13210518'
+        - '#text': "<p>+1 overall.  Here are the results of testing the latest attachment\
+            \ <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12515017/hdfs-2969.txt\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12515017/hdfs-2969.txt</a><br/>\n\
+            \  against trunk revision .</p>\n\n<p>    +1 @author.  The patch does\
+            \ not contain any @author tags.</p>\n\n<p>    +1 tests included.  The\
+            \ patch appears to include 2 new or modified tests.</p>\n\n<p>    +1 javadoc.\
+            \  The javadoc tool did not generate any warning messages.</p>\n\n<p>\
+            \    +1 javac.  The applied patch does not increase the total number of\
+            \ javac compiler warnings.</p>\n\n<p>    +1 eclipse:eclipse.  The patch\
+            \ built with eclipse:eclipse.</p>\n\n<p>    +1 findbugs.  The patch does\
+            \ not introduce any new Findbugs (version 1.3.9) warnings.</p>\n\n<p>\
+            \    +1 release audit.  The applied patch does not increase the total\
+            \ number of release audit warnings.</p>\n\n<p>    +1 core tests.  The\
+            \ patch passed unit tests in .</p>\n\n<p>    +1 contrib tests.  The patch\
+            \ passed contrib unit tests.</p>\n\n<p>Test results: <a href=\"https://builds.apache.org/job/PreCommit-HDFS-Build/1880//testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HDFS-Build/1880//testReport/</a><br/>\n\
+            Console output: <a href=\"https://builds.apache.org/job/PreCommit-HDFS-Build/1880//console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/PreCommit-HDFS-Build/1880//console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Fri, 17 Feb 2012 21:32:56 +0000
+          '@id': '13210584'
+        - '#text': <p>+1, the patch looks good to me. Thanks, Todd.</p>
+          '@author': atm
+          '@created': Fri, 17 Feb 2012 22:36:22 +0000
+          '@id': '13210628'
+        - '#text': <p>Committed to 23 and trunk, thanks for reviewing, Aaron.</p>
+          '@author': tlipcon
+          '@created': Sat, 18 Feb 2012 01:13:28 +0000
+          '@id': '13210719'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk-Commit #1821 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/1821/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/1821/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245830)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:26:02 +0000
+          '@id': '13210728'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-0.23-Commit #556 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-0.23-Commit/556/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-0.23-Commit/556/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245829)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:29:17 +0000
+          '@id': '13210732'
+        - '#text': "<p>Integrated in Hadoop-Common-0.23-Commit #569 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Common-0.23-Commit/569/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Common-0.23-Commit/569/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245829)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:31:00 +0000
+          '@id': '13210735'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk-Commit #1747 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Common-trunk-Commit/1747/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Common-trunk-Commit/1747/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245830)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:34:36 +0000
+          '@id': '13210739'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk-Commit #1759 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/1759/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/1759/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245830)</p>\n\
+            \n<p>     Result = ABORTED<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 02:07:11 +0000
+          '@id': '13210755'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-0.23-Commit #572 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-0.23-Commit/572/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-0.23-Commit/572/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245829)</p>\n\
+            \n<p>     Result = ABORTED<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 02:07:25 +0000
+          '@id': '13210757'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #959 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/959/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/959/</a>)<br/>\n    <a\
+            \ href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"ExtendedBlock.equals\
+            \ is incorrectly implemented\" class=\"issue-link\" data-issue-key=\"\
+            HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals is incorrectly\
+            \ implemented. Contributed by Todd Lipcon. (Revision 1245830)</p>\n\n\
+            <p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 12:40:35 +0000
+          '@id': '13210912'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-0.23-Build #172 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/172/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-0.23-Build/172/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245829)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 13:02:13 +0000
+          '@id': '13210921'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-0.23-Build #200 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-0.23-Build/200/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-0.23-Build/200/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245829)</p>\n\
+            \n<p>     Result = FAILURE<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245829</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/branches/branch-0.23/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 13:54:34 +0000
+          '@id': '13210950'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #994 (See <a href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk/994/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk/994/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2969\" title=\"\
+            ExtendedBlock.equals is incorrectly implemented\" class=\"issue-link\"\
+            \ data-issue-key=\"HDFS-2969\"><del>HDFS-2969</del></a>. ExtendedBlock.equals\
+            \ is incorrectly implemented. Contributed by Todd Lipcon. (Revision 1245830)</p>\n\
+            \n<p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245830</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 13:55:02 +0000
+          '@id': '13210959'
+      component: datanode
+      created: Fri, 17 Feb 2012 20:20:19 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '228381'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 13 years, 15 weeks, 3 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i099av:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '51939'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues:
+            customfieldvalue:
+              '#text': 0.23.2
+              '@id': '12319852'
+      description: <p>The <tt>ExtendedBlock.equals</tt> method incorrectly returns
+        true for any two blocks in the same block pool, regardless of block ID.</p>
+      due: null
+      environment: null
+      fixVersion: 0.23.2
+      issuelinks:
+        issuelinktype:
+          '@id': '12310050'
+          inwardlinks:
+            '@description': is broken by
+            issuelink:
+              issuekey:
+                '#text': HDFS-1359
+                '@id': '12472717'
+          name: Regression
+      key:
+        '#text': HDFS-2969
+        '@id': '12543095'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HDFS-2969
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      project:
+        '#text': Hadoop HDFS
+        '@id': '12310942'
+        '@key': HDFS
+      reporter:
+        '#text': Todd Lipcon
+        '@username': tlipcon
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Sat, 18 Feb 2012 01:13:28 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: ExtendedBlock.equals is incorrectly implemented
+      title: '[HDFS-2969] ExtendedBlock.equals is incorrectly implemented'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Wed, 28 Mar 2012 09:23:46 +0000
+      version: 0.23.0
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

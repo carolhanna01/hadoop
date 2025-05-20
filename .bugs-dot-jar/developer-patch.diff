@@ -1,0 +1,88 @@
+diff --git a/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt b/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt
+index ea72ecf5f1..37dbe59dad 100644
+--- a/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt
++++ b/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt
+@@ -257,6 +257,8 @@ Release 0.23.2 - UNRELEASED
+     HDFS-2938. Recursive delete of a large directory make namenode
+     unresponsive. (Hari Mankude via suresh)
+ 
++    HDFS-2969. ExtendedBlock.equals is incorrectly implemented (todd)
++
+ Release 0.23.1 - 2012-02-08 
+ 
+   INCOMPATIBLE CHANGES
+diff --git a/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java b/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java
+index 035e5c4292..05a2b6ec85 100644
+--- a/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java
++++ b/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocol/ExtendedBlock.java
+@@ -145,7 +145,7 @@ public class ExtendedBlock implements Writable {
+       return false;
+     }
+     ExtendedBlock b = (ExtendedBlock)o;
+-    return b.block.equals(block) || b.poolId.equals(poolId);
++    return b.block.equals(block) && b.poolId.equals(poolId);
+   }
+   
+   @Override // Object
+diff --git a/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java b/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java
+new file mode 100644
+index 0000000000..602f016dac
+--- /dev/null
++++ b/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocol/TestExtendedBlock.java
+@@ -0,0 +1,56 @@
++/**
++ * Licensed to the Apache Software Foundation (ASF) under one
++ * or more contributor license agreements.  See the NOTICE file
++ * distributed with this work for additional information
++ * regarding copyright ownership.  The ASF licenses this file
++ * to you under the Apache License, Version 2.0 (the
++ * "License"); you may not use this file except in compliance
++ * with the License.  You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++package org.apache.hadoop.hdfs.protocol;
++
++import static org.junit.Assert.*;
++
++import org.junit.Test;
++
++
++public class TestExtendedBlock {
++  static final String POOL_A = "blockpool-a";
++  static final String POOL_B = "blockpool-b";
++  static final Block BLOCK_1_GS1 = new Block(1L, 100L, 1L);
++  static final Block BLOCK_1_GS2 = new Block(1L, 100L, 2L);
++  static final Block BLOCK_2_GS1 = new Block(2L, 100L, 1L);
++  
++  @Test
++  public void testEquals() {
++    // Same block -> equal
++    assertEquals(
++        new ExtendedBlock(POOL_A, BLOCK_1_GS1),
++        new ExtendedBlock(POOL_A, BLOCK_1_GS1));
++    // Different pools, same block id -> not equal
++    assertNotEquals(
++        new ExtendedBlock(POOL_A, BLOCK_1_GS1),
++        new ExtendedBlock(POOL_B, BLOCK_1_GS1));
++    // Same pool, different block id -> not equal
++    assertNotEquals(
++        new ExtendedBlock(POOL_A, BLOCK_1_GS1),
++        new ExtendedBlock(POOL_A, BLOCK_2_GS1));
++    // Same block, different genstamps -> equal
++    assertEquals(
++        new ExtendedBlock(POOL_A, BLOCK_1_GS1),
++        new ExtendedBlock(POOL_A, BLOCK_1_GS2));
++  }
++
++  private static void assertNotEquals(Object a, Object b) {
++    assertFalse("expected not equal: '" + a + "' and '" + b + "'",
++        a.equals(b));
++  }
++}
