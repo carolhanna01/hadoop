@@ -767,9 +767,8 @@ public class PBHelper {
     List<RecoveringBlockProto> list = recoveryCmd.getBlocksList();
     List<RecoveringBlock> recoveringBlocks = new ArrayList<RecoveringBlock>(
         list.size());
-    
-    for (RecoveringBlockProto rbp : list) {
-      recoveringBlocks.add(PBHelper.convert(rbp));
+    for (int i = 0; i < list.size(); i++) {
+      recoveringBlocks.add(PBHelper.convert(list.get(0)));
     }
     return new BlockRecoveryCommand(recoveringBlocks);
   }
