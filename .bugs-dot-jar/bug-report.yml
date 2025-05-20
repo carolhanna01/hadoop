@@ -1,0 +1,267 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Todd Lipcon
+        '@username': tlipcon
+      attachments:
+        attachment:
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:32:47 +0000
+          '@id': '12515019'
+          '@name': hdfs-2968.txt
+          '@size': '5941'
+      comments:
+        comment:
+        - '#text': "<p>The PBHelper code has:</p>\n<div class=\"code panel\" style=\"\
+            border-width: 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"\
+            code-java\">    <span class=\"code-keyword\">for</span> (<span class=\"\
+            code-object\">int</span> i = 0; i &lt; list.size(); i++) {\n      recoveringBlocks.add(PBHelper.convert(list.get(0)));\n\
+            \    }\n</pre>\n</div></div>\n<p>which is obviously wrong</p>"
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:10:50 +0000
+          '@id': '13210500'
+        - '#text': <p>Good catch, Todd. Do you not think this should also go in 0.23.1?</p>
+          '@author': atm
+          '@created': Fri, 17 Feb 2012 20:12:08 +0000
+          '@id': '13210504'
+        - '#text': <p>0.23.1 doesn't have protobufs in place yet, right?</p>
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:31:28 +0000
+          '@id': '13210522'
+        - '#text': <p>Attached patch fixes the issue and adds a unit test</p>
+          '@author': tlipcon
+          '@created': Fri, 17 Feb 2012 20:32:47 +0000
+          '@id': '13210523'
+        - '#text': '<blockquote><p>0.23.1 doesn''t have protobufs in place yet, right?</p></blockquote>
+
+
+            <p>Whoops! Of course you''re right. <img class="emoticon" src="https://issues.apache.org/jira/images/icons/emoticons/smile.png"
+            height="16" width="16" align="absmiddle" alt="" border="0"/></p>'
+          '@author': atm
+          '@created': Fri, 17 Feb 2012 20:33:35 +0000
+          '@id': '13210524'
+        - '#text': <p>+1, the patch looks good to me. Good find, Todd.</p>
+          '@author': atm
+          '@created': Fri, 17 Feb 2012 22:35:32 +0000
+          '@id': '13210626'
+        - '#text': <p>Committed to trunk and branch-0.23-PB. Thanks for review, Aaron.</p>
+          '@author': tlipcon
+          '@created': Sat, 18 Feb 2012 01:21:11 +0000
+          '@id': '13210723'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk-Commit #1821 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/1821/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Hdfs-trunk-Commit/1821/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2968\" title=\"\
+            Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery\" class=\"issue-link\" data-issue-key=\"HDFS-2968\"><del>HDFS-2968</del></a>.\
+            \ Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery. Contributed by Todd Lipcon. (Revision 1245832)</p>\n\n\
+            <p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocolPB/PBHelper.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/protocol/BlockRecoveryCommand.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocolPB/TestPBHelper.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:26:02 +0000
+          '@id': '13210727'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk-Commit #1747 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Common-trunk-Commit/1747/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Common-trunk-Commit/1747/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2968\" title=\"\
+            Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery\" class=\"issue-link\" data-issue-key=\"HDFS-2968\"><del>HDFS-2968</del></a>.\
+            \ Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery. Contributed by Todd Lipcon. (Revision 1245832)</p>\n\n\
+            <p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocolPB/PBHelper.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/protocol/BlockRecoveryCommand.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocolPB/TestPBHelper.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 01:34:36 +0000
+          '@id': '13210738'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk-Commit #1759 (See <a href=\"\
+            https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/1759/\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://builds.apache.org/job/Hadoop-Mapreduce-trunk-Commit/1759/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2968\" title=\"\
+            Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery\" class=\"issue-link\" data-issue-key=\"HDFS-2968\"><del>HDFS-2968</del></a>.\
+            \ Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery. Contributed by Todd Lipcon. (Revision 1245832)</p>\n\n\
+            <p>     Result = ABORTED<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocolPB/PBHelper.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/protocol/BlockRecoveryCommand.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocolPB/TestPBHelper.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 02:07:11 +0000
+          '@id': '13210754'
+        - '#text': "<p>Integrated in Hadoop-Hdfs-trunk #959 (See <a href=\"https://builds.apache.org/job/Hadoop-Hdfs-trunk/959/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Hdfs-trunk/959/</a>)<br/>\n    <a\
+            \ href=\"https://issues.apache.org/jira/browse/HDFS-2968\" title=\"Protocol\
+            \ translator for BlockRecoveryCommand broken when multiple blocks need\
+            \ recovery\" class=\"issue-link\" data-issue-key=\"HDFS-2968\"><del>HDFS-2968</del></a>.\
+            \ Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery. Contributed by Todd Lipcon. (Revision 1245832)</p>\n\n\
+            <p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocolPB/PBHelper.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/protocol/BlockRecoveryCommand.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocolPB/TestPBHelper.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 12:40:34 +0000
+          '@id': '13210911'
+        - '#text': "<p>Integrated in Hadoop-Mapreduce-trunk #994 (See <a href=\"https://builds.apache.org/job/Hadoop-Mapreduce-trunk/994/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://builds.apache.org/job/Hadoop-Mapreduce-trunk/994/</a>)<br/>\n\
+            \    <a href=\"https://issues.apache.org/jira/browse/HDFS-2968\" title=\"\
+            Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery\" class=\"issue-link\" data-issue-key=\"HDFS-2968\"><del>HDFS-2968</del></a>.\
+            \ Protocol translator for BlockRecoveryCommand broken when multiple blocks\
+            \ need recovery. Contributed by Todd Lipcon. (Revision 1245832)</p>\n\n\
+            <p>     Result = SUCCESS<br/>\ntodd : <a href=\"http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://svn.apache.org/viewcvs.cgi/?root=Apache-SVN&amp;view=rev&amp;rev=1245832</a><br/>\n\
+            Files : </p>\n<ul>\n\t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/CHANGES.txt</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/protocolPB/PBHelper.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/protocol/BlockRecoveryCommand.java</li>\n\
+            \t<li>/hadoop/common/trunk/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/protocolPB/TestPBHelper.java</li>\n\
+            </ul>"
+          '@author': hudson
+          '@created': Sat, 18 Feb 2012 13:55:02 +0000
+          '@id': '13210958'
+        - '#text': <p>I have merged this to 0.23.</p>
+          '@author': szetszwo
+          '@created': Mon, 27 Feb 2012 20:33:43 +0000
+          '@id': '13217535'
+      component:
+      - datanode
+      - namenode
+      created: Fri, 17 Feb 2012 20:10:01 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '1.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '228380'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 13 years, 14 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i099b3:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '51940'
+        - '@id': customfield_12310320
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multiversion
+          customfieldname: Target Version/s
+          customfieldvalues: null
+      description: <p>If there are multiple blocks to be recovered, it ends up translating
+        to N copies of the first block instead of the N different blocks.</p>
+      due: null
+      environment: null
+      fixVersion: 2.0.0-alpha
+      issuelinks:
+        issuelinktype:
+          '@id': '10032'
+          name: Blocker
+          outwardlinks:
+            '@description': blocks
+            issuelink:
+              issuekey:
+                '#text': HDFS-2929
+                '@id': '12542039'
+      key:
+        '#text': HDFS-2968
+        '@id': '12543094'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HDFS-2968
+      priority:
+        '#text': Blocker
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/blocker.svg
+        '@id': '1'
+      project:
+        '#text': Hadoop HDFS
+        '@id': '12310942'
+        '@key': HDFS
+      reporter:
+        '#text': Todd Lipcon
+        '@username': tlipcon
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Sat, 18 Feb 2012 01:21:11 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Protocol translator for BlockRecoveryCommand broken when multiple blocks
+        need recovery
+      title: '[HDFS-2968] Protocol translator for BlockRecoveryCommand broken when
+        multiple blocks need recovery'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Mon, 28 Sep 2015 20:58:21 +0000
+      version: 2.0.0-alpha
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

@@ -1,0 +1,658 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.hadoop:hadoop-hdfs >--------------------
+[INFO] Building Apache Hadoop HDFS 0.24.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ hadoop-hdfs ---
+[INFO] Deleting /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-testdirs) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-dir
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- jspc-maven-plugin:2.0-alpha-3:compile (hdfs) @ hadoop-hdfs ---
+[WARNING] Compiled JSPs will not be added to the project and web.xml will not be modified, either because includeInProject is set to false or because the project's packaging is not 'war'.
+Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-src/main/jsp
+Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/classes
+[INFO] Compiling 8 JSP source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-src/main/jsp
+[INFO] Built File: /dfsclusterhealth.jsp
+[INFO] Built File: /block_info_xml.jsp
+[INFO] Built File: /decommission.jsp
+[INFO] Built File: /nn_browsedfscontent.jsp
+[INFO] Built File: /dfshealth.jsp
+[INFO] Built File: /corrupt_replicas_xml.jsp
+[INFO] Built File: /corrupt_files.jsp
+[INFO] Built File: /dfsnodelist.jsp
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html for an explanation.
+[INFO] Compiled completed in 0:00:00.203
+[INFO] 
+[INFO] --- jspc-maven-plugin:2.0-alpha-3:compile (secondary) @ hadoop-hdfs ---
+[WARNING] Compiled JSPs will not be added to the project and web.xml will not be modified, either because includeInProject is set to false or because the project's packaging is not 'war'.
+[INFO] Compiling 1 JSP source file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-src/main/jsp
+[INFO] Built File: /status.jsp
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html for an explanation.
+[INFO] Compiled completed in 0:00:00.014
+[INFO] 
+[INFO] --- jspc-maven-plugin:2.0-alpha-3:compile (datanode) @ hadoop-hdfs ---
+[WARNING] Compiled JSPs will not be added to the project and web.xml will not be modified, either because includeInProject is set to false or because the project's packaging is not 'war'.
+[INFO] Compiling 3 JSP source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-src/main/jsp
+[INFO] Built File: /browseDirectory.jsp
+[INFO] Built File: /browseBlock.jsp
+[INFO] Built File: /tail.jsp
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html for an explanation.
+[INFO] Compiled completed in 0:00:00.021
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:add-source (add-source) @ hadoop-hdfs ---
+[INFO] Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-sources/java added.
+[INFO] Source directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/generated-src/main/jsp added.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (compile-proto) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ hadoop-hdfs ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ hadoop-hdfs ---
+[INFO] Compiling 393 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/classes
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-web-xmls) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/hdfs/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/secondary/WEB-INF
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps/datanode/WEB-INF
+     [copy] Copying 6 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ hadoop-hdfs ---
+[INFO] Using default encoding to copy filtered resources.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (create-log-dir) @ hadoop-hdfs ---
+[INFO] Executing tasks
+
+main:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/log
+     [copy] Copying 9 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes/webapps
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ hadoop-hdfs ---
+[INFO] Compiling 261 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ hadoop-hdfs ---
+[INFO] Surefire report directory: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.hadoop.hdfs.TestFileAppend
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.009 sec
+Running org.apache.hadoop.hdfs.TestDefaultNameNodePort
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.304 sec
+Running org.apache.hadoop.hdfs.TestFSOutputSummer
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.625 sec
+Running org.apache.hadoop.hdfs.TestInjectionForSimulatedStorage
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.95 sec
+Running org.apache.hadoop.hdfs.TestMissingBlocksAlert
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.151 sec
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancerWithMultipleNameNodes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.965 sec
+Running org.apache.hadoop.hdfs.server.balancer.TestBalancer
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.36 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestListCorruptFileBlocks
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 93.708 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogRace
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.426 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestParallelImageWrite
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.587 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestSecurityTokenEditLog
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.504 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestGenericJournalConf
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.897 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestCorruptFilesJsp
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.036 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameCache
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNNMetricFilesInGetListingOps
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.738 sec
+Running org.apache.hadoop.hdfs.server.namenode.metrics.TestNameNodeMetrics
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.292 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestEditsDoubleBuffer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestPathComponents
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestStorageRestore
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.637 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestMetaSave
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.535 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestProcessCorruptBlocks
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.653 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogJournalFailures
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.589 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestBlockUnderConstruction
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.567 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.858 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestDeadDatanode
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.064 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFsLimits
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.532 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLogFileOutputStream
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.672 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeJspHelper
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.484 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestStartup
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.375 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNamenodeCapacityReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.806 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestStartupOptionUpgrade
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.186 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckPointForSecurityTokens
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.433 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestClusterId
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.564 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFSEditLogLoader
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.855 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourcePolicy
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.217 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestHDFSConcat
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.612 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.976 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestStreamFile
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.934 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFsck
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.169 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionManager
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.513 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFSImageStorageInspector
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFileJournalManager
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.313 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestFileLimit
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.883 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameEditsConfigs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.755 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNNStorageRetentionFunctional
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.74 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestCheckpoint
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.75 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestEditLog
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.652 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeMXBean
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.858 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestValidateConfigurationSettings
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.799 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.483 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNNThroughputBenchmark
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.628 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestTransferFsImage
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.085 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestBackupNode
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.888 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestLargeDirectoryDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.843 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestAllowFormat
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.423 sec
+Running org.apache.hadoop.hdfs.server.namenode.TestNameNodeResourceChecker
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.019 sec
+Running org.apache.hadoop.hdfs.server.common.TestStorageInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running org.apache.hadoop.hdfs.server.common.TestGetUriFromString
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec
+Running org.apache.hadoop.hdfs.server.common.TestDistributedUpgrade
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.184 sec
+Running org.apache.hadoop.hdfs.server.common.TestJspHelper
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.451 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestOverReplicatedBlocks
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.904 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlockQueues
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestReplicationPolicy
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.132 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestComputeInvalidateWork
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.167 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestCorruptReplicaInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestNodeCount
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.472 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlocksWithNotEnoughRacks
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.229 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestDatanodeDescriptor
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestPendingReplication
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.118 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockTokenWithDFS
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.931 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestUnderReplicatedBlocks
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.667 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestBlockManager
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.889 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHost2NodesMap
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+Running org.apache.hadoop.hdfs.server.blockmanagement.TestHeartbeatHandling
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.855 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestMulitipleNNDataBlockScanner
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockRecovery
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.269 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.7 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeRestart
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.753 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.78 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestTransferRbw
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.705 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestInterDatanodeProtocol
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.384 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.701 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestWriteToReplica
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 1.093 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDiskError
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.933 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeJsp
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.791 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.695 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestSimulatedFSDataset
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.467 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestReplicasMap
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.895 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 1.005 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.754 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.736 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.886 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestDatanodeRegister
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestBlockReport
+Tests run: 16, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 0.926 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.749 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.server.datanode.TestRoundRobinVolumesPolicy
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 sec
+Running org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.715 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestClientReportBadBlock
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.821 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestPread
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.877 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.741 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestDFSFinalize
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.459 sec
+Running org.apache.hadoop.hdfs.TestHftpFileSystem
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.157 sec
+Running org.apache.hadoop.hdfs.TestFileCorruption
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.096 sec
+Running org.apache.hadoop.hdfs.TestAppendDifferentChecksum
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.823 sec
+Running org.apache.hadoop.hdfs.util.TestMD5FileUtils
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 sec
+Running org.apache.hadoop.hdfs.util.TestLightWeightLinkedSet
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec
+Running org.apache.hadoop.hdfs.util.TestGSet
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.739 sec
+Running org.apache.hadoop.hdfs.util.TestAtomicFileOutputStream
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec
+Running org.apache.hadoop.hdfs.util.TestExactSizeInputStream
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running org.apache.hadoop.hdfs.util.TestDirectBufferPool
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec
+Running org.apache.hadoop.hdfs.util.TestLightWeightHashSet
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 sec
+Running org.apache.hadoop.hdfs.util.TestCyclicIteration
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running org.apache.hadoop.hdfs.TestDFSClientExcludedNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.291 sec
+Running org.apache.hadoop.hdfs.TestFileCreationEmpty
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.085 sec
+Running org.apache.hadoop.hdfs.TestIsMethodSupported
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.968 sec
+Running org.apache.hadoop.hdfs.TestBlockMissingException
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.753 sec
+Running org.apache.hadoop.hdfs.TestSetrepIncreasing
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.67 sec
+Running org.apache.hadoop.hdfs.TestLeaseRecovery2
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.365 sec
+Running org.apache.hadoop.hdfs.TestFileCreationDelete
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.844 sec
+Running org.apache.hadoop.hdfs.TestDFSRemove
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.549 sec
+Running org.apache.hadoop.hdfs.TestDatanodeRegistration
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.946 sec
+Running org.apache.hadoop.hdfs.TestParallelRead
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.806 sec
+Running org.apache.hadoop.hdfs.TestFileAppend2
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.405 sec
+Running org.apache.hadoop.hdfs.TestDataTransferProtocol
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.146 sec
+Running org.apache.hadoop.hdfs.TestDFSAddressConfig
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.56 sec
+Running org.apache.hadoop.hdfs.TestFileConcurrentReader
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.156 sec
+Running org.apache.hadoop.hdfs.TestListFilesInFileContext
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.456 sec
+Running org.apache.hadoop.hdfs.TestSetrepDecreasing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.981 sec
+Running org.apache.hadoop.hdfs.TestReplication
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.869 sec
+Running org.apache.hadoop.hdfs.TestRenameWhileOpen
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.56 sec
+Running org.apache.hadoop.hdfs.TestLeaseRenewer
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.764 sec
+Running org.apache.hadoop.hdfs.TestListFilesInDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.406 sec
+Running org.apache.hadoop.hdfs.TestDatanodeDeath
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 116.949 sec
+Running org.apache.hadoop.hdfs.TestFileStatus
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.402 sec
+Running org.apache.hadoop.hdfs.TestLargeBlock
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.016 sec
+Running org.apache.hadoop.hdfs.TestDFSRename
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.692 sec
+Running org.apache.hadoop.hdfs.TestHftpDelegationToken
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.279 sec
+Running org.apache.hadoop.hdfs.TestDFSPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.55 sec
+Running org.apache.hadoop.hdfs.security.token.block.TestBlockToken
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.193 sec
+Running org.apache.hadoop.hdfs.security.TestClientProtocolWithDelegationToken
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.815 sec
+Running org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.924 sec
+Running org.apache.hadoop.hdfs.security.TestDelegationToken
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.05 sec
+Running org.apache.hadoop.hdfs.TestFileCreationClient
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.718 sec
+Running org.apache.hadoop.hdfs.protocol.TestExtendedBlock
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec
+Running org.apache.hadoop.hdfs.protocol.TestLayoutVersion
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+Running org.apache.hadoop.hdfs.protocol.TestCorruptFileBlocks
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+Running org.apache.hadoop.hdfs.TestWriteRead
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.382 sec
+Running org.apache.hadoop.hdfs.TestClientProtocolForPipelineRecovery
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.312 sec
+Running org.apache.hadoop.hdfs.TestMiniDFSCluster
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.933 sec
+Running org.apache.hadoop.hdfs.TestCrcCorruption
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.418 sec
+Running org.apache.hadoop.hdfs.TestSmallBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.321 sec
+Running org.apache.hadoop.hdfs.TestRestartDFS
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.858 sec
+Running org.apache.hadoop.hdfs.TestDeprecatedKeys
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 sec
+Running org.apache.hadoop.hdfs.TestDFSClientRetries
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.613 sec
+Running org.apache.hadoop.hdfs.TestHFlush
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.231 sec
+Running org.apache.hadoop.hdfs.TestModTime
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.708 sec
+Running org.apache.hadoop.hdfs.TestDatanodeReport
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.273 sec
+Running org.apache.hadoop.hdfs.TestConnCache
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.679 sec
+Running org.apache.hadoop.hdfs.TestListPathServlet
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.389 sec
+Running org.apache.hadoop.hdfs.TestDatanodeBlockScanner
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.24 sec
+Running org.apache.hadoop.hdfs.TestWriteConfigurationToDFS
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.926 sec
+Running org.apache.hadoop.hdfs.TestClientBlockVerification
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.626 sec
+Running org.apache.hadoop.hdfs.TestSeekBug
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.522 sec
+Running org.apache.hadoop.hdfs.TestLease
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.525 sec
+Running org.apache.hadoop.hdfs.TestDFSMkdirs
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.341 sec
+Running org.apache.hadoop.hdfs.TestDFSUpgradeFromImage
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.635 sec
+Running org.apache.hadoop.hdfs.TestSetTimes
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.216 sec
+Running org.apache.hadoop.hdfs.TestDFSShellGenericOptions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.914 sec
+Running org.apache.hadoop.hdfs.TestFileCreationNamenodeRestart
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.926 sec
+Running org.apache.hadoop.hdfs.TestHDFSTrash
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.83 sec
+Running org.apache.hadoop.hdfs.TestHDFSFileSystemContract
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.875 sec
+Running org.apache.hadoop.hdfs.tools.TestGetConf
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.429 sec
+Running org.apache.hadoop.hdfs.tools.offlineEditsViewer.TestOfflineEditsViewer
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.441 sec
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestDelimitedImageVisitor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOfflineImageViewer
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.067 sec
+Running org.apache.hadoop.hdfs.tools.offlineImageViewer.TestOIVCanReadOldVersions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec
+Running org.apache.hadoop.hdfs.tools.TestGetGroups
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.526 sec
+Running org.apache.hadoop.hdfs.protocolPB.TestPBHelper
+Tests run: 21, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.345 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestFSInputChecker
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.461 sec
+Running org.apache.hadoop.hdfs.TestByteRangeInputStream
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.218 sec
+Running org.apache.hadoop.hdfs.TestDFSStartupVersions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.506 sec
+Running org.apache.hadoop.hdfs.TestHDFSServerPorts
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.093 sec
+Running org.apache.hadoop.hdfs.TestShortCircuitLocalRead
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.416 sec
+Running org.apache.hadoop.hdfs.TestDecommission
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 110.8 sec <<< FAILURE!
+Running org.apache.hadoop.hdfs.TestSafeMode
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.279 sec
+Running org.apache.hadoop.hdfs.TestLocalDFS
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.379 sec
+Running org.apache.hadoop.hdfs.TestDatanodeConfig
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.231 sec
+Running org.apache.hadoop.hdfs.TestQuota
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.308 sec
+Running org.apache.hadoop.hdfs.TestBalancerBandwidth
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.919 sec
+Running org.apache.hadoop.hdfs.TestDistributedFileSystem
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.264 sec
+Running org.apache.hadoop.hdfs.TestFileAppend4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.892 sec
+Running org.apache.hadoop.hdfs.TestAbandonBlock
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.324 sec
+Running org.apache.hadoop.hdfs.TestFileAppend3
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.572 sec
+Running org.apache.hadoop.hdfs.TestPipelines
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.543 sec
+Running org.apache.hadoop.hdfs.web.resources.TestParam
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.288 sec
+Running org.apache.hadoop.hdfs.web.TestFSMainOperationsWebHdfs
+Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.599 sec
+Running org.apache.hadoop.hdfs.web.TestWebHdfsUrl
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.497 sec
+Running org.apache.hadoop.hdfs.web.TestJsonUtil
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+Running org.apache.hadoop.hdfs.web.TestOffsetUrlInputStream
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.417 sec
+Running org.apache.hadoop.hdfs.web.TestWebHdfsFileSystemContract
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.142 sec
+Running org.apache.hadoop.hdfs.web.TestWebHdfsWithMultipleNameNodes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.608 sec
+Running org.apache.hadoop.hdfs.web.TestAuthFilter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.242 sec
+Running org.apache.hadoop.hdfs.TestDFSUpgrade
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.449 sec
+Running org.apache.hadoop.hdfs.TestMultiThreadedHflush
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.508 sec
+Running org.apache.hadoop.hdfs.TestGetBlocks
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.029 sec
+Running org.apache.hadoop.hdfs.TestDFSStorageStateRecovery
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.647 sec
+Running org.apache.hadoop.hdfs.TestDFSUtil
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.403 sec
+Running org.apache.hadoop.hdfs.TestDFSShell
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.392 sec
+Running org.apache.hadoop.hdfs.TestReadWhileWriting
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.395 sec
+Running org.apache.hadoop.hdfs.TestLeaseRecovery
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.341 sec
+Running org.apache.hadoop.hdfs.TestFileCreation
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.407 sec
+Running org.apache.hadoop.hdfs.TestDFSRollback
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.093 sec
+Running org.apache.hadoop.hdfs.TestBlocksScheduledCounter
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.069 sec
+Running org.apache.hadoop.security.TestPermission
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.491 sec
+Running org.apache.hadoop.security.TestRefreshUserMappings
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.564 sec
+Running org.apache.hadoop.tools.TestDelegationTokenFetcher
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.655 sec
+Running org.apache.hadoop.tools.TestJMXGet
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.718 sec
+Running org.apache.hadoop.fs.TestFcHdfsSymlink
+Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.317 sec
+Running org.apache.hadoop.fs.TestResolveHdfsSymlink
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.856 sec
+Running org.apache.hadoop.fs.permission.TestStickyBit
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.53 sec
+Running org.apache.hadoop.fs.TestUrlStreamHandler
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.581 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFsHdfs
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.038 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFileSystemHdfs
+Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.888 sec
+Running org.apache.hadoop.fs.viewfs.TestViewFsFileStatusHdfs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.12 sec
+Running org.apache.hadoop.fs.TestGlobPaths
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.977 sec
+Running org.apache.hadoop.fs.loadGenerator.TestLoadGenerator
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.678 sec
+Running org.apache.hadoop.fs.TestFcHdfsPermission
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.663 sec
+Running org.apache.hadoop.fs.TestFcHdfsCreateMkdir
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.644 sec
+Running org.apache.hadoop.fs.TestHDFSFileContextMainOperations
+Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.259 sec
+Running org.apache.hadoop.net.TestNetworkTopology
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec
+
+Results :
+
+Failed tests:   testConvertBlockRecoveryCommand(org.apache.hadoop.hdfs.protocolPB.TestPBHelper): expected:<bpid:blk_2_2> but was:<bpid:blk_1_2>
+  testDecommissionFederation(org.apache.hadoop.hdfs.TestDecommission): Number of Datanodes  expected:<2> but was:<1>
+
+Tests in error: 
+  testDataNodeMetrics(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMetrics): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testRecoverReplicas(org.apache.hadoop.hdfs.server.datanode.TestDatanodeRestart): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testFinalizedReplicas(org.apache.hadoop.hdfs.server.datanode.TestDatanodeRestart): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testDfsAdminDeleteBlockPool(org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testDeleteBlockPool(org.apache.hadoop.hdfs.server.datanode.TestDeleteBlockPool): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testTransferRbw(org.apache.hadoop.hdfs.server.datanode.TestTransferRbw): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testBlockMetaDataInfo(org.apache.hadoop.hdfs.server.datanode.TestInterDatanodeProtocol): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testUpdateReplicaUnderRecovery(org.apache.hadoop.hdfs.server.datanode.TestInterDatanodeProtocol): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testVolumeFailure(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailure): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testAppend(org.apache.hadoop.hdfs.server.datanode.TestWriteToReplica): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testWriteToRbw(org.apache.hadoop.hdfs.server.datanode.TestWriteToReplica): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testWriteToTempoary(org.apache.hadoop.hdfs.server.datanode.TestWriteToReplica): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testClose(org.apache.hadoop.hdfs.server.datanode.TestWriteToReplica): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testShutdown(org.apache.hadoop.hdfs.server.datanode.TestDiskError): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testShutdown(org.apache.hadoop.hdfs.server.datanode.TestDiskError)
+  testLocalDirs(org.apache.hadoop.hdfs.server.datanode.TestDiskError): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testLocalDirs(org.apache.hadoop.hdfs.server.datanode.TestDiskError)
+  testReplicationError(org.apache.hadoop.hdfs.server.datanode.TestDiskError): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testReplicationError(org.apache.hadoop.hdfs.server.datanode.TestDiskError)
+  testGenStamp(org.apache.hadoop.hdfs.server.datanode.TestDatanodeJsp): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testViewFileJsp(org.apache.hadoop.hdfs.server.datanode.TestDatanodeJsp): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testDirectoryScanner(org.apache.hadoop.hdfs.server.datanode.TestDirectoryScanner): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testBlockReplacement(org.apache.hadoop.hdfs.server.datanode.TestBlockReplacement): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testFedSingleNN(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  test2NNRegistration(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testClusterIdMismatch(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testMiniDFSClusterWithMultipleNN(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testVolFailureStatsPreservedOnNNRestart(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testVolFailureStatsPreservedOnNNRestart(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting)
+  testSuccessiveVolumeFailures(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testSuccessiveVolumeFailures(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting)
+  testBPServiceExit(org.apache.hadoop.hdfs.server.datanode.TestDataNodeExit): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testFailedVolumeOnStartupIsCounted(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testFailedVolumeOnStartupIsCounted(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration)
+  testVolumeAndTolerableConfiguration(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testVolumeAndTolerableConfiguration(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration)
+  testValidVolumesAtStartup(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testValidVolumesAtStartup(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration)
+  testConfigureMinValidVolumes(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testConfigureMinValidVolumes(org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration)
+  blockReport_03(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_03(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_06(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_06(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_07(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_07(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_08(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_08(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_09(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_09(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  testOneReplicaRbwReportArrivesAfterBlockCompleted(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testOneReplicaRbwReportArrivesAfterBlockCompleted(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_01(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_01(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  blockReport_02(org.apache.hadoop.hdfs.server.datanode.TestBlockReport): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  blockReport_02(org.apache.hadoop.hdfs.server.datanode.TestBlockReport)
+  testRefreshNamenodes(org.apache.hadoop.hdfs.server.datanode.TestRefreshNamenodes): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testDataNodeMXBean(org.apache.hadoop.hdfs.server.datanode.TestDataNodeMXBean): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testCorruptAllOfThreeReplicas(org.apache.hadoop.hdfs.TestClientReportBadBlock): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testCorruptAllOfThreeReplicas(org.apache.hadoop.hdfs.TestClientReportBadBlock)
+  testCorruptTwoOutOfThreeReplicas(org.apache.hadoop.hdfs.TestClientReportBadBlock): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testCorruptTwoOutOfThreeReplicas(org.apache.hadoop.hdfs.TestClientReportBadBlock)
+  testOneBlockReplica(org.apache.hadoop.hdfs.TestClientReportBadBlock): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testOneBlockReplica(org.apache.hadoop.hdfs.TestClientReportBadBlock)
+  testPreadDFS(org.apache.hadoop.hdfs.TestPread): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testPreadDFSSimulated(org.apache.hadoop.hdfs.TestPread): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+  testReplaceDatanodeOnFailure(org.apache.hadoop.hdfs.TestReplaceDatanodeOnFailure): Cannot lock storage /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name1. The directory is already locked.
+
+Tests run: 1089, Failures: 2, Errors: 67, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  48:22 min
+[INFO] Finished at: 2025-05-20T13:44:56+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test (default-test) on project hadoop-hdfs: Failure or timeout -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
