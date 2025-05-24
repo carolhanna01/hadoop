@@ -1,0 +1,84 @@
+diff --git a/CHANGES.txt b/CHANGES.txt
+index 3a206a5fdf..f9056b98f5 100644
+--- a/CHANGES.txt
++++ b/CHANGES.txt
+@@ -951,6 +951,10 @@ Trunk (unreleased changes)
+     HADOOP-6215. fix GenericOptionParser to deal with -D with '=' in the 
+     value. (Amar Kamat via sharad)
+ 
++    HADOOP-6227. Fix Configuration to allow final parameters to be set to null
++    and prevent them from being overridden.
++    (Amareshwari Sriramadasu via yhemanth)
++
+ Release 0.20.1 - Unreleased
+ 
+   INCOMPATIBLE CHANGES
+diff --git a/src/java/org/apache/hadoop/conf/Configuration.java b/src/java/org/apache/hadoop/conf/Configuration.java
+index c53d33a299..edf0f15afe 100644
+--- a/src/java/org/apache/hadoop/conf/Configuration.java
++++ b/src/java/org/apache/hadoop/conf/Configuration.java
+@@ -1286,17 +1286,20 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
+         }
+         
+         // Ignore this parameter if it has already been marked as 'final'
+-        if (attr != null && value != null) {
+-          if (!finalParameters.contains(attr)) {
+-            properties.setProperty(attr, value);
+-            if (storeResource) {
+-              updatingResource.put(attr, name.toString());
+-            }
+-            if (finalParameter)
+-              finalParameters.add(attr);
+-          } else {
+-            LOG.warn(name+":a attempt to override final parameter: "+attr
++        if (attr != null) {
++          if (value != null) {
++            if (!finalParameters.contains(attr)) {
++              properties.setProperty(attr, value);
++              if (storeResource) {
++                updatingResource.put(attr, name.toString());
++              }
++            } else {
++              LOG.warn(name+":a attempt to override final parameter: "+attr
+                      +";  Ignoring.");
++            }
++          }
++          if (finalParameter) {
++            finalParameters.add(attr);
+           }
+         }
+       }
+diff --git a/src/test/core/org/apache/hadoop/conf/TestConfiguration.java b/src/test/core/org/apache/hadoop/conf/TestConfiguration.java
+index 12999c3a55..c35caa1b6a 100644
+--- a/src/test/core/org/apache/hadoop/conf/TestConfiguration.java
++++ b/src/test/core/org/apache/hadoop/conf/TestConfiguration.java
+@@ -100,7 +100,28 @@ public class TestConfiguration extends TestCase {
+     assertTrue(conf.getInt("intvar", -1) == 42);
+     assertTrue(conf.getInt("my.int", -1) == 42);
+   }
+-    
++
++  public void testFinalParam() throws IOException {
++    out=new BufferedWriter(new FileWriter(CONFIG));
++    startConfig();
++    declareProperty("my.var", "", "", true);
++    endConfig();
++    Path fileResource = new Path(CONFIG);
++    Configuration conf1 = new Configuration();
++    conf1.addResource(fileResource);
++    assertNull("my var is not null", conf1.get("my.var"));
++	
++    out=new BufferedWriter(new FileWriter(CONFIG2));
++    startConfig();
++    declareProperty("my.var", "myval", "myval", false);
++    endConfig();
++    fileResource = new Path(CONFIG2);
++
++    Configuration conf2 = new Configuration(conf1);
++    conf2.addResource(fileResource);
++    assertNull("my var is not final", conf2.get("my.var"));
++  }
++
+   public static void assertEq(Object a, Object b) {
+     System.out.println("assertEq: " + a + ", " + b);
+     assertEquals(a, b);

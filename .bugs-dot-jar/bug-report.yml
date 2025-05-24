@@ -1,0 +1,248 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Amareshwari Sriramadasu
+        '@username': amareshwari
+      attachments:
+        attachment:
+        - '@author': amareshwari
+          '@created': Tue, 1 Sep 2009 12:37:45 +0000
+          '@id': '12418237'
+          '@name': patch-6227-0.20.txt
+          '@size': '2463'
+        - '@author': vinodkv
+          '@created': Tue, 1 Sep 2009 13:05:45 +0000
+          '@id': '12418242'
+          '@name': patch-6227-ydist.txt
+          '@size': '2670'
+        - '@author': amareshwari
+          '@created': Tue, 1 Sep 2009 12:37:45 +0000
+          '@id': '12418238'
+          '@name': patch-6227.txt
+          '@size': '2685'
+      comments:
+        comment:
+        - '#text': "<p>The code in configuration looks like this:</p>\n\n<div class=\"\
+            code panel\" style=\"border-width: 1px;\"><div class=\"codeContent panelContent\"\
+            >\n<pre class=\"code-java\">        <span class=\"code-comment\">// Ignore\
+            \ <span class=\"code-keyword\">this</span> parameter <span class=\"code-keyword\"\
+            >if</span> it has already been marked as <span class=\"code-quote\">'<span\
+            \ class=\"code-keyword\">final</span>'</span>\n</span>        <span class=\"\
+            code-keyword\">if</span> (attr != <span class=\"code-keyword\">null</span>\
+            \ &amp;&amp; value != <span class=\"code-keyword\">null</span>) {\n  \
+            \        <span class=\"code-keyword\">if</span> (!finalParameters.contains(attr))\
+            \ {\n            properties.setProperty(attr, value);\n            <span\
+            \ class=\"code-keyword\">if</span> (storeResource) {\n              updatingResource.put(attr,\
+            \ name.toString());\n            }\n            <span class=\"code-keyword\"\
+            >if</span> (finalParameter)\n              finalParameters.add(attr);\n\
+            \          } <span class=\"code-keyword\">else</span> {\n            LOG.warn(name+<span\
+            \ class=\"code-quote\">\":a attempt to override <span class=\"code-keyword\"\
+            >final</span> parameter: \"</span>+attr\n                     +<span class=\"\
+            code-quote\">\";  Ignoring.\"</span>);\n          }\n        }\n</pre>\n\
+            </div></div>\n\n<p>While the check for value being null is required before\
+            \ adding the property to the 'properties' instance, adding it to finalParameters\
+            \ or for that matter even updatingResource shouldn't be an issue even\
+            \ if the value is null. This would certainly fix the current issue. Thoughts\
+            \ ?</p>"
+          '@author': yhemanth
+          '@created': Tue, 1 Sep 2009 11:38:04 +0000
+          '@id': '12749866'
+        - '#text': <p>Patch with the fix</p>
+          '@author': amareshwari
+          '@created': Tue, 1 Sep 2009 12:37:45 +0000
+          '@id': '12749887'
+        - '#text': "<p>+1 overall.  Here are the results of testing the latest attachment\
+            \ <br/>\n  <a href=\"http://issues.apache.org/jira/secure/attachment/12418238/patch-6227.txt\"\
+            \ class=\"external-link\" rel=\"nofollow\">http://issues.apache.org/jira/secure/attachment/12418238/patch-6227.txt</a><br/>\n\
+            \  against trunk revision 809491.</p>\n\n<p>    +1 @author.  The patch\
+            \ does not contain any @author tags.</p>\n\n<p>    +1 tests included.\
+            \  The patch appears to include 3 new or modified tests.</p>\n\n<p>  \
+            \  +1 javadoc.  The javadoc tool did not generate any warning messages.</p>\n\
+            \n<p>    +1 javac.  The applied patch does not increase the total number\
+            \ of javac compiler warnings.</p>\n\n<p>    +1 findbugs.  The patch does\
+            \ not introduce any new Findbugs warnings.</p>\n\n<p>    +1 release audit.\
+            \  The applied patch does not increase the total number of release audit\
+            \ warnings.</p>\n\n<p>    +1 core tests.  The patch passed core unit tests.</p>\n\
+            \n<p>    +1 contrib tests.  The patch passed contrib unit tests.</p>\n\
+            \n<p>Test results: <a href=\"http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/testReport/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/testReport/</a><br/>\n\
+            Findbugs warnings: <a href=\"http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/artifact/trunk/build/test/findbugs/newPatchFindbugsWarnings.html\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/artifact/trunk/build/test/findbugs/newPatchFindbugsWarnings.html</a><br/>\n\
+            Checkstyle results: <a href=\"http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/artifact/trunk/build/test/checkstyle-errors.html\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/artifact/trunk/build/test/checkstyle-errors.html</a><br/>\n\
+            Console output: <a href=\"http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/console\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Patch-h4.grid.sp2.yahoo.net/4/console</a></p>\n\
+            \n<p>This message is automatically generated.</p>"
+          '@author': hadoopqa
+          '@created': Tue, 1 Sep 2009 12:55:05 +0000
+          '@id': '12749892'
+        - '#text': <p>Yahoo! distribution patch. The patch for branch 0.20 will not
+            apply to this distribution with <a href="https://issues.apache.org/jira/browse/HADOOP-6184"
+            title="Provide a configuration dump in json format." class="issue-link"
+            data-issue-key="HADOOP-6184"><del>HADOOP-6184</del></a> already in.</p>
+          '@author': vinodkv
+          '@created': Tue, 1 Sep 2009 13:05:45 +0000
+          '@id': '12749900'
+        - '#text': <p>Code changes look fine to me. +1.</p>
+          '@author': yhemanth
+          '@created': Tue, 1 Sep 2009 13:30:22 +0000
+          '@id': '12749907'
+        - '#text': <p>I just tested this fix on a single node cluster so as to enable/disable
+            mapred debug script by setting it to null. The patch works as expected.
+            A null value marked as final on server side can no longer be overridden
+            by clients.</p>
+          '@author': vinodkv
+          '@created': Tue, 1 Sep 2009 13:59:00 +0000
+          '@id': '12749914'
+        - '#text': <p>+1</p>
+          '@author': acmurthy
+          '@created': Tue, 1 Sep 2009 14:18:29 +0000
+          '@id': '12749920'
+        - '#text': '<p>I just committed this to trunk. Thanks, Amareshwari !</p>
+
+
+            <p>I did not commit to the 0.20 branch, because there''s an active vote
+            in progress and did not think this existing bug should block the release.
+            If decided otherwise, we can commit to the 0.20 branch as well.</p>'
+          '@author': yhemanth
+          '@created': Tue, 1 Sep 2009 15:27:15 +0000
+          '@id': '12749947'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk-Commit #4 (See <a href=\"\
+            http://hudson.zones.apache.org/hudson/job/Hadoop-Common-trunk-Commit/4/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Common-trunk-Commit/4/</a>)<br/>\n\
+            \    . Fix Configuration to allow final parameters to be set to null and\
+            \ prevent them from being overridden. Contributed by Amareshwari Sriramadasu.</p>"
+          '@author': hudson
+          '@created': Tue, 1 Sep 2009 15:39:23 +0000
+          '@id': '12749949'
+        - '#text': "<p>Integrated in Hadoop-Common-trunk #82 (See <a href=\"http://hudson.zones.apache.org/hudson/job/Hadoop-Common-trunk/82/\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >http://hudson.zones.apache.org/hudson/job/Hadoop-Common-trunk/82/</a>)<br/>\n\
+            \    . Fix Configuration to allow final parameters to be set to null and\
+            \ prevent them from being overridden. Contributed by Amareshwari Sriramadasu.</p>"
+          '@author': hudson
+          '@created': Wed, 2 Sep 2009 11:09:22 +0000
+          '@id': '12750389'
+        - '#text': <p>Editorial pass over all release notes prior to publication of
+            0.21. Bug.</p>
+          '@author': chansler
+          '@created': Fri, 9 Oct 2009 04:10:14 +0000
+          '@id': '12763819'
+      component: conf
+      created: Tue, 1 Sep 2009 11:30:09 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '3.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '37253'
+        - '@id': customfield_12310191
+          '@key': com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes
+          customfieldname: Hadoop Flags
+          customfieldvalues:
+            customfieldvalue:
+              '#text': Reviewed
+              '@key': '10343'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 15 years, 35 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i02s5r:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '14163'
+      description: '<p>A use-case: Recently, we stumbled on a bug that wanted us to
+        disable the feature to run a debug script in map/reduce on tasks that fail,
+        specified by mapred.</p>
+
+        {map|reduce}
+
+        <p>.task.debug.script. The best way of disabling it seemed to be to set it
+        with no value in the cluster configuration and mark it final. This did not
+        work, however, because the code in configuration explicitly checks if the
+        value is not null before adding it to the list of final parameters.</p>
+
+
+        <p>Without an ability to do this, there might be a need to explicitly have
+        a special way of disabling optional features.</p>'
+      due: null
+      environment: null
+      fixVersion: 0.21.0
+      key:
+        '#text': HADOOP-6227
+        '@id': '12434506'
+      labels: null
+      link: https://issues.apache.org/jira/browse/HADOOP-6227
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Hadoop Common
+        '@id': '12310240'
+        '@key': HADOOP
+      reporter:
+        '#text': Hemanth Yamijala
+        '@username': yhemanth
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Tue, 1 Sep 2009 15:27:15 +0000
+      status:
+        '#text': Closed
+        '@description': The issue is considered finished, the resolution is correct.
+          Issues which are not closed can be reopened.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/closed.png
+        '@id': '6'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Configuration does not lock parameters marked final if they have no
+        value.
+      title: '[HADOOP-6227] Configuration does not lock parameters marked final if
+        they have no value.'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 24 Aug 2010 20:39:35 +0000
+      votes: '0'
+      watches: '0'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

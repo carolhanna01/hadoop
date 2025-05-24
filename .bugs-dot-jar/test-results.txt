@@ -1,0 +1,533 @@
+Buildfile: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml
+
+clean-contrib:
+
+clean:
+
+clean:
+     [echo] contrib: failmon
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/contrib/failmon
+
+clean:
+     [echo] contrib: hod
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/contrib/hod
+
+clean:
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build
+
+ivy-init-dirs:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/ivy
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/ivy/lib
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/ivy/report
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/ivy/maven
+
+ivy-probe-antlib:
+
+ivy-init-antlib:
+
+ivy-init:
+[ivy:configure] :: Apache Ivy 2.4.0 - 20141213170938 :: http://ant.apache.org/ivy/ ::
+[ivy:configure] :: loading settings :: file = /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/ivy/ivysettings.xml
+
+ivy-resolve-common:
+[ivy:resolve] :: resolving dependencies :: org.apache.hadoop#Hadoop-Core;0.21.0-dev
+[ivy:resolve] 	confs: [common]
+[ivy:resolve] 	found commons-logging#commons-logging;1.0.4 in maven2
+[ivy:resolve] 	found log4j#log4j;1.2.15 in maven2
+[ivy:resolve] 	found commons-httpclient#commons-httpclient;3.0.1 in maven2
+[ivy:resolve] 	found commons-codec#commons-codec;1.3 in maven2
+[ivy:resolve] 	found commons-cli#commons-cli;1.2 in default
+[ivy:resolve] 	found xmlenc#xmlenc;0.52 in maven2
+[ivy:resolve] 	found net.java.dev.jets3t#jets3t;0.7.1 in maven2
+[ivy:resolve] 	found commons-net#commons-net;1.4.1 in maven2
+[ivy:resolve] 	found oro#oro;2.0.8 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#servlet-api-2.5;6.1.14 in maven2
+[ivy:resolve] 	found net.sf.kosmosfs#kfs;0.3 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty-util;6.1.14 in maven2
+[ivy:resolve] 	found tomcat#jasper-runtime;5.5.12 in maven2
+[ivy:resolve] 	found tomcat#jasper-compiler;5.5.12 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-api-2.1;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-2.1;6.1.14 in maven2
+[ivy:resolve] 	found commons-el#commons-el;1.0 in maven2
+[ivy:resolve] 	found junit#junit;4.5 in maven2
+[ivy:resolve] 	found hsqldb#hsqldb;1.8.0.10 in default
+[ivy:resolve] 	found commons-logging#commons-logging-api;1.0.4 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.4.3 in maven2
+[ivy:resolve] 	found org.eclipse.jdt#core;3.1.1 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-log4j12;1.4.3 in maven2
+[ivy:resolve] 	found org.apache.hadoop#avro;1.0.0 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-mapper-asl;1.0.1 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-core-asl;1.0.1 in maven2
+[ivy:resolve] 	found com.thoughtworks.paranamer#paranamer;1.5 in maven2
+[ivy:resolve] :: resolution report :: resolve 625ms :: artifacts dl 20ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      common      |   28  |   0   |   0   |   0   ||   28  |   0   |
+	---------------------------------------------------------------------
+
+ivy-retrieve-common:
+[ivy:retrieve] :: retrieving :: org.apache.hadoop#Hadoop-Core
+[ivy:retrieve] 	confs: [common]
+[ivy:retrieve] 	28 artifacts copied, 0 already retrieved (8922kB/44ms)
+[ivy:cachepath] DEPRECATED: 'ivy.conf.file' is deprecated, use 'ivy.settings.file' instead
+[ivy:cachepath] :: loading settings :: file = /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/ivy/ivysettings.xml
+
+init:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/classes
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/src
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/webapps
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/classes
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/extraconf
+    [touch] Creating /tmp/null1296259002
+   [delete] Deleting: /tmp/null1296259002
+     [copy] Copying 9 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/capacity-scheduler.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/capacity-scheduler.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/core-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/core-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-env.sh.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-env.sh
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-policy.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-policy.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hdfs-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hdfs-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-queue-acls.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-queue-acls.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/masters.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/masters
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/slaves.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/slaves
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib/ec2/bin/hadoop-ec2-env.sh.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib/ec2/bin/hadoop-ec2-env.sh
+
+record-parser:
+
+compile-rcc-compiler:
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:283: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 29 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] 1 warning
+
+compile-core-classes:
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:304: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 317 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/classes
+
+ivy-resolve-test:
+[ivy:resolve] :: resolving dependencies :: org.apache.hadoop#Hadoop-Core;0.21.0-dev
+[ivy:resolve] 	confs: [test]
+[ivy:resolve] 	found commons-logging#commons-logging;1.0.4 in maven2
+[ivy:resolve] 	found log4j#log4j;1.2.15 in maven2
+[ivy:resolve] 	found commons-httpclient#commons-httpclient;3.0.1 in maven2
+[ivy:resolve] 	found commons-codec#commons-codec;1.3 in maven2
+[ivy:resolve] 	found commons-cli#commons-cli;1.2 in default
+[ivy:resolve] 	found xmlenc#xmlenc;0.52 in maven2
+[ivy:resolve] 	found net.java.dev.jets3t#jets3t;0.7.1 in maven2
+[ivy:resolve] 	found commons-net#commons-net;1.4.1 in maven2
+[ivy:resolve] 	found oro#oro;2.0.8 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#servlet-api-2.5;6.1.14 in maven2
+[ivy:resolve] 	found net.sf.kosmosfs#kfs;0.3 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty-util;6.1.14 in maven2
+[ivy:resolve] 	found tomcat#jasper-runtime;5.5.12 in maven2
+[ivy:resolve] 	found tomcat#jasper-compiler;5.5.12 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-api-2.1;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-2.1;6.1.14 in maven2
+[ivy:resolve] 	found commons-el#commons-el;1.0 in maven2
+[ivy:resolve] 	found junit#junit;4.5 in maven2
+[ivy:resolve] 	found hsqldb#hsqldb;1.8.0.10 in default
+[ivy:resolve] 	found commons-logging#commons-logging-api;1.0.4 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.4.3 in maven2
+[ivy:resolve] 	found org.eclipse.jdt#core;3.1.1 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-log4j12;1.4.3 in maven2
+[ivy:resolve] 	found org.apache.hadoop#avro;1.0.0 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-mapper-asl;1.0.1 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-core-asl;1.0.1 in maven2
+[ivy:resolve] 	found com.thoughtworks.paranamer#paranamer;1.5 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftplet-api;1.0.0 in maven2
+[ivy:resolve] 	found org.apache.mina#mina-core;2.0.0-M5 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.5.2 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftpserver-core;1.0.0 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftpserver-deprecated;1.0.0-M2 in maven2
+[ivy:resolve] :: resolution report :: resolve 494ms :: artifacts dl 28ms
+[ivy:resolve] 	:: evicted modules:
+[ivy:resolve] 	org.slf4j#slf4j-api;1.4.3 by [org.slf4j#slf4j-api;1.5.2] in [test]
+[ivy:resolve] 	org.apache.mina#mina-core;2.0.0-M4 by [org.apache.mina#mina-core;2.0.0-M5] in [test]
+[ivy:resolve] 	org.apache.ftpserver#ftplet-api;1.0.0-M2 by [org.apache.ftpserver#ftplet-api;1.0.0] in [test]
+[ivy:resolve] 	org.apache.ftpserver#ftpserver-core;1.0.0-M2 by [org.apache.ftpserver#ftpserver-core;1.0.0] in [test]
+[ivy:resolve] 	org.apache.mina#mina-core;2.0.0-M2 by [org.apache.mina#mina-core;2.0.0-M5] in [test]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       test       |   37  |   0   |   0   |   5   ||   32  |   0   |
+	---------------------------------------------------------------------
+
+ivy-retrieve-test:
+[ivy:retrieve] :: retrieving :: org.apache.hadoop#Hadoop-Core
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	32 artifacts copied, 0 already retrieved (9865kB/46ms)
+
+generate-test-records:
+
+generate-avro-records:
+
+compile-core-test:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/core/classes
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:445: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 8 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/core/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:458: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 123 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/core/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/cache
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/cache
+
+jar-test:
+     [copy] Copying 237 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/classes
+      [jar] Building jar: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/hadoop-core-test-0.21.0-dev.jar
+
+test-core:
+
+ivy-init-dirs:
+
+ivy-probe-antlib:
+
+ivy-init-antlib:
+
+ivy-init:
+[ivy:configure] :: loading settings :: file = /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/ivy/ivysettings.xml
+
+ivy-resolve-common:
+[ivy:resolve] :: resolving dependencies :: org.apache.hadoop#Hadoop-Core;0.21.0-dev
+[ivy:resolve] 	confs: [common]
+[ivy:resolve] 	found commons-logging#commons-logging;1.0.4 in maven2
+[ivy:resolve] 	found log4j#log4j;1.2.15 in maven2
+[ivy:resolve] 	found commons-httpclient#commons-httpclient;3.0.1 in maven2
+[ivy:resolve] 	found commons-codec#commons-codec;1.3 in maven2
+[ivy:resolve] 	found commons-cli#commons-cli;1.2 in default
+[ivy:resolve] 	found xmlenc#xmlenc;0.52 in maven2
+[ivy:resolve] 	found net.java.dev.jets3t#jets3t;0.7.1 in maven2
+[ivy:resolve] 	found commons-net#commons-net;1.4.1 in maven2
+[ivy:resolve] 	found oro#oro;2.0.8 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#servlet-api-2.5;6.1.14 in maven2
+[ivy:resolve] 	found net.sf.kosmosfs#kfs;0.3 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty-util;6.1.14 in maven2
+[ivy:resolve] 	found tomcat#jasper-runtime;5.5.12 in maven2
+[ivy:resolve] 	found tomcat#jasper-compiler;5.5.12 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-api-2.1;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-2.1;6.1.14 in maven2
+[ivy:resolve] 	found commons-el#commons-el;1.0 in maven2
+[ivy:resolve] 	found junit#junit;4.5 in maven2
+[ivy:resolve] 	found hsqldb#hsqldb;1.8.0.10 in default
+[ivy:resolve] 	found commons-logging#commons-logging-api;1.0.4 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.4.3 in maven2
+[ivy:resolve] 	found org.eclipse.jdt#core;3.1.1 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-log4j12;1.4.3 in maven2
+[ivy:resolve] 	found org.apache.hadoop#avro;1.0.0 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-mapper-asl;1.0.1 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-core-asl;1.0.1 in maven2
+[ivy:resolve] 	found com.thoughtworks.paranamer#paranamer;1.5 in maven2
+[ivy:resolve] :: resolution report :: resolve 461ms :: artifacts dl 21ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      common      |   28  |   0   |   0   |   0   ||   28  |   0   |
+	---------------------------------------------------------------------
+
+ivy-retrieve-common:
+[ivy:retrieve] :: retrieving :: org.apache.hadoop#Hadoop-Core
+[ivy:retrieve] 	confs: [common]
+[ivy:retrieve] 	0 artifacts copied, 28 already retrieved (0kB/11ms)
+[ivy:cachepath] DEPRECATED: 'ivy.conf.file' is deprecated, use 'ivy.settings.file' instead
+[ivy:cachepath] :: loading settings :: file = /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/ivy/ivysettings.xml
+
+init:
+    [touch] Creating /tmp/null1296259002
+   [delete] Deleting: /tmp/null1296259002
+     [copy] Copying 9 files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/capacity-scheduler.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/capacity-scheduler.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/core-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/core-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-env.sh.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-env.sh
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-policy.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hadoop-policy.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hdfs-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/hdfs-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-queue-acls.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-queue-acls.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-site.xml.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/mapred-site.xml
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/masters.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/masters
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/slaves.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/conf/slaves
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib
+     [copy] Copying /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib/ec2/bin/hadoop-ec2-env.sh.template to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/src/contrib/ec2/bin/hadoop-ec2-env.sh
+
+record-parser:
+
+compile-rcc-compiler:
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:283: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile-core-classes:
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:304: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] 1 warning
+
+ivy-resolve-test:
+[ivy:resolve] :: resolving dependencies :: org.apache.hadoop#Hadoop-Core;0.21.0-dev
+[ivy:resolve] 	confs: [test]
+[ivy:resolve] 	found commons-logging#commons-logging;1.0.4 in maven2
+[ivy:resolve] 	found log4j#log4j;1.2.15 in maven2
+[ivy:resolve] 	found commons-httpclient#commons-httpclient;3.0.1 in maven2
+[ivy:resolve] 	found commons-codec#commons-codec;1.3 in maven2
+[ivy:resolve] 	found commons-cli#commons-cli;1.2 in default
+[ivy:resolve] 	found xmlenc#xmlenc;0.52 in maven2
+[ivy:resolve] 	found net.java.dev.jets3t#jets3t;0.7.1 in maven2
+[ivy:resolve] 	found commons-net#commons-net;1.4.1 in maven2
+[ivy:resolve] 	found oro#oro;2.0.8 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#servlet-api-2.5;6.1.14 in maven2
+[ivy:resolve] 	found net.sf.kosmosfs#kfs;0.3 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jetty-util;6.1.14 in maven2
+[ivy:resolve] 	found tomcat#jasper-runtime;5.5.12 in maven2
+[ivy:resolve] 	found tomcat#jasper-compiler;5.5.12 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-api-2.1;6.1.14 in maven2
+[ivy:resolve] 	found org.mortbay.jetty#jsp-2.1;6.1.14 in maven2
+[ivy:resolve] 	found commons-el#commons-el;1.0 in maven2
+[ivy:resolve] 	found junit#junit;4.5 in maven2
+[ivy:resolve] 	found hsqldb#hsqldb;1.8.0.10 in default
+[ivy:resolve] 	found commons-logging#commons-logging-api;1.0.4 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.4.3 in maven2
+[ivy:resolve] 	found org.eclipse.jdt#core;3.1.1 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-log4j12;1.4.3 in maven2
+[ivy:resolve] 	found org.apache.hadoop#avro;1.0.0 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-mapper-asl;1.0.1 in maven2
+[ivy:resolve] 	found org.codehaus.jackson#jackson-core-asl;1.0.1 in maven2
+[ivy:resolve] 	found com.thoughtworks.paranamer#paranamer;1.5 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftplet-api;1.0.0 in maven2
+[ivy:resolve] 	found org.apache.mina#mina-core;2.0.0-M5 in maven2
+[ivy:resolve] 	found org.slf4j#slf4j-api;1.5.2 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftpserver-core;1.0.0 in maven2
+[ivy:resolve] 	found org.apache.ftpserver#ftpserver-deprecated;1.0.0-M2 in maven2
+[ivy:resolve] :: resolution report :: resolve 293ms :: artifacts dl 21ms
+[ivy:resolve] 	:: evicted modules:
+[ivy:resolve] 	org.slf4j#slf4j-api;1.4.3 by [org.slf4j#slf4j-api;1.5.2] in [test]
+[ivy:resolve] 	org.apache.mina#mina-core;2.0.0-M4 by [org.apache.mina#mina-core;2.0.0-M5] in [test]
+[ivy:resolve] 	org.apache.ftpserver#ftplet-api;1.0.0-M2 by [org.apache.ftpserver#ftplet-api;1.0.0] in [test]
+[ivy:resolve] 	org.apache.ftpserver#ftpserver-core;1.0.0-M2 by [org.apache.ftpserver#ftpserver-core;1.0.0] in [test]
+[ivy:resolve] 	org.apache.mina#mina-core;2.0.0-M2 by [org.apache.mina#mina-core;2.0.0-M5] in [test]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       test       |   37  |   0   |   0   |   5   ||   32  |   0   |
+	---------------------------------------------------------------------
+
+ivy-retrieve-test:
+[ivy:retrieve] :: retrieving :: org.apache.hadoop#Hadoop-Core
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	0 artifacts copied, 32 already retrieved (0kB/11ms)
+
+generate-test-records:
+
+generate-avro-records:
+Trying to override old definition of task schema
+
+compile-core-test:
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:445: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 8 source files to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/core/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+    [javac] /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build.xml:458: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+   [delete] Deleting directory /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/cache
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/cache
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/cache
+
+run-test-core:
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/data
+    [mkdir] Created dir: /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/logs
+     [copy] Copying 1 file to /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/extraconf
+    [junit] Running org.apache.hadoop.cli.TestCLI
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 sec
+    [junit] Running org.apache.hadoop.conf.TestConfiguration
+    [junit] Tests run: 17, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.887 sec
+    [junit] Running org.apache.hadoop.conf.TestConfigurationSubclass
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.303 sec
+    [junit] Running org.apache.hadoop.conf.TestGetInstances
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.223 sec
+    [junit] Running org.apache.hadoop.fs.TestBlockLocation
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 sec
+    [junit] Running org.apache.hadoop.fs.TestChecksumFileSystem
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.445 sec
+    [junit] Running org.apache.hadoop.fs.TestDFVariations
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.24 sec
+    [junit] Running org.apache.hadoop.fs.TestDU
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.179 sec
+    [junit] Running org.apache.hadoop.fs.TestGetFileBlockLocations
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.427 sec
+    [junit] Running org.apache.hadoop.fs.TestGlobExpander
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+    [junit] Running org.apache.hadoop.fs.TestLocalDirAllocator
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.161 sec
+    [junit] Running org.apache.hadoop.fs.TestLocalFileSystem
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.398 sec
+    [junit] Running org.apache.hadoop.fs.TestLocalFileSystemPermission
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.235 sec
+    [junit] Running org.apache.hadoop.fs.TestPath
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+    [junit] Running org.apache.hadoop.fs.TestTrash
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.505 sec
+    [junit] Running org.apache.hadoop.fs.TestTruncatedInputBug
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.258 sec
+    [junit] Running org.apache.hadoop.fs.kfs.TestKosmosFileSystem
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.415 sec
+    [junit] Running org.apache.hadoop.fs.permission.TestFsPermission
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
+    [junit] Running org.apache.hadoop.fs.s3.TestINode
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+    [junit] Running org.apache.hadoop.fs.s3.TestInMemoryS3FileSystemContract
+    [junit] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.615 sec
+    [junit] Running org.apache.hadoop.fs.s3.TestS3Credentials
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 sec
+    [junit] Running org.apache.hadoop.fs.s3.TestS3FileSystem
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec
+    [junit] Running org.apache.hadoop.fs.s3native.TestInMemoryNativeS3FileSystemContract
+    [junit] Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.053 sec
+    [junit] Running org.apache.hadoop.http.TestGlobalFilter
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.04 sec
+    [junit] Running org.apache.hadoop.http.TestServletFilter
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.043 sec
+    [junit] Running org.apache.hadoop.io.TestArrayFile
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.923 sec
+    [junit] Running org.apache.hadoop.io.TestArrayWritable
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec
+    [junit] Running org.apache.hadoop.io.TestBloomMapFile
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.422 sec
+    [junit] Running org.apache.hadoop.io.TestBytesWritable
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec
+    [junit] Running org.apache.hadoop.io.TestDefaultStringifier
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 sec
+    [junit] Running org.apache.hadoop.io.TestEnumSetWritable
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec
+    [junit] Running org.apache.hadoop.io.TestGenericWritable
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.247 sec
+    [junit] Running org.apache.hadoop.io.TestMD5Hash
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+    [junit] Running org.apache.hadoop.io.TestMapFile
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.345 sec
+    [junit] Running org.apache.hadoop.io.TestMapWritable
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.145 sec
+    [junit] Running org.apache.hadoop.io.TestSequenceFileSerialization
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.319 sec
+    [junit] Running org.apache.hadoop.io.TestSetFile
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.753 sec
+    [junit] Running org.apache.hadoop.io.TestSortedMapWritable
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.138 sec
+    [junit] Running org.apache.hadoop.io.TestText
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.324 sec
+    [junit] Running org.apache.hadoop.io.TestTextNonUTF8
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+    [junit] Running org.apache.hadoop.io.TestVersionedWritable
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+    [junit] Running org.apache.hadoop.io.TestWritable
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+    [junit] Running org.apache.hadoop.io.TestWritableName
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+    [junit] Running org.apache.hadoop.io.TestWritableUtils
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+    [junit] Running org.apache.hadoop.io.compress.TestCodec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.486 sec
+    [junit] Running org.apache.hadoop.io.compress.TestCodecFactory
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.264 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFile
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.967 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileByteArrays
+    [junit] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.905 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileComparators
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.24 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileJClassComparatorByteArrays
+    [junit] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.446 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileLzoCodecsByteArrays
+    [junit] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileLzoCodecsStreams
+    [junit] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsByteArrays
+    [junit] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.132 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsJClassComparatorByteArrays
+    [junit] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.704 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileNoneCodecsStreams
+    [junit] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.848 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileSeek
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.695 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileSeqFileComparison
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.21 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileSplit
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.498 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileStreams
+    [junit] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.787 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestTFileUnsortedByteArrays
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.295 sec
+    [junit] Running org.apache.hadoop.io.file.tfile.TestVLong
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.037 sec
+    [junit] Running org.apache.hadoop.io.retry.TestRetryProxy
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.142 sec
+    [junit] Running org.apache.hadoop.io.serializer.TestWritableSerialization
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec
+    [junit] Running org.apache.hadoop.io.serializer.avro.TestAvroSerialization
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec
+    [junit] Running org.apache.hadoop.ipc.TestIPC
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.554 sec
+    [junit] Running org.apache.hadoop.ipc.TestIPCServerResponder
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.086 sec
+    [junit] Running org.apache.hadoop.ipc.TestRPC
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.949 sec
+    [junit] Running org.apache.hadoop.log.TestLogLevel
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.669 sec
+    [junit] Running org.apache.hadoop.metrics.TestMetricsServlet
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+    [junit] Running org.apache.hadoop.metrics.spi.TestOutputRecord
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+    [junit] Running org.apache.hadoop.net.TestDNS
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec
+    [junit] Running org.apache.hadoop.net.TestScriptBasedMapping
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.185 sec
+    [junit] Running org.apache.hadoop.net.TestSocketIOWithTimeout
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.023 sec
+    [junit] Running org.apache.hadoop.record.TestBuffer
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+    [junit] Running org.apache.hadoop.record.TestRecordIO
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+    [junit] Running org.apache.hadoop.record.TestRecordVersioning
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec
+    [junit] Running org.apache.hadoop.security.TestAccessControlList
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+    [junit] Running org.apache.hadoop.security.TestAccessToken
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+    [junit] Running org.apache.hadoop.security.TestUnixUserGroupInformation
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 sec
+    [junit] Running org.apache.hadoop.security.authorize.TestConfiguredPolicy
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.186 sec
+    [junit] Running org.apache.hadoop.util.TestCyclicIteration
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+    [junit] Running org.apache.hadoop.util.TestGenericsUtil
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec
+    [junit] Running org.apache.hadoop.util.TestIndexedSort
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.694 sec
+    [junit] Running org.apache.hadoop.util.TestProcfsBasedProcessTree
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.332 sec
+    [junit] Running org.apache.hadoop.util.TestPureJavaCrc32
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.301 sec
+    [junit] Running org.apache.hadoop.util.TestShell
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.17 sec
+    [junit] Running org.apache.hadoop.util.TestStringUtils
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+
+checkfailure:
+    [touch] Creating /home/carol/Desktop/benchmark/bugs-dot-jar/hadoop/build/test/testsfailed
