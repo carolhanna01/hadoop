@@ -1,5 +1,5 @@
 diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMActiveServiceContext.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMActiveServiceContext.java
-index 06a1d00..66065e3 100644
+index 06a1d00d95..66065e33ba 100644
 --- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMActiveServiceContext.java
 +++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMActiveServiceContext.java
 @@ -36,6 +36,7 @@
@@ -10,7 +10,7 @@ index 06a1d00..66065e3 100644
  import org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMApp;
  import org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.AMLivelinessMonitor;
  import org.apache.hadoop.yarn.server.resourcemanager.rmapp.monitor.RMAppLifetimeMonitor;
-@@ -111,6 +112,7 @@
+@@ -111,6 +112,7 @@ public class RMActiveServiceContext {
    private QueueLimitCalculator queueLimitCalculator;
    private AllocationTagsManager allocationTagsManager;
    private PlacementConstraintManager placementConstraintManager;
@@ -33,10 +33,10 @@ index 06a1d00..66065e3 100644
 +  }
  }
 diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMContextImpl.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMContextImpl.java
-index 0b6be72..84e0f6f 100644
+index 0b6be722ac..84e0f6f6b5 100644
 --- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMContextImpl.java
 +++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMContextImpl.java
-@@ -93,8 +93,6 @@
+@@ -93,8 +93,6 @@ public class RMContextImpl implements RMContext {
     */
    private RMActiveServiceContext activeServiceContext;
  
@@ -64,7 +64,7 @@ index 0b6be72..84e0f6f 100644
    // Note: Read java doc before adding any services over here.
  }
 diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
-index 38da7f5..733da5b 100644
+index 38da7f5e5c..733da5bd71 100644
 --- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
 +++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
 @@ -245,13 +245,6 @@ protected void serviceInit(Configuration conf) throws Exception {
@@ -94,53 +94,3 @@ index 38da7f5..733da5b 100644
        RMDelegatedNodeLabelsUpdater delegatedNodeLabelsUpdater =
            createRMDelegatedNodeLabelsUpdater();
        if (delegatedNodeLabelsUpdater != null) {
-diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java
-index 20e9ff4..385e8db 100644
---- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java
-+++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java
-@@ -658,6 +658,45 @@ protected Dispatcher createDispatcher() {
-     assertEquals(HAServiceState.STANDBY, rm.getRMContext().getHAServiceState());
-   }
- 
-+  @Test
-+  public void testResourceProfilesManagerAfterRMWentStandbyThenBackToActive()
-+      throws Exception {
-+    configuration.setBoolean(YarnConfiguration.AUTO_FAILOVER_ENABLED, false);
-+    configuration.setBoolean(YarnConfiguration.RECOVERY_ENABLED, true);
-+    Configuration conf = new YarnConfiguration(configuration);
-+    conf.set(YarnConfiguration.RM_STORE, MemoryRMStateStore.class.getName());
-+
-+    // 1. start RM
-+    rm = new MockRM(conf);
-+    rm.init(conf);
-+    rm.start();
-+
-+    StateChangeRequestInfo requestInfo = new StateChangeRequestInfo(
-+        HAServiceProtocol.RequestSource.REQUEST_BY_USER);
-+    checkMonitorHealth();
-+    checkStandbyRMFunctionality();
-+
-+    // 2. Transition to active
-+    rm.adminService.transitionToActive(requestInfo);
-+    checkMonitorHealth();
-+    checkActiveRMFunctionality();
-+
-+    // 3. Transition to standby
-+    rm.adminService.transitionToStandby(requestInfo);
-+    checkMonitorHealth();
-+    checkStandbyRMFunctionality();
-+
-+    // 4. Transition to active
-+    rm.adminService.transitionToActive(requestInfo);
-+    checkMonitorHealth();
-+    checkActiveRMFunctionality();
-+
-+    // 5. Check ResourceProfilesManager
-+    Assert.assertNotNull(
-+        "ResourceProfilesManager should not be null!",
-+        rm.getRMContext().getResourceProfilesManager());
-+  }
-+
-   public void innerTestHAWithRMHostName(boolean includeBindHost) {
-     //this is run two times, with and without a bind host configured
-     if (includeBindHost) {
