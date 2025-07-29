@@ -1,17 +1,3 @@
-diff --git a/hadoop-common-project/hadoop-common/CHANGES.txt b/hadoop-common-project/hadoop-common/CHANGES.txt
-index c34deefafd..eeb320514f 100644
---- a/hadoop-common-project/hadoop-common/CHANGES.txt
-+++ b/hadoop-common-project/hadoop-common/CHANGES.txt
-@@ -432,6 +432,9 @@ Release 2.0.0 - UNRELEASED
-     HADOOP-8359. Fix javadoc warnings in Configuration.  (Anupam Seth via
-     szetszwo)
- 
-+    HADOOP-8372. NetUtils.normalizeHostName() incorrectly handles hostname
-+    starting with a numeric character. (Junping Du via suresh)
-+
-   BREAKDOWN OF HADOOP-7454 SUBTASKS
- 
-     HADOOP-7455. HA: Introduce HA Service Protocol Interface. (suresh)
 diff --git a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/net/NetUtils.java b/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/net/NetUtils.java
 index 0fe61ad21c..b3c77c2033 100644
 --- a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/net/NetUtils.java
@@ -46,111 +32,16 @@ index 0fe61ad21c..b3c77c2033 100644
    }
    
    /** 
-diff --git a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestNetUtils.java b/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestNetUtils.java
-index 61ac35c5cc..e8455862d7 100644
---- a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestNetUtils.java
-+++ b/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestNetUtils.java
-@@ -31,7 +31,9 @@ import java.net.SocketException;
- import java.net.SocketTimeoutException;
- import java.net.URI;
- import java.net.UnknownHostException;
-+import java.util.Arrays;
- import java.util.Enumeration;
-+import java.util.List;
- import java.util.concurrent.TimeUnit;
- 
- import junit.framework.AssertionFailedError;
-@@ -42,8 +44,6 @@ import org.apache.commons.logging.LogFactory;
- import org.apache.hadoop.conf.Configuration;
- import org.apache.hadoop.io.IOUtils;
- import org.apache.hadoop.security.NetUtilsTestResolver;
--import org.apache.hadoop.test.MultithreadedTestUtil.TestContext;
--import org.apache.hadoop.test.MultithreadedTestUtil.TestingThread;
- import org.junit.Assume;
- import org.junit.Before;
- import org.junit.BeforeClass;
-@@ -599,6 +599,26 @@ public class TestNetUtils {
-     assertEquals("scheme://host.a.b/path", uri.toString());
-   }
-   
-+  /** 
-+   * Test for {@link NetUtils#normalizeHostNames}
-+   */
-+  @Test
-+  public void testNormalizeHostName() {	
-+    List<String> hosts = Arrays.asList(new String[] {"127.0.0.1",
-+        "localhost", "3w.org", "UnknownHost"});
-+    List<String> normalizedHosts = NetUtils.normalizeHostNames(hosts);
-+    // when ipaddress is normalized, same address is expected in return
-+    assertEquals(normalizedHosts.get(0), hosts.get(0));
-+    // for normalizing a resolvable hostname, resolved ipaddress is expected in return
-+    assertFalse(normalizedHosts.get(1).equals(hosts.get(1)));
-+    assertEquals(normalizedHosts.get(1), hosts.get(0));
-+    // this address HADOOP-8372: when normalizing a valid resolvable hostname start with numeric, 
-+    // its ipaddress is expected to return
-+    assertFalse(normalizedHosts.get(2).equals(hosts.get(2)));
-+    // return the same hostname after normalizing a irresolvable hostname.
-+    assertEquals(normalizedHosts.get(3), hosts.get(3));
-+  }
-+  
-   @Test
-   public void testGetHostNameOfIP() {
-     assertNull(NetUtils.getHostNameOfIP(null));
-diff --git a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestTableMapping.java b/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestTableMapping.java
-index f8b3c33340..6356555da4 100644
---- a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestTableMapping.java
-+++ b/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/net/TestTableMapping.java
-@@ -41,7 +41,7 @@ public class TestTableMapping {
-   public void setUp() throws IOException {
-     mappingFile = File.createTempFile(getClass().getSimpleName(), ".txt");
-     Files.write("a.b.c /rack1\n" +
--                "1.2.3\t/rack2\n", mappingFile, Charsets.UTF_8);
-+                "1.2.3.4\t/rack2\n", mappingFile, Charsets.UTF_8);
-     mappingFile.deleteOnExit();
-   }
- 
-@@ -55,7 +55,7 @@ public class TestTableMapping {
- 
-     List<String> names = new ArrayList<String>();
-     names.add("a.b.c");
--    names.add("1.2.3");
-+    names.add("1.2.3.4");
- 
-     List<String> result = mapping.resolve(names);
-     assertEquals(names.size(), result.size());
-@@ -73,7 +73,7 @@ public class TestTableMapping {
- 
-     List<String> names = new ArrayList<String>();
-     names.add("a.b.c");
--    names.add("1.2.3");
-+    names.add("1.2.3.4");
- 
-     List<String> result1 = mapping.resolve(names);
-     assertEquals(names.size(), result1.size());
-@@ -96,7 +96,7 @@ public class TestTableMapping {
- 
-     List<String> names = new ArrayList<String>();
-     names.add("a.b.c");
--    names.add("1.2.3");
-+    names.add("1.2.3.4");
- 
-     List<String> result = mapping.resolve(names);
-     assertEquals(names.size(), result.size());
-@@ -114,7 +114,7 @@ public class TestTableMapping {
- 
-     List<String> names = new ArrayList<String>();
-     names.add("a.b.c");
--    names.add("1.2.3");
-+    names.add("1.2.3.4");
- 
-     List<String> result = mapping.resolve(names);
-     assertEquals(names.size(), result.size());
-@@ -134,7 +134,7 @@ public class TestTableMapping {
- 
-     List<String> names = new ArrayList<String>();
-     names.add("a.b.c");
--    names.add("1.2.3");
-+    names.add("1.2.3.4");
- 
-     List<String> result = mapping.resolve(names);
-     assertEquals(names.size(), result.size());
+diff --git a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/partition/InputSampler.java b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/partition/InputSampler.java
+index 82277a1f0b..72b47f282e 100644
+--- a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/partition/InputSampler.java
++++ b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/partition/InputSampler.java
+@@ -317,7 +317,7 @@ public class InputSampler<K,V> extends Configured implements Tool  {
+     final InputFormat inf = 
+         ReflectionUtils.newInstance(job.getInputFormatClass(), conf);
+     int numPartitions = job.getNumReduceTasks();
+-    K[] samples = (K[]) sampler.getSample(inf, job);
++    K[] samples = sampler.getSample(inf, job);
+     LOG.info("Using " + samples.length + " samples");
+     RawComparator<K> comparator =
+       (RawComparator<K>) job.getSortComparator();
